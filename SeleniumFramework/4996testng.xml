@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+		<class name="_4996Test.TC613_UndoLastPayroll_BasicFuncionalityWeekly" />
+			<class name="_4996Test.TC614_UndoLastPayroll_BasicFuncionalityFortnightly" />
+			<class name="_4996Test.TC615_UndoLastPayroll_BasicFuncionalityFourWeekly" />
+			<class name="_4996Test.TC616_UndoLastPayroll_BasicFuncionalityFourAnnually" />
+			<class name="_4996Test.TC617_UndoLastPayroll_NoEmployee" />
+			<class name="_4996Test.TC618_UndoLastPayroll_Functionality" />
+			<class name="_4996Test.TC619_UndoLastPayrollSingleEmployee_PayrollDashboard" />
+			<class name="_4996Test.TC620_UndoLastPayroll_FillingManagement" />
+			<class name="_4996Test.TC621_UndoPayroll_EmployeeB" />
+			<class name="_4996Test.TC622_UndoPayroll_EmployeeA" />
+			<class name="_4996Test.TC623_UndoPayroll_EmployeeAStudentLoan1" />
+			<class name="_4996Test.TC624_UndoPayroll_EmployeeAStudentLoan2" />
+			<class name="_4996Test.TC625_UndoPayroll_AfterSubmmision" />
+			<!--<class name="_4996Test.TC626_UndoPayroll__7Employee" />
+			<class name="_4996Test.TC627_UndoPayroll__7EmployeeMay" />
+			<class name="_4996Test.TC628_UndoPayroll__7EmployeeJunePension" />
+			<class name="_4996Test.TC629_UndoPayroll__7EmployeeJulyPension" />
+			<class name="_4996Test.TC630_UndoPayroll__7EmployeeAug" />
+			<class name="_4996Test.TC631_UndoPayroll__7EmployeeSep" />
+			<class name="_4996Test.TC632_UndoPayroll__7EmployeeOct" />
+			<class name="_4996Test.TC633_UndoPayroll__7EmployeeNov" />
+			<class name="_4996Test.TC634_UndoPayroll__7EmployeeDec" />
+			<class name="_4996Test.TC635_UndoPayroll__7EmployeeJan" />
+			<class name="_4996Test.TC636_UndoPayroll__7EmployeeFeb" />
+			<class name="_4996Test.TC637_UndoPayroll__7EmployeeMarch" />
+			
+				<class name="_4996Test.TC634_UndoPayroll__7EmployeeDec" />
+
+			<class name="_4996Test.TC638_UndoLastPayroll_3EmployeeWeekly" />
+			<class name="_4996Test.TC639_UndoLastPayroll_3EmployeeWeekly14April" />
+			<class name="_4996Test.TC640_UndoLastPayroll_3EmployeeWeek3" />
+			<class name="_4996Test.TC641_UndoLastPayroll_3EmployeeWeek4" />
+			<class name="_4996Test.TC642_UndoLastPayroll_3EmployeeWeek5" />
+			<class name="_4996Test.TC643_UndoLastPayroll_3EmployeeWeek6" />
+			<class name="_4996Test.TC644_UndoLastPayroll_4EmployeeWeek7" />
+			<class name="_4996Test.TC645_UndoLastPayroll_4EmployeeWeek8" />
+			<class name="_4996Test.TC646_UndoLastPayroll_5EmployeeWeek8" />
+			<class name="_4996Test.TC647_UndoLastPayroll_5EmployeeWeek9" />
+			<class name="_4996Test.TC648_UndoLastPayroll_5EmployeeWeek10" />
+			<class name="_4996Test.TC649_UndoLastPayroll_5EmployeeWeek11" />
+			<class name="_4996Test.TC650_UndoLastPayroll_5EmployeeWeek12" />
+			<class name="_4996Test.TC651_UndoLastPayroll_5EmployeeWeek13" />
+			<class name="_4996Test.TC652_UndoLastPayroll_5EmployeeWeek14" />
+			<class name="_4996Test.TC653_UndoLastPayroll_5EmployeeWeek15" />
+			<class name="_4996Test.TC654_UndoLastPayroll_5EmployeeWeek16" />
+			<class name="_4996Test.TC655_UndoLastPayroll_5EmployeeWeek17" />
+			<class name="_4996Test.TC656_UndoLastPayroll_5EmployeeWeek18" />
+			<class name="_4996Test.TC657_UndoLastPayroll_5EmployeeWeek19" />
+			<class name="_4996Test.TC658_UndoPayroll_SMP" />
+			
+			<class name="_4996Test.TC659_UndoLastPayroll__7EmployeePension" />
+			<class name="_4996Test.TC660_UndoLastPayroll__7EmployeePensionMayJune" />
+			<class name="_4996Test.TC661_UndoLastPayroll__7EmployeePensionJuly" />
+			<class name="_4996Test.TC662_UndoLastPayroll__7EmployeePensionAug" />
+			<class name="_4996Test.TC663_UndoLastPayroll__7EmployeePensionSep" />
+			<class name="_4996Test.TC664_UndoLastPayroll__7EmployeePensionOct" />
+			<class name="_4996Test.TC665_UndoLastPayroll__7EmployeePensionNov" />
+			<class name="_4996Test.TC666_UndoLastPayroll__7EmployeePensionDec" />
+			<class name="_4996Test.TC667_UndoLastPayroll__7EmployeePensionJan" />
+			<class name="_4996Test.TC668_UndoLastPayroll__7EmployeePensionFeb" />
+			<class name="_4996Test.TC669_UndoLastPayroll__7EmployeePensionMarch" />
+			<class name="_4996Test.TC670_UndoLastPayroll_5EmployeeFortnightly14" />
+			<class name="_4996Test.TC671_UndoLastPayroll_6EmployeeFortnightly15" />
+			<class name="_4996Test.TC672_UndoLastPayroll_EmployeeFortnightly16" />
+			<class name="_4996Test.TC673_UndoLastPayroll_EmployeeFortnightly17" />
+			<class name="_4996Test.TC674_UndoLastPayroll_EmployeeFortnightly17_AddExpense" />
+			<class name="_4996Test.TC675_UndoLastPayroll_EmployeeFortnightly18" />
+			<class name="_4996Test.TC676_UndoLastPayroll_EmployeeFortnightly19" />
+			<class name="_4996Test.TC677_UndoLastPayroll_EmployeeFortnightly19EmployeeTwo" />
+			<class name="_4996Test.TC678_UndoLastPayroll_EmployeeFortnightly20" />
+			<class name="_4996Test.TC679_UndoLastPayroll_EmployeeFortnightly20OptOut" />
+			<class name="_4996Test.TC680_UndoLastPayroll_EmployeeFortnightly21" />
+			<class name="_4996Test.TC681_UndoLastPayroll_EmployeeFortnightly21NoEmployerNic" />
+			<class name="_4996Test.TC682_UndoLastPayroll_EmployeeFortnightly22" />
+			<class name="_4996Test.TC683_UndoLastPayroll_EmployeeFortnightly22Leave" />
+			<class name="_4996Test.TC684_UndoLastPayroll_EmployeeFortnightly23" />
+			<class name="_4996Test.TC685_UndoLastPayroll_EmployeeFortnightly24" />
+			<class name="_4996Test.TC686_UndoLastPayroll_EmployeeFortnightly24ChangeSalary" />
+			<class name="_4996Test.TC687_UndoLastPayroll_EmployeeFortnightly25" />
+			<class name="_4996Test.TC688_UndoLastPayroll_EmployeeFortnightly25ChangeSalary" />
+			<class name="_4996Test.TC689_UndoLastPayroll_EmployeeFortnightly26" />
+			<class name="_4996Test.TC690_UndoLastPayroll_EmployeeFortnightly26ChangeSalary" />
+			<class name="_4996Test.TC691_UndoLastPayroll_OpeningBalance" />
+			<class name="_4996Test.TC692_UndoLastPayroll_OpeningBalance_SepToMarch" />
+			<class name="_4996Test.TC693_UndoLastPayroll_Email" />
+			<class name="_4996Test.TC694_UndoLastPayroll_Email_ApriltoMarch" />
+			
+				<class name="_4996Test.TC695_UndoLastPayroll_P45_Weekly" />
+				<class name="_4996Test.TC696_UndoLastPayroll_P45_Weekly_34" />
+				<class name="_4996Test.TC697_UndoLastPayroll_P45_Weekly_53" />
+				<class name="_4996Test.TC698_UndoLastPayroll_P45_2Weekly_23" />
+				<class name="_4996Test.TC699_UndoLastPayroll_P45_2Weekly_24" />
+				<class name="_4996Test.TC700_UndoLastPayroll_P45_2Weekly_24_P45" />
+				<class name="_4996Test.TC701_UndoLastPayroll_P45_2Weekly_25_P45" />
+				<class name="_4996Test.TC702_UndoLastPayroll_P45_4Weekly_12_P45" />
+
+				<class name="_4996Test.TC703_UndoLastPayroll_P45_4Weekly_12" />
+				<class name="_4996Test.TC704_UndoLastPayroll_P45_4Weekly_13" />-->
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

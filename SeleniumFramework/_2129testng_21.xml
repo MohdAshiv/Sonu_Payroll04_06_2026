@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2129Suite">
+  <test thread-count="5" name="_2129Test">
+    <classes>
+      <class name="_2129SummaryCustomized.TC597FirstQtrSummaryReportWeeklyFrq"/>
+      <class name="_2129SummaryCustomized.TC606PAYE_NIinAgent"/>
+      <class name="_2129SummaryCustomized.TC601_603SummaryPayslipofQtrWhenWeekly"/>
+      <class name="_2129SummaryCustomized.TC598_600SendEmailofQtrPayrollWeeklyFrq"/>
+      <class name="_2129SummaryCustomized.TC588_590SendEmailofQtrPayroll"/>
+      <class name="_2129SummaryCustomized.TC591_593SummaryPayslipofQtr"/>
+      <class name="_2129SummaryCustomized.TC596SummaryTaxPaymntWhenQtr"/>
+      <class name="_2129SummaryCustomized.TC604_605JournalDataofSummary"/>
+      <class name="_2129SummaryCustomized.TC607FirstQtrSummaryReport"/>
+      <class name="_2129SummaryCustomized.TC595SummaryEmailWhenAutoPayrollQtr"/>
+      <class name="_2129SummaryCustomized.TC587FirstQtrSummaryReport"/>
+      <class name="_2129SummaryCustomized.TC594SummaryDsbEmailQtr"/>
+    </classes>
+  </test> <!-- _2129Test -->
+</suite> <!-- _2129Suite -->

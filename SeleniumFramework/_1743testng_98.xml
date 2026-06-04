@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1743Suite">
+  <test thread-count="5" name="_1743Test">
+    <classes>
+      <class name="_1743PayrollDSB.TC700_701CheckTaxablePayJoinMidFourWeekly7"/>
+      <class name="_1743PayrollDSB.TC709_710CheckTaxablePayForTwoMonths10"/>
+      <class name="_1743PayrollDSB.TC702CheckTaxablePayJoinMidFourWeekly8"/>
+      <class name="_1743PayrollDSB.TC707CheckTotalClient"/>
+      <class name="_1743PayrollDSB.TC726_731CheckPayroll_OnHoldClient"/>
+      <class name="_1743PayrollDSB.TC738_743CheckPayroll_AwaitingApprovalClient"/>
+      <class name="_1743PayrollDSB.TC708CheckPayroll_Overdue_NotStarted"/>
+      <class name="_1743PayrollDSB.TC702CheckTaxablePayJoinMidFourWeeklyA"/>
+      <class name="_1743PayrollDSB.TC704CheckManualPayroll"/>
+      <class name="_1743PayrollDSB.TC786CheckPayrollDeadlineByAccountant"/>
+      <class name="_1743PayrollDSB.TC720_725CheckPayroll_InprogressClient"/>
+      <class name="_1743PayrollDSB.TC698_699CheckTaxablePayJoinMidFortNightC"/>
+      <class name="_1743PayrollDSB.TC719CheckPayroll_6plusMonths_NotStarte"/>
+      <class name="_1743PayrollDSB.TC706CheckP11DClient"/>
+      <class name="_1743PayrollDSB.TC732_737CheckPayroll_AwaitingReviewClient"/>
+      <class name="_1743PayrollDSB.TC711_712CheckTaxablePayForTwoMonths10"/>
+      <class name="_1743PayrollDSB.TC715CheckPayroll_1Week_NotStarted"/>
+      <class name="_1743PayrollDSB.TC700_701CheckTaxablePayJoinMidFourWeekly15"/>
+      <class name="_1743PayrollDSB.TC703CheckAutoPayroll"/>
+      <class name="_1743PayrollDSB.TC774_779CheckPayroll_DefferedClient"/>
+      <class name="_1743PayrollDSB.TC787CheckPensionDeadlineByAccountant"/>
+      <class name="_1743PayrollDSB.TC744_749CheckPayroll_DefferedClient"/>
+      <class name="_1743PayrollDSB.TC702CheckTaxablePayJoinMidFourWeekly16"/>
+      <class name="_1743PayrollDSB.TC716CheckPayroll_1Months_NotStarted"/>
+      <class name="_1743PayrollDSB.TC718CheckPayroll_3_6Months_NotStarte"/>
+      <class name="_1743PayrollDSB.TC750_755CheckPention_InprogressClient"/>
+      <class name="_1743PayrollDSB.TC717CheckPayroll_3Months_NotStarted"/>
+      <class name="_1743PayrollDSB.TC780_785CheckPension_Overdue"/>
+      <class name="_1743PayrollDSB.TC768_773CheckPayroll_AwaitingApprovalClient"/>
+      <class name="_1743PayrollDSB.TC705CheckPensionClient"/>
+      <class name="_1743PayrollDSB.TC713_714CheckTaxablePayForTwoMonths10"/>
+      <class name="_1743PayrollDSB.TC762_767CheckPayroll_AwaitingReviewClient"/>
+      <class name="_1743PayrollDSB.TC698_699CheckTaxablePayJoinMidFortNight6"/>
+      <class name="_1743PayrollDSB.TC756_761CheckPayroll_OnHoldClient"/>
+      <class name="_1743PayrollDSB.TC700_701CheckTaxablePayJoinMidFourWeeklyB"/>
+    </classes>
+  </test> <!-- _1743Test -->
+</suite> <!-- _1743Suite -->

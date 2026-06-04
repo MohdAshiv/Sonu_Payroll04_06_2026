@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1939Suite">
+  <test thread-count="5" name="_1939Test">
+    <classes>
+      <class name="_1939_tests.TC03_AutoRunEffectonMannual"/>
+      <class name="_1939_tests.TC11_AutoRunPayrollErrorMsgChecked"/>
+      <class name="_1939_tests.TC08_AutoRunPayrollChangeOther"/>
+      <class name="_1939_tests.TC01_AutoRunPayroll"/>
+      <class name="_1939_tests.TC04_AutoRunPayrollAgainDateChange"/>
+      <class name="_1939_tests.TC10_AutoRunPayrollBackDate"/>
+      <class name="_1939_tests.TC05_AutoRunPayrollMakeDisable"/>
+      <class name="_1939_tests.TC07_AutoRun_DateDiffer_NextPayroll"/>
+      <class name="_1939_tests.TC02_AutoRunPayrollDateDiffer"/>
+      <class name="_1939_tests.TC09_BlankAutoRunPayroll"/>
+    </classes>
+  </test> <!-- _1939Test -->
+</suite> <!-- _1939Suite -->

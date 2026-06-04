@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SMP_XMLSuite">
+  <test thread-count="5" name="SMP_XMLTest">
+    <classes>
+      <class name="SMP_XML.TC568SMP_XMLFortNight6"/>
+      <class name="SMP_XML.TC545SMP_XML1"/>
+      <class name="SMP_XML.TC550SMP_XMLFortNight1"/>
+      <class name="SMP_XML.TC563SMP_XML6"/>
+    </classes>
+  </test> <!-- SMP_XMLTest -->
+</suite> <!-- SMP_XMLSuite -->

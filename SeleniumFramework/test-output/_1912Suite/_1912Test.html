@@ -1,0 +1,2432 @@
+<html>
+<head>
+<title>TestNG:  _1912Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>_1912Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/48/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 13 22:21:42 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1902 seconds (1902356 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC362_364_1912FirstAndLastMonthSalary<br/>
+<a href="#Output-1038002783" onClick='toggleBox("Output-1038002783", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1038002783" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1038002783">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC362_364_1912FirstAndLastMonthSalary.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1038002783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1038002783'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC362_364_1912FirstAndLastMonthSalary.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC362_364_1912FirstAndLastMonthSalary@24b6b8f6</td></tr>
+<tr>
+<td title='_1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC377_382_1912TwoDir<br/>
+<a href="#Output-1756333997" onClick='toggleBox("Output-1756333997", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1756333997" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1756333997">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC377_382_1912TwoDir.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1756333997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1756333997'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC377_382_1912TwoDir.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC377_382_1912TwoDir@6d304f9d</td></tr>
+<tr>
+<td title='_1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC362_364_1912FirstAndLastMonthSalary<br/>
+<a href="#Output-567954271" onClick='toggleBox("Output-567954271", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-567954271" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-567954271">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC362_364_1912FirstAndLastMonthSalary.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace567954271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace567954271'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC362_364_1912FirstAndLastMonthSalary.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>_1912.TC362_364_1912FirstAndLastMonthSalary@24b6b8f6</td></tr>
+<tr>
+<td title='_1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC377_382_1912TwoDir<br/>
+<a href="#Output-1600869357" onClick='toggleBox("Output-1600869357", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1600869357" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1600869357">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC377_382_1912TwoDir.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1600869357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1600869357'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC377_382_1912TwoDir.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC377_382_1912TwoDir@6d304f9d</td></tr>
+<tr>
+<td title='_1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC392_394_1912WeeklyHighSalary<br/>
+<a href="#Output-441683672" onClick='toggleBox("Output-441683672", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-441683672" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-441683672">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC392_394_1912WeeklyHighSalary.java:272)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace441683672", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace441683672'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC392_394_1912WeeklyHighSalary.java:272)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC392_394_1912WeeklyHighSalary@5974109</td></tr>
+<tr>
+<td title='_1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC365_367_1912DirPaymentNotFixed<br/>
+<a href="#Output-479442206" onClick='toggleBox("Output-479442206", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-479442206" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-479442206">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC365_367_1912DirPaymentNotFixed.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace479442206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace479442206'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC365_367_1912DirPaymentNotFixed.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC365_367_1912DirPaymentNotFixed@7b324585</td></tr>
+<tr>
+<td title='_1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC353_355_1912DirSalNotFixed<br/>
+<a href="#Output-111702054" onClick='toggleBox("Output-111702054", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-111702054" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-111702054">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC353_355_1912DirSalNotFixed.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace111702054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace111702054'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC353_355_1912DirSalNotFixed.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>_1912.TC353_355_1912DirSalNotFixed@15cafec7</td></tr>
+<tr>
+<td title='_1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC350_352_1912DirSalFiveMonth<br/>
+<a href="#Output-999864329" onClick='toggleBox("Output-999864329", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-999864329" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-999864329">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC350_352_1912DirSalFiveMonth.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace999864329", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace999864329'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC350_352_1912DirSalFiveMonth.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC350_352_1912DirSalFiveMonth@7c2b6087</td></tr>
+<tr>
+<td title='_1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC383_385_1912JoiAndLeaveSameYr<br/>
+<a href="#Output-360233196" onClick='toggleBox("Output-360233196", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-360233196" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-360233196">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC383_385_1912JoiAndLeaveSameYr.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace360233196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace360233196'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC383_385_1912JoiAndLeaveSameYr.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>_1912.TC383_385_1912JoiAndLeaveSameYr@354fc8f0</td></tr>
+<tr>
+<td title='_1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC371_373_1912DirMidYrJoin<br/>
+<a href="#Output-824177287" onClick='toggleBox("Output-824177287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-824177287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-824177287">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC371_373_1912DirMidYrJoin.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace824177287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace824177287'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC371_373_1912DirMidYrJoin.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC371_373_1912DirMidYrJoin@45c8d09f</td></tr>
+<tr>
+<td title='_1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC347_349_1912TC01<br/>
+<a href="#Output-639492613" onClick='toggleBox("Output-639492613", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-639492613" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-639492613">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC347_349_1912TC01.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace639492613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace639492613'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC347_349_1912TC01.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC347_349_1912TC01@58ebfd03</td></tr>
+<tr>
+<td title='_1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC368_370_1912DirSalinOneMonth<br/>
+<a href="#Output-2121745388" onClick='toggleBox("Output-2121745388", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2121745388" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2121745388">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC368_370_1912DirSalinOneMonth.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2121745388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2121745388'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC368_370_1912DirSalinOneMonth.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>_1912.TC368_370_1912DirSalinOneMonth@37b70343</td></tr>
+<tr>
+<td title='_1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC362_364_1912FirstAndLastMonthSalary<br/>
+<a href="#Output-1583001542" onClick='toggleBox("Output-1583001542", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1583001542" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1583001542">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC362_364_1912FirstAndLastMonthSalary.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1583001542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1583001542'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC362_364_1912FirstAndLastMonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC362_364_1912FirstAndLastMonthSalary.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC362_364_1912FirstAndLastMonthSalary@24b6b8f6</td></tr>
+<tr>
+<td title='_1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC383_385_1912JoiAndLeaveSameYr<br/>
+<a href="#Output-1951783627" onClick='toggleBox("Output-1951783627", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1951783627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1951783627">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC383_385_1912JoiAndLeaveSameYr.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1951783627", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1951783627'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC383_385_1912JoiAndLeaveSameYr.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC383_385_1912JoiAndLeaveSameYr@354fc8f0</td></tr>
+<tr>
+<td title='_1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC350_352_1912DirSalFiveMonth<br/>
+<a href="#Output-535910992" onClick='toggleBox("Output-535910992", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-535910992" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-535910992">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC350_352_1912DirSalFiveMonth.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace535910992", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace535910992'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC350_352_1912DirSalFiveMonth.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC350_352_1912DirSalFiveMonth@7c2b6087</td></tr>
+<tr>
+<td title='_1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC347_349_1912TC01<br/>
+<a href="#Output-1683063408" onClick='toggleBox("Output-1683063408", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1683063408" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1683063408">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC347_349_1912TC01.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1683063408", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1683063408'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC347_349_1912TC01.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC347_349_1912TC01@58ebfd03</td></tr>
+<tr>
+<td title='_1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC389_391_1912MiddleFPSWithLowSalary<br/>
+<a href="#Output-1306429814" onClick='toggleBox("Output-1306429814", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1306429814" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1306429814">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC389_391_1912MiddleFPSWithLowSalary.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1306429814", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1306429814'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC389_391_1912MiddleFPSWithLowSalary.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>40</td>
+<td>_1912.TC389_391_1912MiddleFPSWithLowSalary@60d1a32f</td></tr>
+<tr>
+<td title='_1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC389_391_1912MiddleFPSWithLowSalary<br/>
+<a href="#Output-428089645" onClick='toggleBox("Output-428089645", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-428089645" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-428089645">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC389_391_1912MiddleFPSWithLowSalary.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace428089645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace428089645'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC389_391_1912MiddleFPSWithLowSalary.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>42</td>
+<td>_1912.TC389_391_1912MiddleFPSWithLowSalary@60d1a32f</td></tr>
+<tr>
+<td title='_1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC392_394_1912WeeklyHighSalary<br/>
+<a href="#Output-1947378744" onClick='toggleBox("Output-1947378744", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1947378744" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1947378744">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC392_394_1912WeeklyHighSalary.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1947378744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1947378744'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC392_394_1912WeeklyHighSalary.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC392_394_1912WeeklyHighSalary@5974109</td></tr>
+<tr>
+<td title='_1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC353_355_1912DirSalNotFixed<br/>
+<a href="#Output-1266068058" onClick='toggleBox("Output-1266068058", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1266068058" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1266068058">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC353_355_1912DirSalNotFixed.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1266068058", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1266068058'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC353_355_1912DirSalNotFixed.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC353_355_1912DirSalNotFixed@15cafec7</td></tr>
+<tr>
+<td title='_1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC353_355_1912DirSalNotFixed<br/>
+<a href="#Output-1245124890" onClick='toggleBox("Output-1245124890", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1245124890" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1245124890">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC353_355_1912DirSalNotFixed.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1245124890", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1245124890'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC353_355_1912DirSalNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC353_355_1912DirSalNotFixed.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC353_355_1912DirSalNotFixed@15cafec7</td></tr>
+<tr>
+<td title='_1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC371_373_1912DirMidYrJoin<br/>
+<a href="#Output-1637411253" onClick='toggleBox("Output-1637411253", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1637411253" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1637411253">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC371_373_1912DirMidYrJoin.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1637411253", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1637411253'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC371_373_1912DirMidYrJoin.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>_1912.TC371_373_1912DirMidYrJoin@45c8d09f</td></tr>
+<tr>
+<td title='_1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC359_361_1912DirFirst2MonthSalaryandlast<br/>
+<a href="#Output-871065432" onClick='toggleBox("Output-871065432", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-871065432" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-871065432">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC359_361_1912DirFirst2MonthSalaryandlast.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace871065432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace871065432'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC359_361_1912DirFirst2MonthSalaryandlast.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC359_361_1912DirFirst2MonthSalaryandlast@40c80397</td></tr>
+<tr>
+<td title='_1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC386_388_1912MiddleFPSWithHighSalary<br/>
+<a href="#Output-1779615656" onClick='toggleBox("Output-1779615656", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1779615656" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1779615656">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC386_388_1912MiddleFPSWithHighSalary.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1779615656", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1779615656'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC386_388_1912MiddleFPSWithHighSalary.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC386_388_1912MiddleFPSWithHighSalary@129b4fe2</td></tr>
+<tr>
+<td title='_1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC365_367_1912DirPaymentNotFixed<br/>
+<a href="#Output-942217109" onClick='toggleBox("Output-942217109", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-942217109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-942217109">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC365_367_1912DirPaymentNotFixed.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace942217109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace942217109'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC365_367_1912DirPaymentNotFixed.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC365_367_1912DirPaymentNotFixed@7b324585</td></tr>
+<tr>
+<td title='_1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC356_358_1912Dir3MonthSalary<br/>
+<a href="#Output-752148842" onClick='toggleBox("Output-752148842", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-752148842" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-752148842">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC356_358_1912Dir3MonthSalary.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace752148842", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace752148842'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC356_358_1912Dir3MonthSalary.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>_1912.TC356_358_1912Dir3MonthSalary@18230356</td></tr>
+<tr>
+<td title='_1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC368_370_1912DirSalinOneMonth<br/>
+<a href="#Output-1707458318" onClick='toggleBox("Output-1707458318", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1707458318" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1707458318">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC368_370_1912DirSalinOneMonth.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1707458318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1707458318'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC368_370_1912DirSalinOneMonth.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC368_370_1912DirSalinOneMonth@37b70343</td></tr>
+<tr>
+<td title='_1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4</b><br>Test class: _1912.TC377_382_1912TwoDir<br/>
+<a href="#Output-177267393" onClick='toggleBox("Output-177267393", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-177267393" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-177267393">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4(TC377_382_1912TwoDir.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace177267393", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace177267393'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4(TC377_382_1912TwoDir.java:568)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC377_382_1912TwoDir@6d304f9d</td></tr>
+<tr>
+<td title='_1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC356_358_1912Dir3MonthSalary<br/>
+<a href="#Output-1470959992" onClick='toggleBox("Output-1470959992", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1470959992" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1470959992">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC356_358_1912Dir3MonthSalary.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1470959992", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1470959992'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC356_358_1912Dir3MonthSalary.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>42</td>
+<td>_1912.TC356_358_1912Dir3MonthSalary@18230356</td></tr>
+<tr>
+<td title='_1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC392_394_1912WeeklyHighSalary<br/>
+<a href="#Output-565077371" onClick='toggleBox("Output-565077371", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-565077371" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-565077371">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC392_394_1912WeeklyHighSalary.java:426)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace565077371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace565077371'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC392_394_1912WeeklyHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC392_394_1912WeeklyHighSalary.java:426)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>34</td>
+<td>_1912.TC392_394_1912WeeklyHighSalary@5974109</td></tr>
+<tr>
+<td title='_1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC359_361_1912DirFirst2MonthSalaryandlast<br/>
+<a href="#Output-944826636" onClick='toggleBox("Output-944826636", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-944826636" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-944826636">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC359_361_1912DirFirst2MonthSalaryandlast.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace944826636", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace944826636'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC359_361_1912DirFirst2MonthSalaryandlast.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC359_361_1912DirFirst2MonthSalaryandlast@40c80397</td></tr>
+<tr>
+<td title='_1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC374_376_1912DirLeaveDuringTxYr<br/>
+<a href="#Output-1911008699" onClick='toggleBox("Output-1911008699", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1911008699" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1911008699">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC374_376_1912DirLeaveDuringTxYr.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1911008699", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1911008699'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC374_376_1912DirLeaveDuringTxYr.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC374_376_1912DirLeaveDuringTxYr@75c9e76b</td></tr>
+<tr>
+<td title='_1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC374_376_1912DirLeaveDuringTxYr<br/>
+<a href="#Output-990656849" onClick='toggleBox("Output-990656849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-990656849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-990656849">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC374_376_1912DirLeaveDuringTxYr.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace990656849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990656849'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC374_376_1912DirLeaveDuringTxYr.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC374_376_1912DirLeaveDuringTxYr@75c9e76b</td></tr>
+<tr>
+<td title='_1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC374_376_1912DirLeaveDuringTxYr<br/>
+<a href="#Output-1045718836" onClick='toggleBox("Output-1045718836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1045718836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1045718836">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC374_376_1912DirLeaveDuringTxYr.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1045718836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1045718836'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC374_376_1912DirLeaveDuringTxYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC374_376_1912DirLeaveDuringTxYr.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>_1912.TC374_376_1912DirLeaveDuringTxYr@75c9e76b</td></tr>
+<tr>
+<td title='_1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC347_349_1912TC01<br/>
+<a href="#Output-65168514" onClick='toggleBox("Output-65168514", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-65168514" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-65168514">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC347_349_1912TC01.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace65168514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace65168514'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC347_349_1912TC01.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC347_349_1912TC01.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>_1912.TC347_349_1912TC01@58ebfd03</td></tr>
+<tr>
+<td title='_1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC365_367_1912DirPaymentNotFixed<br/>
+<a href="#Output-1526730726" onClick='toggleBox("Output-1526730726", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1526730726" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1526730726">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC365_367_1912DirPaymentNotFixed.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1526730726", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1526730726'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC365_367_1912DirPaymentNotFixed.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC365_367_1912DirPaymentNotFixed.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC365_367_1912DirPaymentNotFixed@7b324585</td></tr>
+<tr>
+<td title='_1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC350_352_1912DirSalFiveMonth<br/>
+<a href="#Output-696031899" onClick='toggleBox("Output-696031899", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-696031899" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-696031899">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC350_352_1912DirSalFiveMonth.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696031899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696031899'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC350_352_1912DirSalFiveMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC350_352_1912DirSalFiveMonth.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC350_352_1912DirSalFiveMonth@7c2b6087</td></tr>
+<tr>
+<td title='_1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC359_361_1912DirFirst2MonthSalaryandlast<br/>
+<a href="#Output-692763171" onClick='toggleBox("Output-692763171", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-692763171" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-692763171">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC359_361_1912DirFirst2MonthSalaryandlast.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace692763171", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace692763171'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC359_361_1912DirFirst2MonthSalaryandlast.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC359_361_1912DirFirst2MonthSalaryandlast.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>_1912.TC359_361_1912DirFirst2MonthSalaryandlast@40c80397</td></tr>
+<tr>
+<td title='_1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc6()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc6</b><br>Test class: _1912.TC377_382_1912TwoDir<br/>
+<a href="#Output-1487365582" onClick='toggleBox("Output-1487365582", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1487365582" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1487365582">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc6(TC377_382_1912TwoDir.java:873)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1487365582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1487365582'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc6(TC377_382_1912TwoDir.java:873)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC377_382_1912TwoDir@6d304f9d</td></tr>
+<tr>
+<td title='_1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC368_370_1912DirSalinOneMonth<br/>
+<a href="#Output-132048949" onClick='toggleBox("Output-132048949", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-132048949" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-132048949">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC368_370_1912DirSalinOneMonth.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace132048949", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace132048949'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC368_370_1912DirSalinOneMonth.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC368_370_1912DirSalinOneMonth.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC368_370_1912DirSalinOneMonth@37b70343</td></tr>
+<tr>
+<td title='_1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC371_373_1912DirMidYrJoin<br/>
+<a href="#Output-1563699545" onClick='toggleBox("Output-1563699545", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1563699545" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1563699545">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC371_373_1912DirMidYrJoin.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1563699545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1563699545'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC371_373_1912DirMidYrJoin.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC371_373_1912DirMidYrJoin.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC371_373_1912DirMidYrJoin@45c8d09f</td></tr>
+<tr>
+<td title='_1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc5()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc5</b><br>Test class: _1912.TC377_382_1912TwoDir<br/>
+<a href="#Output-2100048989" onClick='toggleBox("Output-2100048989", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2100048989" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2100048989">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc5(TC377_382_1912TwoDir.java:723)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2100048989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2100048989'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc5(TC377_382_1912TwoDir.java:723)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>39</td>
+<td>_1912.TC377_382_1912TwoDir@6d304f9d</td></tr>
+<tr>
+<td title='_1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC386_388_1912MiddleFPSWithHighSalary<br/>
+<a href="#Output-1639759054" onClick='toggleBox("Output-1639759054", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1639759054" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1639759054">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC386_388_1912MiddleFPSWithHighSalary.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1639759054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1639759054'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC386_388_1912MiddleFPSWithHighSalary.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>37</td>
+<td>_1912.TC386_388_1912MiddleFPSWithHighSalary@129b4fe2</td></tr>
+<tr>
+<td title='_1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1912.TC386_388_1912MiddleFPSWithHighSalary<br/>
+<a href="#Output-1052658892" onClick='toggleBox("Output-1052658892", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1052658892" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1052658892">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC386_388_1912MiddleFPSWithHighSalary.java:268)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1052658892", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1052658892'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC386_388_1912MiddleFPSWithHighSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC386_388_1912MiddleFPSWithHighSalary.java:268)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>35</td>
+<td>_1912.TC386_388_1912MiddleFPSWithHighSalary@129b4fe2</td></tr>
+<tr>
+<td title='_1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC389_391_1912MiddleFPSWithLowSalary<br/>
+<a href="#Output-1679022055" onClick='toggleBox("Output-1679022055", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1679022055" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1679022055">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC389_391_1912MiddleFPSWithLowSalary.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1679022055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1679022055'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC389_391_1912MiddleFPSWithLowSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC389_391_1912MiddleFPSWithLowSalary.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>_1912.TC389_391_1912MiddleFPSWithLowSalary@60d1a32f</td></tr>
+<tr>
+<td title='_1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC377_382_1912TwoDir<br/>
+<a href="#Output-167670282" onClick='toggleBox("Output-167670282", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-167670282" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-167670282">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC377_382_1912TwoDir.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace167670282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace167670282'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC377_382_1912TwoDir.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC377_382_1912TwoDir.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC377_382_1912TwoDir@6d304f9d</td></tr>
+<tr>
+<td title='_1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3</b><br>Test class: _1912.TC356_358_1912Dir3MonthSalary<br/>
+<a href="#Output-99195804" onClick='toggleBox("Output-99195804", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-99195804" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-99195804">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC356_358_1912Dir3MonthSalary.java:418)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace99195804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace99195804'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC356_358_1912Dir3MonthSalary.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3(TC356_358_1912Dir3MonthSalary.java:418)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>36</td>
+<td>_1912.TC356_358_1912Dir3MonthSalary@18230356</td></tr>
+<tr>
+<td title='_1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1912.TC383_385_1912JoiAndLeaveSameYr<br/>
+<a href="#Output-449240381" onClick='toggleBox("Output-449240381", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-449240381" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-449240381">
+Search Agent Name =VikasNew<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC383_385_1912JoiAndLeaveSameYr.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace449240381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace449240381'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:172)
+	at _1912.TC383_385_1912JoiAndLeaveSameYr.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC383_385_1912JoiAndLeaveSameYr.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>39</td>
+<td>_1912.TC383_385_1912JoiAndLeaveSameYr@354fc8f0</td></tr>
+</table><p>
+</body>
+</html>

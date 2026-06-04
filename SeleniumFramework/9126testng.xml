@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="_9126Test.TC705_Department_Filter" />
+			<class name="_9126Test.TC706_Frequency_Filter" />
+			<class name="_9126Test.TC707_DepartmentalAnalysis_Basic" />
+			<class name="_9126Test.TC708_DepartmentalAnalysis_FinancialYear" />
+			<class name="_9126Test.TC709_DepartmentalAnalysis_MoreThan10" />
+
+			<class name="_9126Test.TC710_DepartmentalAnalysis_EmailPopUp" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

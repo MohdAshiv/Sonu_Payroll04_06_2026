@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SmallerERSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SmallerERTest(failed)">
+    <classes>
+      <class name="SmallerEmployertest.TC137_SER_PrevEmpEligible">
+        <methods>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC137_SER_PrevEmpEligible -->
+      <class name="SmallerEmployertest.T146TC11_SER_MidYrReportsSumarry_EPS">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.T146TC11_SER_MidYrReportsSumarry_EPS -->
+      <class name="SmallerEmployertest.TC66NotQualifiedforSmallerEmployer_DefaultProfile">
+        <methods>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC66NotQualifiedforSmallerEmployer_DefaultProfile -->
+      <class name="SmallerEmployertest.TC64QualifiedforSmallerEmployer_DefaultProfile">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC64QualifiedforSmallerEmployer_DefaultProfile -->
+      <class name="SmallerEmployertest.TC65QualifiedforSmallerEmployer2022_DefaultProfile">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC65QualifiedforSmallerEmployer2022_DefaultProfile -->
+      <class name="SmallerEmployertest.TC67NotQualifiedforSmallerEmployerbutSuccess_DefaultProfile">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC67NotQualifiedforSmallerEmployerbutSuccess_DefaultProfile -->
+      <class name="SmallerEmployertest.TC63SmallerEmployer_DefaultProfile">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC63SmallerEmployer_DefaultProfile -->
+      <class name="SmallerEmployertest.TC136_SER_EnablewhenPrevEmp">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC136_SER_EnablewhenPrevEmp -->
+      <class name="SmallerEmployertest.T142TC08_SER_ReportsSumarry_EPS">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.T142TC08_SER_ReportsSumarry_EPS -->
+      <class name="SmallerEmployertest.TC141_SER_ReportsSumarry">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickselectYestosmallERClickselectNotosmallERClickc"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- SmallerEmployertest.TC141_SER_ReportsSumarry -->
+    </classes>
+  </test> <!-- SmallerERTest(failed) -->
+</suite> <!-- Failed suite [SmallerERSuite] -->

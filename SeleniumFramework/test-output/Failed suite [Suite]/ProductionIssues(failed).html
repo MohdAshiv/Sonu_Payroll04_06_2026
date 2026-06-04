@@ -1,0 +1,1715 @@
+<html>
+<head>
+<title>TestNG:  ProductionIssues(failed)</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ProductionIssues(failed)</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 11 13:52:23 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>4411 seconds (4411380 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ProductionIssueTest.TC029_14017_RTReSubmissionReason.TC01validateResonToSumbitHMRCFutureDate()'><b>TC01validateResonToSumbitHMRCFutureDate</b><br>Test class: ProductionIssueTest.TC029_14017_RTReSubmissionReason<br/>
+<a href="#Output-1639958975" onClick='toggleBox("Output-1639958975", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1639958975" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1639958975">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - BOOJLwmxn<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - BOOJLwmxn<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+ClickContactDetails<br/>
+enterFirstName<br/>
+enterEmail<br/>
+clickAddContact<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+enterEmailAddress<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 25000<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+clickSubmitHmrc<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:11,&quot;value&quot;:&quot;Element is not currently visible and may not be manipulated&quot;}
+  (Session info: chrome=129.0.6668.101)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4dc78eda0da56a3dfc3e536a49dcf3f8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+	at pages.FilingManagement.selectReson(FilingManagement.java:494)
+	at ProductionIssueTest.TC029_14017_RTReSubmissionReason.TC01validateResonToSumbitHMRCFutureDate(TC029_14017_RTReSubmissionReason.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1639958975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1639958975'><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:11,&quot;value&quot;:&quot;Element is not currently visible and may not be manipulated&quot;}
+  (Session info: chrome=129.0.6668.101)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4dc78eda0da56a3dfc3e536a49dcf3f8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+	at pages.FilingManagement.selectReson(FilingManagement.java:494)
+	at ProductionIssueTest.TC029_14017_RTReSubmissionReason.TC01validateResonToSumbitHMRCFutureDate(TC029_14017_RTReSubmissionReason.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>704</td>
+<td>ProductionIssueTest.TC029_14017_RTReSubmissionReason@34f22f9d</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC01validateP11DClickableBuisnessView()'><b>TC01validateP11DClickableBuisnessView</b><br>Test class: ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality<br/>
+<a href="#Output-464994546" onClick='toggleBox("Output-464994546", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-464994546" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-464994546">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - P11d<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+clickP11DEmployeeBtn<br/>
+verifyP11DemployeeIsClickable<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Edit Employee   MAnish Employee] but found [Edit Employee  ]
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC01validateP11DClickableBuisnessView(TC022_13430_P11D_ClickableFunctionality.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace464994546", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace464994546'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Edit Employee   MAnish Employee] but found [Edit Employee  ]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC01validateP11DClickableBuisnessView(TC022_13430_P11D_ClickableFunctionality.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>58</td>
+<td>ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality@344f4dea</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC02validateP11DClickableEmployerView()'><b>TC02validateP11DClickableEmployerView</b><br>Test class: ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality<br/>
+<a href="#Output-927557408" onClick='toggleBox("Output-927557408", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-927557408" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-927557408">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - P11d<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+click Employer View<br/>
+Click Report Section<br/>
+SelectTaxYear<br/>
+clickP11DEmployeeBtn<br/>
+verifyP11DemployeeIsClickable<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Edit Employee   MAnish Employee] but found [Edit Employee  ]
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC02validateP11DClickableEmployerView(TC022_13430_P11D_ClickableFunctionality.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace927557408", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace927557408'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Edit Employee   MAnish Employee] but found [Edit Employee  ]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC02validateP11DClickableEmployerView(TC022_13430_P11D_ClickableFunctionality.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>67</td>
+<td>ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality@344f4dea</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC010_12948_AddNote.TC09validateToEmailTaxPayementReportAtEmployer()'><b>TC09validateToEmailTaxPayementReportAtEmployer</b><br>Test class: ProductionIssueTest.TC010_12948_AddNote<br/>
+<a href="#Output-2061552777" onClick='toggleBox("Output-2061552777", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2061552777" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2061552777">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - QnmKlFTjO<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - QnmKlFTjO<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+enterEmailAddress<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+clickYesOffPayWorker<br/>
+enterNICategory<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=129.0.6668.101)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52802}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c1e03056d681ff92569cd1fb17c89769
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at pages.EmployeeEditAndRateChanges.enterTaxCode(EmployeeEditAndRateChanges.java:1487)
+	at ProductionIssueTest.TC010_12948_AddNote.TC09validateToEmailTaxPayementReportAtEmployer(TC010_12948_AddNote.java:498)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2061552777", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2061552777'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=129.0.6668.101)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52802}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c1e03056d681ff92569cd1fb17c89769
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
+	at pages.EmployeeEditAndRateChanges.enterTaxCode(EmployeeEditAndRateChanges.java:1487)
+	at ProductionIssueTest.TC010_12948_AddNote.TC09validateToEmailTaxPayementReportAtEmployer(TC010_12948_AddNote.java:498)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>280</td>
+<td>ProductionIssueTest.TC010_12948_AddNote@53de625d</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI.TC01validatePayrollFillingShowDouble()'><b>TC01validatePayrollFillingShowDouble</b><br>Test class: ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI<br/>
+<a href="#Output-1633770314" onClick='toggleBox("Output-1633770314", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1633770314" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1633770314">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - fJEOeuIJs<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - fJEOeuIJs<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+ClickContactDetails<br/>
+enterFirstName<br/>
+enterEmail<br/>
+clickAddContact<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+enterEmailAddress<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+clickYesOffPayWorker<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 20000<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+verifyFillingManagmentGross<br/>
+clickPayroll<br/>
+clickRunPayroll<br/>
+clickubmitRtiBtn<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ctl00_ctl00_ParentContent_cPHFilter_txtCompanyName&apos;]&quot;}
+  (Session info: chrome=129.0.6668.101)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b1500e96f4810a029cfeacf3da1d0bdc
+*** Element info: {Using=xpath, value=//*[@id=&apos;ctl00_ctl00_ParentContent_cPHFilter_txtCompanyName&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at pages.agentpage.enterCompanyName(agentpage.java:430)
+	at ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI.TC01validatePayrollFillingShowDouble(TC025_13265_AgentlevelSubmitRTI.java:141)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1633770314", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1633770314'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ctl00_ctl00_ParentContent_cPHFilter_txtCompanyName&apos;]&quot;}
+  (Session info: chrome=129.0.6668.101)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b1500e96f4810a029cfeacf3da1d0bdc
+*** Element info: {Using=xpath, value=//*[@id=&apos;ctl00_ctl00_ParentContent_cPHFilter_txtCompanyName&apos;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at pages.agentpage.enterCompanyName(agentpage.java:430)
+	at ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI.TC01validatePayrollFillingShowDouble(TC025_13265_AgentlevelSubmitRTI.java:141)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>508</td>
+<td>ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI@3a5ecce3</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear.TC04validateTaxYearP11dEmployerClientSpecificEmployer()'><b>TC04validateTaxYearP11dEmployerClientSpecificEmployer</b><br>Test class: ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear<br/>
+<a href="#Output-2082115343" onClick='toggleBox("Output-2082115343", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2082115343" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2082115343">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+clickClientSpecificReport<br/>
+selectReportType<br/>
+selectCompany<br/>
+verifyP11dNiRate<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear.TC04validateTaxYearP11dEmployerClientSpecificEmployer(TC023_13519And13531_P11D_NiRatePdfAndTaxYear.java:164)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2082115343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2082115343'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear.TC04validateTaxYearP11dEmployerClientSpecificEmployer(TC023_13519And13531_P11D_NiRatePdfAndTaxYear.java:164)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>58</td>
+<td>ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear@388526fb</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC05validateBuisnessLoginP11DClickableEmployeeView()'><b>TC05validateBuisnessLoginP11DClickableEmployeeView</b><br>Test class: ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality<br/>
+<a href="#Output-1002762002" onClick='toggleBox("Output-1002762002", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1002762002" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1002762002">
+lunch Url Suss<br/>
+EnterUsername = 333<br/>
+Enter_Enterpassword = 298870<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_gridDisplayRecords&apos;]/tbody/tr[2]/td[1]/a
+	at _2154EmployeeOpeningBalance_Page.EmployerView.clickEmployee(EmployerView.java:121)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC05validateBuisnessLoginP11DClickableEmployeeView(TC022_13430_P11D_ClickableFunctionality.java:257)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1002762002", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1002762002'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_gridDisplayRecords&apos;]/tbody/tr[2]/td[1]/a
+	at org.testng.Assert.fail(Assert.java:99)
+	at _2154EmployeeOpeningBalance_Page.EmployerView.clickEmployee(EmployerView.java:121)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC05validateBuisnessLoginP11DClickableEmployeeView(TC022_13430_P11D_ClickableFunctionality.java:257)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>15</td>
+<td>ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality@344f4dea</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC035_13991_BasicPayOnPayslip.TC01validateBasicPayOnPayslip()'><b>TC01validateBasicPayOnPayslip</b><br>Test class: ProductionIssueTest.TC035_13991_BasicPayOnPayslip<br/>
+<a href="#Output-871461513" onClick='toggleBox("Output-871461513", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-871461513" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-871461513">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - KEzWgbJPQ<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - KEzWgbJPQ<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+ClickContactDetails<br/>
+enterFirstName<br/>
+enterEmail<br/>
+clickAddContact<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+enterEmailAddress<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+clickYesOffPayWorker<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 20000<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickEmployeeName<br/>
+clickViewAdditionDeduction<br/>
+Select Frequency =Recurring<br/>
+Select From Date =15/06/2024<br/>
+Select the Acount Code =6000 - Gross Wages<br/>
+Enter Description =Bonus<br/>
+Enter Amount =500<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: E:\LatestSeleniumFramework\Sonu_Payroll_Selenium_New\SeleniumFramework\PdfFile\Employee-Payslip-Mr. Aniket Singh-31_08_2024.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:354)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:271)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:221)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at ProductionIssuePage.VerifyResult.verifyPayslip(VerifyResult.java:1245)
+	at ProductionIssueTest.TC035_13991_BasicPayOnPayslip.TC01validateBasicPayOnPayslip(TC035_13991_BasicPayOnPayslip.java:135)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace871461513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace871461513'><pre>java.io.FileNotFoundException: E:\LatestSeleniumFramework\Sonu_Payroll_Selenium_New\SeleniumFramework\PdfFile\Employee-Payslip-Mr. Aniket Singh-31_08_2024.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:354)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:271)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:221)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at ProductionIssuePage.VerifyResult.verifyPayslip(VerifyResult.java:1245)
+	at ProductionIssueTest.TC035_13991_BasicPayOnPayslip.TC01validateBasicPayOnPayslip(TC035_13991_BasicPayOnPayslip.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>391</td>
+<td>ProductionIssueTest.TC035_13991_BasicPayOnPayslip@24111ef1</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC036_13750_InvalidLeaveCalculating.TC01validateLeavesOnPayslip()'><b>TC01validateLeavesOnPayslip</b><br>Test class: ProductionIssueTest.TC036_13750_InvalidLeaveCalculating<br/>
+<a href="#Output-496556704" onClick='toggleBox("Output-496556704", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-496556704" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-496556704">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - btOrfJkTQ<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - btOrfJkTQ<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+clickDisplayLeaveOnPayslip<br/>
+Click_ClickSave<br/>
+clickGeneralTerms<br/>
+clickCommanContractualTerms<br/>
+enterLeaveStartDate<br/>
+enterleaveDaysComapny<br/>
+enterHolidayPayRate<br/>
+enterMaxCarryOver<br/>
+enterWeeklyWorkingHrs<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+enterUnit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+enterUnit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+enterUnit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+enterUnit<br/>
+Click Save Btn<br/>
+clickLeaveManagement<br/>
+clickApprovedLeaves<br/>
+clickAddLeave<br/>
+selectLeaveType<br/>
+clickDaysRadioBtns<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+clickSaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+clickOnRegenerateBtn<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: E:\LatestSeleniumFramework\Sonu_Payroll_Selenium_New\SeleniumFramework\PdfFile\Employee-Payslip-Mr. Employee A-31_01_2024.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:354)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:271)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:221)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at ProductionIssuePage.VerifyResult.verifyLeaveOnPayslip(VerifyResult.java:1271)
+	at ProductionIssueTest.TC036_13750_InvalidLeaveCalculating.TC01validateLeavesOnPayslip(TC036_13750_InvalidLeaveCalculating.java:177)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace496556704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace496556704'><pre>java.io.FileNotFoundException: E:\LatestSeleniumFramework\Sonu_Payroll_Selenium_New\SeleniumFramework\PdfFile\Employee-Payslip-Mr. Employee A-31_01_2024.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:354)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:271)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:221)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at ProductionIssuePage.VerifyResult.verifyLeaveOnPayslip(VerifyResult.java:1271)
+	at ProductionIssueTest.TC036_13750_InvalidLeaveCalculating.TC01validateLeavesOnPayslip(TC036_13750_InvalidLeaveCalculating.java:177)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>464</td>
+<td>ProductionIssueTest.TC036_13750_InvalidLeaveCalculating@16ce702d</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC04validateBuisnessLoginViewP11DClickableEmployerView()'><b>TC04validateBuisnessLoginViewP11DClickableEmployerView</b><br>Test class: ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality<br/>
+<a href="#Output-1157624710" onClick='toggleBox("Output-1157624710", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1157624710" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1157624710">
+lunch Url Suss<br/>
+EnterUsername = 333<br/>
+Enter_Enterpassword = 298870<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.linkText: Reports
+	at _2154EmployeeOpeningBalance_Page.EmployerView.Click__Reports_(EmployerView.java:62)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC04validateBuisnessLoginViewP11DClickableEmployerView(TC022_13430_P11D_ClickableFunctionality.java:203)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1157624710", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1157624710'><pre>java.lang.AssertionError: Unable to locate object: By.linkText: Reports
+	at org.testng.Assert.fail(Assert.java:99)
+	at _2154EmployeeOpeningBalance_Page.EmployerView.Click__Reports_(EmployerView.java:62)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC04validateBuisnessLoginViewP11DClickableEmployerView(TC022_13430_P11D_ClickableFunctionality.java:203)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>12</td>
+<td>ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality@344f4dea</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC037_13916_19921AdditionalFPS_SubmissionDate.TC02validateSubmissionHistoryLog()'><b>TC02validateSubmissionHistoryLog</b><br>Test class: ProductionIssueTest.TC037_13916_19921AdditionalFPS_SubmissionDate<br/>
+<a href="#Output-276777344" onClick='toggleBox("Output-276777344", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-276777344" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-276777344">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - null<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:247)
+	at ProductionIssueTest.TC037_13916_19921AdditionalFPS_SubmissionDate.TC02validateSubmissionHistoryLog(TC037_13916_19921AdditionalFPS_SubmissionDate.java:287)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace276777344", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace276777344'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_hrefCompany&apos;]
+	at org.testng.Assert.fail(Assert.java:99)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:247)
+	at ProductionIssueTest.TC037_13916_19921AdditionalFPS_SubmissionDate.TC02validateSubmissionHistoryLog(TC037_13916_19921AdditionalFPS_SubmissionDate.java:287)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>55</td>
+<td>ProductionIssueTest.TC037_13916_19921AdditionalFPS_SubmissionDate@1f010bf0</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC03validateP11DClickableEmployeeView()'><b>TC03validateP11DClickableEmployeeView</b><br>Test class: ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality<br/>
+<a href="#Output-1623670360" onClick='toggleBox("Output-1623670360", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1623670360" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1623670360">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - P11d<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+Click Report Section<br/>
+SelectTaxYear<br/>
+clickP11DEmployeeBtn<br/>
+verifyP11DemployeeIsClickable<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Edit Employee   MAnish Employee] but found [Edit Employee  ]
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC03validateP11DClickableEmployeeView(TC022_13430_P11D_ClickableFunctionality.java:164)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1623670360", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1623670360'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [Edit Employee   MAnish Employee] but found [Edit Employee  ]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality.TC03validateP11DClickableEmployeeView(TC022_13430_P11D_ClickableFunctionality.java:164)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>85</td>
+<td>ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality@344f4dea</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC010_12948_AddNote.TC03validateAddNoteFromPdf()'><b>TC03validateAddNoteFromPdf</b><br>Test class: ProductionIssueTest.TC010_12948_AddNote<br/>
+<a href="#Output-639482242" onClick='toggleBox("Output-639482242", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-639482242" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-639482242">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - BOOJLwmxn<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Tax Payment <br/>
+verifyOffPayWorkejrNotePdf<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [** NIC for off payroll workers is not included in Employment Allowances.] but found []
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC010_12948_AddNote.TC03validateAddNoteFromPdf(TC010_12948_AddNote.java:190)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace639482242", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace639482242'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [** NIC for off payroll workers is not included in Employment Allowances.] but found []
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at ProductionIssuePage.VerifyResult.assertAll(VerifyResult.java:1318)
+	at ProductionIssueTest.TC010_12948_AddNote.TC03validateAddNoteFromPdf(TC010_12948_AddNote.java:190)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>57</td>
+<td>ProductionIssueTest.TC010_12948_AddNote@53de625d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ProductionIssueTest.TC032_14123_PensionWithZeroFigure.TC01validateZeroPensionFigure()'><b>TC01validateZeroPensionFigure</b><br>Test class: ProductionIssueTest.TC032_14123_PensionWithZeroFigure<br/>
+<a href="#Output-1617550648" onClick='toggleBox("Output-1617550648", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1617550648" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1617550648">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - QjihHfRyD<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - QjihHfRyD<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+clickYesPension<br/>
+enterPensionStagingDate<br/>
+enterSignatoryTitle<br/>
+enterSignatoryName<br/>
+enterEmailAddress<br/>
+enterPhoneNumber<br/>
+enterPensionId<br/>
+Click PayrollDashBoard<br/>
+clickPensionDashBoar<br/>
+enterPensionSchemeName<br/>
+selectPensionProvider<br/>
+selectCalculationBasis<br/>
+selectCalculationMethod<br/>
+eeContribution<br/>
+enterErContribution<br/>
+enterSubgroupName<br/>
+enterSubgroupId<br/>
+enterSubGroupId<br/>
+clickSaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000<br/>
+Click SaveBtn<br/>
+click clickAutoEnrolment<br/>
+selectWorkerType<br/>
+selectScheme<br/>
+enterEnrollmentDate<br/>
+eeChoosenContribution<br/>
+erChoosenContribution<br/>
+eeVoluntaryContribution<br/>
+eRVoluntaryContribution<br/>
+clickAutoEnrollmentSaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000<br/>
+Click SaveBtn<br/>
+click clickAutoEnrolment<br/>
+selectWorkerType<br/>
+selectScheme<br/>
+enterEnrollmentDate<br/>
+eeChoosenContribution<br/>
+erChoosenContribution<br/>
+eeVoluntaryContribution<br/>
+eRVoluntaryContribution<br/>
+clickAutoEnrollmentSaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click clickAutoEnrolment<br/>
+selectWorkerType<br/>
+selectScheme<br/>
+enterEnrollmentDate<br/>
+eeChoosenContribution<br/>
+erChoosenContribution<br/>
+eeVoluntaryContribution<br/>
+eRVoluntaryContribution<br/>
+clickAutoEnrollmentSaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click clickAutoEnrolment<br/>
+selectWorkerType<br/>
+selectScheme<br/>
+enterEnrollmentDate<br/>
+eeChoosenContribution<br/>
+erChoosenContribution<br/>
+eeVoluntaryContribution<br/>
+eRVoluntaryContribution<br/>
+clickAutoEnrollmentSaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectPension<br/>
+clickOnZeroPension<br/>
+verifyZeroPensionList<br/>
+</div>
+</td>
+<td></td>
+<td>668</td>
+<td>ProductionIssueTest.TC032_14123_PensionWithZeroFigure@4f9a2c08</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC011_13080_DirectorPayroll.TC01validateNiFiguresAtRunPayrollPage()'><b>TC01validateNiFiguresAtRunPayrollPage</b><br>Test class: ProductionIssueTest.TC011_13080_DirectorPayroll<br/>
+<a href="#Output-1559434619" onClick='toggleBox("Output-1559434619", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1559434619" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1559434619">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - XhqTooHSf<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - XhqTooHSf<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+ClickContactDetails<br/>
+enterFirstName<br/>
+enterEmail<br/>
+clickAddContact<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+enterEmailAddress<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+clickYesOffPayWorker<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+click clickYesDirector<br/>
+Enter Director From Date.<br/>
+enter_DirectorFromDate<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 20000<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+VerifyErEeAtRunPayrollPage<br/>
+</div>
+</td>
+<td></td>
+<td>360</td>
+<td>ProductionIssueTest.TC011_13080_DirectorPayroll@48e92c5c</td></tr>
+<tr>
+<td title='ProductionIssueTest.TC030_13691_14298_DuplicateDoubleEmployeesPension.TC01validatePensionOnDashBoard()'><b>TC01validatePensionOnDashBoard</b><br>Test class: ProductionIssueTest.TC030_13691_14298_DuplicateDoubleEmployeesPension<br/>
+<a href="#Output-1289454852" onClick='toggleBox("Output-1289454852", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1289454852" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1289454852">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - ldPMZNFso<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - ldPMZNFso<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickAdditionalFrequecy<br/>
+Select_F2Weekly<br/>
+Entered PayDate.06/04/2024<br/>
+Click_ClickSave<br/>
+Click_ClickSave<br/>
+clickYesPension<br/>
+enterPensionStagingDate<br/>
+enterSignatoryTitle<br/>
+enterSignatoryName<br/>
+enterEmailAddress<br/>
+enterPhoneNumber<br/>
+enterPensionId<br/>
+Click PayrollDashBoard<br/>
+clickPensionDashBoar<br/>
+enterPensionSchemeName<br/>
+selectPensionProvider<br/>
+selectCalculationBasis<br/>
+selectCalculationMethod<br/>
+eeContribution<br/>
+enterErContribution<br/>
+enterSubgroupName<br/>
+enterSubgroupId<br/>
+enterSubGroupId<br/>
+clickSaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 1678<br/>
+Click SaveBtn<br/>
+click clickAutoEnrolment<br/>
+selectWorkerType<br/>
+selectScheme<br/>
+enterEnrollmentDate<br/>
+eeChoosenContribution<br/>
+erChoosenContribution<br/>
+eeVoluntaryContribution<br/>
+eRVoluntaryContribution<br/>
+clickAutoEnrollmentSaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterPayFrequency<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 1678<br/>
+Click SaveBtn<br/>
+click clickAutoEnrolment<br/>
+selectWorkerType<br/>
+selectScheme<br/>
+enterEnrollmentDate<br/>
+eeChoosenContribution<br/>
+erChoosenContribution<br/>
+eeVoluntaryContribution<br/>
+eRVoluntaryContribution<br/>
+clickAutoEnrollmentSaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+clickEmployeeName<br/>
+Click Edit Btn<br/>
+click Mandotorypayroll<br/>
+enterPayFrequency<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+clickPensionDashBoar<br/>
+PensionDahboard<br/>
+PensionDahboard<br/>
+PensionDahboard<br/>
+</div>
+</td>
+<td></td>
+<td>592</td>
+<td>ProductionIssueTest.TC030_13691_14298_DuplicateDoubleEmployeesPension@68b32e3e</td></tr>
+</table><p>
+</body>
+</html>

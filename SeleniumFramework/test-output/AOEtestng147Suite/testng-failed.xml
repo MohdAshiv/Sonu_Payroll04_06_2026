@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AOEtestng147Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AOEtestng147Test(failed)">
+    <classes>
+      <class name="AOE.TC894_900AOE_ChildSupportPopupA3">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC894_900AOE_ChildSupportPopupA3 -->
+      <class name="AOE.TC852_858AOE_ChildSupportPopup">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs4"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC852_858AOE_ChildSupportPopup -->
+      <class name="AOE.TC887_893AOE_ChildSupportPopup4">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs6"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs7"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC887_893AOE_ChildSupportPopup4 -->
+      <class name="AOE.TC907_913AOE_ChildSupportPopupA5">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC907_913AOE_ChildSupportPopupA5 -->
+      <class name="AOE.TC859_865AOE_ChildSupportPopup">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC859_865AOE_ChildSupportPopup -->
+      <class name="AOE.TC859_865AOE_ChildSupportPopupA5">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs4"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC859_865AOE_ChildSupportPopupA5 -->
+      <class name="AOE.TC845_851AOE_ChildSupportPopupA6">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs4"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC845_851AOE_ChildSupportPopupA6 -->
+      <class name="AOE.TC873_879AOE_ChildSupportPopupA1">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC873_879AOE_ChildSupportPopupA1 -->
+      <class name="AOE.TC914_920AOE_ChildSupportPopupA2">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs4"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC914_920AOE_ChildSupportPopupA2 -->
+      <class name="AOE.TC852_858AOE_ChildSupportPopupA4">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC852_858AOE_ChildSupportPopupA4 -->
+      <class name="AOE.TC866_872AOE_ChildSupportPopupA3">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs4"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC866_872AOE_ChildSupportPopupA3 -->
+      <class name="AOE.TC901_906AOE_ChildSupportPopup5">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC901_906AOE_ChildSupportPopup5 -->
+      <class name="AOE.TC830_836AOE_ChildSupportPopup">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC830_836AOE_ChildSupportPopup -->
+      <class name="AOE.TC837_844AOE_ChildSupportPopup">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs5"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC837_844AOE_ChildSupportPopup -->
+      <class name="AOE.TC880_886AOE_ChildSupportPopupA1">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs4"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- AOE.TC880_886AOE_ChildSupportPopupA1 -->
+    </classes>
+  </test> <!-- AOEtestng147Test(failed) -->
+</suite> <!-- Failed suite [AOEtestng147Suite] -->

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_1912Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_1912Test(failed)">
+    <classes>
+      <class name="_1912.TC356_358_1912Dir3MonthSalary">
+        <methods>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC356_358_1912Dir3MonthSalary -->
+      <class name="_1912.TC389_391_1912MiddleFPSWithLowSalary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC389_391_1912MiddleFPSWithLowSalary -->
+      <class name="_1912.TC392_394_1912WeeklyHighSalary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC392_394_1912WeeklyHighSalary -->
+      <class name="_1912.TC377_382_1912TwoDir">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc5"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc6"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC377_382_1912TwoDir -->
+      <class name="_1912.TC347_349_1912TC01">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+        </methods>
+      </class> <!-- _1912.TC347_349_1912TC01 -->
+      <class name="_1912.TC371_373_1912DirMidYrJoin">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC371_373_1912DirMidYrJoin -->
+      <class name="_1912.TC365_367_1912DirPaymentNotFixed">
+        <methods>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+        </methods>
+      </class> <!-- _1912.TC365_367_1912DirPaymentNotFixed -->
+      <class name="_1912.TC350_352_1912DirSalFiveMonth">
+        <methods>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC350_352_1912DirSalFiveMonth -->
+      <class name="_1912.TC362_364_1912FirstAndLastMonthSalary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC362_364_1912FirstAndLastMonthSalary -->
+      <class name="_1912.TC368_370_1912DirSalinOneMonth">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+        </methods>
+      </class> <!-- _1912.TC368_370_1912DirSalinOneMonth -->
+      <class name="_1912.TC386_388_1912MiddleFPSWithHighSalary">
+        <methods>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1912.TC386_388_1912MiddleFPSWithHighSalary -->
+      <class name="_1912.TC353_355_1912DirSalNotFixed">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+        </methods>
+      </class> <!-- _1912.TC353_355_1912DirSalNotFixed -->
+      <class name="_1912.TC374_376_1912DirLeaveDuringTxYr">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC374_376_1912DirLeaveDuringTxYr -->
+      <class name="_1912.TC359_361_1912DirFirst2MonthSalaryandlast">
+        <methods>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+        </methods>
+      </class> <!-- _1912.TC359_361_1912DirFirst2MonthSalaryandlast -->
+      <class name="_1912.TC383_385_1912JoiAndLeaveSameYr">
+        <methods>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc3"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+        </methods>
+      </class> <!-- _1912.TC383_385_1912JoiAndLeaveSameYr -->
+    </classes>
+  </test> <!-- _1912Test(failed) -->
+</suite> <!-- Failed suite [_1912Suite] -->

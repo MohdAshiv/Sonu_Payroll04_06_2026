@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1908Suite">
+  <test name="_1908Test">
+    <classes>
+      <class name="_1908WeeklyRate.TC001_1908WeeklyRate"/>
+      <class name="_1908WeeklyRate.TC002_1908MonthlyRate"/>
+      <class name="_1908WeeklyRate.TC003_1908AnnuallyRate"/>
+      <class name="_1908WeeklyRate.TC004_1908WeeklyRate"/>
+      <class name="_1908WeeklyRate.TC005_1908DayRate"/>
+      <class name="_1908WeeklyRate.TC006_1908DayRate"/>     
+      <class name="_1908WeeklyRate.TC007_1908HourRate"/>
+      <class name="_1908WeeklyRate.TC008_1908HourRate"/>
+      <class name="_1908WeeklyRate.TC009_1908AnnualtoWeekAlert"/>
+      <class name="_1908WeeklyRate.TC010_1908AnnualtoDayAlert"/>
+      <class name="_1908WeeklyRate.TC011_1908AnnualtoHourAlert"/>
+      <class name="_1908WeeklyRate.TC012_1908DaytoHourAlert"/>      
+      <class name="_1908WeeklyRate.TC013_1908DaytoWeekAlert"/>
+      <class name="_1908WeeklyRate.TC014_1908DaytoAnnualAlert"/>
+      <class name="_1908WeeklyRate.TC015_1908HourtoWeekAlert"/>
+      <class name="_1908WeeklyRate.TC016_1908HourtoDayAlert"/>
+      <class name="_1908WeeklyRate.TC017_1908HourtoAnnualAlert"/>      
+      <class name="_1908WeeklyRate.TC018_1908WeektoDayAlert"/>
+      <class name="_1908WeeklyRate.TC19_1908WeektoHourAlert"/>
+      <class name="_1908WeeklyRate.TC20_1908WeektoAnnualAlert"/>
+      <class name="_1908WeeklyRate.TC21_1908ChangeDayRateAlert"/>
+      <class name="_1908WeeklyRate.TC22_1908ChangeWeekRateAlert"/>      
+      <class name="_1908WeeklyRate.TC23_1908ChangeHourRateAlert"/>
+      <class name="_1908WeeklyRate.TC24_1908ChangeAnnualRateAlert"/>
+
+    </classes>
+  </test> <!-- _1908Test -->
+</suite> <!-- _1908Suite -->

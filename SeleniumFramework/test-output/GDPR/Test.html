@@ -1,0 +1,2504 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/3/5</td>
+</tr><tr>
+<td>Started on:</td><td>Sat May 18 20:06:47 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>6589 seconds (6589678 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='EmailGDPR.TC359_GDPR_P45.initDriver()'><b>initDriver</b><br>Test class: EmailGDPR.TC359_GDPR_P45<br>Parameters: public void EmailGDPR.TC359_GDPR_P45.TC02validateEmployerRecieivedIndividualP45D() throws java.lang.Exception</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2077845538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2077845538'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>86</td>
+<td>EmailGDPR.TC359_GDPR_P45@539d019</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.initDriver()'><b>initDriver</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br>Parameters: public void EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC03validateEmployeeRecieivedIndividualEmployeePayslip_Select2Period() throws java.lang.Exception</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1526453607", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1526453607'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>85</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.initDriver()'><b>initDriver</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br>Parameters: public void EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC04validateEmployerRecieivedIndividualEmployeePayslip_SelectAllPeriod() throws java.lang.Exception</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace829082549", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace829082549'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>82</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.initDriver()'><b>initDriver</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br>Parameters: public void EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period() throws java.lang.Exception</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace625232315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace625232315'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>83</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='EmailGDPR.TC359_GDPR_P45.TC01validateEmployeeRecieivedIndividualP45D()'><b>TC01validateEmployeeRecieivedIndividualP45D</b><br>Test class: EmailGDPR.TC359_GDPR_P45<br/>
+<a href="#Output-379972461" onClick='toggleBox("Output-379972461", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-379972461" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-379972461">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - P45GDPR1<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+selectEmailType<br/>
+clickEmailBtnP45<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:777)
+	at EmailGDPR.TC359_GDPR_P45.TC01validateEmployeeRecieivedIndividualP45D(TC359_GDPR_P45.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace379972461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace379972461'><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:777)
+	at EmailGDPR.TC359_GDPR_P45.TC01validateEmployeeRecieivedIndividualP45D(TC359_GDPR_P45.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>217</td>
+<td>EmailGDPR.TC359_GDPR_P45@539d019</td></tr>
+<tr>
+<td title='EmailGDPR.TC360_GDPR_AssessEmployee.TC01validateEmployeeRecieivedAutoEnrollement()'><b>TC01validateEmployeeRecieivedAutoEnrollement</b><br>Test class: EmailGDPR.TC360_GDPR_AssessEmployee<br/>
+<a href="#Output-2012910465" onClick='toggleBox("Output-2012910465", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2012910465" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2012910465">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_PensionDashboard<br/>
+clickAssessEmployee<br/>
+clickSelectChkBox<br/>
+clickSendEmailBtn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:777)
+	at EmailGDPR.TC360_GDPR_AssessEmployee.TC01validateEmployeeRecieivedAutoEnrollement(TC360_GDPR_AssessEmployee.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2012910465", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2012910465'><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:777)
+	at EmailGDPR.TC360_GDPR_AssessEmployee.TC01validateEmployeeRecieivedAutoEnrollement(TC360_GDPR_AssessEmployee.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>159</td>
+<td>EmailGDPR.TC360_GDPR_AssessEmployee@6f63b475</td></tr>
+<tr>
+<td title='EmailGDPR.TC360_GDPR_AssessEmployee.TC02validateEmployerRecieivedAutoEnrollement()'><b>TC02validateEmployerRecieivedAutoEnrollement</b><br>Test class: EmailGDPR.TC360_GDPR_AssessEmployee<br/>
+<a href="#Output-1664093259" onClick='toggleBox("Output-1664093259", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1664093259" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1664093259">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_PensionDashboard<br/>
+clickAssessEmployee<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=124.0.6367.158)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.158, chrome: {chromedriverVersion: 124.0.6367.201 (46cf136d27d..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56855}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c74b9f4c8a6d07b7e41341ad5913684
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at pages.EmailSection.clickEmployerRadioBtn(EmailSection.java:577)
+	at EmailGDPR.TC360_GDPR_AssessEmployee.TC02validateEmployerRecieivedAutoEnrollement(TC360_GDPR_AssessEmployee.java:102)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1664093259", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1664093259'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=124.0.6367.158)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.158, chrome: {chromedriverVersion: 124.0.6367.201 (46cf136d27d..., userDataDir: C:\Users\Sonu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56855}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c74b9f4c8a6d07b7e41341ad5913684
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at pages.EmailSection.clickEmployerRadioBtn(EmailSection.java:577)
+	at EmailGDPR.TC360_GDPR_AssessEmployee.TC02validateEmployerRecieivedAutoEnrollement(TC360_GDPR_AssessEmployee.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>81</td>
+<td>EmailGDPR.TC360_GDPR_AssessEmployee@6f63b475</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC04validateBothRecieivedPayslipWithSummary()'><b>TC04validateBothRecieivedPayslipWithSummary</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-2047770317" onClick='toggleBox("Output-2047770317", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2047770317" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2047770317">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>297</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@29526c05</td></tr>
+<tr>
+<td title='EmailGDPR.TC356_GDPR_P11D.TC01validateEmployeeRecieivedIndividualP11D()'><b>TC01validateEmployeeRecieivedIndividualP11D</b><br>Test class: EmailGDPR.TC356_GDPR_P11D<br/>
+<a href="#Output-2119713755" onClick='toggleBox("Output-2119713755", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2119713755" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2119713755">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+SelectTaxYear<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedP11D<br/>
+</div>
+</td>
+<td></td>
+<td>275</td>
+<td>EmailGDPR.TC356_GDPR_P11D@e70f13a</td></tr>
+<tr>
+<td title='EmailGDPR.TC357_GDPR_PayrollSummary.TC03validateEmployeeRecieivedOnlySummary()'><b>TC03validateEmployeeRecieivedOnlySummary</b><br>Test class: EmailGDPR.TC357_GDPR_PayrollSummary<br/>
+<a href="#Output-609438896" onClick='toggleBox("Output-609438896", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-609438896" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-609438896">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click  Email Btn<br/>
+uncheckPayslipAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifySummaryWithoutPayslip<br/>
+</div>
+</td>
+<td></td>
+<td>141</td>
+<td>EmailGDPR.TC357_GDPR_PayrollSummary@528c868</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC01validateEmployeeRecieivedIndividualPayslip()'><b>TC01validateEmployeeRecieivedIndividualPayslip</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-208437930" onClick='toggleBox("Output-208437930", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-208437930" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-208437930">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip <br/>
+</div>
+</td>
+<td></td>
+<td>265</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@29526c05</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC03validateRecieivedPayslipWithoutSummary()'><b>TC03validateRecieivedPayslipWithoutSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-538132628" onClick='toggleBox("Output-538132628", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-538132628" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-538132628">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+Click Run Payroll2<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>149</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@2c07545f</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC02validateRecieivedPayslipWithSummary()'><b>TC02validateRecieivedPayslipWithSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-1903406683" onClick='toggleBox("Output-1903406683", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1903406683" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1903406683">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+Click Run Payroll2<br/>
+sendEmailToMainContact<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>121</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@2c07545f</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC04validateSendApproval_RecieivedPayslipWithSummary()'><b>TC04validateSendApproval_RecieivedPayslipWithSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-435034854" onClick='toggleBox("Output-435034854", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-435034854" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-435034854">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+clickSendApprovalBtn<br/>
+sendEmailToMainContact<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>140</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@2c07545f</td></tr>
+<tr>
+<td title='EmailGDPR.TC356_GDPR_P11D.TC02validateEmployerRecieivedIndividualP11D()'><b>TC02validateEmployerRecieivedIndividualP11D</b><br>Test class: EmailGDPR.TC356_GDPR_P11D<br/>
+<a href="#Output-1277882374" onClick='toggleBox("Output-1277882374", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1277882374" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1277882374">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+SelectTaxYear<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyP60forEmployer<br/>
+</div>
+</td>
+<td></td>
+<td>139</td>
+<td>EmailGDPR.TC356_GDPR_P11D@e70f13a</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC05validateSendApproval_RecieivedPayslipWithotSummary()'><b>TC05validateSendApproval_RecieivedPayslipWithotSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-1332121385" onClick='toggleBox("Output-1332121385", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1332121385" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1332121385">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+clickSendApprovalBtn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>111</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@2c07545f</td></tr>
+<tr>
+<td title='EmailGDPR.TC357_GDPR_PayrollSummary.TC01validateEmployeeRecieivedIndividualPayslipWithSummary()'><b>TC01validateEmployeeRecieivedIndividualPayslipWithSummary</b><br>Test class: EmailGDPR.TC357_GDPR_PayrollSummary<br/>
+<a href="#Output-1141264726" onClick='toggleBox("Output-1141264726", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1141264726" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1141264726">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>136</td>
+<td>EmailGDPR.TC357_GDPR_PayrollSummary@528c868</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC02validateEmployeeRecieivedIndividualEmployeePayslip_Select3Period()'><b>TC02validateEmployeeRecieivedIndividualEmployeePayslip_Select3Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-1991537156" onClick='toggleBox("Output-1991537156", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1991537156" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1991537156">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+selectEmployee -Dr. Ajay Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Arvind Singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Avatar singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Golu Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Gudiyadevi Singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Heena Khan<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. himanshu jha<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Iron Man<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Jack sali<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Kaushal Director<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Mohit singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Naman Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pankaj singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pooja Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Prakash Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. prince jha<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Raman jha<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Saloni Singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Spider Man<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>734</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC03validateEmployerRecieivedPayslipWithoutSummary()'><b>TC03validateEmployerRecieivedPayslipWithoutSummary</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-1981708431" onClick='toggleBox("Output-1981708431", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1981708431" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1981708431">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>142</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@29526c05</td></tr>
+<tr>
+<td title='EmailGDPR.TC357_GDPR_PayrollSummary.TC02validateEmployeeRecieivedIndividualOnlyPayslip()'><b>TC02validateEmployeeRecieivedIndividualOnlyPayslip</b><br>Test class: EmailGDPR.TC357_GDPR_PayrollSummary<br/>
+<a href="#Output-1875304119" onClick='toggleBox("Output-1875304119", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1875304119" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1875304119">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click  Email Btn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>141</td>
+<td>EmailGDPR.TC357_GDPR_PayrollSummary@528c868</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC02validateEmployerRecieivedSummaryWithPayslip()'><b>TC02validateEmployerRecieivedSummaryWithPayslip</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-520830206" onClick='toggleBox("Output-520830206", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-520830206" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-520830206">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>145</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@29526c05</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC01validateEmployeeRecieivedIndividualEmployeePayslip_SelectAll()'><b>TC01validateEmployeeRecieivedIndividualEmployeePayslip_SelectAll</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-345607713" onClick='toggleBox("Output-345607713", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-345607713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-345607713">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+selectEmployee -Dr. Ajay Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Arvind Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Avatar singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Golu Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Gudiyadevi Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Heena Khan<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. himanshu jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Iron Man<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Jack sali<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Kaushal Director<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Mohit singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Naman Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pankaj singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pooja Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Prakash Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. prince jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Raman jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Saloni Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Spider Man<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>1089</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC355_GDPR_P60.TC01validateEmployeeRecieivedIndividualP60()'><b>TC01validateEmployeeRecieivedIndividualP60</b><br>Test class: EmailGDPR.TC355_GDPR_P60<br/>
+<a href="#Output-967343730" onClick='toggleBox("Output-967343730", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-967343730" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-967343730">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedP60<br/>
+</div>
+</td>
+<td></td>
+<td>778</td>
+<td>EmailGDPR.TC355_GDPR_P60@7331196b</td></tr>
+<tr>
+<td title='EmailGDPR.TC355_GDPR_P60.TC02ValidateEmployerRecieivedIndividualP60()'><b>TC02ValidateEmployerRecieivedIndividualP60</b><br>Test class: EmailGDPR.TC355_GDPR_P60<br/>
+<a href="#Output-315998990" onClick='toggleBox("Output-315998990", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-315998990" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-315998990">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+select Form<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyP60forEmployer<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>243</td>
+<td>EmailGDPR.TC355_GDPR_P60@7331196b</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC05validateBothRecieivedPayslipWithoutSummary()'><b>TC05validateBothRecieivedPayslipWithoutSummary</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-1445225850" onClick='toggleBox("Output-1445225850", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1445225850" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1445225850">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>306</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@29526c05</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC01validateRecieivedIndividualPayslip()'><b>TC01validateRecieivedIndividualPayslip</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-1910034407" onClick='toggleBox("Output-1910034407", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1910034407" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1910034407">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Employees<br/>
+Click Run Payroll2<br/>
+sendEmailToMainContact<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip <br/>
+</div>
+</td>
+<td></td>
+<td>262</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@2c07545f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC04validateEmployerRecieivedIndividualEmployeePayslip_SelectAllPeriod()'><b>TC04validateEmployerRecieivedIndividualEmployeePayslip_SelectAllPeriod</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace708422187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace708422187'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period()'><b>TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace572137576", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace572137576'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC359_GDPR_P45.TC02validateEmployerRecieivedIndividualP45D()'><b>TC02validateEmployerRecieivedIndividualP45D</b><br>Test class: EmailGDPR.TC359_GDPR_P45</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace313881452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace313881452'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>EmailGDPR.TC359_GDPR_P45@539d019</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period()'><b>TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1041219253", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1041219253'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC03validateEmployeeRecieivedIndividualEmployeePayslip_Select2Period()'><b>TC03validateEmployeeRecieivedIndividualEmployeePayslip_Select2Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1403539444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1403539444'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0089C183+48259]
+	(No symbol) [0x0082CAB1]
+	(No symbol) [0x00720A17]
+	(No symbol) [0x00751834]
+	(No symbol) [0x0074D43A]
+	(No symbol) [0x00749239]
+	(No symbol) [0x0078A8BA]
+	(No symbol) [0x0078A0EA]
+	(No symbol) [0x00780B36]
+	(No symbol) [0x0075570D]
+	(No symbol) [0x007562CD]
+	GetHandleVerifier [0x00B56613+2908435]
+	GetHandleVerifier [0x00B93C2B+3159851]
+	GetHandleVerifier [0x0093513B+674875]
+	GetHandleVerifier [0x0093B2FC+699900]
+	(No symbol) [0x008362B4]
+	(No symbol) [0x00832308]
+	(No symbol) [0x0083249C]
+	(No symbol) [0x00824C20]
+	BaseThreadInitThunk [0x75AEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x77C07B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77C07AEE+238]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at utilities.CapabilityLoader.createWebDriver(CapabilityLoader.java:67)
+	at tests.TestBase.initDriver(TestBase.java:81)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@7a1234bf</td></tr>
+</table><p>
+</body>
+</html>

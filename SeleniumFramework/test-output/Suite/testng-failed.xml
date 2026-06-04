@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="PayrollDashBoardCalculations.TC15_PensionAnnually">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC05validateQualifyingSalarySacrifice"/>
+          <include name="setupReporter"/>
+          <include name="TC06validateCustomSalarySacrifice"/>
+          <include name="TC03validateQualifyingNetPay"/>
+          <include name="TC01validateQalifyingRAS"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC15_PensionAnnually -->
+      <class name="PayrollDashBoardCalculations.TC27_PensionWeely_TPP">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateQualifyingNetPay"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC27_PensionWeely_TPP -->
+      <class name="PayrollDashBoardCalculations.TC20_NetPayAnnually">
+        <methods>
+          <include name="TC01validateNormalNI"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC20_NetPayAnnually -->
+      <class name="PayrollDashBoardCalculations.TC11_PensionMonthly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateCustomNetPay"/>
+          <include name="TC03validateQualifyingNetPay"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC11_PensionMonthly -->
+      <class name="PayrollDashBoardCalculations.TC08_TaxCalculationsFortnightly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateTaxCalculation"/>
+          <include name="setupReporter"/>
+          <include name="TC02validateTaxWithW1M1"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC08_TaxCalculationsFortnightly -->
+      <class name="PayrollDashBoardCalculations.TC09_TaxCalculationsFourWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC01validateTaxCalculation"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC02validateTaxWithW1M1"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC09_TaxCalculationsFourWeekly -->
+      <class name="PayrollDashBoardCalculations.TC33_PensionFortnightly_NOW">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="TC01validateQualifyingNetPay"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC33_PensionFortnightly_NOW -->
+      <class name="PayrollDashBoardCalculations.TC10_TaxCalculationsAnnually">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateTaxCalculation"/>
+          <include name="TC02validateTaxWithW1M1"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC10_TaxCalculationsAnnually -->
+      <class name="PayrollDashBoardCalculations.TC05_NICalculationsAnnually">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateNormalNI"/>
+          <include name="TC02validateDirectorNI"/>
+          <include name="TC03validateFreePortNI"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC05_NICalculationsAnnually -->
+      <class name="PayrollDashBoardCalculations.TC25_PensionAnnualy_SMP">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC03validateQualifyingSalarySacrifice"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateCustomSalarySacrifice"/>
+          <include name="TC06validateCustomNoTaxRelief"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC25_PensionAnnualy_SMP -->
+      <class name="PayrollDashBoardCalculations.TC04_NICalculationsFourWeekly">
+        <methods>
+          <include name="TC01validateNormalNI"/>
+          <include name="initDriver"/>
+          <include name="TC02validateDirectorNI"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC03validateFreePortNI"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC04_NICalculationsFourWeekly -->
+      <class name="PayrollDashBoardCalculations.TC44_PensionFourWeekly_Other">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateQualifyingNetPay"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC44_PensionFourWeekly_Other -->
+      <class name="PayrollDashBoardCalculations.TC23_PensionFortnightly_SMP">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC06validateCustomNoTaxRelief"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateCustomSalarySacrifice"/>
+          <include name="TC03validateQualifyingSalarySacrifice"/>
+          <include name="TC05validateQualifyingNoTaxRelief"/>
+          <include name="TC01validateQualifyingNetPay"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC23_PensionFortnightly_SMP -->
+      <class name="PayrollDashBoardCalculations.TC17_NetPayWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateNetPay"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC17_NetPayWeekly -->
+      <class name="PayrollDashBoardCalculations.TC19_NetPayFourWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateNormalNI"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC19_NetPayFourWeekly -->
+      <class name="PayrollDashBoardCalculations.TC18_NetPayFortNightly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateNetPay"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC18_NetPayFortNightly -->
+      <class name="PayrollDashBoardCalculations.TC30_PensionAnnually_TPP">
+        <methods>
+          <include name="TC01validateQualifyingNetPay"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC30_PensionAnnually_TPP -->
+      <class name="PayrollDashBoardCalculations.TC14_PensionFourWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC06validateCustomSalarySacrifice"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC02validateCustomRAS"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC14_PensionFourWeekly -->
+      <class name="PayrollDashBoardCalculations.TC13_PensionFortnightly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC03validateQualifyingNetPay"/>
+          <include name="TC01validateQalifyingRAS"/>
+          <include name="setupReporter"/>
+          <include name="TC05validateQualifyingSalarySacrifice"/>
+          <include name="TC06validateCustomSalarySacrifice"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC13_PensionFortnightly -->
+      <class name="PayrollDashBoardCalculations.TC37_PensionWeekly_AVC">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateAllPensionMethod"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC37_PensionWeekly_AVC -->
+      <class name="PayrollDashBoardCalculations.TC06_TaxCalculationsMonthly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC02validateTaxWithW1M1"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC06_TaxCalculationsMonthly -->
+      <class name="PayrollDashBoardCalculations.TC24_PensionFourWeekly_SMP">
+        <methods>
+          <include name="TC06validateCustomNoTaxRelief"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC05validateQualifyingNoTaxRelief"/>
+          <include name="TC03validateQualifyingSalarySacrifice"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC24_PensionFourWeekly_SMP -->
+      <class name="PayrollDashBoardCalculations.TC42_PensionWeekly_Other">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateQualifyingNetPay"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC42_PensionWeekly_Other -->
+      <class name="PayrollDashBoardCalculations.TC26_PensionMonthly_TPP">
+        <methods>
+          <include name="TC01validateQualifyingNetPay"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC26_PensionMonthly_TPP -->
+      <class name="PayrollDashBoardCalculations.TC21_PensionMonthly_SMP">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC01validateQualifyingNetPay"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC05validateQualifyingNoTaxRelief"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateCustomSalarySacrifice"/>
+          <include name="TC03validateQualifyingSalarySacrifice"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC21_PensionMonthly_SMP -->
+      <class name="PayrollDashBoardCalculations.TC07_TaxCalculationsWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC02validateTaxWithW1M1"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateTaxCalculation"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC07_TaxCalculationsWeekly -->
+      <class name="PayrollDashBoardCalculations.TC03_NICalculationsFortnightly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC02validateDirectorNI"/>
+          <include name="TC03validateFreePortNI"/>
+          <include name="TC01validateNormalEmployeeNI"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC03_NICalculationsFortnightly -->
+      <class name="PayrollDashBoardCalculations.TC16_NetPayMonthly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateNetPay"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC16_NetPayMonthly -->
+      <class name="PayrollDashBoardCalculations.TC02_NICalculationsWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateNormalEmployeeNI"/>
+          <include name="TC03validateFreePortNI"/>
+          <include name="TC02validateDirectorNI"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC02_NICalculationsWeekly -->
+      <class name="PayrollDashBoardCalculations.TC01_NICalculationsMonthly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC01validateNormalEmployeeNI"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC02validateDirectorNI"/>
+          <include name="setupReporter"/>
+          <include name="TC03validateFreePortNI"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC01_NICalculationsMonthly -->
+      <class name="PayrollDashBoardCalculations.TC22_PensionWeekly_SMP">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC03validateQualifyingSalarySacrifice"/>
+          <include name="TC02validateCustomNetPay"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC05validateQualifyingNoTaxRelief"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateQualifyingNetPay"/>
+          <include name="TC06validateCustomNoTaxRelief"/>
+        </methods>
+      </class> <!-- PayrollDashBoardCalculations.TC22_PensionWeekly_SMP -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,1711 @@
+<html>
+<head>
+<title>TestNG:  CompanyDirectorTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>CompanyDirectorTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/28/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 12 18:19:30 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1668 seconds (1668426 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Company_Director_Tests.TC81CDResignBetweenTxYrLowFiling_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC81CDResignBetweenTxYrLowFiling_DefaultProfile<br/>
+<a href="#Output-602748972" onClick='toggleBox("Output-602748972", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-602748972" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-602748972">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC81CDResignBetweenTxYrLowFiling_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC81CDResignBetweenTxYrLowFiling_DefaultProfile.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace602748972", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602748972'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC81CDResignBetweenTxYrLowFiling_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC81CDResignBetweenTxYrLowFiling_DefaultProfile.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>51</td>
+<td>Company_Director_Tests.TC81CDResignBetweenTxYrLowFiling_DefaultProfile@192d74fb</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC86CD_StatePensionReached.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC86CD_StatePensionReached<br/>
+<a href="#Output-766089249" onClick='toggleBox("Output-766089249", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-766089249" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-766089249">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC86CD_StatePensionReached.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC86CD_StatePensionReached.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766089249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace766089249'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC86CD_StatePensionReached.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC86CD_StatePensionReached.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>Company_Director_Tests.TC86CD_StatePensionReached@66ce957f</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC103_CDwithPreviousEmpXMLVerify2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC103_CDwithPreviousEmpXMLVerify2<br/>
+<a href="#Output-812229472" onClick='toggleBox("Output-812229472", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-812229472" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-812229472">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC103_CDwithPreviousEmpXMLVerify2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC103_CDwithPreviousEmpXMLVerify2.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace812229472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace812229472'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC103_CDwithPreviousEmpXMLVerify2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC103_CDwithPreviousEmpXMLVerify2.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>46</td>
+<td>Company_Director_Tests.TC103_CDwithPreviousEmpXMLVerify2@f73dcd6</td></tr>
+<tr>
+<td title='Company_Director_Tests.T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3<br/>
+<a href="#Output-704832331" onClick='toggleBox("Output-704832331", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-704832331" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-704832331">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace704832331", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace704832331'><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>Company_Director_Tests.T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3@285c08c8</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC87CD_StatePensionReachedfiling.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC87CD_StatePensionReachedfiling<br/>
+<a href="#Output-757819744" onClick='toggleBox("Output-757819744", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-757819744" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-757819744">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC87CD_StatePensionReachedfiling.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC87CD_StatePensionReachedfiling.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace757819744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace757819744'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC87CD_StatePensionReachedfiling.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC87CD_StatePensionReachedfiling.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>Company_Director_Tests.TC87CD_StatePensionReachedfiling@13c3c1e1</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC82CDResignBetweenTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC82CDResignBetweenTxYrLow_DefaultProfile<br/>
+<a href="#Output-1994984869" onClick='toggleBox("Output-1994984869", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1994984869" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1994984869">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC82CDResignBetweenTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC82CDResignBetweenTxYrLow_DefaultProfile.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1994984869", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1994984869'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC82CDResignBetweenTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC82CDResignBetweenTxYrLow_DefaultProfile.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>45</td>
+<td>Company_Director_Tests.TC82CDResignBetweenTxYrLow_DefaultProfile@3dddefd8</td></tr>
+<tr>
+<td title='Company_Director_Tests.T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1<br/>
+<a href="#Output-1109258131" onClick='toggleBox("Output-1109258131", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1109258131" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1109258131">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£1000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1109258131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1109258131'><pre>java.lang.NumberFormatException: For input string: &quot;£1000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>Company_Director_Tests.T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1@3fffff43</td></tr>
+<tr>
+<td title='Company_Director_Tests.T105TC29_CD_TwoDir_A1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T105TC29_CD_TwoDir_A1<br/>
+<a href="#Output-1323996324" onClick='toggleBox("Output-1323996324", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1323996324" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1323996324">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£2500.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC14_CD.Click_getLELAmount1(TC14_CD.java:290)
+	at Company_Director_Tests.T105TC29_CD_TwoDir_A1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T105TC29_CD_TwoDir_A1.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1323996324", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1323996324'><pre>java.lang.NumberFormatException: For input string: &quot;£2500.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC14_CD.Click_getLELAmount1(TC14_CD.java:290)
+	at Company_Director_Tests.T105TC29_CD_TwoDir_A1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T105TC29_CD_TwoDir_A1.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>48</td>
+<td>Company_Director_Tests.T105TC29_CD_TwoDir_A1@14c01636</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC78CDBetweenTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC78CDBetweenTxYrLow_DefaultProfile<br/>
+<a href="#Output-1402606475" onClick='toggleBox("Output-1402606475", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1402606475" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1402606475">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£5640.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBetweenTxYrLow.Click_getLELAmount(CDBetweenTxYrLow.java:259)
+	at Company_Director_Tests.TC78CDBetweenTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC78CDBetweenTxYrLow_DefaultProfile.java:197)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1402606475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1402606475'><pre>java.lang.NumberFormatException: For input string: &quot;£5640.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBetweenTxYrLow.Click_getLELAmount(CDBetweenTxYrLow.java:259)
+	at Company_Director_Tests.TC78CDBetweenTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC78CDBetweenTxYrLow_DefaultProfile.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>50</td>
+<td>Company_Director_Tests.TC78CDBetweenTxYrLow_DefaultProfile@7446d8d5</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC100_CD_SalaryinOneMonth.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC100_CD_SalaryinOneMonth<br/>
+<a href="#Output-345132865" onClick='toggleBox("Output-345132865", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-345132865" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-345132865">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;192.168.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50739}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a6b4ba00a4c9f611d858caf86a562b5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at Company_Director.TC14_CD.Click_gotoReports(TC14_CD.java:124)
+	at Company_Director_Tests.TC100_CD_SalaryinOneMonth.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC100_CD_SalaryinOneMonth.java:139)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace345132865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace345132865'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;192.168.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50739}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a6b4ba00a4c9f611d858caf86a562b5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at Company_Director.TC14_CD.Click_gotoReports(TC14_CD.java:124)
+	at Company_Director_Tests.TC100_CD_SalaryinOneMonth.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC100_CD_SalaryinOneMonth.java:139)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>Company_Director_Tests.TC100_CD_SalaryinOneMonth@5b07730f</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC97_CD_Pay4Monthonly.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC97_CD_Pay4Monthonly<br/>
+<a href="#Output-1166292560" onClick='toggleBox("Output-1166292560", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1166292560" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1166292560">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£604.59&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC97_CD_Pay4Monthonly.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC97_CD_Pay4Monthonly.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1166292560", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1166292560'><pre>java.lang.NumberFormatException: For input string: &quot;£604.59&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC97_CD_Pay4Monthonly.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC97_CD_Pay4Monthonly.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>Company_Director_Tests.TC97_CD_Pay4Monthonly@45cff11c</td></tr>
+<tr>
+<td title='Company_Director_Tests.T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3<br/>
+<a href="#Output-1057064084" onClick='toggleBox("Output-1057064084", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1057064084" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1057064084">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£1000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1057064084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1057064084'><pre>java.lang.NumberFormatException: For input string: &quot;£1000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>Company_Director_Tests.T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3@531c311e</td></tr>
+<tr>
+<td title='Company_Director_Tests.T88TC6CDJoiningBeforeTxYr_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T88TC6CDJoiningBeforeTxYr_DefaultProfile<br/>
+<a href="#Output-1282035709" onClick='toggleBox("Output-1282035709", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1282035709" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1282035709">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£5199.96&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.T88TC6CDJoiningBeforeTxYr_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T88TC6CDJoiningBeforeTxYr_DefaultProfile.java:203)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1282035709", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1282035709'><pre>java.lang.NumberFormatException: For input string: &quot;£5199.96&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.T88TC6CDJoiningBeforeTxYr_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T88TC6CDJoiningBeforeTxYr_DefaultProfile.java:203)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>48</td>
+<td>Company_Director_Tests.T88TC6CDJoiningBeforeTxYr_DefaultProfile@37bd68c3</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC99_CD_Pay4Monthonly3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC99_CD_Pay4Monthonly3<br/>
+<a href="#Output-1110095671" onClick='toggleBox("Output-1110095671", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1110095671" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1110095671">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£604.59&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC99_CD_Pay4Monthonly3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC99_CD_Pay4Monthonly3.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1110095671", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1110095671'><pre>java.lang.NumberFormatException: For input string: &quot;£604.59&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC99_CD_Pay4Monthonly3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC99_CD_Pay4Monthonly3.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>43</td>
+<td>Company_Director_Tests.TC99_CD_Pay4Monthonly3@654d8173</td></tr>
+<tr>
+<td title='Company_Director_Tests.T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2<br/>
+<a href="#Output-836841663" onClick='toggleBox("Output-836841663", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-836841663" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-836841663">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;192.168.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:49630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 11f92e9a08b32a43010b66d375b84c3d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_gotoReports(TC7_CD_Alt_JoiningBetweenTxYr.java:125)
+	at Company_Director_Tests.T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2.java:139)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace836841663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace836841663'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;192.168.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:49630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 11f92e9a08b32a43010b66d375b84c3d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_gotoReports(TC7_CD_Alt_JoiningBetweenTxYr.java:125)
+	at Company_Director_Tests.T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2.java:139)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>Company_Director_Tests.T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2@53812a9b</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC102_CDwithPreviousEmp1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC102_CDwithPreviousEmp1<br/>
+<a href="#Output-899068489" onClick='toggleBox("Output-899068489", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-899068489" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-899068489">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC14_CD.Click_getLELAmount1(TC14_CD.java:290)
+	at Company_Director_Tests.TC102_CDwithPreviousEmp1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC102_CDwithPreviousEmp1.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace899068489", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace899068489'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC14_CD.Click_getLELAmount1(TC14_CD.java:290)
+	at Company_Director_Tests.TC102_CDwithPreviousEmp1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC102_CDwithPreviousEmp1.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>44</td>
+<td>Company_Director_Tests.TC102_CDwithPreviousEmp1@4fc5e095</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC80CDBeforeTxYrLowFiling_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC80CDBeforeTxYrLowFiling_DefaultProfile<br/>
+<a href="#Output-696870185" onClick='toggleBox("Output-696870185", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-696870185" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-696870185">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC80CDBeforeTxYrLowFiling_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC80CDBeforeTxYrLowFiling_DefaultProfile.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696870185", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696870185'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC80CDBeforeTxYrLowFiling_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC80CDBeforeTxYrLowFiling_DefaultProfile.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>Company_Director_Tests.TC80CDBeforeTxYrLowFiling_DefaultProfile@3d484181</td></tr>
+<tr>
+<td title='Company_Director_Tests.T106TC29_CD_TwoDir_A2XML.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T106TC29_CD_TwoDir_A2XML<br/>
+<a href="#Output-1942258276" onClick='toggleBox("Output-1942258276", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1942258276" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1942258276">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£2500.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T106TC29_CD_TwoDir_A2XML.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T106TC29_CD_TwoDir_A2XML.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1942258276", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1942258276'><pre>java.lang.NumberFormatException: For input string: &quot;£2500.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T106TC29_CD_TwoDir_A2XML.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T106TC29_CD_TwoDir_A2XML.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>46</td>
+<td>Company_Director_Tests.T106TC29_CD_TwoDir_A2XML@1eb6749b</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC101_CD_SalaryOneMonth2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC101_CD_SalaryOneMonth2<br/>
+<a href="#Output-1238047663" onClick='toggleBox("Output-1238047663", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1238047663" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1238047663">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£0.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC101_CD_SalaryOneMonth2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC101_CD_SalaryOneMonth2.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1238047663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1238047663'><pre>java.lang.NumberFormatException: For input string: &quot;£0.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC101_CD_SalaryOneMonth2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC101_CD_SalaryOneMonth2.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>46</td>
+<td>Company_Director_Tests.TC101_CD_SalaryOneMonth2@2e11485</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC98_CD_Pay4Monthonly2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC98_CD_Pay4Monthonly2<br/>
+<a href="#Output-1914538677" onClick='toggleBox("Output-1914538677", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1914538677" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1914538677">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£604.59&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC98_CD_Pay4Monthonly2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC98_CD_Pay4Monthonly2.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1914538677", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1914538677'><pre>java.lang.NumberFormatException: For input string: &quot;£604.59&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC98_CD_Pay4Monthonly2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC98_CD_Pay4Monthonly2.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>53</td>
+<td>Company_Director_Tests.TC98_CD_Pay4Monthonly2@388ba540</td></tr>
+<tr>
+<td title='Company_Director_Tests.T109TC29_CD_TwoDir_B2XML.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T109TC29_CD_TwoDir_B2XML<br/>
+<a href="#Output-2026873444" onClick='toggleBox("Output-2026873444", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2026873444" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2026873444">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T109TC29_CD_TwoDir_B2XML.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T109TC29_CD_TwoDir_B2XML.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2026873444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2026873444'><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T109TC29_CD_TwoDir_B2XML.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T109TC29_CD_TwoDir_B2XML.java:151)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>61</td>
+<td>Company_Director_Tests.T109TC29_CD_TwoDir_B2XML@30d4b288</td></tr>
+<tr>
+<td title='Company_Director_Tests.T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1<br/>
+<a href="#Output-253916873" onClick='toggleBox("Output-253916873", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-253916873" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-253916873">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace253916873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace253916873'><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>Company_Director_Tests.T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1@14f5da2c</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile<br/>
+<a href="#Output-368270275" onClick='toggleBox("Output-368270275", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-368270275" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-368270275">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£5640.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBetweenTxYrLow.Click_getLELAmount(CDBetweenTxYrLow.java:259)
+	at Company_Director_Tests.TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile.java:197)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace368270275", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace368270275'><pre>java.lang.NumberFormatException: For input string: &quot;£5640.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBetweenTxYrLow.Click_getLELAmount(CDBetweenTxYrLow.java:259)
+	at Company_Director_Tests.TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>61</td>
+<td>Company_Director_Tests.TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile@4b672daa</td></tr>
+<tr>
+<td title='Company_Director_Tests.T107TC29_CD_TwoDir_A1Screenshot3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T107TC29_CD_TwoDir_A1Screenshot3<br/>
+<a href="#Output-1223360538" onClick='toggleBox("Output-1223360538", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1223360538" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1223360538">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£2500.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T107TC29_CD_TwoDir_A1Screenshot3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T107TC29_CD_TwoDir_A1Screenshot3.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1223360538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1223360538'><pre>java.lang.NumberFormatException: For input string: &quot;£2500.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T107TC29_CD_TwoDir_A1Screenshot3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T107TC29_CD_TwoDir_A1Screenshot3.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>63</td>
+<td>Company_Director_Tests.T107TC29_CD_TwoDir_A1Screenshot3@d8305c2</td></tr>
+<tr>
+<td title='Company_Director_Tests.T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2<br/>
+<a href="#Output-179455108" onClick='toggleBox("Output-179455108", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-179455108" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-179455108">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£1000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace179455108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace179455108'><pre>java.lang.NumberFormatException: For input string: &quot;£1000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>Company_Director_Tests.T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2@efde75f</td></tr>
+<tr>
+<td title='Company_Director_Tests.T108TC29_CD_TwoDir_B1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T108TC29_CD_TwoDir_B1<br/>
+<a href="#Output-2134194703" onClick='toggleBox("Output-2134194703", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2134194703" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2134194703">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC14_CD.Click_getLELAmount1(TC14_CD.java:290)
+	at Company_Director_Tests.T108TC29_CD_TwoDir_B1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T108TC29_CD_TwoDir_B1.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134194703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134194703'><pre>java.lang.NumberFormatException: For input string: &quot;£520.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC14_CD.Click_getLELAmount1(TC14_CD.java:290)
+	at Company_Director_Tests.T108TC29_CD_TwoDir_B1.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(T108TC29_CD_TwoDir_B1.java:151)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>Company_Director_Tests.T108TC29_CD_TwoDir_B1@5316e95f</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC77CDBeforeTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC77CDBeforeTxYrLow_DefaultProfile<br/>
+<a href="#Output-122513206" onClick='toggleBox("Output-122513206", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-122513206" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-122513206">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC77CDBeforeTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC77CDBeforeTxYrLow_DefaultProfile.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace122513206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace122513206'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:651)
+	at Company_Director.CDBeforeTxYrLow.Click_getLELAmount(CDBeforeTxYrLow.java:171)
+	at Company_Director_Tests.TC77CDBeforeTxYrLow_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC77CDBeforeTxYrLow_DefaultProfile.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>63</td>
+<td>Company_Director_Tests.TC77CDBeforeTxYrLow_DefaultProfile@27305e6</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC104_CDwithPreviousEmpScreenshot3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC104_CDwithPreviousEmpScreenshot3<br/>
+<a href="#Output-1051890381" onClick='toggleBox("Output-1051890381", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1051890381" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1051890381">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC104_CDwithPreviousEmpScreenshot3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC104_CDwithPreviousEmpScreenshot3.java:147)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1051890381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1051890381'><pre>java.lang.NumberFormatException: For input string: &quot;£6240.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at Company_Director.TC7_CD_Alt_JoiningBetweenTxYr.Click_getLELAmount1(TC7_CD_Alt_JoiningBetweenTxYr.java:291)
+	at Company_Director_Tests.TC104_CDwithPreviousEmpScreenshot3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou(TC104_CDwithPreviousEmpScreenshot3.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>45</td>
+<td>Company_Director_Tests.TC104_CDwithPreviousEmpScreenshot3@41813449</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Company_Director_Tests.T90TC6CDJoiningBeforeTxYr_DefaultProfile3.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T90TC6CDJoiningBeforeTxYr_DefaultProfile3<br/>
+<a href="#Output-1237416868" onClick='toggleBox("Output-1237416868", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1237416868" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1237416868">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>Company_Director_Tests.T90TC6CDJoiningBeforeTxYr_DefaultProfile3@5b444398</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC84CDBetweenTxYrXMLVerify_Alternative_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC84CDBetweenTxYrXMLVerify_Alternative_DefaultProfile<br/>
+<a href="#Output-583490561" onClick='toggleBox("Output-583490561", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-583490561" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-583490561">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>Company_Director_Tests.TC84CDBetweenTxYrXMLVerify_Alternative_DefaultProfile@72cf2de5</td></tr>
+<tr>
+<td title='Company_Director_Tests.T89TC6CDJoiningBeforeTxYr_DefaultProfile2.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.T89TC6CDJoiningBeforeTxYr_DefaultProfile2<br/>
+<a href="#Output-2066919721" onClick='toggleBox("Output-2066919721", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2066919721" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2066919721">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>Company_Director_Tests.T89TC6CDJoiningBeforeTxYr_DefaultProfile2@5af3a0f</td></tr>
+<tr>
+<td title='Company_Director_Tests.TC83CDBetweenTxYr_Alternative_DefaultProfile.GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou()'><b>GoToUrlAssertUrlClickgotoReportsClickclickP11ClickgetLELAmountClickgetPTAmountClickgetUELAmou</b><br>Test class: Company_Director_Tests.TC83CDBetweenTxYr_Alternative_DefaultProfile<br/>
+<a href="#Output-1169015699" onClick='toggleBox("Output-1169015699", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1169015699" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1169015699">
+Search Agent Name =vikasDemo<br/>
+Click Search Btn<br/>
+Click Searched Agen<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>Company_Director_Tests.TC83CDBetweenTxYr_Alternative_DefaultProfile@306851c7</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1749Suite">
+  <test thread-count="5" name="_1749Test">
+    <classes>
+      <class name="_1749PensionConribution.TC815_822PensionContributionPage"/>
+    </classes>
+  </test> <!-- _1749Test -->
+</suite> <!-- _1749Suite -->

@@ -1,0 +1,2132 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Feb 16 00:23:21 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>10904 seconds (10904891 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC01validateRecieivedIndividualPayslip()'><b>TC01validateRecieivedIndividualPayslip</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-310626851" onClick='toggleBox("Output-310626851", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-310626851" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-310626851">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Employees<br/>
+Click Run Payroll2<br/>
+sendEmailToMainContact<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true],
+	welcome to catch block expected [false] but found [true]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC353_EmailGDPR_RunPayroll.TC01validateRecieivedIndividualPayslip(TC353_EmailGDPR_RunPayroll.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace310626851", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace310626851'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true],
+	welcome to catch block expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC353_EmailGDPR_RunPayroll.TC01validateRecieivedIndividualPayslip(TC353_EmailGDPR_RunPayroll.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>172</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@35f26e72</td></tr>
+<tr>
+<td title='EmailGDPR.TC356_GDPR_P11D.TC01validateEmployeeRecieivedIndividualP11D()'><b>TC01validateEmployeeRecieivedIndividualP11D</b><br>Test class: EmailGDPR.TC356_GDPR_P11D<br/>
+<a href="#Output-557699421" onClick='toggleBox("Output-557699421", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-557699421" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-557699421">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+SelectTaxYear<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC356_GDPR_P11D.TC01validateEmployeeRecieivedIndividualP11D(TC356_GDPR_P11D.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace557699421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace557699421'><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC356_GDPR_P11D.TC01validateEmployeeRecieivedIndividualP11D(TC356_GDPR_P11D.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>236</td>
+<td>EmailGDPR.TC356_GDPR_P11D@1199fe66</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC04validateBothRecieivedPayslipWithSummary()'><b>TC04validateBothRecieivedPayslipWithSummary</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-2126328287" onClick='toggleBox("Output-2126328287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2126328287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2126328287">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC354_GDPR_PayslipEmail.TC04validateBothRecieivedPayslipWithSummary(TC354_GDPR_PayslipEmail.java:245)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2126328287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2126328287'><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC354_GDPR_PayslipEmail.TC04validateBothRecieivedPayslipWithSummary(TC354_GDPR_PayslipEmail.java:245)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>398</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@5d5f10b2</td></tr>
+<tr>
+<td title='EmailGDPR.TC357_GDPR_PayrollSummary.TC02validateEmployeeRecieivedIndividualOnlyPayslip()'><b>TC02validateEmployeeRecieivedIndividualOnlyPayslip</b><br>Test class: EmailGDPR.TC357_GDPR_PayrollSummary<br/>
+<a href="#Output-1581909647" onClick='toggleBox("Output-1581909647", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1581909647" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1581909647">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [52f964810396cd99223c3134ccaa06db, clickElement {id=f.979EB1BE7A35B2A1F793057EB55E6BBE.d.1A88B9FC5FC1F461ED490E2E8C04C36C.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52602}, goog:processID: 23036, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52602/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (52f964810396cd99223c3134ccaa06db)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 52f964810396cd99223c3134ccaa06db
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC357_GDPR_PayrollSummary.TC02validateEmployeeRecieivedIndividualOnlyPayslip(TC357_GDPR_PayrollSummary.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1581909647", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1581909647'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [52f964810396cd99223c3134ccaa06db, clickElement {id=f.979EB1BE7A35B2A1F793057EB55E6BBE.d.1A88B9FC5FC1F461ED490E2E8C04C36C.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52602}, goog:processID: 23036, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52602/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (52f964810396cd99223c3134ccaa06db)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 52f964810396cd99223c3134ccaa06db
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC357_GDPR_PayrollSummary.TC02validateEmployeeRecieivedIndividualOnlyPayslip(TC357_GDPR_PayrollSummary.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>14</td>
+<td>EmailGDPR.TC357_GDPR_PayrollSummary@7d64e326</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC05validateBothRecieivedPayslipWithoutSummary()'><b>TC05validateBothRecieivedPayslipWithoutSummary</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-1970088139" onClick='toggleBox("Output-1970088139", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1970088139" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1970088139">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC354_GDPR_PayslipEmail.TC05validateBothRecieivedPayslipWithoutSummary(TC354_GDPR_PayslipEmail.java:314)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1970088139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1970088139'><pre>java.lang.AssertionError: The following asserts failed:
+	welcome to catch block expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC354_GDPR_PayslipEmail.TC05validateBothRecieivedPayslipWithoutSummary(TC354_GDPR_PayslipEmail.java:314)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>393</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@5d5f10b2</td></tr>
+<tr>
+<td title='EmailGDPR.TC359_GDPR_P45.TC02validateEmployerRecieivedIndividualP45D()'><b>TC02validateEmployerRecieivedIndividualP45D</b><br>Test class: EmailGDPR.TC359_GDPR_P45<br/>
+<a href="#Output-895405652" onClick='toggleBox("Output-895405652", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-895405652" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-895405652">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - P45GDPR1<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+select Form<br/>
+selectEmailType<br/>
+clickEmailBtnP45<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;]&quot;}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6a101098025841c42f2fb8daf188c44, findElement {value=//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57851}, goog:processID: 22948, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57851/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6a101098025841c42f2fb8daf188c44
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at pages.EmailSection.clickSendBtn(EmailSection.java:324)
+	at EmailGDPR.TC359_GDPR_P45.TC02validateEmployerRecieivedIndividualP45D(TC359_GDPR_P45.java:111)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace895405652", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace895405652'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;]&quot;}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6a101098025841c42f2fb8daf188c44, findElement {value=//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57851}, goog:processID: 22948, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57851/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6a101098025841c42f2fb8daf188c44
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at pages.EmailSection.clickSendBtn(EmailSection.java:324)
+	at EmailGDPR.TC359_GDPR_P45.TC02validateEmployerRecieivedIndividualP45D(TC359_GDPR_P45.java:111)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>87</td>
+<td>EmailGDPR.TC359_GDPR_P45@49d3c823</td></tr>
+<tr>
+<td title='EmailGDPR.TC355_GDPR_P60.TC02ValidateEmployerRecieivedIndividualP60()'><b>TC02ValidateEmployerRecieivedIndividualP60</b><br>Test class: EmailGDPR.TC355_GDPR_P60<br/>
+<a href="#Output-197225933" onClick='toggleBox("Output-197225933", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-197225933" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-197225933">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b956c6f947d3bc3326a228375fe4760, clickElement {id=f.26D3660D993C5646BDC752A9C22AB5AD.d.A30E4E9267A0C1FF9418E36D96AC81E9.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50847}, goog:processID: 15708, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50847/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4b956c6f947d3bc3326a228375fe4760)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 4b956c6f947d3bc3326a228375fe4760
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC355_GDPR_P60.TC02ValidateEmployerRecieivedIndividualP60(TC355_GDPR_P60.java:88)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace197225933", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace197225933'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b956c6f947d3bc3326a228375fe4760, clickElement {id=f.26D3660D993C5646BDC752A9C22AB5AD.d.A30E4E9267A0C1FF9418E36D96AC81E9.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50847}, goog:processID: 15708, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50847/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4b956c6f947d3bc3326a228375fe4760)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 4b956c6f947d3bc3326a228375fe4760
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC355_GDPR_P60.TC02ValidateEmployerRecieivedIndividualP60(TC355_GDPR_P60.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>15</td>
+<td>EmailGDPR.TC355_GDPR_P60@3e30646a</td></tr>
+<tr>
+<td title='EmailGDPR.TC355_GDPR_P60.TC01validateEmployeeRecieivedIndividualP60()'><b>TC01validateEmployeeRecieivedIndividualP60</b><br>Test class: EmailGDPR.TC355_GDPR_P60<br/>
+<a href="#Output-207012443" onClick='toggleBox("Output-207012443", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-207012443" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-207012443">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+select Form<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;]&quot;}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78ae40427362e7926e9d3f80d558ffd5, findElement {value=//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63801}, goog:processID: 4528, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63801/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78ae40427362e7926e9d3f80d558ffd5
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at pages.EmailSection.clickSendBtnP60(EmailSection.java:483)
+	at EmailGDPR.TC355_GDPR_P60.TC01validateEmployeeRecieivedIndividualP60(TC355_GDPR_P60.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace207012443", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace207012443'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;]&quot;}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78ae40427362e7926e9d3f80d558ffd5, findElement {value=//*[@id=&apos;ctl00_ctl00_ParentContent_cphFooter_btnSave&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63801}, goog:processID: 4528, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63801/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78ae40427362e7926e9d3f80d558ffd5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at pages.EmailSection.clickSendBtnP60(EmailSection.java:483)
+	at EmailGDPR.TC355_GDPR_P60.TC01validateEmployeeRecieivedIndividualP60(TC355_GDPR_P60.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>92</td>
+<td>EmailGDPR.TC355_GDPR_P60@3e30646a</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period()'><b>TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-1503103558" onClick='toggleBox("Output-1503103558", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1503103558" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1503103558">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a64a2e56ade8c8aa6ce3569eb44673f6, clickElement {id=f.4D69F50C2DDCD71874C17BF8B04B988B.d.75B01445F91B455AC113382D53C2F2DF.e.126}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50329}, goog:processID: 16928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50329/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a64a2e56ade8c8aa6ce3569eb44673f6)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: a64a2e56ade8c8aa6ce3569eb44673f6
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period(TC358_GDPR_IndividualEmployeePaySchedule.java:276)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1503103558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1503103558'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a64a2e56ade8c8aa6ce3569eb44673f6, clickElement {id=f.4D69F50C2DDCD71874C17BF8B04B988B.d.75B01445F91B455AC113382D53C2F2DF.e.126}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50329}, goog:processID: 16928, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50329/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a64a2e56ade8c8aa6ce3569eb44673f6)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: a64a2e56ade8c8aa6ce3569eb44673f6
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period(TC358_GDPR_IndividualEmployeePaySchedule.java:276)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>21</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@6b8d96d9</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period()'><b>TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-721896662" onClick='toggleBox("Output-721896662", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-721896662" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-721896662">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9c6c7ebe23a779e690112b338c85fd49, clickElement {id=f.30E1646E51AD213FAE5ED9870FD68EB4.d.953187B93F821C8AF3E1B2C2AC469844.e.125}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53283}, goog:processID: 18768, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53283/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9c6c7ebe23a779e690112b338c85fd49)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 9c6c7ebe23a779e690112b338c85fd49
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period(TC358_GDPR_IndividualEmployeePaySchedule.java:336)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace721896662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace721896662'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9c6c7ebe23a779e690112b338c85fd49, clickElement {id=f.30E1646E51AD213FAE5ED9870FD68EB4.d.953187B93F821C8AF3E1B2C2AC469844.e.125}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53283}, goog:processID: 18768, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53283/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9c6c7ebe23a779e690112b338c85fd49)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 9c6c7ebe23a779e690112b338c85fd49
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period(TC358_GDPR_IndividualEmployeePaySchedule.java:336)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>14</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@6b8d96d9</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC01validateEmployeeRecieivedIndividualPayslip()'><b>TC01validateEmployeeRecieivedIndividualPayslip</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-1969217453" onClick='toggleBox("Output-1969217453", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1969217453" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1969217453">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [99cb4a159235096aa0488a58d2b703c8, clickElement {id=f.AB5A4BFEC753EAC6BD72F25492FB755E.d.E5C43C56EA27672833ED62987F1D9F76.e.140}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54459}, goog:processID: 8428, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54459/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (99cb4a159235096aa0488a58d2b703c8)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 99cb4a159235096aa0488a58d2b703c8
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC354_GDPR_PayslipEmail.TC01validateEmployeeRecieivedIndividualPayslip(TC354_GDPR_PayslipEmail.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1969217453", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1969217453'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [99cb4a159235096aa0488a58d2b703c8, clickElement {id=f.AB5A4BFEC753EAC6BD72F25492FB755E.d.E5C43C56EA27672833ED62987F1D9F76.e.140}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54459}, goog:processID: 8428, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54459/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (99cb4a159235096aa0488a58d2b703c8)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 99cb4a159235096aa0488a58d2b703c8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC354_GDPR_PayslipEmail.TC01validateEmployeeRecieivedIndividualPayslip(TC354_GDPR_PayslipEmail.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>36</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@5d5f10b2</td></tr>
+<tr>
+<td title='EmailGDPR.TC356_GDPR_P11D.TC02validateEmployerRecieivedIndividualP11D()'><b>TC02validateEmployerRecieivedIndividualP11D</b><br>Test class: EmailGDPR.TC356_GDPR_P11D<br/>
+<a href="#Output-12276332" onClick='toggleBox("Output-12276332", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-12276332" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-12276332">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+SelectTaxYear<br/>
+selectEmailType<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyP60forEmployer<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [42] but found [0]
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC356_GDPR_P11D.TC02validateEmployerRecieivedIndividualP11D(TC356_GDPR_P11D.java:129)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace12276332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace12276332'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [42] but found [0]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at EmailGDPR_Page.VerifyData.assertAll(VerifyData.java:811)
+	at EmailGDPR.TC356_GDPR_P11D.TC02validateEmployerRecieivedIndividualP11D(TC356_GDPR_P11D.java:129)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>242</td>
+<td>EmailGDPR.TC356_GDPR_P11D@1199fe66</td></tr>
+<tr>
+<td title='EmailGDPR.TC359_GDPR_P45.TC01validateEmployeeRecieivedIndividualP45D()'><b>TC01validateEmployeeRecieivedIndividualP45D</b><br>Test class: EmailGDPR.TC359_GDPR_P45<br/>
+<a href="#Output-230971771" onClick='toggleBox("Output-230971771", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-230971771" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-230971771">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a08db1d86f69dabcee766945ffb6897, clickElement {id=f.D19CADC9302DA82CA98C8525EA4ECE2D.d.F1F00C783B1CE7F68A71B34779E4A58B.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55159}, goog:processID: 4784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55159/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3a08db1d86f69dabcee766945ffb6897)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 3a08db1d86f69dabcee766945ffb6897
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC359_GDPR_P45.TC01validateEmployeeRecieivedIndividualP45D(TC359_GDPR_P45.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace230971771", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace230971771'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a08db1d86f69dabcee766945ffb6897, clickElement {id=f.D19CADC9302DA82CA98C8525EA4ECE2D.d.F1F00C783B1CE7F68A71B34779E4A58B.e.127}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\SONUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55159}, goog:processID: 4784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55159/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3a08db1d86f69dabcee766945ffb6897)] -&gt; xpath: //*[@id=&quot;tblReportData&quot;]/tbody/tr/td[1]/span]
+Session ID: 3a08db1d86f69dabcee766945ffb6897
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.agentpage.Click_ClickAgent(agentpage.java:533)
+	at EmailGDPR.TC359_GDPR_P45.TC01validateEmployeeRecieivedIndividualP45D(TC359_GDPR_P45.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>14</td>
+<td>EmailGDPR.TC359_GDPR_P45@49d3c823</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC02validateEmployerRecieivedSummaryWithPayslip()'><b>TC02validateEmployerRecieivedSummaryWithPayslip</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-41141427" onClick='toggleBox("Output-41141427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-41141427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-41141427">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>197</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@5d5f10b2</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC05validateSendApproval_RecieivedPayslipWithotSummary()'><b>TC05validateSendApproval_RecieivedPayslipWithotSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-925800237" onClick='toggleBox("Output-925800237", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-925800237" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-925800237">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+clickSendApprovalBtn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>166</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@35f26e72</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC04validateEmployerRecieivedIndividualEmployeePayslip_SelectAllPeriod()'><b>TC04validateEmployerRecieivedIndividualEmployeePayslip_SelectAllPeriod</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-1652132826" onClick='toggleBox("Output-1652132826", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1652132826" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1652132826">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+selectEmployee -Dr. Ajay Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Arvind Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Avatar singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Golu Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Gudiyadevi Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Heena Khan<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. himanshu jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Iron Man<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Jack sali<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Kaushal Director<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Mohit singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Naman Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pankaj singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pooja Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Prakash Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. prince jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Raman jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Saloni Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Spider Man<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployerIEPSPayslip<br/>
+</div>
+</td>
+<td></td>
+<td>3401</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@6b8d96d9</td></tr>
+<tr>
+<td title='EmailGDPR.TC361_19961.TC02validateEmailToEmployee()'><b>TC02validateEmailToEmployee</b><br>Test class: EmailGDPR.TC361_19961<br/>
+<a href="#Output-1718222016" onClick='toggleBox("Output-1718222016", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1718222016" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1718222016">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - BroweserTab<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip <br/>
+</div>
+</td>
+<td></td>
+<td>239</td>
+<td>EmailGDPR.TC361_19961@584f54e6</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC04validateSendApproval_RecieivedPayslipWithSummary()'><b>TC04validateSendApproval_RecieivedPayslipWithSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-583021646" onClick='toggleBox("Output-583021646", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-583021646" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-583021646">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+clickSendApprovalBtn<br/>
+sendEmailToMainContact<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>199</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@35f26e72</td></tr>
+<tr>
+<td title='EmailGDPR.TC360_GDPR_AssessEmployee.TC01validateEmployeeRecieivedAutoEnrollement()'><b>TC01validateEmployeeRecieivedAutoEnrollement</b><br>Test class: EmailGDPR.TC360_GDPR_AssessEmployee<br/>
+<a href="#Output-840409895" onClick='toggleBox("Output-840409895", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-840409895" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-840409895">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPR<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click_PensionDashboard<br/>
+clickAssessEmployee<br/>
+clickSelectChkBox<br/>
+selectEmailTypeAssessEmployeeContribution<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedAssessEmployee<br/>
+</div>
+</td>
+<td></td>
+<td>427</td>
+<td>EmailGDPR.TC360_GDPR_AssessEmployee@66fdec9</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC03validateRecieivedPayslipWithoutSummary()'><b>TC03validateRecieivedPayslipWithoutSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-1937889008" onClick='toggleBox("Output-1937889008", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1937889008" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1937889008">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+Click Run Payroll2<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>200</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@35f26e72</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC01validateEmployeeRecieivedIndividualEmployeePayslip_SelectAll()'><b>TC01validateEmployeeRecieivedIndividualEmployeePayslip_SelectAll</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-90647349" onClick='toggleBox("Output-90647349", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-90647349" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-90647349">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+selectEmployee -Dr. Ajay Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Arvind Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Avatar singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Golu Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Gudiyadevi Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Heena Khan<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. himanshu jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Iron Man<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Jack sali<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Kaushal Director<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Mohit singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Naman Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pankaj singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pooja Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Prakash Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. prince jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Raman jha<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Saloni Singh<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Spider Man<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>1583</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@6b8d96d9</td></tr>
+<tr>
+<td title='EmailGDPR.TC360_GDPR_AssessEmployee.TC02validateEmployerRecieivedAutoEnrollement()'><b>TC02validateEmployerRecieivedAutoEnrollement</b><br>Test class: EmailGDPR.TC360_GDPR_AssessEmployee<br/>
+<a href="#Output-1422226967" onClick='toggleBox("Output-1422226967", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1422226967" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1422226967">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPR<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click_PensionDashboard<br/>
+clickAssessEmployee<br/>
+clickSelectChkBox<br/>
+selectEmailTypeAssessEmployeeContribution<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedAssessEmployer<br/>
+</div>
+</td>
+<td></td>
+<td>280</td>
+<td>EmailGDPR.TC360_GDPR_AssessEmployee@66fdec9</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC02validateEmployeeRecieivedIndividualEmployeePayslip_Select3Period()'><b>TC02validateEmployeeRecieivedIndividualEmployeePayslip_Select3Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-1684975323" onClick='toggleBox("Output-1684975323", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1684975323" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1684975323">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+selectEmployee -Dr. Ajay Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Arvind Singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Avatar singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Golu Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Gudiyadevi Singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Heena Khan<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. himanshu jha<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Iron Man<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Jack sali<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Kaushal Director<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Mohit singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Naman Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pankaj singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pooja Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Prakash Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. prince jha<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Raman jha<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Saloni Singh<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Spider Man<br/>
+select3Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>538</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@6b8d96d9</td></tr>
+<tr>
+<td title='EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule.TC03validateEmployeeRecieivedIndividualEmployeePayslip_Select2Period()'><b>TC03validateEmployeeRecieivedIndividualEmployeePayslip_Select2Period</b><br>Test class: EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule<br/>
+<a href="#Output-250523835" onClick='toggleBox("Output-250523835", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-250523835" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-250523835">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+selectEmployee -Dr. Ajay Sharma<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Arvind Singh<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Avatar singh<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Golu Sharma<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Gudiyadevi Singh<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Heena Khan<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. himanshu jha<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Iron Man<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Jack sali<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Kaushal Director<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Mohit singh<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Naman Sharma<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pankaj singh<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Pooja Sharma<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Prakash Sharma<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. prince jha<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Raman jha<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Miss Saloni Singh<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+selectEmployee -Mr. Spider Man<br/>
+select2Period<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip<br/>
+</div>
+</td>
+<td></td>
+<td>535</td>
+<td>EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule@6b8d96d9</td></tr>
+<tr>
+<td title='EmailGDPR.TC353_EmailGDPR_RunPayroll.TC02validateRecieivedPayslipWithSummary()'><b>TC02validateRecieivedPayslipWithSummary</b><br>Test class: EmailGDPR.TC353_EmailGDPR_RunPayroll<br/>
+<a href="#Output-634250683" onClick='toggleBox("Output-634250683", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-634250683" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-634250683">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+selectTypeTo Main Contact<br/>
+Click Run Payroll2<br/>
+sendEmailToMainContact<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>204</td>
+<td>EmailGDPR.TC353_EmailGDPR_RunPayroll@35f26e72</td></tr>
+<tr>
+<td title='EmailGDPR.TC361_19961.TC01validateEmailToEmployer()'><b>TC01validateEmailToEmployer</b><br>Test class: EmailGDPR.TC361_19961<br/>
+<a href="#Output-1012036741" onClick='toggleBox("Output-1012036741", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1012036741" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1012036741">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - BroweserTab<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+click Send Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>243</td>
+<td>EmailGDPR.TC361_19961@584f54e6</td></tr>
+<tr>
+<td title='EmailGDPR.TC354_GDPR_PayslipEmail.TC03validateEmployerRecieivedPayslipWithoutSummary()'><b>TC03validateEmployerRecieivedPayslipWithoutSummary</b><br>Test class: EmailGDPR.TC354_GDPR_PayslipEmail<br/>
+<a href="#Output-1499984127" onClick='toggleBox("Output-1499984127", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1499984127" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1499984127">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+clickPayslipEmailBtn<br/>
+uncheckPayrollSummaryAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>220</td>
+<td>EmailGDPR.TC354_GDPR_PayslipEmail@5d5f10b2</td></tr>
+<tr>
+<td title='EmailGDPR.TC357_GDPR_PayrollSummary.TC01validateEmployeeRecieivedIndividualPayslipWithSummary()'><b>TC01validateEmployeeRecieivedIndividualPayslipWithSummary</b><br>Test class: EmailGDPR.TC357_GDPR_PayrollSummary<br/>
+<a href="#Output-1535462941" onClick='toggleBox("Output-1535462941", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1535462941" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1535462941">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click  Email Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifyPayslipWithSummary<br/>
+</div>
+</td>
+<td></td>
+<td>214</td>
+<td>EmailGDPR.TC357_GDPR_PayrollSummary@7d64e326</td></tr>
+<tr>
+<td title='EmailGDPR.TC357_GDPR_PayrollSummary.TC03validateEmployeeRecieivedOnlySummary()'><b>TC03validateEmployeeRecieivedOnlySummary</b><br>Test class: EmailGDPR.TC357_GDPR_PayrollSummary<br/>
+<a href="#Output-595308931" onClick='toggleBox("Output-595308931", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-595308931" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-595308931">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - GDPRTesting<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click  Email Btn<br/>
+uncheckPayslipAndSend<br/>
+Click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+verifySummaryWithoutPayslip<br/>
+</div>
+</td>
+<td></td>
+<td>223</td>
+<td>EmailGDPR.TC357_GDPR_PayrollSummary@7d64e326</td></tr>
+<tr>
+<td title='EmailGDPR.TC361_19961.TC03validateEmailToEmployeeEmployerView()'><b>TC03validateEmailToEmployeeEmployerView</b><br>Test class: EmailGDPR.TC361_19961<br/>
+<a href="#Output-1696943582" onClick='toggleBox("Output-1696943582", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1696943582" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1696943582">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =GDPR<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - BroweserTab<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click Report Section<br/>
+clickPayslip<br/>
+selectEmailType<br/>
+clickEmployerPayslipEmailBtn<br/>
+click Employer View<br/>
+Click Report Section<br/>
+clickPayslip<br/>
+selectEmailType<br/>
+clickEmployerPayslipEmailBtn<br/>
+click Send Btn<br/>
+click Send Btn<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+verifyRecievedEmployeePayslip <br/>
+</div>
+</td>
+<td></td>
+<td>258</td>
+<td>EmailGDPR.TC361_19961@584f54e6</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CompanyDirectorSuite">
+  <test thread-count="5" name="CompanyDirectorTest">
+    <classes>
+      <class name="Company_Director_Tests.T90TC6CDJoiningBeforeTxYr_DefaultProfile3"/>
+      <class name="Company_Director_Tests.T89TC6CDJoiningBeforeTxYr_DefaultProfile2"/>
+      <class name="Company_Director_Tests.TC84CDBetweenTxYrXMLVerify_Alternative_DefaultProfile"/>
+      <class name="Company_Director_Tests.T92TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile2"/>
+      <class name="Company_Director_Tests.T107TC29_CD_TwoDir_A1Screenshot3"/>
+      <class name="Company_Director_Tests.T96TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile3"/>
+      <class name="Company_Director_Tests.TC79CDBetweenTxYrLowFilingmngmnt_DefaultProfile"/>
+      <class name="Company_Director_Tests.T94TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile1"/>
+      <class name="Company_Director_Tests.TC101_CD_SalaryOneMonth2"/>
+      <class name="Company_Director_Tests.TC77CDBeforeTxYrLow_DefaultProfile"/>
+      <class name="Company_Director_Tests.TC78CDBetweenTxYrLow_DefaultProfile"/>
+      <class name="Company_Director_Tests.TC83CDBetweenTxYr_Alternative_DefaultProfile"/>
+      <class name="Company_Director_Tests.TC104_CDwithPreviousEmpScreenshot3"/>
+      <class name="Company_Director_Tests.TC100_CD_SalaryinOneMonth"/>
+      <class name="Company_Director_Tests.TC103_CDwithPreviousEmpXMLVerify2"/>
+      <class name="Company_Director_Tests.T109TC29_CD_TwoDir_B2XML"/>
+      <class name="Company_Director_Tests.T105TC29_CD_TwoDir_A1"/>
+      <class name="Company_Director_Tests.TC102_CDwithPreviousEmp1"/>
+      <class name="Company_Director_Tests.TC81CDResignBetweenTxYrLowFiling_DefaultProfile"/>
+      <class name="Company_Director_Tests.TC86CD_StatePensionReached"/>
+      <class name="Company_Director_Tests.T95TC8_CD_Alt_ResignBetweenTxYr_DefaultProfile2"/>
+      <class name="Company_Director_Tests.TC82CDResignBetweenTxYrLow_DefaultProfile"/>
+      <class name="Company_Director_Tests.T108TC29_CD_TwoDir_B1"/>
+      <class name="Company_Director_Tests.TC87CD_StatePensionReachedfiling"/>
+      <class name="Company_Director_Tests.T93TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile3"/>
+      <class name="Company_Director_Tests.TC98_CD_Pay4Monthonly2"/>
+      <class name="Company_Director_Tests.TC80CDBeforeTxYrLowFiling_DefaultProfile"/>
+      <class name="Company_Director_Tests.T88TC6CDJoiningBeforeTxYr_DefaultProfile"/>
+      <class name="Company_Director_Tests.TC97_CD_Pay4Monthonly"/>
+      <class name="Company_Director_Tests.TC99_CD_Pay4Monthonly3"/>
+      <class name="Company_Director_Tests.T91TC7_CD_Alt_JoiningBetweenTxYr_DefaultProfile1"/>
+      <class name="Company_Director_Tests.T106TC29_CD_TwoDir_A2XML"/>
+    </classes>
+  </test> <!-- CompanyDirectorTest -->
+</suite> <!-- CompanyDirectorSuite -->

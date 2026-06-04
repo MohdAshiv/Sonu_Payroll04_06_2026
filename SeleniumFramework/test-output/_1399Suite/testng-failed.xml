@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_1399Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_1399Test(failed)">
+    <classes>
+      <class name="_1399subContr.TC210VerifySubContrwithWrongNI">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC210VerifySubContrwithWrongNI -->
+      <class name="_1399subContr.TC208VerifySubContrwithNI20Dump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC208VerifySubContrwithNI20Dump -->
+      <class name="_1399subContr.TC189VerifySubContrwithUTR">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC189VerifySubContrwithUTR -->
+      <class name="_1399subContr.TC192VerifySubContrwithNI20">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1399subContr.TC192VerifySubContrwithNI20 -->
+      <class name="_1399subContr.TC209VerifySubContrwithoutNI_n_UTRDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1399subContr.TC209VerifySubContrwithoutNI_n_UTRDump -->
+      <class name="_1399subContr.TC207VerifySubContrwithUTRDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC207VerifySubContrwithUTRDump -->
+      <class name="_1399subContr.TC193VerifySubContrwithNI_0">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1399subContr.TC193VerifySubContrwithNI_0 -->
+      <class name="_1399subContr.TC195VerifySubContrwithNI_n_UTR_0">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC195VerifySubContrwithNI_n_UTR_0 -->
+      <class name="_1399subContr.TC211VerifySubContrwithWrongNIDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC211VerifySubContrwithWrongNIDump -->
+      <class name="_1399subContr.TC199VerifySubContrwithoutNI_n_UTR">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC199VerifySubContrwithoutNI_n_UTR -->
+      <class name="_1399subContr.TC190VerifySubContrwithUTR30">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1399subContr.TC190VerifySubContrwithUTR30 -->
+      <class name="_1399subContr.TC194VerifySubContrwithNI_n_UTR_20">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1399subContr.TC194VerifySubContrwithNI_n_UTR_20 -->
+      <class name="_1399subContr.TC191VerifySubContrwithUTR0per">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1399subContr.TC191VerifySubContrwithUTR0per -->
+    </classes>
+  </test> <!-- _1399Test(failed) -->
+</suite> <!-- Failed suite [_1399Suite] -->

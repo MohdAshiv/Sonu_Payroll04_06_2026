@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PaymentMangmentSuite">
+  <test thread-count="5" name="PaymentMangmentTest">
+    <classes>
+      <class name="PaymentManagement.T110TS01_PM"/>
+      <class name="PaymentManagement.TC73subscriptPaymentmmgtwhenfreqFourweekly"/>
+      <class name="PaymentManagement.TC74subscriptPaymentmmgtwhenfreqMultiple"/>
+      <class name="PaymentManagement.T122TC04_PM_Fortnight1"/>
+      <class name="PaymentManagement.T123TC04_PM_Fortnight2"/>
+      <class name="PaymentManagement.T119TC05_PM_MidYear3"/>
+      <class name="PaymentManagement.T113TC03_PM_weekly1"/>
+      <class name="PaymentManagement.T117TC05_PM_MidYear1"/>
+      <class name="PaymentManagement.TC71subscriptPaymentmmgtwhenMidyear"/>
+      <class name="PaymentManagement.T115TC03_PM_weekly3"/>
+      <class name="PaymentManagement.T116TC02_PM_MulFreq1"/>
+      <class name="PaymentManagement.T124TC04_PM_Fortnight3"/>
+      <class name="PaymentManagement.T121TC02_PM_MulFreq3"/>
+      <class name="PaymentManagement.TC72subscriptPaymentmmgtwhenfreqFortnightly"/>
+      <class name="PaymentManagement.T120TC02_PM_MulFreq2"/>
+      <class name="PaymentManagement.T111TS01_PM_Dump"/>
+      <class name="PaymentManagement.T114TC03_PM_weekly2"/>
+      <class name="PaymentManagement.TC70subscriptPaymentmmgtwhenfreqWeekly"/>
+      <class name="PaymentManagement.TC69subscriptPaymentmmgtwhenfreqMonthly"/>
+      <class name="PaymentManagement.T118TC05_PM_MidYear2"/>
+    </classes>
+  </test> <!-- PaymentMangmentTest -->
+</suite> <!-- PaymentMangmentSuite -->

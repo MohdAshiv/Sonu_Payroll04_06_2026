@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2087EmailLogSuite">
+  <test thread-count="5" name="_2087EmailLogTest">
+    <classes>
+      <class name="_2087EmailLog.TC457_458EmailLogFromSummary"/>
+      <class name="_2087EmailLog.TC461_462EmailLogFromP60"/>
+      <class name="_2087EmailLog.TC459_460EmailLogFromAgentPage"/>
+      <class name="_2087EmailLog.TC453_454EmailLogMainContact"/>
+      <class name="_2087EmailLog.TC455_456EmailLogToEmployee"/>
+    </classes>
+  </test> <!-- _2087EmailLogTest -->
+</suite> <!-- _2087EmailLogSuite -->

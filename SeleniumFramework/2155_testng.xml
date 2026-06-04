@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+					<class name="_2155Test.TC085_Verify_DayRate" />
+					<class name="_2155Test.TC086_VerifyHourlyRate" />
+					<class name="_2155Test.TC087_VerifyHoulyRate_After2Months" />
+					<class name="_2155Test.TC088_VerifyHourlyRate_After3Months" />
+					<class name="_2155Test.TC089_VerifyAnnualToHouraly" />
+					<class name="_2155Test.TC090_VerifyUntickFunctionality" />
+					<class name="_2155Test.TC091_VerifyAnothoerRate" />
+					<class name="_2155Test.TC092_Verify_MulipleAddedRates" />
+					<class name="_2155Test.TC093_Verify_AnnualToDay" />
+					<class name="_2155Test.TC094_VerifyPayslip" />
+					<class name="_2155Test.TC095_VerifyPayrollDashboardAndReportSection" />
+					<class name="_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll" />
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

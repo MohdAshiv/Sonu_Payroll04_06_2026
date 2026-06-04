@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2054VerificationCertificate.TC07_VerifyEmailJustZipforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC11_VerifyEmailTemplateforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC04_VerifyExprttoPDFforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC02_ShowVerificationCertificateforDateRange"/>
+      <class name="_2054VerificationCertificate.TC05_VerifyExprttoCSVforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC03_ShowVerificationCertificateforPeriod"/>
+      <class name="_2054VerificationCertificate.TC08_VerifyWithoutEmailtoSCforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC12_VerifyEmailtoBothforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC10_VerifyEmailtoContractorforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC01_ShowVerificationCertificateforSubconc"/>
+      <class name="_2054VerificationCertificate.TC06_VerifyEmailtoAllSCforVerificationCertificate"/>
+      <class name="_2054VerificationCertificate.TC09_VerifyEmailJustPdfforVerificationCertificate"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

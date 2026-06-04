@@ -1,0 +1,399 @@
+<html>
+<head>
+<title>TestNG:  _1706Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>_1706Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>27/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 03 11:24:45 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1682 seconds (1682188 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1706Test.TC449_452P11DeductionReport</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£2000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC449_452P11DeductionReport.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace987834065", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace987834065'><pre>java.lang.NumberFormatException: For input string: &quot;£2000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC449_452P11DeductionReport.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>65</td>
+<td>_1706Test.TC449_452P11DeductionReport@42f48531</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonthsG.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonthsG</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //TR[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_rowCompany&apos;]/TD/SPAN[@class=&apos;border-btm-dotted&apos;]
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:171)
+	at _1706Test.TC690_691CheckTaxablePayForTwoMonthsG.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1(TC690_691CheckTaxablePayForTwoMonthsG.java:284)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2034610694", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2034610694'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //TR[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_rowCompany&apos;]/TD/SPAN[@class=&apos;border-btm-dotted&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.OpenClient.Click_ClickClient(OpenClient.java:171)
+	at _1706Test.TC690_691CheckTaxablePayForTwoMonthsG.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1(TC690_691CheckTaxablePayForTwoMonthsG.java:284)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonthsG@a4b2d8f</td></tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4</b><br>Test class: _1706Test.TC449_452P11DeductionReport</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£2000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4(TC449_452P11DeductionReport.java:279)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace36127072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace36127072'><pre>java.lang.NumberFormatException: For input string: &quot;£2000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4(TC449_452P11DeductionReport.java:279)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>50</td>
+<td>_1706Test.TC449_452P11DeductionReport@42f48531</td></tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1706Test.TC449_452P11DeductionReport</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£900.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getTax(_1706P11DeductionReport.java:124)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC449_452P11DeductionReport.java:416)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace421632334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace421632334'><pre>java.lang.NumberFormatException: For input string: &quot;£900.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getTax(_1706P11DeductionReport.java:124)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC449_452P11DeductionReport.java:416)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>47</td>
+<td>_1706Test.TC449_452P11DeductionReport@42f48531</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYearF.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYearF</td>
+<td></td>
+<td>57</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYearF@75d0911a</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMidE.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMidE</td>
+<td></td>
+<td>40</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMidE@5b43fbf6</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid12.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid12</td>
+<td></td>
+<td>42</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid12@2fea7088</td></tr>
+<tr>
+<td title='_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC698_699CheckTaxablePayJoinMidFortNight14</td>
+<td></td>
+<td>54</td>
+<td>_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14@662f5666</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear11.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear11</td>
+<td></td>
+<td>55</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear11@e077866</td></tr>
+<tr>
+<td title='_1706Test.TC689CheckTaxablePayH.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC689CheckTaxablePayH</td>
+<td></td>
+<td>56</td>
+<td>_1706Test.TC689CheckTaxablePayH@4fbda97b</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonthsG.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonthsG</td>
+<td></td>
+<td>67</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonthsG@a4b2d8f</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear3.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear3</td>
+<td></td>
+<td>61</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear3@10993713</td></tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1</b><br>Test class: _1706Test.TC449_452P11DeductionReport</td>
+<td></td>
+<td>45</td>
+<td>_1706Test.TC449_452P11DeductionReport@42f48531</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear3.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear3</td>
+<td></td>
+<td>47</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear3@10993713</td></tr>
+<tr>
+<td title='_1706Test.TC689CheckTaxablePay9.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC689CheckTaxablePay9</td>
+<td></td>
+<td>49</td>
+<td>_1706Test.TC689CheckTaxablePay9@41e350f1</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYearF.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYearF</td>
+<td></td>
+<td>41</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYearF@75d0911a</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly5</td>
+<td></td>
+<td>67</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5@5f031ebd</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly13</td>
+<td></td>
+<td>55</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13@1fcb4808</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid12.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid12</td>
+<td></td>
+<td>77</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid12@2fea7088</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly5</td>
+<td></td>
+<td>46</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5@5f031ebd</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD</td>
+<td></td>
+<td>59</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD@4879f0f2</td></tr>
+<tr>
+<td title='_1706Test.TC689CheckTaxablePay1.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC689CheckTaxablePay1</td>
+<td></td>
+<td>54</td>
+<td>_1706Test.TC689CheckTaxablePay1@40f1be1b</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly13</td>
+<td></td>
+<td>46</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13@1fcb4808</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonths2.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonths2</td>
+<td></td>
+<td>51</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonths2@502f1f4c</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear11.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear11</td>
+<td></td>
+<td>44</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear11@e077866</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid4.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid4</td>
+<td></td>
+<td>55</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid4@1c7fd41f</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonths2.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonths2</td>
+<td></td>
+<td>64</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonths2@502f1f4c</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD</td>
+<td></td>
+<td>43</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD@4879f0f2</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMidE.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMidE</td>
+<td></td>
+<td>53</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMidE@5b43fbf6</td></tr>
+<tr>
+<td title='_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC698_699CheckTaxablePayJoinMidFortNight14</td>
+<td></td>
+<td>45</td>
+<td>_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14@662f5666</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid4.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid4</td>
+<td></td>
+<td>43</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid4@1c7fd41f</td></tr>
+</table><p>
+</body>
+</html>

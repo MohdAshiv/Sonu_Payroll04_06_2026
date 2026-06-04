@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AlertForEEAgeSuite">
+  <test thread-count="5" name="AlertForEEAgeTest">
+    <classes>
+      <class name="AlertsForEmployeeAge.TC481Over19AndApperentice"/>
+      <class name="AlertsForEmployeeAge.TC464Under19AndnotApperentice"/>
+      <class name="AlertsForEmployeeAge.TC482EmpApperenticeafterFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC465Under19AndApperentice"/>
+      <class name="AlertsForEmployeeAge.TC476over19andEmpApperenticeInFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC471under18andEmpApperenticeInFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC486under18andEmpApperenticeInFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC463over19AndnotApperentice"/>
+      <class name="AlertsForEmployeeAge.TC467EmpApperenticeafterFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC487over18andEmpRateis5"/>
+      <class name="AlertsForEmployeeAge.TC469over25andEmpApperenticeafterFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC470over25andEmpApperenticeInFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC474over21andEmpApperenticeInFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC480Under19AndApperentice"/>
+      <class name="AlertsForEmployeeAge.TC473over21andEmpApperenticeIn2ndYear"/>
+      <class name="AlertsForEmployeeAge.TC484over25andEmpApperenticeafterFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC477over26andEmpFirstYrApprenticeComplete"/>
+      <class name="AlertsForEmployeeAge.TC472over18andEmpRateis5"/>
+      <class name="AlertsForEmployeeAge.TC478over19AndnotApperentice"/>
+      <class name="AlertsForEmployeeAge.TC483over22andEmpApperenticeafterFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC475over21andEmpRateisBelowNMW"/>
+      <class name="AlertsForEmployeeAge.TC479Under19AndnotApperentice"/>
+      <class name="AlertsForEmployeeAge.TC468over22andEmpApperenticeafterFirstYear"/>
+      <class name="AlertsForEmployeeAge.TC466Over19AndApperentice"/>
+      <class name="AlertsForEmployeeAge.TC485over25andEmpApperenticeInFirstYear"/>
+    </classes>
+  </test> <!-- AlertForEEAgeTest -->
+</suite> <!-- AlertForEEAgeSuite -->

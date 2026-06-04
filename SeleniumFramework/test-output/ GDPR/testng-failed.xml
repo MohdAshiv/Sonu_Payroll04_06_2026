@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ GDPR]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="EmailGDPR.TC353_EmailGDPR_RunPayroll">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC01validateRecieivedIndividualPayslip"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC353_EmailGDPR_RunPayroll -->
+      <class name="EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC06validateEmployerRecieivedIndividualEmployeePayslip_Select2Period"/>
+          <include name="setupReporter"/>
+          <include name="TC05validateEmployerRecieivedIndividualEmployeePayslip_Select3Period"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC358_GDPR_IndividualEmployeePaySchedule -->
+      <class name="EmailGDPR.TC356_GDPR_P11D">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC02validateEmployerRecieivedIndividualP11D"/>
+          <include name="TC01validateEmployeeRecieivedIndividualP11D"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC356_GDPR_P11D -->
+      <class name="EmailGDPR.TC359_GDPR_P45">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC02validateEmployerRecieivedIndividualP45D"/>
+          <include name="TC01validateEmployeeRecieivedIndividualP45D"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC359_GDPR_P45 -->
+      <class name="EmailGDPR.TC357_GDPR_PayrollSummary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="TC02validateEmployeeRecieivedIndividualOnlyPayslip"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC357_GDPR_PayrollSummary -->
+      <class name="EmailGDPR.TC355_GDPR_P60">
+        <methods>
+          <include name="initDriver"/>
+          <include name="TC02ValidateEmployerRecieivedIndividualP60"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateEmployeeRecieivedIndividualP60"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC355_GDPR_P60 -->
+      <class name="EmailGDPR.TC354_GDPR_PayslipEmail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateEmployeeRecieivedIndividualPayslip"/>
+          <include name="TC04validateBothRecieivedPayslipWithSummary"/>
+          <include name="TC05validateBothRecieivedPayslipWithoutSummary"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC354_GDPR_PayslipEmail -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [ GDPR] -->

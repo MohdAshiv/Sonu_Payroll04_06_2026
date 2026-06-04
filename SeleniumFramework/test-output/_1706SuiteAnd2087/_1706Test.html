@@ -1,0 +1,1319 @@
+<html>
+<head>
+<title>TestNG:  _1706Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>_1706Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>32/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 18 07:30:28 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>4668 seconds (4668303 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl</b><br>Test class: _1706Test.TC449_452P11DeductionReport<br/>
+<a href="#Output-2061316668" onClick='toggleBox("Output-2061316668", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2061316668" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2061316668">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: empty String
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC449_452P11DeductionReport.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2061316668", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2061316668'><pre>java.lang.NumberFormatException: empty String
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl(TC449_452P11DeductionReport.java:137)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>122</td>
+<td>_1706Test.TC449_452P11DeductionReport@41709512</td></tr>
+<tr>
+<td title='_2087EmailLog.TC453_454EmailLogMainContact.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard</b><br>Test class: _2087EmailLog.TC453_454EmailLogMainContact<br/>
+<a href="#Output-670299410" onClick='toggleBox("Output-670299410", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-670299410" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-670299410">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayEmailLog_ctl00_lbtnViewEmail_sub&apos;]
+	at _2087EmailLogPage._2087EmailLog.Click_getLogCount(_2087EmailLog.java:182)
+	at _2087EmailLog.TC453_454EmailLogMainContact.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC453_454EmailLogMainContact.java:158)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace670299410", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace670299410'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayEmailLog_ctl00_lbtnViewEmail_sub&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at _2087EmailLogPage._2087EmailLog.Click_getLogCount(_2087EmailLog.java:182)
+	at _2087EmailLog.TC453_454EmailLogMainContact.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC453_454EmailLogMainContact.java:158)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>110</td>
+<td>_2087EmailLog.TC453_454EmailLogMainContact@4b3ed2f0</td></tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2</b><br>Test class: _1706Test.TC449_452P11DeductionReport<br/>
+<a href="#Output-1242969461" onClick='toggleBox("Output-1242969461", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1242969461" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1242969461">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;£2000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getTax(_1706P11DeductionReport.java:124)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC449_452P11DeductionReport.java:416)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1242969461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1242969461'><pre>java.lang.NumberFormatException: For input string: &quot;£2000.00&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getTax(_1706P11DeductionReport.java:124)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2(TC449_452P11DeductionReport.java:416)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>161</td>
+<td>_1706Test.TC449_452P11DeductionReport@41709512</td></tr>
+<tr>
+<td title='_2087EmailLog.TC461_462EmailLogFromP60.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1</b><br>Test class: _2087EmailLog.TC461_462EmailLogFromP60<br/>
+<a href="#Output-584580417" onClick='toggleBox("Output-584580417", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-584580417" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-584580417">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayEmailLog_ctl00_lbtnViewEmail_sub&apos;]
+	at _2087EmailLogPage._2087EmailLog.Click_getLogCount4(_2087EmailLog.java:316)
+	at _2087EmailLog.TC461_462EmailLogFromP60.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1(TC461_462EmailLogFromP60.java:369)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace584580417", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace584580417'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_rptrDisplayEmailLog_ctl00_lbtnViewEmail_sub&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at _2087EmailLogPage._2087EmailLog.Click_getLogCount4(_2087EmailLog.java:316)
+	at _2087EmailLog.TC461_462EmailLogFromP60.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1(TC461_462EmailLogFromP60.java:369)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>115</td>
+<td>_2087EmailLog.TC461_462EmailLogFromP60@77d67cf3</td></tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4</b><br>Test class: _1706Test.TC449_452P11DeductionReport<br/>
+<a href="#Output-1507604180" onClick='toggleBox("Output-1507604180", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1507604180" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1507604180">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NumberFormatException: empty String
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4(TC449_452P11DeductionReport.java:279)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1507604180", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1507604180'><pre>java.lang.NumberFormatException: empty String
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:476)
+	at _1706Page._1706P11DeductionReport.Click_getGross(_1706P11DeductionReport.java:93)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4(TC449_452P11DeductionReport.java:279)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>103</td>
+<td>_1706Test.TC449_452P11DeductionReport@41709512</td></tr>
+<tr>
+<td title='_2087EmailLog.TC457_458EmailLogFromSummary.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard</b><br>Test class: _2087EmailLog.TC457_458EmailLogFromSummary<br/>
+<a href="#Output-226213650" onClick='toggleBox("Output-226213650", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-226213650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-226213650">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: D:\vikash\1.pdf (The device is not ready)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:213)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at VerifyEmailsData.verifyEmail.Click_clickPayrollSummary(verifyEmail.java:404)
+	at _2087EmailLog.TC457_458EmailLogFromSummary.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC457_458EmailLogFromSummary.java:162)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace226213650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace226213650'><pre>java.io.FileNotFoundException: D:\vikash\1.pdf (The device is not ready)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:213)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at VerifyEmailsData.verifyEmail.Click_clickPayrollSummary(verifyEmail.java:404)
+	at _2087EmailLog.TC457_458EmailLogFromSummary.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC457_458EmailLogFromSummary.java:162)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>110</td>
+<td>_2087EmailLog.TC457_458EmailLogFromSummary@4748a0f9</td></tr>
+<tr>
+<td title='_1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1()'><b>GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1</b><br>Test class: _1706Test.TC449_452P11DeductionReport<br/>
+<a href="#Output-1154481189" onClick='toggleBox("Output-1154481189", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1154481189" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1154481189">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //H4[contains(text(),&apos;PAYE Income Tax&apos;)]
+	at _1706Page._1706P11DeductionReport.Click_scrollToPAYE_Income_Tax(_1706P11DeductionReport.java:200)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1(TC449_452P11DeductionReport.java:558)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1154481189", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1154481189'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //H4[contains(text(),&apos;PAYE Income Tax&apos;)]
+	at org.testng.Assert.fail(Assert.java:110)
+	at _1706Page._1706P11DeductionReport.Click_scrollToPAYE_Income_Tax(_1706P11DeductionReport.java:200)
+	at _1706Test.TC449_452P11DeductionReport.GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1(TC449_452P11DeductionReport.java:558)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>105</td>
+<td>_1706Test.TC449_452P11DeductionReport@41709512</td></tr>
+<tr>
+<td title='_2087EmailLog.TC461_462EmailLogFromP60.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard</b><br>Test class: _2087EmailLog.TC461_462EmailLogFromP60</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //INPUT[@name=&apos;ctl00$cPH$login&apos;]
+	at pages.loginpageSandbox4.Enter_EnterUsername(loginpageSandbox4.java:73)
+	at _2087EmailLog.TC461_462EmailLogFromP60.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC461_462EmailLogFromP60.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1947378744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1947378744'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //INPUT[@name=&apos;ctl00$cPH$login&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.loginpageSandbox4.Enter_EnterUsername(loginpageSandbox4.java:73)
+	at _2087EmailLog.TC461_462EmailLogFromP60.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC461_462EmailLogFromP60.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>9</td>
+<td>_2087EmailLog.TC461_462EmailLogFromP60@77d67cf3</td></tr>
+<tr>
+<td title='_2087EmailLog.TC455_456EmailLogToEmployee.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard</b><br>Test class: _2087EmailLog.TC455_456EmailLogToEmployee<br/>
+<a href="#Output-1792110618" onClick='toggleBox("Output-1792110618", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1792110618" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1792110618">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: null value in entry: id=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:70)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:891)
+	at VerifyEmailsData.PayrollDsbEmailBody.Click_clickSend(PayrollDsbEmailBody.java:518)
+	at _2087EmailLog.TC455_456EmailLogToEmployee.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC455_456EmailLogToEmployee.java:146)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1792110618", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1792110618'><pre>java.lang.NullPointerException: null value in entry: id=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:70)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:891)
+	at VerifyEmailsData.PayrollDsbEmailBody.Click_clickSend(PayrollDsbEmailBody.java:518)
+	at _2087EmailLog.TC455_456EmailLogToEmployee.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard(TC455_456EmailLogToEmployee.java:146)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>113</td>
+<td>_2087EmailLog.TC455_456EmailLogToEmployee@1941a8ff</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_2087EmailLog.TC459_460EmailLogFromAgentPage.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard</b><br>Test class: _2087EmailLog.TC459_460EmailLogFromAgentPage<br/>
+<a href="#Output-2076165631" onClick='toggleBox("Output-2076165631", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2076165631" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2076165631">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>82</td>
+<td>_2087EmailLog.TC459_460EmailLogFromAgentPage@5d12a356</td></tr>
+<tr>
+<td title='_1706Test.TC689CheckTaxablePay9.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC689CheckTaxablePay9<br/>
+<a href="#Output-1283906060" onClick='toggleBox("Output-1283906060", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1283906060" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1283906060">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>104</td>
+<td>_1706Test.TC689CheckTaxablePay9@535779e4</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonthsG.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonthsG<br/>
+<a href="#Output-600554759" onClick='toggleBox("Output-600554759", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-600554759" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-600554759">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>138</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonthsG@1b835480</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly13<br/>
+<a href="#Output-1137210118" onClick='toggleBox("Output-1137210118", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1137210118" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1137210118">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>117</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13@3a5ecce3</td></tr>
+<tr>
+<td title='_2087EmailLog.TC453_454EmailLogMainContact.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1</b><br>Test class: _2087EmailLog.TC453_454EmailLogMainContact<br/>
+<a href="#Output-1905252289" onClick='toggleBox("Output-1905252289", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1905252289" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1905252289">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>103</td>
+<td>_2087EmailLog.TC453_454EmailLogMainContact@4b3ed2f0</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly13<br/>
+<a href="#Output-736714033" onClick='toggleBox("Output-736714033", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-736714033" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-736714033">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>101</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13@3a5ecce3</td></tr>
+<tr>
+<td title='_2087EmailLog.TC457_458EmailLogFromSummary.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1</b><br>Test class: _2087EmailLog.TC457_458EmailLogFromSummary<br/>
+<a href="#Output-1557752641" onClick='toggleBox("Output-1557752641", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1557752641" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1557752641">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>109</td>
+<td>_2087EmailLog.TC457_458EmailLogFromSummary@4748a0f9</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYearF.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYearF<br/>
+<a href="#Output-1617920437" onClick='toggleBox("Output-1617920437", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1617920437" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1617920437">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>115</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYearF@5dcb4f5f</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonths2.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonths2<br/>
+<a href="#Output-1386429503" onClick='toggleBox("Output-1386429503", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1386429503" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1386429503">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>115</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonths2@2f1de2d6</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid4.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid4<br/>
+<a href="#Output-1526453607" onClick='toggleBox("Output-1526453607", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1526453607" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1526453607">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>99</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid4@74f5ce22</td></tr>
+<tr>
+<td title='_1706Test.TC689CheckTaxablePayH.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC689CheckTaxablePayH<br/>
+<a href="#Output-1845746463" onClick='toggleBox("Output-1845746463", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1845746463" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1845746463">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>104</td>
+<td>_1706Test.TC689CheckTaxablePayH@289710d9</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear11.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear11<br/>
+<a href="#Output-929219836" onClick='toggleBox("Output-929219836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-929219836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-929219836">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>118</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear11@531f4093</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid4.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid4<br/>
+<a href="#Output-213095762" onClick='toggleBox("Output-213095762", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-213095762" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-213095762">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>173</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid4@74f5ce22</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYearF.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYearF<br/>
+<a href="#Output-923539816" onClick='toggleBox("Output-923539816", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-923539816" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-923539816">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>104</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYearF@5dcb4f5f</td></tr>
+<tr>
+<td title='_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC698_699CheckTaxablePayJoinMidFortNight14<br/>
+<a href="#Output-1788662008" onClick='toggleBox("Output-1788662008", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1788662008" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1788662008">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>102</td>
+<td>_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14@7776ab</td></tr>
+<tr>
+<td title='_1706Test.TC689CheckTaxablePay1.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC689CheckTaxablePay1<br/>
+<a href="#Output-884868698" onClick='toggleBox("Output-884868698", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-884868698" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-884868698">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>105</td>
+<td>_1706Test.TC689CheckTaxablePay1@78383390</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMidE.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMidE<br/>
+<a href="#Output-1306429814" onClick='toggleBox("Output-1306429814", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1306429814" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1306429814">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>130</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMidE@71c27ee8</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear11.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear11<br/>
+<a href="#Output-492938056" onClick='toggleBox("Output-492938056", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-492938056" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-492938056">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>101</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear11@531f4093</td></tr>
+<tr>
+<td title='_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC698_699CheckTaxablePayJoinMidFortNight14<br/>
+<a href="#Output-634440506" onClick='toggleBox("Output-634440506", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-634440506" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-634440506">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>113</td>
+<td>_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14@7776ab</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid12.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid12<br/>
+<a href="#Output-909914828" onClick='toggleBox("Output-909914828", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-909914828" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-909914828">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>117</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid12@16414e40</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear3.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear3<br/>
+<a href="#Output-1572255813" onClick='toggleBox("Output-1572255813", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1572255813" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1572255813">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>113</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear3@34f22f9d</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly5<br/>
+<a href="#Output-1015545330" onClick='toggleBox("Output-1015545330", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1015545330" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1015545330">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>119</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5@1b7c473a</td></tr>
+<tr>
+<td title='_2087EmailLog.TC455_456EmailLogToEmployee.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1</b><br>Test class: _2087EmailLog.TC455_456EmailLogToEmployee<br/>
+<a href="#Output-1437396121" onClick='toggleBox("Output-1437396121", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1437396121" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1437396121">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>108</td>
+<td>_2087EmailLog.TC455_456EmailLogToEmployee@1941a8ff</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMidE.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMidE<br/>
+<a href="#Output-1319778140" onClick='toggleBox("Output-1319778140", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1319778140" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1319778140">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>116</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMidE@71c27ee8</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeekly5<br/>
+<a href="#Output-534553956" onClick='toggleBox("Output-534553956", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-534553956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-534553956">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>101</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5@1b7c473a</td></tr>
+<tr>
+<td title='_2087EmailLog.TC459_460EmailLogFromAgentPage.GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1()'><b>GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1</b><br>Test class: _2087EmailLog.TC459_460EmailLogFromAgentPage<br/>
+<a href="#Output-1999695752" onClick='toggleBox("Output-1999695752", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1999695752" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1999695752">
+GoToUrl<br/>
+AssertUrl<br/>
+Enter_EnterUsername<br/>
+Enter_Enterpassword<br/>
+Click_LoginButton<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>83</td>
+<td>_2087EmailLog.TC459_460EmailLogFromAgentPage@5d12a356</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD<br/>
+<a href="#Output-222250245" onClick='toggleBox("Output-222250245", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-222250245" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-222250245">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>115</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD@4c51cf28</td></tr>
+<tr>
+<td title='_1706Test.TC694_695CheckTaxablePayJoinMid12.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC694_695CheckTaxablePayJoinMid12<br/>
+<a href="#Output-1984294974" onClick='toggleBox("Output-1984294974", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1984294974" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1984294974">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>99</td>
+<td>_1706Test.TC694_695CheckTaxablePayJoinMid12@16414e40</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonths2.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonths2<br/>
+<a href="#Output-1896000574" onClick='toggleBox("Output-1896000574", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1896000574" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1896000574">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>104</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonths2@2f1de2d6</td></tr>
+<tr>
+<td title='_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD<br/>
+<a href="#Output-348731252" onClick='toggleBox("Output-348731252", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-348731252" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-348731252">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>99</td>
+<td>_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD@4c51cf28</td></tr>
+<tr>
+<td title='_1706Test.TC692_693CheckTaxablePayForMidYear3.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC692_693CheckTaxablePayForMidYear3<br/>
+<a href="#Output-1286771084" onClick='toggleBox("Output-1286771084", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1286771084" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1286771084">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>103</td>
+<td>_1706Test.TC692_693CheckTaxablePayForMidYear3@34f22f9d</td></tr>
+<tr>
+<td title='_1706Test.TC690_691CheckTaxablePayForTwoMonthsG.GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1()'><b>GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1</b><br>Test class: _1706Test.TC690_691CheckTaxablePayForTwoMonthsG<br/>
+<a href="#Output-1306067302" onClick='toggleBox("Output-1306067302", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1306067302" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1306067302">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =VikasNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+</div>
+</td>
+<td></td>
+<td>99</td>
+<td>_1706Test.TC690_691CheckTaxablePayForTwoMonthsG@1b835480</td></tr>
+</table><p>
+</body>
+</html>

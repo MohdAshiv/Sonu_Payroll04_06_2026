@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="VerifyEmailDataSuite">
+  <test thread-count="5" name="VerifyEmailDataTest">
+    <classes>
+      <class name="verifyEmailsDataTest.TC243whenUncheckPayslip"/>
+      <class name="verifyEmailsDataTest.TC246ErrorwhenNoEmailinMainContact"/>
+      <class name="verifyEmailsDataTest.TC236EmailHeaderWhenMainContact"/>
+      <class name="verifyEmailsDataTest.TC112verifyEmail_DefaultProfile"/>
+      <class name="verifyEmailsDataTest.TC249EmployeesumaryToRecipient"/>
+      <class name="verifyEmailsDataTest.TC238EmailHeaderWhenMainContactnotAvail"/>
+      <class name="verifyEmailsDataTest.TC295EmailAttachmentData"/>
+      <class name="verifyEmailsDataTest.TC225verifyEmailAtDsbToEmp"/>
+      <class name="verifyEmailsDataTest.TC242ErrorwhenUncheckCompanyemail"/>
+      <class name="verifyEmailsDataTest.TC229verifyAlertMsgWhenNoEmpEmail"/>
+      <class name="verifyEmailsDataTest.TC224verifyEmailAtDsb"/>
+      <class name="verifyEmailsDataTest.TC230verifyAlertMsgWhenNoEmpEmailDump"/>
+      <class name="verifyEmailsDataTest.TC239EmailHeaderWhenNoMainContactDump"/>
+      <class name="verifyEmailsDataTest.TC244whenUncheckPayrollSummary"/>
+      <class name="verifyEmailsDataTest.TC231summaryEmailSentSuccessful"/>
+      <class name="verifyEmailsDataTest.TC292AttachmentwhenCIS"/>
+      <class name="verifyEmailsDataTest.TC235PreCheckedCompanyEmailOptioninSummaryDump"/>
+      <class name="verifyEmailsDataTest.TC294EmailButtonIsClickable"/>
+      <class name="verifyEmailsDataTest.TC245whenUncheckPayrollSummaryandPayslip"/>
+      <class name="verifyEmailsDataTest.TC233PreUnCheckedCompanyEmailOptioninSummary"/>
+      <class name="verifyEmailsDataTest.TC226verifyErrorMsgWhenNoCheck"/>
+      <class name="verifyEmailsDataTest.TC234PreUnCheckedCompanyEmailOptioninSummaryDump"/>
+      <class name="verifyEmailsDataTest.TC248WrongEmailofOtherRecipient"/>
+      <class name="verifyEmailsDataTest.TC228verifyAlertWhenNoContactDump"/>
+      <class name="verifyEmailsDataTest.TC232PreCheckedCompanyEmailOptioninSummary"/>
+      <class name="verifyEmailsDataTest.TC227verifyAlertWhenNoContact"/>
+      <class name="verifyEmailsDataTest.TC247EmailtoOtherRecipient"/>
+      <class name="verifyEmailsDataTest.TC237EmailHeaderWhenMainContactDump"/>
+      <class name="verifyEmailsDataTest.TC250EmployeePayslipToRecipient"/>
+      <class name="verifyEmailsDataTest.TC291VerifySummaryDatainEmailAttachment"/>
+    </classes>
+  </test> <!-- VerifyEmailDataTest -->
+</suite> <!-- VerifyEmailDataSuite -->

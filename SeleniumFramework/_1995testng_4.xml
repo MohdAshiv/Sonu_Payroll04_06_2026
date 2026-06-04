@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1995Suite">
+  <test thread-count="5" name="_1995Test">
+    <classes>
+      <class name="_1995subContractorPayReportTest.TC202subcontractorPayReportDump"/>
+      <class name="_1995subContractorPayReportTest.TC201subcontractorPayReportNoPay"/>
+      <class name="_1995subContractorPayReportTest.TC203subcontractorPayReportNoPayDump"/>
+      <class name="_1995subContractorPayReportTest.TC200subcontractorPayReport"/>
+    </classes>
+  </test> <!-- _1995Test -->
+</suite> <!-- _1995Suite -->

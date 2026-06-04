@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DelAddEESuite">
+  <test thread-count="5" name="DelAddEETest">
+    <classes>
+      <class name="DeleteAddEmpTest.TC445_448EmpAddDel"/>
+    </classes>
+  </test> <!-- DelAddEETest -->
+</suite> <!-- DelAddEESuite -->

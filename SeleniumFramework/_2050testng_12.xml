@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2050DetailedPayTotals.TC06_ColumnUpdateList"/>
+      <class name="_2050DetailedPayTotals.TC08_VerifyExprtToCSVFunctionality"/>
+      <class name="_2050DetailedPayTotals.TC10_VerifyDPTEmailforMultipleContractor"/>
+      <class name="_2050DetailedPayTotals.TC05_VerifySubconcPayDetails"/>
+      <class name="_2050DetailedPayTotals.TC03_VerifyAllselectedinNameFilter"/>
+      <class name="_2050DetailedPayTotals.TC07_VerifyExprtToPDFFunctionality"/>
+      <class name="_2050DetailedPayTotals.TC09_VerifyDPTEmailforAllContractor"/>
+      <class name="_2050DetailedPayTotals.TC01_VerifyDetailedPayTotal"/>
+      <class name="_2050DetailedPayTotals.TC04_MultipleSubConcSelected"/>
+      <class name="_2050DetailedPayTotals.TC11_VerifyDPTreportwithoutemail"/>
+      <class name="_2050DetailedPayTotals.TC12_VerifyEmailTemplateforDPTReport"/>
+      <class name="_2050DetailedPayTotals.TC02_VerifyNameFilter"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

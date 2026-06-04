@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VerifyEmailDataSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="VerifyEmailDataTest(failed)">
+    <classes>
+      <class name="verifyEmailsDataTest.TC234PreUnCheckedCompanyEmailOptioninSummaryDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC234PreUnCheckedCompanyEmailOptioninSummaryDump -->
+      <class name="verifyEmailsDataTest.TC249EmployeesumaryToRecipient">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC249EmployeesumaryToRecipient -->
+      <class name="verifyEmailsDataTest.TC237EmailHeaderWhenMainContactDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC237EmailHeaderWhenMainContactDump -->
+      <class name="verifyEmailsDataTest.TC112verifyEmail_DefaultProfile">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1PositiveSelectSelecttoMainContactClickRunPayroll2ClickopenPayr"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC112verifyEmail_DefaultProfile -->
+      <class name="verifyEmailsDataTest.TC245whenUncheckPayrollSummaryandPayslip">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC245whenUncheckPayrollSummaryandPayslip -->
+      <class name="verifyEmailsDataTest.TC235PreCheckedCompanyEmailOptioninSummaryDump">
+        <methods>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC235PreCheckedCompanyEmailOptioninSummaryDump -->
+      <class name="verifyEmailsDataTest.TC236EmailHeaderWhenMainContact">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC236EmailHeaderWhenMainContact -->
+      <class name="verifyEmailsDataTest.TC232PreCheckedCompanyEmailOptioninSummary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC232PreCheckedCompanyEmailOptioninSummary -->
+      <class name="verifyEmailsDataTest.TC230verifyAlertMsgWhenNoEmpEmailDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC230verifyAlertMsgWhenNoEmpEmailDump -->
+      <class name="verifyEmailsDataTest.TC291VerifySummaryDatainEmailAttachment">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC291VerifySummaryDatainEmailAttachment -->
+      <class name="verifyEmailsDataTest.TC248WrongEmailofOtherRecipient">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC248WrongEmailofOtherRecipient -->
+      <class name="verifyEmailsDataTest.TC233PreUnCheckedCompanyEmailOptioninSummary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC233PreUnCheckedCompanyEmailOptioninSummary -->
+      <class name="verifyEmailsDataTest.TC250EmployeePayslipToRecipient">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC250EmployeePayslipToRecipient -->
+      <class name="verifyEmailsDataTest.TC238EmailHeaderWhenMainContactnotAvail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC238EmailHeaderWhenMainContactnotAvail -->
+      <class name="verifyEmailsDataTest.TC229verifyAlertMsgWhenNoEmpEmail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC229verifyAlertMsgWhenNoEmpEmail -->
+      <class name="verifyEmailsDataTest.TC244whenUncheckPayrollSummary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC244whenUncheckPayrollSummary -->
+      <class name="verifyEmailsDataTest.TC231summaryEmailSentSuccessful">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC231summaryEmailSentSuccessful -->
+      <class name="verifyEmailsDataTest.TC292AttachmentwhenCIS">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC292AttachmentwhenCIS -->
+      <class name="verifyEmailsDataTest.TC242ErrorwhenUncheckCompanyemail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC242ErrorwhenUncheckCompanyemail -->
+      <class name="verifyEmailsDataTest.TC294EmailButtonIsClickable">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC294EmailButtonIsClickable -->
+      <class name="verifyEmailsDataTest.TC246ErrorwhenNoEmailinMainContact">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC246ErrorwhenNoEmailinMainContact -->
+      <class name="verifyEmailsDataTest.TC243whenUncheckPayslip">
+        <methods>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC243whenUncheckPayslip -->
+      <class name="verifyEmailsDataTest.TC295EmailAttachmentData">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC295EmailAttachmentData -->
+      <class name="verifyEmailsDataTest.TC247EmailtoOtherRecipient">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC247EmailtoOtherRecipient -->
+      <class name="verifyEmailsDataTest.TC239EmailHeaderWhenNoMainContactDump">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- verifyEmailsDataTest.TC239EmailHeaderWhenNoMainContactDump -->
+    </classes>
+  </test> <!-- VerifyEmailDataTest(failed) -->
+</suite> <!-- Failed suite [VerifyEmailDataSuite] -->

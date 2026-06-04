@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      
+      <class name="_11552Test.TC724_LeaveTaxYear_HolidayLeave"/>
+      <class name="_11552Test.TC725_LeaveTaxYear_HourlyRate36"/>
+      <class name="_11552Test.TC726_LeaveTaxYear_HourlyRate_HolidayLeaveDate"/>
+      <class name="_11552Test.TC727_LeaveTaxYear_HourlyRate_HolidayLeaveDate2"/>
+      <class name="_11552Test.TC728_LeaveYearCreation"/>
+      <class name="_11552Test.TC729_LeaveFinancialYear"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

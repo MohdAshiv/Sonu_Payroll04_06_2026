@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1399Suite">
+  <test thread-count="5" name="_1399Test">
+    <classes>
+      <class name="_1399subContr.TC208VerifySubContrwithNI20Dump"/>
+      <class name="_1399subContr.TC199VerifySubContrwithoutNI_n_UTR"/>
+      <class name="_1399subContr.TC211VerifySubContrwithWrongNIDump"/>
+      <class name="_1399subContr.TC190VerifySubContrwithUTR30"/>
+      <class name="_1399subContr.TC195VerifySubContrwithNI_n_UTR_0"/>
+      <class name="_1399subContr.TC209VerifySubContrwithoutNI_n_UTRDump"/>
+      <class name="_1399subContr.TC210VerifySubContrwithWrongNI"/>
+      <class name="_1399subContr.TC189VerifySubContrwithUTR"/>
+      <class name="_1399subContr.TC191VerifySubContrwithUTR0per"/>
+      <class name="_1399subContr.TC207VerifySubContrwithUTRDump"/>
+      <class name="_1399subContr.TC193VerifySubContrwithNI_0"/>
+      <class name="_1399subContr.TC192VerifySubContrwithNI20"/>
+      <class name="_1399subContr.TC194VerifySubContrwithNI_n_UTR_20"/>
+     
+    </classes>
+  </test> <!-- _1399Test -->
+</suite> <!-- _1399Suite -->

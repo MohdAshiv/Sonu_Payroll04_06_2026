@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AOESuite">
+  <test thread-count="5" name="AOETest">
+    <classes>
+      <class name="AOE.TC823_829AOE_ChildSupportPopup"/>
+      <class name="AOE.TC852_858AOE_ChildSupportPopup"/>
+      <class name="AOE.TC894_900AOE_ChildSupportPopupA3"/>
+      <class name="AOE.TC859_865AOE_ChildSupportPopup6"/>
+      <class name="AOE.TC901_906AOE_ChildSupportPopup5"/>
+      <class name="AOE.TC887_893AOE_ChildSupportPopup4"/>
+      <class name="AOE.TC830_836AOE_ChildSupportPopup"/>
+      <class name="AOE.TC873_879AOE_ChildSupportPopupA1"/>
+      <class name="AOE.TC845_851AOE_ChildSupportPopup"/>
+      <class name="AOE.TC866_872AOE_ChildSupportPopup5"/>
+      <class name="AOE.TC859_865AOE_ChildSupportPopupA2"/>
+      <class name="AOE.TC866_872AOE_ChildSupportPopupA3"/>
+      <class name="AOE.TC907_913AOE_ChildSupportPopupA5"/>
+      <class name="AOE.TC837_844AOE_ChildSupportPopup"/>
+      <class name="AOE.TC873_879AOE_ChildSupportPopup4"/>
+      <class name="AOE.TC845_851AOE_ChildSupportPopupA6"/>
+      <class name="AOE.TC852_858AOE_ChildSupportPopupA4"/>
+      <class name="AOE.TC914_920AOE_ChildSupportPopupA2"/>
+      <class name="AOE.TC859_865AOE_ChildSupportPopupA5"/>
+      <class name="AOE.TC859_865AOE_ChildSupportPopup"/>
+      <class name="AOE.TC880_886AOE_ChildSupportPopupA1"/>
+    </classes>
+  </test> <!-- AOETest -->
+</suite> <!-- AOESuite -->

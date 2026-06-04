@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed)">
+    <classes>
+      <class name="_6440_EmployeeNI_22_23.TC481_NI_LetterA_QualifyingSalarySacrifice_C67L">
+        <methods>
+          <include name="TC03ValidateP11"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _6440_EmployeeNI_22_23.TC481_NI_LetterA_QualifyingSalarySacrifice_C67L -->
+      <class name="_6440_EmployeeNI_22_23.TC488_NI_Letter_A_Monthly_P45">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateNITaxNetPay"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _6440_EmployeeNI_22_23.TC488_NI_Letter_A_Monthly_P45 -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed)(failed)(failed)(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Suite]]]]]]]] -->

@@ -1,0 +1,1328 @@
+<html>
+<head>
+<title>TestNG:  Test(failed)(failed)</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test(failed)(failed)</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Aug 27 23:37:29 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>5543 seconds (5543640 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC576_LeaveRequestNotification.TC02validateLeaveRequestNotificationIfApproved()'><b>TC02validateLeaveRequestNotificationIfApproved</b><br>Test class: _2855LeaveManagementTest.TC576_LeaveRequestNotification<br/>
+<a href="#Output-1981708431" onClick='toggleBox("Output-1981708431", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1981708431" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1981708431">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - FhJZHNIpO<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - FhJZHNIpO<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter_LeaverStartDateSSP<br/>
+enterAwe<br/>
+clickSaveBtn<br/>
+clickCancelLeaves<br/>
+click Employer View<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;aspnetForm&apos;]/main/div/div[3]/header/div/div/div[1]/div/a
+	at pages.EmployerView.clickLeaveNotification(EmployerView.java:144)
+	at _2855LeaveManagementTest.TC576_LeaveRequestNotification.TC02validateLeaveRequestNotificationIfApproved(TC576_LeaveRequestNotification.java:323)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1981708431", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1981708431'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;aspnetForm&apos;]/main/div/div[3]/header/div/div/div[1]/div/a
+	at org.testng.Assert.fail(Assert.java:99)
+	at pages.EmployerView.clickLeaveNotification(EmployerView.java:144)
+	at _2855LeaveManagementTest.TC576_LeaveRequestNotification.TC02validateLeaveRequestNotificationIfApproved(TC576_LeaveRequestNotification.java:323)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>532</td>
+<td>_2855LeaveManagementTest.TC576_LeaveRequestNotification@49ff7d8c</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC576_LeaveRequestNotification.TC04validateLeaveNotificationRedirectPendingForApprovalPage()'><b>TC04validateLeaveNotificationRedirectPendingForApprovalPage</b><br>Test class: _2855LeaveManagementTest.TC576_LeaveRequestNotification<br/>
+<a href="#Output-751259764" onClick='toggleBox("Output-751259764", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-751259764" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-751259764">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - SCJYUBLka<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - SCJYUBLka<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;aspnetForm&apos;]/main/div/div[3]/header/div/div/div[1]/div/a
+	at pages.EmployerView.clickLeaveNotification(EmployerView.java:144)
+	at _2855LeaveManagementTest.TC576_LeaveRequestNotification.TC04validateLeaveNotificationRedirectPendingForApprovalPage(TC576_LeaveRequestNotification.java:626)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace751259764", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace751259764'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;aspnetForm&apos;]/main/div/div[3]/header/div/div/div[1]/div/a
+	at org.testng.Assert.fail(Assert.java:99)
+	at pages.EmployerView.clickLeaveNotification(EmployerView.java:144)
+	at _2855LeaveManagementTest.TC576_LeaveRequestNotification.TC04validateLeaveNotificationRedirectPendingForApprovalPage(TC576_LeaveRequestNotification.java:626)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>431</td>
+<td>_2855LeaveManagementTest.TC576_LeaveRequestNotification@49ff7d8c</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC567_ResonForLeaveTypes.TCvalidateApprovedLeavesInBulk()'><b>TCvalidateApprovedLeavesInBulk</b><br>Test class: _2855LeaveManagementTest.TC567_ResonForLeaveTypes<br/>
+<a href="#Output-2081595126" onClick='toggleBox("Output-2081595126", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2081595126" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2081595126">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - LSsaIVzyt<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - LSsaIVzyt<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+verifyLeaveResonField<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+verifyLeaveResonField<br/>
+selectLeaveType<br/>
+verifyLeaveResonField<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [] but found [XYZ],
+	expected [] but found [XYZ]
+	at _2855Page.VerifyLeaveManagement.assertAll(VerifyLeaveManagement.java:894)
+	at _2855LeaveManagementTest.TC567_ResonForLeaveTypes.TCvalidateApprovedLeavesInBulk(TC567_ResonForLeaveTypes.java:143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2081595126", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2081595126'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [] but found [XYZ],
+	expected [] but found [XYZ]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at _2855Page.VerifyLeaveManagement.assertAll(VerifyLeaveManagement.java:894)
+	at _2855LeaveManagementTest.TC567_ResonForLeaveTypes.TCvalidateApprovedLeavesInBulk(TC567_ResonForLeaveTypes.java:143)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>464</td>
+<td>_2855LeaveManagementTest.TC567_ResonForLeaveTypes@5a755cc1</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC576_LeaveRequestNotification.TC03validateLeaveRequestNotificationIfRejected()'><b>TC03validateLeaveRequestNotificationIfRejected</b><br>Test class: _2855LeaveManagementTest.TC576_LeaveRequestNotification<br/>
+<a href="#Output-85435056" onClick='toggleBox("Output-85435056", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-85435056" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-85435056">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - sJSqopWBH<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - sJSqopWBH<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter_LeaverStartDateSSP<br/>
+enterAwe<br/>
+clickSaveBtn<br/>
+clickCancelLeaves<br/>
+click Employer View<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;aspnetForm&apos;]/main/div/div[3]/header/div/div/div[1]/div/a
+	at pages.EmployerView.clickLeaveNotification(EmployerView.java:144)
+	at _2855LeaveManagementTest.TC576_LeaveRequestNotification.TC03validateLeaveRequestNotificationIfRejected(TC576_LeaveRequestNotification.java:493)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace85435056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace85435056'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;aspnetForm&apos;]/main/div/div[3]/header/div/div/div[1]/div/a
+	at org.testng.Assert.fail(Assert.java:99)
+	at pages.EmployerView.clickLeaveNotification(EmployerView.java:144)
+	at _2855LeaveManagementTest.TC576_LeaveRequestNotification.TC03validateLeaveRequestNotificationIfRejected(TC576_LeaveRequestNotification.java:493)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>525</td>
+<td>_2855LeaveManagementTest.TC576_LeaveRequestNotification@49ff7d8c</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC577_ManageLeaveRequest.TC01validateTotalLeaveTaken()'><b>TC01validateTotalLeaveTaken</b><br>Test class: _2855LeaveManagementTest.TC577_ManageLeaveRequest<br/>
+<a href="#Output-2050529121" onClick='toggleBox("Output-2050529121", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2050529121" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2050529121">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - MWUSsNnJk<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - MWUSsNnJk<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+ClickContactDetails<br/>
+enterFirstName<br/>
+enterEmail<br/>
+clickAddContact<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+enterEmailAddress<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter_LeaverStartDateSSP<br/>
+enterAwe<br/>
+clickSaveBtn<br/>
+clickCancelLeaves<br/>
+click Employer View<br/>
+clickLeaveManagement<br/>
+clickPendingForApproval<br/>
+clickEmployeeNameOnLeaveCancelPage<br/>
+clickCheckBox<br/>
+clickApproveBtn<br/>
+verifyleaveApprovedOrRejectMsg<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickManageLeaves<br/>
+verifyTotalLeaveTakenCount<br/>
+clickTotalLeaveTaken<br/>
+verifyTotalLeaveTakenRedirectPage<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [History] but found [Leave Management]
+	at _2855Page.VerifyLeaveManagement.assertAll(VerifyLeaveManagement.java:894)
+	at _2855LeaveManagementTest.TC577_ManageLeaveRequest.TC01validateTotalLeaveTaken(TC577_ManageLeaveRequest.java:181)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2050529121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2050529121'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [History] but found [Leave Management]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at _2855Page.VerifyLeaveManagement.assertAll(VerifyLeaveManagement.java:894)
+	at _2855LeaveManagementTest.TC577_ManageLeaveRequest.TC01validateTotalLeaveTaken(TC577_ManageLeaveRequest.java:181)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>563</td>
+<td>_2855LeaveManagementTest.TC577_ManageLeaveRequest@36328d33</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave.TC08validateErrorMsgForSameDurationLeave()'><b>TC08validateErrorMsgForSameDurationLeave</b><br>Test class: _2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave<br/>
+<a href="#Output-445350376" onClick='toggleBox("Output-445350376", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-445350376" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-445350376">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - lKWvIQDXY<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - lKWvIQDXY<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+verifyGoBackBtn<br/>
+</div>
+</td>
+<td></td>
+<td>574</td>
+<td>_2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave@7fb95505</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC576_LeaveRequestNotification.TC01validateLeaveRequestNotificationNumber()'><b>TC01validateLeaveRequestNotificationNumber</b><br>Test class: _2855LeaveManagementTest.TC576_LeaveRequestNotification<br/>
+<a href="#Output-1945836927" onClick='toggleBox("Output-1945836927", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1945836927" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1945836927">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - EovDrflWG<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - EovDrflWG<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter_LeaverStartDateSSP<br/>
+enterAwe<br/>
+clickSaveBtn<br/>
+clickCancelLeaves<br/>
+click Employer View<br/>
+verifyNotificationNumber<br/>
+</div>
+</td>
+<td></td>
+<td>523</td>
+<td>_2855LeaveManagementTest.TC576_LeaveRequestNotification@49ff7d8c</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC576_LeaveRequestNotification.TC05validateLeaveRequestNotificationFromDiffrentEmployee()'><b>TC05validateLeaveRequestNotificationFromDiffrentEmployee</b><br>Test class: _2855LeaveManagementTest.TC576_LeaveRequestNotification<br/>
+<a href="#Output-267098351" onClick='toggleBox("Output-267098351", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-267098351" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-267098351">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TehttzLLv<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TehttzLLv<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter_LeaverStartDateSSP<br/>
+enterAwe<br/>
+clickSaveBtn<br/>
+clickCancelLeaves<br/>
+click Employer View<br/>
+Click clickEmployee1<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+enterExpectedBirthDate<br/>
+Enter Actual BirthDate<br/>
+enterAwe<br/>
+enterFromDate<br/>
+mToDate<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+click Employer View<br/>
+verifyNotificationNumber<br/>
+</div>
+</td>
+<td></td>
+<td>701</td>
+<td>_2855LeaveManagementTest.TC576_LeaveRequestNotification@49ff7d8c</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC576_LeaveRequestNotification.TC06validateLeaveRequestApprovedNotificationFromDiffrentEmployee()'><b>TC06validateLeaveRequestApprovedNotificationFromDiffrentEmployee</b><br>Test class: _2855LeaveManagementTest.TC576_LeaveRequestNotification<br/>
+<a href="#Output-1596843797" onClick='toggleBox("Output-1596843797", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1596843797" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1596843797">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - dAwnpiWZM<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - dAwnpiWZM<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter_LeaverStartDateSSP<br/>
+enterAwe<br/>
+clickSaveBtn<br/>
+clickCancelLeaves<br/>
+click Employer View<br/>
+Click clickEmployee1<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateSick<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+Enter Leaver StartDate<br/>
+Enter_LeaverEndDateHoliday<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+selectLeaveType<br/>
+enterExpectedBirthDate<br/>
+Enter Actual BirthDate<br/>
+enterAwe<br/>
+enterFromDate<br/>
+mToDate<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+click Employer View<br/>
+clickLeaveManagement<br/>
+clickPendingForApproval<br/>
+clickEmplyeeA<br/>
+clickCheckBox<br/>
+enterNote<br/>
+clickApproveBtn<br/>
+click Employer View<br/>
+verifyNotificationNumber<br/>
+</div>
+</td>
+<td></td>
+<td>717</td>
+<td>_2855LeaveManagementTest.TC576_LeaveRequestNotification@49ff7d8c</td></tr>
+<tr>
+<td title='_2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave.TC07validateApprovedMaternityRejectedLeaveRequestEmployer()'><b>TC07validateApprovedMaternityRejectedLeaveRequestEmployer</b><br>Test class: _2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave<br/>
+<a href="#Output-1005344801" onClick='toggleBox("Output-1005344801", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1005344801" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1005344801">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =AutomationTester<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+clickNewClient<br/>
+clickLimitedCompany<br/>
+clickMnualyLimitedCompany<br/>
+clickBuisnessName<br/>
+enterRegistrationNo<br/>
+enterRegistrationDate<br/>
+enterFirstName<br/>
+enterLastName<br/>
+clickSaveBtn<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - eougSsgoL<br/>
+Click_ClickSearch<br/>
+Select_services.<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - eougSsgoL<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click_gotoEditCompany<br/>
+Click_clickPayrollDetails<br/>
+enterPayeNumber<br/>
+enterRefrenceNumber<br/>
+accountOfficeReffrence<br/>
+Click_ClickSave<br/>
+Click_clickPayrollSettings<br/>
+Entered Nomisma Start date.<br/>
+Click_ClickSave<br/>
+Click PayrollDashBoard<br/>
+clickNewEmployee<br/>
+enterTitle<br/>
+enterFirstName<br/>
+enterLastName<br/>
+enterDateOfBirth<br/>
+enterAddressLine<br/>
+enterAddressLine2<br/>
+enterPostCode<br/>
+Click SaveBtn<br/>
+click Mandotorypayroll<br/>
+enterJoiningDate<br/>
+enterNICategory<br/>
+Enter taxCode<br/>
+Click SaveBtn<br/>
+click PayDetails<br/>
+Enter basic salary= 3000.00<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click_gotoFilingManagement<br/>
+selectStatus<br/>
+clickCheckBox<br/>
+enterNotes<br/>
+clickNottoSubmit<br/>
+click Employer View<br/>
+Click EmployeeName<br/>
+clickLeaveManagement<br/>
+clickApplyLeaves<br/>
+selectLeaveType<br/>
+enterExpectedBirthDate<br/>
+Enter Actual BirthDate<br/>
+enterFromDate<br/>
+enterAwe<br/>
+enterLeaveReson<br/>
+clickSaveBtn<br/>
+click Employer View<br/>
+clickLeaveManagement<br/>
+clickPendingForApproval<br/>
+clickEmployeeNameOnLeaveCancelPage<br/>
+clickCheckBox<br/>
+enterNote<br/>
+clickRejectBtn<br/>
+verifyleaveRejectMsg<br/>
+clickLeaveManagement<br/>
+clickRejectedLeaves<br/>
+verifySMPLeave<br/>
+</div>
+</td>
+<td></td>
+<td>493</td>
+<td>_2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave@7fb95505</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,405 @@
+package PayrollDashboard_Test;
+
+import org.testng.annotations.Test;
+
+import tests.TestBase;
+import utilities.ExcelData;
+
+public class TC804_PayrollDashboardBtn extends TestBase {
+
+	
+	public String sTestCaseID = null;
+	String[] data = null;
+	String Sheet = null;
+
+	@Test(priority=1)
+
+	public void TC01validateEmployerNote() throws Exception {
+
+		sTestCaseID = "TC804";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4  loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();	
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+		
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+		OpenClient.Click_ClientsClick();
+		pages.CreateClient buisness= new pages.CreateClient (driver);
+		buisness.clickNewClient();
+		buisness.clickLimitedCompany();
+		buisness.clickMnualyLimitedCompany();
+		buisness.enterBuisnessName();
+		
+		buisness.enterRegistrationNo();
+		buisness.enterRegistrationDate(data[88]);
+		buisness.enterFirstName();
+		buisness.enterLastName();
+		buisness.clickSaveBtn();
+		
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+	
+		pages.AccountingPeriodSettingBK_FAInactive Bk= new 		pages.AccountingPeriodSettingBK_FAInactive(driver);
+		Bk.Click_BKEdit();
+		Bk.Select_services(data[86]);
+		Bk.Enter_CompanyAddressLine1(data[87]);
+		Bk.Click_Save();
+
+		Bk.Click_AccountingPeriod();
+		Bk.Click_AddAccountingPeriod();
+		Bk.Enter_NewStartDate(data[88]);
+		Bk.Enter_NewEndDate(data[89]);
+		Bk.Click_AccPeriodSave();
+		
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		pages.EditCompany company= new 	pages.EditCompany(driver);
+		
+		company.Click_gotoEditCompany();
+		
+	    company.Click_clickDepartments();		
+		company.clickDepartment();
+		company.enterDepartmentName1(data[12]);
+		company.clickDepatrmentSaveBtn();
+		Thread.sleep(15000);
+			
+		company.Click_clickPayrollDetails();
+		
+		company.enterPayeNumber(data[90]);
+		company.enterRefrenceNumber(data[91]);
+		company.accountOfficeReffrence(data[92]);
+		
+		company.Click_ClickSave();
+		company.Click_clickPayrollSettings();
+		company.Enter_NomismaStartDate(data[108]);
+		company.Click_ClickSave();
+		company.clickYesPension();
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+
+		pages.PensionSetup pension = new pages.PensionSetup(driver);
+		
+		pension.enterPensionStagingDate(data[93]);
+		pension.enterSignatoryTitle();
+		pension.enterSignatoryName();
+		pension.enterEmailAddress(data[94]);
+		pension.enterPhoneNumber();
+		pension.enterPensionId(data[95]);
+		pension.clickPensonDetailsSave();
+		payroll.scrollClickPayrollDashboard();
+		pension.clickPensionDashBoard();
+		pension.addSchemeManually();
+		pension.enterPensionSchemeName(data[96]);
+		pension.selectPensionProvider(data[96]);
+		pension.selectCalculationBasis(data[97]);
+		pension.selectCalculationMethod(data[98]);
+		pension.eeContribution(data[99]);
+		pension.enterErContribution(data[100]);
+		pension.enterSubgroupName();
+		pension.enterGroupId();
+		pension.enterSubGroupId();
+		pension.clickSaveBtn();
+		payroll.Click_PayrollDashboard();
+		
+		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
+		
+		employee.clickNewEmployee();
+		employee.enterFirstName(data[102]);
+		employee.enterLastName(data[103]);
+		employee.enterDateOfBirth(data[104]);
+		employee.enterAddressLine(data[105]);
+		employee.enterAddressLine2(data[106]);
+		employee.enterPostCode(data[107]);
+		employee.clickSaveBtn();
+		employee.clickMandotoryPayroll();
+		employee.enterJoiningDate(data[108]);
+
+		employee.enterNICategory(data[6]);
+		employee.enterTaxCode(data[7]);
+		employee.clickYesDirector();
+		employee.enter_DirectorFromDate(data[108]);
+		employee.clickSaveBtn();
+		employee.click_Paydetails();
+		employee.enterBasicSalary3(data[5]);
+		employee.clickSaveBtn();
+		employee.clickAutoEnrolment();
+		pension.selectWorkerType(data[109]);
+		pension.selectScheme(data[96]);
+		pension.enterEnrollmentDate(data[108]);
+		pension.eeChoosenContribution(data[99]);
+		pension.erChoosenContribution(data[100]);
+		pension.eeVoluntaryContribution(data[101]);
+		pension.eRVoluntaryContribution(data[101]);
+		pension.clickAutoEnrollmentSaveBtn();
+		payroll.Click_PayrollDashboard();
+
+		employee.click3Dots();
+		employee.clickEditBtn();
+
+		employee.click_Paydetails();
+		_5671Departments_Page.DepartmentsPage page = new _5671Departments_Page.DepartmentsPage(driver);
+		page.selectDepartment(data[12]);
+		employee.clickSaveBtn();
+		payroll.Click_PayrollDashboard();
+		
+		pages.DashboardPage dashboard= new  pages.DashboardPage(driver);
+		dashboard.payrollNotesClick();
+		dashboard.clickAndEnterMayNote();
+		dashboard.saveNote();
+	
+		payroll.Click_PayrollDashboard();
+		
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		
+		verify.verifyNotesOnDashboard(0);
+		payroll.Run_Payroll();
+		verify.verifyNotesOnDashboard(1);
+		verify.verifyEnterdNote();
+		payroll.Click_PayrollDashboard();
+		
+		payroll.Run_Payroll();
+		verify.verifyNotesOnDashboard(0);
+
+		verify.assertAll();
+		
+
+	}
+	
+
+	@Test(priority = 2)
+	public void TC02validateUpcomingLeaveBtn() throws Exception {
+
+		sTestCaseID = "TC804";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4 loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		pages.DashboardPage dashboard= new  pages.DashboardPage(driver);
+		dashboard.clickUpcomingLeave();
+
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+
+		verify.verifyUpcomingLeave(data[8]);
+		verify.assertAll();
+	}	
+	
+	
+	@Test(priority = 3)
+	public void TC03validateSendSms() throws Exception {
+
+		sTestCaseID = "TC804";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4 loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		pages.DashboardPage dashboard= new  pages.DashboardPage(driver);
+		dashboard.clickSendSms();
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+
+		verify.verifySendSMS(data[9]);
+		verify.assertAll();
+	}	
+	
+	
+	@Test(priority = 4)
+	public void TC04validateRequestHoursBtn() throws Exception {
+
+		sTestCaseID = "TC804";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4 loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		
+		pages.EditCompany company= new 	pages.EditCompany(driver);
+		
+		company.Click_gotoEditCompany();
+		company.Click_clickPayrollDetails();
+		company.Click_clickPayrollSettings();
+		company.clickYesRequestHrsBtn();
+		
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+
+		payroll.Click_PayrollDashboard();
+		
+		pages.DashboardPage dashboard= new  pages.DashboardPage(driver);
+		dashboard.clickOnRequstHoursBtn();
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		
+		verify.verifyRequestHourBtn(data[13]);
+		
+		company.Click_gotoEditCompany();
+		company.Click_clickPayrollDetails();
+		company.Click_clickPayrollSettings();
+		company.clickNoRequestPayrollInfo();
+		company.Click_ClickSave();
+		payroll.Click_PayrollDashboard();
+		verify.verifyRequestHoursBtnNotVisible(0);
+		
+		verify.assertAll();
+	}	
+	
+	
+	
+	
+	@Test(priority = 5)
+	public void TC05validateNmwAlert() throws Exception {
+
+		sTestCaseID = "TC804";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4 loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		
+		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
+		employee.clickEmployeeName();
+		employee.editEmployeeDetails();
+		employee.click_Paydetails();
+		employee.Click_howpayworkout(data[15]);
+		employee.Enter_HourRate(data[16]);
+		
+		employee.clickTab();
+		driver.switchTo().alert().accept();
+		
+		employee.clickSaveBtn();
+		
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+
+		payroll.Click_PayrollDashboard();
+		
+		
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		
+		verify.verifyNMWAlert(data[14]);
+		
+		verify.assertAll();
+	}	
+	
+	
+	@Test(priority = 6)
+	public void TC06validateLeaverEmployeeShouldNotReflectOnDashboard() throws Exception {
+
+		sTestCaseID = "TC804";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4 loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
+		employee.click3Dots();		
+		
+		employee.clickOnLeveBtn();
+		employee.enterLeaveDate(data[17]);
+	
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+		payroll.Run_Payroll();
+
+		payroll.Click_PayrollDashboard();		
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		verify.verifyLeaverEmployee(0);
+		
+		verify.assertAll();
+	}	
+	
+}

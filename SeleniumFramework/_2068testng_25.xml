@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2068Suite">
+  <test thread-count="5" name="_2068Test">
+    <classes>
+      <class name="_2068.TC544TaxWhenCD2"/>
+      <class name="_2068.TC536SummaryWhenPM"/>
+      <class name="_2068.TC518SummarywhenNoSER"/>
+      <class name="_2068.TC543TaxwhenCD1"/>
+      <class name="_2068.TC522MidYrQTRWhenPaymentMngmnt"/>
+      <class name="_2068.TC516_2068NomismaPayroll"/>
+      <class name="_2068.TC521MidYrQtr"/>
+      <class name="_2068.TC523PaymentMangmntSumary"/>
+      <class name="_2068.TC538Taxpayment"/>
+      <class name="_2068.TC539TaxDeductionWhenCD"/>
+      <class name="_2068.TC533PayrollwhenPaymentmngmnt"/>
+      <class name="_2068.TC519FirstMonthSalary"/>
+      <class name="_2068.TC535SummaryWhenNoCIS"/>
+      <class name="_2068.TC537SummaryWhenNoPM"/>
+      <class name="_2068.TC526EmpSlrywhenMonthly"/>
+      <class name="_2068.TC525EmpPayslipWhenQtr"/>
+      <class name="_2068.TC520QtrPayeScheme"/>
+      <class name="_2068.TC524EmpPayslip"/>
+      <class name="_2068.TC534SummarywhenCIS"/>
+      <class name="_2068.TC541TaxWhen1250L"/>
+      <class name="_2068.TC540TaxWhenCD1"/>
+      <class name="_2068.TC531PayrollWhenCIS"/>
+      <class name="_2068.TC542TaxWhenC1CD"/>
+      <class name="_2068.TC532PayrollWhenNoCIS"/>
+      <class name="_2068.TC517PayrollSummary"/>
+    </classes>
+  </test> <!-- _2068Test -->
+</suite> <!-- _2068Suite -->

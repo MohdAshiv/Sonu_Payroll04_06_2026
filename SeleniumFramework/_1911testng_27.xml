@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1911Suite">
+  <test thread-count="5" name="_1911Test">
+    <classes>
+      <class name="_1911test.TC668ZIPEmailfromDSBtoEmp"/>
+      <class name="_1911test.TC669ZIPEmailfromDSBtoER"/>
+      <class name="_1911test.TC662NoProtectionEmailfromDSBtoEmp"/>
+      <class name="_1911test.TC666PDFEmailfromDSBtoER"/>
+      <class name="_1911test.TC687ZIPprotectionReportsPayslipEE"/>
+      <class name="_1911test.TC672NoprotectionReportsPayslipER"/>
+      <class name="_1911test.TC671NoprotectionReportsPayslipEE"/>
+      <class name="_1911test.TC681NoprotectionReportsPayslipER"/>
+      <class name="_1911test.TC665PDFEmailfromDSBtoEmp"/>
+      <class name="_1911test.TC677ZIPprotectionReportsPayslipER"/>
+      <class name="_1911test.TC679ZIPprotectionReportsPayslipBoth"/>
+      <class name="_1911test.TC676PDFprotectionReportsPayslipBoth"/>
+      <class name="_1911test.TC688ZIPprotectionReportsPayslipBoth"/>
+      <class name="_1911test.TC674PDFprotectionReportsPayslipER"/>
+      <class name="_1911test.TC667PDFEmailfromDSBtoNoContact"/>
+      <class name="_1911test.TC675PDFprotectionReportsPayslipEE"/>
+      <class name="_1911test.TC673NoprotectionReportsPayslipBoth"/>
+      <class name="_1911test.TC682NoprotectionReportsPayslipBoth"/>
+      <class name="_1911test.TC664NoProtectionEmailfromDSBtoNoContact"/>
+      <class name="_1911test.TC678ZIPprotectionReportsPayslipEE"/>
+      <class name="_1911test.TC686ZIPprotectionReportsPayslipER"/>
+      <class name="_1911test.TC685PDFprotectionReportsPayslipBoth"/>
+      <class name="_1911test.TC680NoprotectionReportsPayslipEE"/>
+      <class name="_1911test.TC670ZIPEmailfromDSBtoNoContact"/>
+      <class name="_1911test.TC663NoProtectionEmailfromDSBtoER"/>
+      <class name="_1911test.TC684PDFprotectionReportsPayslipEE"/>
+      <class name="_1911test.TC683PDFprotectionReportsPayslipER"/>
+    </classes>
+  </test> <!-- _1911Test -->
+</suite> <!-- _1911Suite -->

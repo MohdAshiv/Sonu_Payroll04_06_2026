@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2081_RecurringAddition_Deductions.TC035_RecurringAddition"/>
+      <class name="_2081_RecurringAddition_Deductions.TC036_RecurringAddition_Backdated"/>
+      <class name="_2081_RecurringAddition_Deductions.TC037_RecurringAddition_Pension"/>
+      <class name="_2081_RecurringAddition_Deductions.TC038_MultipleRecurring"/>
+      <class name="_2081_RecurringAddition_Deductions.TC039_RecurringAddition_Changed"/>
+      <class name="_2081_RecurringAddition_Deductions.TC040_RecurringStop"/>
+      <class name="_2081_RecurringAddition_Deductions.TC041_RecurringAddition_Payslip"/>
+      <class name="_2081_RecurringAddition_Deductions.TC042_RecurringAddition_PayrollSummary"/>
+      <class name="_2081_RecurringAddition_Deductions.TC043_RecurringAdition_PeriodSummary"/>
+      <class name="_2081_RecurringAddition_Deductions.TC044_Individually_EmployeePaySchedule"/>
+      <class name="_2081_RecurringAddition_Deductions.TC045_Addition_Deduction_BeforeTax"/>
+      <class name="_2081_RecurringAddition_Deductions.TC046_Addition_Deduction_AfterTax"/>
+      <class name="_2081_RecurringAddition_Deductions.TC047_Addition_Deduction_BeforeTax"/>
+     
+      
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

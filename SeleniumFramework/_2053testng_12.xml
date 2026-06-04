@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2053SubcontractorPayslips.TC05_VerifyExprtSubcontractorPayslipCSV"/>
+      <class name="_2053SubcontractorPayslips.TC12_VerifyWithoutEmailpayslipforSubcontractorlist"/>
+      <class name="_2053SubcontractorPayslips.TC11_VerifyEmailPayslipJustZipforSunconctractorlist"/>
+      <class name="_2053SubcontractorPayslips.TC01_ShowSubcontractorsPayslipforTaxYear"/>
+      <class name="_2053SubcontractorPayslips.TC10_VerifyEmailPayslipTemplateforSubcontractor"/>
+      <class name="_2053SubcontractorPayslips.TC03_ShowSubcontractorPayslipforNamefilter"/>
+      <class name="_2053SubcontractorPayslips.TC09_VerifyEmailPayslipforMultipleSubcontractor"/>
+      <class name="_2053SubcontractorPayslips.TC02_ShowSubcontractorPayslipforDateRange"/>
+      <class name="_2053SubcontractorPayslips.TC08_VerifyEmailPayslipforAllSubcontractorlist"/>
+      <class name="_2053SubcontractorPayslips.TC06_VerifyExprtSubcontractorPayslipZip"/>
+      <class name="_2053SubcontractorPayslips.TC07_VerifyDownloadindividualSCPayslip"/>
+      <class name="_2053SubcontractorPayslips.TC04_VerifyExprtSubcontractorPayslipPDF"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

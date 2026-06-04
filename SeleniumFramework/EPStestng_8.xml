@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EPStestSuite">
+  <test thread-count="5" name="EPStestTest">
+    <classes>
+      <class name="EPStest.TC47SubscriptlastEPS"/>
+      <class name="EPStest.TC60subscriptEPSwhenCISSuffered"/>
+      <class name="EPStest.TC61subscriptEPSwhenApperentice"/>
+      <class name="EPStest.TC43_FinalEPSGen"/>
+      <class name="EPStest.TC58subscriptEveryMonthEPSMaternity"/>
+      <class name="EPStest.TC48subscriptEveryMonthEPS"/>
+      <class name="EPStest.TC59subscriptEPSwhenNoEmp"/>
+      <class name="EPStest.TC44subscriptyearSingleEPS"/>
+    </classes>
+  </test> <!-- EPStestTest -->
+</suite> <!-- EPStestSuite -->

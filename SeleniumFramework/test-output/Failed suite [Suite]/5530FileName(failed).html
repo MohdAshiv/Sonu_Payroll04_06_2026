@@ -1,0 +1,639 @@
+<html>
+<head>
+<title>TestNG:  5530FileName(failed)</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>5530FileName(failed)</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 04 11:46:16 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>1501 seconds (1501742 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_5530FileName.TC247_PayrollSummaryCisPension.validatePdfFileName()'><b>validatePdfFileName</b><br>Test class: _5530FileName.TC247_PayrollSummaryCisPension<br/>
+<a href="#Output-581383895" onClick='toggleBox("Output-581383895", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-581383895" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-581383895">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - SummaryPension<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+clickPayrollSummaryCsv<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC247_PayrollSummaryCisPension.validatePdfFileName(TC247_PayrollSummaryCisPension.java:99)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace581383895", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace581383895'><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC247_PayrollSummaryCisPension.validatePdfFileName(TC247_PayrollSummaryCisPension.java:99)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>112</td>
+<td>_5530FileName.TC247_PayrollSummaryCisPension@8ad6665</td></tr>
+<tr>
+<td title='_5530FileName.TC236_EmployerView_TaxPayment.validatePdfFileName()'><b>validatePdfFileName</b><br>Test class: _5530FileName.TC236_EmployerView_TaxPayment<br/>
+<a href="#Output-411876574" onClick='toggleBox("Output-411876574", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-411876574" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-411876574">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530EmployerView<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+click Employer View<br/>
+Click Report Section<br/>
+Click TaxPayment<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_Lnkbtnpdf&apos;]
+	at _5530FileNamePage.FileNamePage.clickEmployerTaxExportPdfIcn(FileNamePage.java:197)
+	at _5530FileName.TC236_EmployerView_TaxPayment.validatePdfFileName(TC236_EmployerView_TaxPayment.java:99)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace411876574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace411876574'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_Lnkbtnpdf&apos;]
+	at org.testng.Assert.fail(Assert.java:110)
+	at _5530FileNamePage.FileNamePage.clickEmployerTaxExportPdfIcn(FileNamePage.java:197)
+	at _5530FileName.TC236_EmployerView_TaxPayment.validatePdfFileName(TC236_EmployerView_TaxPayment.java:99)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>105</td>
+<td>_5530FileName.TC236_EmployerView_TaxPayment@1921ad94</td></tr>
+<tr>
+<td title='_5530FileName.TC246_PayrollSummaryPension.validateCsvFileName()'><b>validateCsvFileName</b><br>Test class: _5530FileName.TC246_PayrollSummaryPension<br/>
+<a href="#Output-1815501246" onClick='toggleBox("Output-1815501246", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1815501246" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1815501246">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - SummaryPension<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+clickPayrollSummaryCsv<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC246_PayrollSummaryPension.validateCsvFileName(TC246_PayrollSummaryPension.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1815501246", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1815501246'><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC246_PayrollSummaryPension.validateCsvFileName(TC246_PayrollSummaryPension.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>115</td>
+<td>_5530FileName.TC246_PayrollSummaryPension@386f0da3</td></tr>
+<tr>
+<td title='_5530FileName.TC247_PayrollSummaryCisPension.validateCsvFileName()'><b>validateCsvFileName</b><br>Test class: _5530FileName.TC247_PayrollSummaryCisPension<br/>
+<a href="#Output-1640832113" onClick='toggleBox("Output-1640832113", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1640832113" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1640832113">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - SummaryPension<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+clickPayrollSummaryCsv<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC247_PayrollSummaryCisPension.validateCsvFileName(TC247_PayrollSummaryCisPension.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1640832113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1640832113'><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC247_PayrollSummaryCisPension.validateCsvFileName(TC247_PayrollSummaryCisPension.java:55)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>123</td>
+<td>_5530FileName.TC247_PayrollSummaryCisPension@8ad6665</td></tr>
+<tr>
+<td title='_5530FileName.TC246_PayrollSummaryPension.validatePdfFileName()'><b>validatePdfFileName</b><br>Test class: _5530FileName.TC246_PayrollSummaryPension<br/>
+<a href="#Output-1020897892" onClick='toggleBox("Output-1020897892", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1020897892" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1020897892">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - SummaryPension<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+clickPayrollSummaryCsv<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC246_PayrollSummaryPension.validatePdfFileName(TC246_PayrollSummaryPension.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1020897892", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1020897892'><pre>java.lang.AssertionError: Failed to download Expected document expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at _5530FileNamePage.VerifyFileNmae.verifyDownloadFileName(VerifyFileNmae.java:28)
+	at _5530FileName.TC246_PayrollSummaryPension.validatePdfFileName(TC246_PayrollSummaryPension.java:100)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>109</td>
+<td>_5530FileName.TC246_PayrollSummaryPension@386f0da3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_5530FileName.TC223_PayrollSummary.validateCsvFileName()'><b>validateCsvFileName</b><br>Test class: _5530FileName.TC223_PayrollSummary<br/>
+<a href="#Output-1485179287" onClick='toggleBox("Output-1485179287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1485179287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1485179287">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530FileName<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+clickPayrollSummaryCsv<br/>
+Verify Downloaded FileName<br/>
+</div>
+</td>
+<td></td>
+<td>116</td>
+<td>_5530FileName.TC223_PayrollSummary@3c9c0d96</td></tr>
+<tr>
+<td title='_5530FileName.TC223_PayrollSummary.validatePdfFileName()'><b>validatePdfFileName</b><br>Test class: _5530FileName.TC223_PayrollSummary<br/>
+<a href="#Output-1153511683" onClick='toggleBox("Output-1153511683", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1153511683" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1153511683">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530FileName<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+clickPayrollSummaryCsv<br/>
+Verify Downloaded FileName<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>116</td>
+<td>_5530FileName.TC223_PayrollSummary@3c9c0d96</td></tr>
+<tr>
+<td title='_5530FileName.TC221_Payslip.validatePdfFileName()'><b>validatePdfFileName</b><br>Test class: _5530FileName.TC221_Payslip<br/>
+<a href="#Output-1539477312" onClick='toggleBox("Output-1539477312", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1539477312" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1539477312">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530FileName<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+clickPayslipIcn<br/>
+Verify Downloaded FileName<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>128</td>
+<td>_5530FileName.TC221_Payslip@33308786</td></tr>
+<tr>
+<td title='_5530FileName.TC232_P60Form.validateP60PdfFileName()'><b>validateP60PdfFileName</b><br>Test class: _5530FileName.TC232_P60Form<br/>
+<a href="#Output-2082807696" onClick='toggleBox("Output-2082807696", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2082807696" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2082807696">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530FileName<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+select Form<br/>
+clickP60PdfIcn<br/>
+Verify Downloaded FileName<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>331</td>
+<td>_5530FileName.TC232_P60Form@19b93fa8</td></tr>
+<tr>
+<td title='_5530FileName.TC225_RunPayrollPage.validateCsvFileName()'><b>validateCsvFileName</b><br>Test class: _5530FileName.TC225_RunPayrollPage<br/>
+<a href="#Output-765420745" onClick='toggleBox("Output-765420745", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-765420745" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-765420745">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530FileName<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+clickExportCsv<br/>
+Verify Downloaded FileName<br/>
+</div>
+</td>
+<td></td>
+<td>108</td>
+<td>_5530FileName.TC225_RunPayrollPage@7e4204e2</td></tr>
+<tr>
+<td title='_5530FileName.TC225_RunPayrollPage.validatePdfFileName()'><b>validatePdfFileName</b><br>Test class: _5530FileName.TC225_RunPayrollPage<br/>
+<a href="#Output-1579823168" onClick='toggleBox("Output-1579823168", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1579823168" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1579823168">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5530FileName<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+Click Run Payroll<br/>
+clickExportPdf<br/>
+Verify Downloaded FileName<br/>
+</div>
+</td>
+<td></td>
+<td>102</td>
+<td>_5530FileName.TC225_RunPayrollPage@7e4204e2</td></tr>
+</table><p>
+</body>
+</html>

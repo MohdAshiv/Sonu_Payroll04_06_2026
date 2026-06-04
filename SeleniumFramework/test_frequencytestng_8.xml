@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="test_frequencySuite">
+  <test thread-count="5" name="test_frequencyTest">
+    <classes>
+      <class name="test.frequency.TC23subScriptExistingEmployerFrequency_DefaultProfile"/>
+      <class name="test.frequency.TC22subScriptFourWeeklyFrequency_DefaultProfile"/>
+      <class name="test.frequency.TC20subScriptFortnightFrequency_DefaultProfile"/>
+      <class name="test.frequency.TC25subScriptEmployeePayFrequency_DefaultProfile"/>
+      <class name="test.frequency.TC27subscriptFillingManagmentNotToSubmit_DefaultProfile"/>
+      <class name="test.frequency.TC24subScriptPayFrequencyMonthly_DefaultProfile"/>
+      <class name="test.frequency.TC21subScriptPayFrequencyWeekly_DefaultProfile"/>
+      <class name="test.frequency.TC26subscriptFillingManagment_DefaultProfile"/>
+    </classes>
+  </test> <!-- test_frequencyTest -->
+</suite> <!-- test_frequencySuite -->

@@ -1,0 +1,105 @@
+package tests;
+
+import utilities.CapabilityLoader;
+import utilities.PropertiesLoader;
+import utilities.reports.ExtentReportManager;
+import ie.curiositysoftware.allocation.dto.AllocationType;
+import ie.curiositysoftware.allocation.engine.DataAllocation;
+import ie.curiositysoftware.allocation.engine.DataAllocationEngine;
+import ie.curiositysoftware.jobengine.services.ConnectionProfile;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestNGMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestBase {
+    /********** Replace with your own details ***********/
+    protected WebDriver driver;
+
+    protected ConnectionProfile cp = new ConnectionProfile(PropertiesLoader.getProperties().getProperty("testModeller.apiHost"), PropertiesLoader.getProperties().getProperty("testModeller.apiKey"));
+
+    protected DataAllocationEngine dataAllocationEngine = new DataAllocationEngine(cp);
+
+    public WebDriver getDriver()
+    {
+        return driver;
+    }
+
+    @BeforeSuite(alwaysRun = true)
+    public void setupReporter()
+    {
+        ExtentReportManager.setupReporter();
+    }
+
+//    @BeforeSuite(alwaysRun = true)
+//    public void allocateData(ITestContext testContext)
+//    {
+//        // Create a list of all the pools that need allocating
+//        List<AllocationType> allocationTypes = new ArrayList<AllocationType>();
+//
+//        ITestNGMethod[] methods =  testContext.getAllTestMethods();
+//        try {
+//
+//            for (int i = 0; i < methods.length; i++) {
+//                ITestNGMethod method = methods[i];
+//
+//                Method testMethod = method.getConstructorOrMethod().getMethod();
+//
+//                if (testMethod != null && testMethod.isAnnotationPresent(DataAllocation.class))
+//                {
+//                    DataAllocation dataAllocation = testMethod.getAnnotation(DataAllocation.class);
+//
+//                    for (String testType : dataAllocation.groups()) {
+//                        AllocationType allocationType = new AllocationType(dataAllocation.poolName(), dataAllocation.suiteName(), testType);
+//
+//                        allocationTypes.add(allocationType);
+//                    }
+//                }
+//            }
+//        } catch (Throwable e) {
+//            System.err.println(e);
+//        }
+//
+//        // Publish and allocate data
+//        if (!dataAllocationEngine.resolvePools(PropertiesLoader.getProperties().getProperty("testModeller.serverName"), allocationTypes)) {
+//            System.out.println("Error - " + dataAllocationEngine.getErrorMessage());
+//        }
+//    }
+
+    @BeforeMethod(alwaysRun = true)
+    public void initDriver(Method method) throws IOException 
+    {
+        ExtentReportManager.createNewTest(method);
+
+        driver = CapabilityLoader.createWebDriver();
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void closerDriver()
+    {
+        driver.quit();
+    }
+
+    @AfterSuite
+    public void closeReporter() throws IOException, Exception
+    {
+        ExtentReportManager.closeReporter();
+        
+//        
+//        Thread.sleep(10000);
+//      String ChargeBasis = RandomStringUtils.randomNumeric(5);
+//		UITestPage.EmailSender.zipFolder("D:\\PayrollClone\\Payroll_Automation_2\\SeleniumFramework\\As_Screenshot\\UIDiff2" , "D:\\PayrollClone\\Payroll_Automation_2\\SeleniumFramework\\As_Screenshot\\ZIPFolder\\Reports_"+ChargeBasis+".zip");
+//		UITestPage.EmailSender.sendReportEmail("Sonu.Kumar@nomi.co.uk" ,"D:\\PayrollClone\\Payroll_Automation_2\\SeleniumFramework\\As_Screenshot\\ZIPFolder\\Reports_"+ChargeBasis+".zip");
+//        
+        
+    }
+}

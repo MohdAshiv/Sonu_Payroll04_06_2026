@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+		 <class name="_2855LeaveManagementTest.TC558_CancelLeavePageHeaderAndCoulum" />
+			<class name="_2855LeaveManagementTest.TC559_CancelLeavePageLeaveDetails" />
+			<class name="_2855LeaveManagementTest.TC560_CancelBtnAndGoBack" />
+			<class name="_2855LeaveManagementTest.TC561_MultipleLeaveRequest" />
+			<class name="_2855LeaveManagementTest.TC562_MultipleLeaveRequestReject" />
+			<class name="_2855LeaveManagementTest.TC563_LeaveApprovedEmailBody" />
+			<class name="_2855LeaveManagementTest.TC564_LeaveRejectedEmailBody" />
+			<class name="_2855LeaveManagementTest.TC565_LeaveRequestEmailBody" />
+			<class name="_2855LeaveManagementTest.TC566_LeaveRequestGoBackBtn" />
+			<class name="_2855LeaveManagementTest.TC567_ResonForLeaveTypes" />
+			<class name="_2855LeaveManagementTest.TC568_MultipleLeaveRequestApprovedHistory" />
+			<class name="_2855LeaveManagementTest.TC569_MultipleLeaveRequestRejectHistory" />
+			<class name="_2855LeaveManagementTest.TC570_MultipleLeaveRequestApprovedHistoryEmployee" />
+			<class name="_2855LeaveManagementTest.TC571_MultipleLeaveRequestRejectedHistoryEmployee" />
+			<class name="_2855LeaveManagementTest.TC572_MultipleLeaveRequestApprovedAdmin" />
+			<class name="_2855LeaveManagementTest.TC573_LeaveRequestWithMaternityLeave" />
+			<class name="_2855LeaveManagementTest.TC574_MultipleLeaveRequestComment" />
+			<class name="_2855LeaveManagementTest.TC575_LeaveRequestForDiffrentEmployees" />
+			<class name="_2855LeaveManagementTest.TC576_LeaveRequestNotification" />      
+			<class name="_2855LeaveManagementTest.TC577_ManageLeaveRequest" />
+			<class name="_2855LeaveManagementTest.TC578_LeaveDateAndWeekField" />
+			<class name="_2855LeaveManagementTest.TC579_LeaveManagementFilter" />
+			<class name="_2855LeaveManagementTest.TC580_LeaveManagementAttachements" />
+		
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

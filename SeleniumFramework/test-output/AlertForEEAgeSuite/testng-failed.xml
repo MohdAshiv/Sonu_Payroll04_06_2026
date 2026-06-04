@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AlertForEEAgeSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression Suit(failed)">
+    <classes>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC111_RecurringDeduction_BeforeEmployeePension">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiablePension"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC111_RecurringDeduction_BeforeEmployeePension -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC114_RecurringDeduction_OverPayment">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="validateTaxableNiablePension"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC114_RecurringDeduction_OverPayment -->
+      <class name="_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateAprenticeshipLevy1"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC109_RecurringDeduction_TickPayeTax">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiablePension"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC109_RecurringDeduction_TickPayeTax -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC116_RecurringAdditionDeduction">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiablePension"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC116_RecurringAdditionDeduction -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC113_RecurringMulipleDeduction">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateTaxableNiablePension"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC113_RecurringMulipleDeduction -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC117_RecurringAddition_DeletAlert">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="validateAlertMsg"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC117_RecurringAddition_DeletAlert -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC120_RecurringAddition_ReflectProcessPay">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiableAndPensionable"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC120_RecurringAddition_ReflectProcessPay -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC118_RecurringAddition_OnlyTickPayeTax">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiableAndPensionable"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC118_RecurringAddition_OnlyTickPayeTax -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC115_RecurringDeduction_BeforeTax">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiablePension"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC115_RecurringDeduction_BeforeTax -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC119_RecurringAddition_Delet">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="validateTaxableNiableAndPensionable"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC119_RecurringAddition_Delet -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC112_RecurringDeduction_BeforePayeTax">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateTaxableNiablePension"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC112_RecurringDeduction_BeforePayeTax -->
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC110_RecurringDeduction_TickNIc">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="validateTaxableNiablePension"/>
+        </methods>
+      </class> <!-- _1707_AutoRecurringAdditionDeductionTest.TC110_RecurringDeduction_TickNIc -->
+    </classes>
+  </test> <!-- Regression Suit(failed) -->
+</suite> <!-- Failed suite [AlertForEEAgeSuite] -->

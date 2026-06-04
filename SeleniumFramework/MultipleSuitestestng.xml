@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Test Suite" thread-count="5" parallel="tests" >
+	<test  name="SmokeTest">
+	
+	
+		<classes>
+			<class name="SmokeTest.TC730_AllTypesOfPayrollBusiness" />
+			<class name="SmokeTest.TC731_CompanyAccessibleFromDashBoard" />
+			<class name="SmokeTest.TC732_ExistingCompanyAccessibleAndLoginSuccessful" />
+			<class name="SmokeTest.TC733_VerifyAccountOfficeAndPaye" />
+			<class name="SmokeTest.TC734_VerifyWeeklyFrequency" />
+			<class name="SmokeTest.TC735_VerifyTwoWeeklyFrequency" />
+			<class name="SmokeTest.TC736_VerifyFourWeeklyFrequency" />
+			<class name="SmokeTest.TC737_VerifyFourAnnualyFrequency" />
+			<class name="SmokeTest.TC738_VerifyMonthlyFrequency" />
+			<class name="SmokeTest.TC739_VerifyEmployeePage" />
+			<class name="SmokeTest.TC740_VerifyExistingEmployeePage" />
+			<class name="SmokeTest.TC741_VerifyWith5Employee" />
+			<class name="SmokeTest.TC742_VerifyWith5Employee_PayrollSummaryUntick" />
+			<class name="SmokeTest.TC743_VerifyWith5Employee_ToEmployees" />
+			<class name="SmokeTest.TC744_VerifyWith5Employee_ToBoth" />
+			<class name="SmokeTest.TC744_VerifyWith5Employee_ToBoth" />
+			<class name="SmokeTest.TC745_VerifyWith5Employee_DoNotSend" />
+			<class name="SmokeTest.TC746_VerifyCompanyInactiveAndAccessible" />
+			<class name="SmokeTest.TC747_VerifyPensionQualifying_RAS" />
+			<class name="SmokeTest.TC748_VerifyPensionCustom_RAS" />
+			<class name="SmokeTest.TC749_VerifyPensionQualifying_NetPayArrangement" />
+			<class name="SmokeTest.TC750_VerifyPensionCustom_NetPayArrangement" />
+			<class name="SmokeTest.TC751_VerifyPensionQualifyingSalarySacrifice" />
+			<class name="SmokeTest.TC752_VerifyPensionCustom_SalarySacrifice" />
+			<class name="SmokeTest.TC753_VerifyEmployementAllowances" />
+			<class name="SmokeTest.TC754_ValidateInlineDropDownButtons" />
+
+		</classes>
+	</test> <!-- Test -->
+	
+	<test  name="ProductionIssueTest">
+		<classes>
+	
+			<class name="ProductionIssueTest.TC010_12948_AddNote" />
+			<class name="ProductionIssueTest.TC011_13080_DirectorPayroll" />
+			<class
+				name="ProductionIssueTest.TC012_13151_PayrollFilingShowDouble" />
+			<class
+				name="ProductionIssueTest.TC013_13103_PayrollReportingPeriodSummarycrashing" />
+			<class name="ProductionIssueTest.TC014_13099_SearchResult" />
+			<class name="ProductionIssueTest.TC015_12740_LeaveDays" />
+			<class name="ProductionIssueTest.TC016_12661_OverTimeR1_R2" />
+			<class name="ProductionIssueTest.TC017_12266_CIS_StatusFailed" />
+			<class name="ProductionIssueTest.TC018_13909_HmrcPaymentBtn" />
+
+			<class name="ProductionIssueTest.TC019_13407_EditOrDeletIcn" />
+			<class name="ProductionIssueTest.TC020_13098_SaveNext" />
+			<class
+				name="ProductionIssueTest.TC021_12906_13998_ImportFourWeeklyEmployee" />
+			<class
+				name="ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality" />
+			<class
+				name="ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear" />
+			<class
+				name="ProductionIssueTest.TC024_13272_DepartmentBookkeepingAllocation" />
+			<class name="ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI" />
+			<class
+				name="ProductionIssueTest.TC026_13145_P11dSubmissionStatusDate" />
+			<class name="ProductionIssueTest.TC027_11708_RestrictAddingExpenses" />
+
+		</classes>
+
+	</test> <!-- Test -->
+	
+	
+	 <test name="PayrollDashboard">
+    <classes>
+      <class name="PayrollDashboard_Test.TC799_CalculationsOnDashboard_2Weekly"/>
+      <class name="PayrollDashboard_Test.TC805_PayrollDashboard_RunPayroll_AndUndoPayrollBtn"/>
+      <class name="PayrollDashboard_Test.TC801_CalculationsOnDashboard_Annually"/>
+      <class name="PayrollDashboard_Test.TC798_CalculationsOnDashboard_Weekly"/>
+      <class name="PayrollDashboard_Test.TC806_PayrollDashboard_AddOneOffPayement"/>
+      <class name="PayrollDashboard_Test.TC802_PayrollDashboardFunction"/>
+      <class name="PayrollDashboard_Test.TC803_PayrollTypeStatusAndDeletEmployee"/>
+      <class name="PayrollDashboard_Test.TC797_DashBoardPayrollPage"/>
+      <class name="PayrollDashboard_Test.TC804_PayrollDashboardBtn"/>
+      <class name="PayrollDashboard_Test.TC800_CalculationsOnDashboard_4Weekly"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->
+
+
+
+
+

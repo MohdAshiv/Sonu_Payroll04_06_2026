@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1540Suite">
+  <test thread-count="5" name="_1540Test">
+    <classes>
+      <class name="_1540EEInfoImport.TC809_811RunPayrollTable"/>
+      <class name="_1540EEInfoImport.TC930EEIInfomportVerify"/>
+      <class name="_1540EEInfoImport.TC945_948CheckPayroll_Awaiting"/>
+      <class name="_1540EEInfoImport.TC939_944CheckPayroll_AwaitingReviewClient"/>
+      <class name="_1540EEInfoImport.TC929EEIInfomport"/>
+      <class name="_1540EEInfoImport.TC931DwnldDataFormat"/>
+      <class name="_1540EEInfoImport.TC932EEIInfomport"/>
+      <class name="_1540EEInfoImport.TC933_938CheckPayroll_AwaitingReview"/>
+    </classes>
+  </test> <!-- _1540Test -->
+</suite> <!-- _1540Suite -->

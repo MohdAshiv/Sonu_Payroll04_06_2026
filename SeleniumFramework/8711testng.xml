@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+		  <class name="_8711Test.TC597_EmailpermissionOptions" />
+			<class name="_8711Test.TC598_EmailpermissionMainContactPayrollApproval" />
+			<class name="_8711Test.TC599_EmailpermissionMainContactLeaveManagement" />
+			<class name="_8711Test.TC600_EmailpermissionMainContactTimesheetApproval" />
+			<class name="_8711Test.TC601_EmailpermissionMainContactExpenseManagement" />
+			<class name="_8711Test.TC602_EmailpermissionSecondaryContactPayrollApproval" />
+			<class name="_8711Test.TC603_EmailpermissionSecondaryContactTimesheetApproval" />
+			<class name="_8711Test.TC604_EmailpermissionSecondaryContactLeaveManagement" />
+		
+			<class name="_8711Test.TC605_EmailpermissionSecondaryContactExpenseManagement" />
+			<class name="_8711Test.TC606_EmailpermissionSaprateContactPayrollApproval" />
+			<class name="_8711Test.TC607_EmailpermissionSaprateContactTimeSheetApproval" />
+			<class name="_8711Test.TC608_EmailpermissionSaprateContactLeaveManagement" />
+			<class name="_8711Test.TC609_EmailpermissionSaprateContactExpenseManagement" />
+			<class name="_8711Test.TC610_EmailpermissionOptOutwillTransferToSecondry" />
+			<class name="_8711Test.TC611_EmailpermissionOptions_ClientPage" />
+	
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

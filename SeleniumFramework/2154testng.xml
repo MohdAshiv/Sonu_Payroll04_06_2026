@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+	<test name="TC137_OpeningBalance_NegativeTax">
+		<classes>
+			<class name="_2154EmployeeOpeningBalance_Test.TC137_OpeningBalance_NegativeTax" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="TC138_OpeningBalance_NegativeEmployeeNI">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC138_OpeningBalance_NegativeEmployeeNI" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC139_OpeningBalance_NegativeEmployerNI">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC139_OpeningBalance_NegativeEmployerNI" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC140_OpeningBalance_NegativeEEPension">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC140_OpeningBalance_NegativeEEPension" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC141_OpeningBalance_NegativeEE_ER_Pension">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC141_OpeningBalance_NegativeEE_ER_Pension" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC142_OpeningBalance">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC142_OpeningBalance" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC143_OpeningBalance_EmployeeEmployer">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC143_OpeningBalance_EmployeeEmployer" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC144_OpeningBalance_DirectorER_View">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC144_OpeningBalance_DirectorER_View" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC145_OpeningBalance_XML">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC145_OpeningBalance_XML" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC146_OpeningBalance_XMLFeb">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC146_OpeningBalance_XMLFeb" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC147_OpeningBalance_TaxNI">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC147_OpeningBalance_TaxNI" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC148_OpeningBalance_Director_TaxNI">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC148_OpeningBalance_Director_TaxNI" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC149_OpeningBalance_PensionNetPay">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC149_OpeningBalance_PensionNetPay" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test name="TC150_OpeningBalance_PensionSalarySacrifice">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC150_OpeningBalance_PensionSalarySacrifice" />
+		</classes>
+	</test> <!-- Test -->
+
+<test name="TC151_OpeningBalance_Weekly">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC151_OpeningBalance_Weekly" />
+		</classes>
+	</test> <!-- Test -->
+	
+
+	<test name="TC152_OpeningBalanceTaxPayment">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC152_OpeningBalanceTaxPayment" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="TC153_OpeningBalanceTaxPayment2">
+		<classes>
+
+			<class name="_2154EmployeeOpeningBalance_Test.TC153_OpeningBalanceTaxPayment2" />
+		</classes>
+	</test> <!-- Test -->
+	
+</suite> <!-- Suite -->

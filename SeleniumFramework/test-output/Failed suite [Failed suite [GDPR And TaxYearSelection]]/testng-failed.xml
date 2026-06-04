@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [GDPR And TaxYearSelection]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)(failed)">
+    <classes>
+      <class name="_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="TC02_validateSelectedTaxYearDateWithEmployeeChange"/>
+        </methods>
+      </class> <!-- _5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport -->
+      <class name="_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC05_validateSelectedTaxYearWithRegenerateBtn"/>
+        </methods>
+      </class> <!-- _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report -->
+      <class name="_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="TC04_validateSelectedTaxYearDateWithEmployeeChange"/>
+        </methods>
+      </class> <!-- _5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [GDPR And TaxYearSelection]]] -->

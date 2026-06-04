@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC097_AutoRecurringAddition"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC098_RecurringAddition_TickPayeTax"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC099_RecurringAddition_TickNIC"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC100_RecurringAddition_TickEmployeePension"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC101_RecurringAddition_TickEmployerPension"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC102_RecurringAddition_TaxAndNI"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC103_RecuringAddition_untickEmployerPension"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC104_RecurringAddition_TickEmployeePensionAndPayeTax"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC105_RecurringAddition_TickPensionable"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC106_RecurringAddition_TickTaxAndNI"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC107_RecurringAddition_TickTaxAndNI"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC108_RecurringMulipleAddition"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC109_RecurringDeduction_TickPayeTax"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC110_RecurringDeduction_TickNIc"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC111_RecurringDeduction_BeforeEmployeePension"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC112_RecurringDeduction_BeforePayeTax"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC113_RecurringMulipleDeduction"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC114_RecurringDeduction_OverPayment"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC115_RecurringDeduction_BeforeTax"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC116_RecurringAdditionDeduction"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC117_RecurringAddition_DeletAlert"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC118_RecurringAddition_OnlyTickPayeTax"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC119_RecurringAddition_Delet"/>
+      <class name="_1707_AutoRecurringAdditionDeductionTest.TC120_RecurringAddition_ReflectProcessPay"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

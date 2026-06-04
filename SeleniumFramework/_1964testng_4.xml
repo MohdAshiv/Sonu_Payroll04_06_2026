@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1964Suite">
+  <test thread-count="5" name="_1964Test">
+    <classes>
+      <class name="_1964_RunPayroll.T151TC01_1964_RunPayroll_OverDue_DefaultProfile"/>
+      <class name="_1964_RunPayroll.T152TC02_1964_RunPayroll_DuePay_DefaultProfile"/>
+      <class name="_1964_RunPayroll.T153TC03_1964_RunPayroll_DuePay_DefaultProfile"/>
+    </classes>
+  </test> <!-- _1964Test -->
+</suite> <!-- _1964Suite -->

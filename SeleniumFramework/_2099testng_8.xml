@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2099Suite">
+  <test thread-count="5" name="_2099Test">
+    <classes>
+      <class name="_2099PreviousEmployment.TC830_837EE_Previous_Yr_Detail"/>
+    </classes>
+  </test> <!-- _2099Test -->
+</suite> <!-- _2099Suite -->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1744testngSuite">
+  <test thread-count="5" name="_1744testngTest">
+    <classes>
+      <class name="_1744CISDSBTest.TC494PeriodSelectOptionView"/>
+      <class name="_1744CISDSBTest.TC498_499InactiveActiveContractor"/>
+      <class name="_1744CISDSBTest.TC502ContractorHaveBookKeeping"/>
+      <class name="_1744CISDSBTest.TC503ContractorHaveNoBookkeepingAcount"/>
+      <class name="_1744CISDSBTest.TC500DeclineAlertofrInactiveContractor"/>
+      <class name="_1744CISDSBTest.TC510InactiveButNotRemovedFromList"/>
+      <class name="_1744CISDSBTest.TC493UpcomingReturnViewWithPeriodSelectOption"/>
+      <class name="_1744CISDSBTest.TC488DueSubmission"/>
+      <class name="_1744CISDSBTest.TC506NewCntrorisActive"/>
+      <class name="_1744CISDSBTest.TC489OverdueReturn"/>
+      <class name="_1744CISDSBTest.TC501VerifySubContrAdded"/>
+      <class name="_1744CISDSBTest.TC504NewContractorFields"/>
+      <class name="_1744CISDSBTest.TC491UpcomingReturnView"/>
+      <class name="_1744CISDSBTest.TC505NewCntrorisActive"/>
+      <class name="_1744CISDSBTest.TC513ContractorNotAllocatedList"/>
+      <class name="_1744CISDSBTest.TC507QuickJumpOption"/>
+      <class name="_1744CISDSBTest.TC509InactiveFromDsb"/>
+      <class name="_1744CISDSBTest.TC508MakeInactiveandcheckRemovalFromField"/>
+      <class name="_1744CISDSBTest.TC512ContractorNotAllocatedList"/>
+      <class name="_1744CISDSBTest.TC490UpcomingReturn"/>
+      <class name="_1744CISDSBTest.TC492UpcomingReturnViewWithPeriodSelectOption"/>
+      <class name="_1744CISDSBTest.TC495UpcomingReturnViewWithPeriod60DaysOption"/>
+      <class name="_1744CISDSBTest.TC496FailedSubmission"/>
+      <class name="_1744CISDSBTest.TC501VerifySubContrAddedA"/>
+      <class name="_1744CISDSBTest.TC497ContractorEditPage"/>
+      <class name="_1744CISDSBTest.TC511ContractorListInaccountManager"/>
+    </classes>
+  </test> <!-- _1744testngTest -->
+</suite> <!-- _1744testngSuite -->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+					<class name="_5852_NoEmployerNIC.TC301_NoEmployerNIC_Liablity" />
+					<class name="_5852_NoEmployerNIC.TC302_NoEmplyerNICLiablity_EmployerView" />
+					<class name="_5852_NoEmployerNIC.TC303_NoEmployerNICLiablity_Drirector" />
+					<class name="_5852_NoEmployerNIC.TC304_NoEmployerNICLiablity_DirectorEmployerView" />
+					<class name="_5852_NoEmployerNIC.TC305_NoEmployerNICLiablity_EnabledDisable" />
+					<class name="_5852_NoEmployerNIC.TC306_NoEmployerNICLiablity_Weekly" />
+					<class name="_5852_NoEmployerNIC.TC307_NoEmployerNICLiablity_FourWeekly" />
+					<class name="_5852_NoEmployerNIC.TC308_NoEmployerNICLiablity_Fornightly" />
+					<class name="_5852_NoEmployerNIC.TC309_NoEmployerNICLiablity_Annually" />
+					<class name="_5852_NoEmployerNIC.TC310_NoEmployerNICLiablityWithOffPayWorker" />
+					<class name="_5852_NoEmployerNIC.TC311_NoEmployerNICLiablityWithAdditionAmount" />
+					<class name="_5852_NoEmployerNIC.TC312_NoEmployerNICLiablityWithTerminationAward" />
+					<class name="_5852_NoEmployerNIC.TC313_NoEmployerNICLiablityWithDirectorMethod" />
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

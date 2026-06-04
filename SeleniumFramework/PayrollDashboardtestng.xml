@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    
+   
+
+    
+      <class name="PayrollDashboard_Test.TC797_DashBoardPayrollPage"/>
+      <class name="PayrollDashboard_Test.TC798_CalculationsOnDashboard_Weekly"/>
+      <class name="PayrollDashboard_Test.TC799_CalculationsOnDashboard_2Weekly"/>
+     			
+     <class name="PayrollDashboard_Test.TC800_CalculationsOnDashboard_4Weekly"/>
+      <class name="PayrollDashboard_Test.TC801_CalculationsOnDashboard_Annually"/>
+      <class name="PayrollDashboard_Test.TC802_PayrollDashboardFunction"/>
+
+      <class name="PayrollDashboard_Test.TC803_PayrollTypeStatusAndDeletEmployee"/>
+      <class name="PayrollDashboard_Test.TC804_PayrollDashboardBtn"/>
+      <class name="PayrollDashboard_Test.TC805_PayrollDashboard_RunPayroll_AndUndoPayrollBtn"/>
+      <class name="PayrollDashboard_Test.TC806_PayrollDashboard_AddOneOffPayement"/>
+      <class name="PayrollDashboard_Test.TC807_PayrollDashboard_SearchingAndSorting"/>
+      <class name="PayrollDashboard_Test.TC808_PayrollDashboard_ProfileIcnAndEmployerView_PeriodEnd_TaxYear"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

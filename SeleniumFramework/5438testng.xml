@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			
+<class name="_5438_EmployerAllowancesDisable.TC315_EmployementAllowanceTillMay" />
+			<class name="_5438_EmployerAllowancesDisable.TC316_EmployementAllowanceTill_June" />
+			<class name="_5438_EmployerAllowancesDisable.TC317_EmployementAllowanceTill_Sep" />
+			<class name="_5438_EmployerAllowancesDisable.TC318_EmployementAllowanceTill_Oct" />
+			<class name="_5438_EmployerAllowancesDisable.TC319_EmployementAllowanceTill_Nov" />
+			<class name="_5438_EmployerAllowancesDisable.TC320_EmployementAllowanceEnableDisableMultipleTimes" />
+			<class name="_5438_EmployerAllowancesDisable.TC321_EmployementAllowanceEnable_AprilToFeb23" />
+			<class name="_5438_EmployerAllowancesDisable.TC322_EmployementAllowanceEnable_Feb2023" />
+			<class name="_5438_EmployerAllowancesDisable.TC323_EmployementAllowance_Director" />
+			<class name="_5438_EmployerAllowancesDisable.TC324_EmployementAllowanceDirectorUndoEA_Aug" />
+			<class name="_5438_EmployerAllowancesDisable.TC325_EmployementAllowance_Weekly" />
+			<class name="_5438_EmployerAllowancesDisable.TC326_EmployementAllowance_XmlTag" />		
+		
+		    <class name="_5438_EmployerAllowancesDisable.TC327_EmployementAllowance_FourWeekly" />
+			<class name="_5438_EmployerAllowancesDisable.TC328_EmployementAllowance_Fornightly" />
+			<class name="_5438_EmployerAllowancesDisable.TC329_EmployementAllowancePayrollSummary_JulyUndoEA" />
+			<class name="_5438_EmployerAllowancesDisable.TC330_EmployementAllowancePayrollSummary_FebUndoEA" />
+			<class name="_5438_EmployerAllowancesDisable.TC331_EPS_DateTag" />
+			<class name="_5438_EmployerAllowancesDisable.TC332_EpsJune_CisSuffered" />
+			<class name="_5438_EmployerAllowancesDisable.TC333_EmployementAllowance_MultipleFrequency" />
+			<class name="_5438_EmployerAllowancesDisable.TC334_EmployementAllowance_OctUndoEA" />
+			<class name="_5438_EmployerAllowancesDisable.TC335_EmployementAllowance_EnableDisableMultipleTime" />
+			<class name="_5438_EmployerAllowancesDisable.TC336_EmployementAllowance_Weekly52" />
+			<class name="_5438_EmployerAllowancesDisable.TC337_EmployementAllowance_OpeningBalance" />
+			<class name="_5438_EmployerAllowancesDisable.TC338_EmployementAllowance_OpeningBalance2" />
+			<class name="_5438_EmployerAllowancesDisable.TC339_EmployementAllowance_NI_C" />
+			<class name="_5438_EmployerAllowancesDisable.TC340_EmployementAllowance_5Employee" />
+			<class name="_5438_EmployerAllowancesDisable.TC341_EmployementAllowance_Director_Cumulative" />
+			<class name="_5438_EmployerAllowancesDisable.TC342_EmployementAllowance_UndoEA_March" />
+			<class name="_5438_EmployerAllowancesDisable.TC343_EmployementAllowance_UndoEA_Fornightly" />
+			<class name="_5438_EmployerAllowancesDisable.TC344_EmployementAllowance_OffPayAndNormalEmployee" />
+			<class name="_5438_EmployerAllowancesDisable.TC345_EmployementAllowance_OffPay3Employee" />
+			<class name="_5438_EmployerAllowancesDisable.TC346_EmployementAllowance_UndoEADec" />
+			<class name="_5438_EmployerAllowancesDisable.TC347_EmployementAllowance_FourWeeklyUndoEA" />
+			<class name="_5438_EmployerAllowancesDisable.TC348_EmployementAllowance_WeeklynormalOffpayEmployee" />
+			<class name="_5438_EmployerAllowancesDisable.TC349EmployementAllowance_UndoLastWeekCurrentTaxYear" />
+			<class name="_5438_EmployerAllowancesDisable.TC351_EmployementAllowance_SMP" />
+
+
+		
+		
+		
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2078Suite">
+  <test thread-count="5" name="_2078Test">
+    <classes>
+      <class name="_2078Test.TC398_401PaymentofMonthwhen5"/>
+      <class name="_2078Test.TC434PaymentofMonthwhenWklyPM"/>
+      <class name="_2078Test.TC427PaymentofMonthwhenFortnight"/>
+      <class name="_2078Test.TC414_417PaymentofMonthwhen1"/>
+      <class name="_2078Test.TC398PayrollUndo"/>
+      <class name="_2078Test.TC429PaymentofMonthwhenAnually"/>
+      <class name="_2078Test.TC430_433PaymentofMonthwhenPaymentManagement"/>
+      <class name="_2078Test.TC422_425PaymentofMonthwhenQtrPAYE"/>
+      <class name="_2078Test.TC402_405PaymentofMonthwhen4"/>
+      <class name="_2078Test.TC418_421PaymentofMonthwhenLastDayOfMonth"/>
+      <class name="_2078Test.TC428PaymentofMonthwhenFourWeekly"/>
+      <class name="_2078Test.TC406_409PaymentofMonthwhen3"/>
+      <class name="_2078Test.TC410_413PaymentofMonthwhen2"/>
+      <class name="_2078Test.TC426PaymentofMonthwhenWeekly"/>
+    </classes>
+  </test> <!-- _2078Test -->
+</suite> <!-- _2078Suite -->

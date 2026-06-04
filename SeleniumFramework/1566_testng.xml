@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    
+       <class name="_1566AdditionDeduction.TC048_DefaultApplyOnOptions_Addition"/>
+     <class name="_1566AdditionDeduction.TC049_DefaultApplyOnOptions_Deductions"/>
+      <class name="_1566AdditionDeduction.TC050_DefaultApplyOnAfterUndoPayroll"/>
+      <class name="_1566AdditionDeduction.TC051_Addition_PAYEtaxuntick"/>
+      <class name="_1566AdditionDeduction.TC052_EmployeeSchedule"/>
+      <class name="_1566AdditionDeduction.TC053_EmployeeeDashboard_3Months"/>
+      <class name="_1566AdditionDeduction.TC054_CorrectFigureShow_PayrollPage"/>
+      <class name="_1566AdditionDeduction.TC055_PayrollPage"/>
+      <class name="_1566AdditionDeduction.TC056_PayrollSummary_MainContact"/>
+      <class name="_1566AdditionDeduction.TC057_Taxable_XML"/>
+      <class name="_1566AdditionDeduction.TC058_RecievedPayrollSummary"/>
+      <class name="_1566AdditionDeduction.TC059_NiableAndTaxable"/>
+      <class name="_1566AdditionDeduction.TC060_Niable_Taxable_Pension"/>
+      <class name="_1566AdditionDeduction.TC061_Niable_Taxable_PensionableBasicPay"/>
+      <class name="_1566AdditionDeduction.TC062_VerifyXml"/>
+      <class name="_1566AdditionDeduction.TC063_VerifyXml_EE_Pensionable"/>
+      <class name="_1566AdditionDeduction.TC064_ER_Pensionable"/>
+      <class name="_1566AdditionDeduction.TC065_ER_EE_Pensionable_PayrollXml"/>
+      
+  
+      <class name="_1566AdditionDeduction.TC066_WeeklyQualifying_1257L"/>
+     <class name="_1566AdditionDeduction.TC067_WeeklyQualifying_89T"/>
+      <class name="_1566AdditionDeduction.TC068_WeeklyQualifying_45L"/>
+      <class name="_1566AdditionDeduction.TC069_WeeklyQualifying_K11"/>
+      
+     <class name="_1566AdditionDeduction.TC070_Deduction_76L"/>
+      <class name="_1566AdditionDeduction.TC071_Deductions_S34L"/>
+      <class name="_1566AdditionDeduction.TC072_AdditionDeduction_C56L"/>
+      <class name="_1566AdditionDeduction.TC073_Addition_C56L"/>
+      <class name="_1566AdditionDeduction.TC074_Fortnightly_67L"/>
+      <class name="_1566AdditionDeduction.TC075_Fortnightly_45L"/>
+      <class name="_1566AdditionDeduction.TC076_AdditionDeduction_Fornightly_K9"/>
+      <class name="_1566AdditionDeduction.TC077_VerifyCSVandPDF"/>
+      <class name="_1566AdditionDeduction.TC079_OpeningBalance"/>
+       <class name="_1566AdditionDeduction.TC080_OpeningBalanceWeekly"/>
+       <class name="_1566AdditionDeduction.TC081_SalarySacrifice_NonTaxable"/>
+       <class name="_1566AdditionDeduction.TC082_SalarySacrifice_NonPensionable"/>
+       <class name="_1566AdditionDeduction.TC083_SalarySacrifice_MultipleAdditon"/>
+       <class name="_1566AdditionDeduction.TC084_DirectorABL"/>
+       
+       
+      
+      
+      
+  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

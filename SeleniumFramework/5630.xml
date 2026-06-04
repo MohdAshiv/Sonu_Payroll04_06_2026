@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+		
+			<class name="_5630OffPayrollWorker.TC263_OffPayrollWorker" />
+			<class name="_5630OffPayrollWorker.TC264_OffPayWorkerLeave" />
+			<class name="_5630OffPayrollWorker.TC265_OffPayWorkerNotinalPayment" />
+			<class name="_5630OffPayrollWorker.TC266_OffPayWorker_NetPayCalculator" />
+			<class name="_5630OffPayrollWorker.TC267_OffPayWorker_Recurring" />
+			<class name="_5630OffPayrollWorker.TC268_OffPayWorker_AOE" />
+			<class name="_5630OffPayrollWorker.TC269_OffPayrollWorker_XML" />
+			<class name="_5630OffPayrollWorker.TC270_OffPayWorker_Pension" />
+			<class name="_5630OffPayrollWorker.TC271_OffPayWorker_MidTaxYear" />
+			<class name="_5630OffPayrollWorker.TC272_OffPayWorkerEmployee" />
+			<class name="_5630OffPayrollWorker.TC273_OffPayWorker_2Employee" />
+			<class name="_5630OffPayrollWorker.TC274_OffPayWorker_EmployemetAllowances" />
+			<class name="_5630OffPayrollWorker.TC275_OffPayWorker_RunPayroll2Months" />
+			<class name="_5630OffPayrollWorker.TC276_OffPayWorker_RunPayroll12Months" />
+			<class name="_5630OffPayrollWorker.TC277_OffPayWorker_ChangedSalary" />
+			<class name="_5630OffPayrollWorker.TC278_OffPayWorker_RunPayrollTillJuly" />
+			<class name="_5630OffPayrollWorker.TC279_OffPayWorker_DirectorCumulative" />
+			<class name="_5630OffPayrollWorker.TC280_OffPayWorker_DirectorAlternative" />
+			<class name="_5630OffPayrollWorker.TC281_OffPayWorker_Cumulative_RunPauroll12" />
+
+			<class name="_5630OffPayrollWorker.TC282_OffPayWorker_TaxPaymentWeekly" />
+			<class name="_5630OffPayrollWorker.TC283_OffPayWorker_MulipleFrequency" />
+			<class name="_5630OffPayrollWorker.TC284_OffPayWorker_C" />
+			
+			<class name="_5630OffPayrollWorker.TC285_OffPayWorker_OpeningBalance" />
+			<class name="_5630OffPayrollWorker.TC286_OffPayWorker_OpeningBalanceDirector" />
+		    <class name="_5630OffPayrollWorker.TC287_OffPayWorker_OpeningBalanceWeekly" />
+			<class name="_5630OffPayrollWorker.TC288_OffPayWorker_DirectorToOffPayWorker" />
+			<class name="_5630OffPayrollWorker.TC289_OffPayWorker_XmlTagOff" />
+			<class name="_5630OffPayrollWorker.TC290_OffPayWorker_LeaveManagement" />
+			<class name="_5630OffPayrollWorker.TC291_OffPayWorker_EmployerView" />
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

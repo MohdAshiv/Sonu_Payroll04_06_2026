@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="_1756Test">
+    <classes>
+      <class name="_1756PayrollSummary.TC215verifysummaryreportforMonthMay"/>
+      <class name="_1756PayrollSummary.TC218verifysummaryPaye_NIforMonthMay"/>
+      <class name="_1756PayrollSummary.TC221verifysummarychngetoMonthlyDump"/>
+      <class name="_1756PayrollSummary.TC223verifysummarywhenCISinQtr"/>
+      <class name="_1756PayrollSummary.TC205verifysummaryreportforMonthlyinMail"/>
+      <class name="_1756PayrollSummary.TC214verifysummaryreportforMonthApril"/>
+      <class name="_1756PayrollSummary.TC220verifysummarychngetoMonthly"/>
+      <class name="_1756PayrollSummary.TC213verifysummaryreportforMonthAprilDump"/>
+      <class name="_1756PayrollSummary.TC222verifysummarywhenchangeToQuaterly"/>
+      <class name="_1756PayrollSummary.TC212verifysummaryreportforMonthlywhenQuaterly"/>
+      <class name="_1756PayrollSummary.TC206verifysummaryreportforMonthlyinMailDump"/>
+      <class name="_1756PayrollSummary.TC217verifysummaryPaye_NIforMonthMay"/>
+      <class name="_1756PayrollSummary.TC219verifysummaryPaye_NIforMonthJune"/>
+      <class name="_1756PayrollSummary.TC204verifysummaryreportforMonthly"/>
+      <class name="_1756PayrollSummary.TC216verifysummaryreportforMonthJune"/>
+    </classes>
+  </test> <!-- _1756Test -->
+</suite> <!-- Suite -->

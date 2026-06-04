@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Suite]]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)(failed)">
+    <classes>
+      <class name="_2855LeaveManagementTest.TC576_LeaveRequestNotification">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateLeaveNotificationRedirectPendingForApprovalPage"/>
+          <include name="TC03validateLeaveRequestNotificationIfRejected"/>
+          <include name="TC02validateLeaveRequestNotificationIfApproved"/>
+        </methods>
+      </class> <!-- _2855LeaveManagementTest.TC576_LeaveRequestNotification -->
+      <class name="_2855LeaveManagementTest.TC577_ManageLeaveRequest">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateTotalLeaveTaken"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2855LeaveManagementTest.TC577_ManageLeaveRequest -->
+      <class name="_2855LeaveManagementTest.TC567_ResonForLeaveTypes">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TCvalidateApprovedLeavesInBulk"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2855LeaveManagementTest.TC567_ResonForLeaveTypes -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Suite]]] -->

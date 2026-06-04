@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="_12513_Test.TC754_TaxGrossVariable" />
+			<class name="_12513_Test.TC755_TaxGrossWeeklyVariable" />
+			<class name="_12513_Test.TC756_TaxGrossVariableWith11Employee" />
+			<class name="_12513_Test.TC757_TaxGrossVariableWith9EmployeeWeekly" />
+			<class name="_12513_Test.TC758_TaxGrossVariable_TaxCodeBR" />
+			<class name="_12513_Test.TC759_TaxGrossVariable_TaxCodeBR_Weekly" />
+			<class name="_12513_Test.TC760_TaxCodeK585_Monthly" />
+			<class name="_12513_Test.TC761_TaxCodeK585_Weekly" />
+			<class name="_12513_Test.TC762_TaxCodeW1M1_Monthly" />
+			<class name="_12513_Test.TC763_TaxCodeW1M1_Weekly" />
+			<class name="_12513_Test.TC764_TaxCodeWithoutW1M1_Monthly_3Employee" />
+			<class name="_12513_Test.TC765_TaxCodeWithoutW1M1_Weekly_3Employee" />
+			<class name="_12513_Test.TC766_TaxGrossVariable_Monthly10Period" />
+			<class name="_12513_Test.TC767_TaxGrossVariable_Weekly10Period" />
+			<class name="_12513_Test.TC768_TaxGrossVariableWith20Employee" />
+			<class name="_12513_Test.TC769_TaxGrossVariableWith18Employee_Weekly" />
+			<class name="_12513_Test.TC770_TaxGrossVariable_TaxCodeSK585_Monthly" />
+			<class name="_12513_Test.TC771_TaxGrossVariable_TaxCodeSK630_Weekly" />
+			<class name="_12513_Test.TC772TaxGrossVariable_Monthly" />
+			<class name="_12513_Test.TC773_TaxGrossWeeklyVariable" />
+			<class name="_12513_Test.TC774_TaxGrossVariableWith11EmployeeWelsh" />
+			<class name="_12513_Test.TC775_TaxGrossVariableWith9EmployeeWeeklyWelsh" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

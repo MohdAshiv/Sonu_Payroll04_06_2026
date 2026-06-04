@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2134StarterDetailSuite">
+  <test thread-count="5" name="_2134StarterDetailTest">
+    <classes>
+      <class name="_2134StarterDetail.TC654LeaverAndStarterDetailinReports"/>
+      <class name="_2134StarterDetail.TC657StarterDateinXML"/>
+      <class name="_2134StarterDetail.TC661StarterDetailnotVisibleReportsof2Weekly"/>
+      <class name="_2134StarterDetail.TC659StarterDetailnotVisibleReportsofWeekly"/>
+      <class name="_2134StarterDetail.TC660LeaverDetailnotVisibleReportsof4Weekly"/>
+      <class name="_2134StarterDetail.TC658StarterDetailinReportsofWeekly"/>
+      <class name="_2134StarterDetail.TC656LeaverAndStarterDetailinReports"/>
+      <class name="_2134StarterDetail.TC655StarterDateinXML"/>
+    </classes>
+  </test> <!-- _2134StarterDetailTest -->
+</suite> <!-- _2134StarterDetailSuite -->

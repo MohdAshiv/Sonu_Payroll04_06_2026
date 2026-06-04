@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="ProductionIssues">
+		<classes>
+		    <!--
+	        <class name="ProductionIssueTest.TC001_4863ExportToPdf" />
+			<class name="ProductionIssueTest.TC002_5637GrossEarningNICYTD" />
+			<class name="ProductionIssueTest.TC003_5455CancelBtn" />
+			<class name="ProductionIssueTest.TC004_5769NewInvoice" />
+			<class name="ProductionIssueTest.TC005_4729LinkedwithAccount" />
+			<class name="ProductionIssueTest.TC006_5676UTR" />
+			<class name="ProductionIssueTest.TC007_UTR_FromPayroll" />
+			<class name="ProductionIssueTest.TC008_RunPayrollAgentLevel" />
+			<class
+				name="ProductionIssueTest.TC009_13100_DisableAllOptionsOnRunPayrollPage" />      -->
+
+			<class name="ProductionIssueTest.TC010_12948_AddNote" />
+			<class name="ProductionIssueTest.TC011_13080_DirectorPayroll" />
+			<class
+				name="ProductionIssueTest.TC012_13151_PayrollFilingShowDouble" />
+			<class
+				name="ProductionIssueTest.TC013_13103_PayrollReportingPeriodSummarycrashing" />
+			<class name="ProductionIssueTest.TC014_13099_SearchResult" />
+			<class name="ProductionIssueTest.TC015_12740_LeaveDays" />
+			<class name="ProductionIssueTest.TC016_12661_OverTimeR1_R2" />
+			<class name="ProductionIssueTest.TC017_12266_CIS_StatusFailed" />
+			<class name="ProductionIssueTest.TC018_13909_HmrcPaymentBtn" />
+
+			<class name="ProductionIssueTest.TC019_13407_EditOrDeletIcn" />
+			<class name="ProductionIssueTest.TC020_13098_SaveNext" />
+			<class
+				name="ProductionIssueTest.TC021_12906_13998_ImportFourWeeklyEmployee" />
+			<class
+				name="ProductionIssueTest.TC022_13430_P11D_ClickableFunctionality" />
+			<class
+				name="ProductionIssueTest.TC023_13519And13531_P11D_NiRatePdfAndTaxYear" />
+			<class
+				name="ProductionIssueTest.TC024_13272_DepartmentBookkeepingAllocation" />
+			<class name="ProductionIssueTest.TC025_13265_AgentlevelSubmitRTI" />
+			<class
+				name="ProductionIssueTest.TC026_13145_P11dSubmissionStatusDate" />
+			<class name="ProductionIssueTest.TC027_11708_RestrictAddingExpenses" />
+			<class name="ProductionIssueTest.TC028_13918_P45StarterDeclaration" />
+			<class name="ProductionIssueTest.TC029_14017_RTReSubmissionReason" />
+			<class name="ProductionIssueTest.TC030_13691_14298_DuplicateDoubleEmployeesPension" />
+			<class name="ProductionIssueTest.TC031_14116_PayrollEmployeeListingWrongly" />
+			<class name="ProductionIssueTest.TC032_14123_PensionWithZeroFigure" />
+			<class name="ProductionIssueTest.TC033_14321_RTiSubmissionIdMax30" />
+			<class name="ProductionIssueTest.TC034_13753_StatusDropDown" />
+			<class name="ProductionIssueTest.TC035_13991_BasicPayOnPayslip" />
+			<class name="ProductionIssueTest.TC036_13750_InvalidLeaveCalculating" />
+			<class name="ProductionIssueTest.TC037_13916_19921AdditionalFPS_SubmissionDate" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

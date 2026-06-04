@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_2044Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_2044Test(failed)">
+    <classes>
+      <class name="_2055CisReports.TC09_VerifyVerificationCertificates">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC09_VerifyVerificationCertificates -->
+      <class name="_2050DetailedPayTotals.TC03_VerifyAllselectedinNameFilter">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC03_VerifyAllselectedinNameFilter -->
+      <class name="_2052SubcontractorList.TC05_VerifyEmailforSubcontractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC05_VerifyEmailforSubcontractorlist -->
+      <class name="_2050DetailedPayTotals.TC12_VerifyEmailTemplateforDPTReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC12_VerifyEmailTemplateforDPTReport -->
+      <class name="_2055CisReports.TC05_VerifySummarisedPayTotals">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC05_VerifySummarisedPayTotals -->
+      <class name="_2055CisReports.TC01_CheckSubcontractorReportslist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC01_CheckSubcontractorReportslist -->
+      <class name="_2053SubcontractorPayslips.TC05_VerifyExprtSubcontractorPayslipCSV">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC05_VerifyExprtSubcontractorPayslipCSV -->
+      <class name="_2053SubcontractorPayslips.TC03_ShowSubcontractorPayslipforNamefilter">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC03_ShowSubcontractorPayslipforNamefilter -->
+      <class name="_2055CisReports.TC08_VerifySubmissionHistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC08_VerifySubmissionHistory -->
+      <class name="_2054VerificationCertificate.TC03_ShowVerificationCertificateforPeriod">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC03_ShowVerificationCertificateforPeriod -->
+      <class name="_2132SubmissionHistory.TC10_VerifyWithoutEmailforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC10_VerifyWithoutEmailforSubmissionhistory -->
+      <class name="_2055CisReports.TC04_VerifySubcontractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC04_VerifySubcontractorlist -->
+      <class name="_2044CIS_SUBMIT.TC11_VerifyContractorEmailSubmission">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC11_VerifyContractorEmailSubmission -->
+      <class name="_2047PaymentandDeductionStmt.TC05_VerifyExporttoCSV">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2047PaymentandDeductionStmt.TC05_VerifyExporttoCSV -->
+      <class name="_2053SubcontractorPayslips.TC04_VerifyExprtSubcontractorPayslipPDF">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC04_VerifyExprtSubcontractorPayslipPDF -->
+      <class name="_2054VerificationCertificate.TC04_VerifyExprttoPDFforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC04_VerifyExprttoPDFforVerificationCertificate -->
+      <class name="_2047PaymentandDeductionStmt.TC06_VerifyExporttoPDF">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2047PaymentandDeductionStmt.TC06_VerifyExporttoPDF -->
+      <class name="_2050DetailedPayTotals.TC01_VerifyDetailedPayTotal">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC01_VerifyDetailedPayTotal -->
+      <class name="_2132SubmissionHistory.TC05_VerifyUndoAllSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC05_VerifyUndoAllSubmissionhistory -->
+      <class name="_2054VerificationCertificate.TC01_ShowVerificationCertificateforSubconc">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC01_ShowVerificationCertificateforSubconc -->
+      <class name="_2051SummarisedPayTotal.TC03_VerifyExprtPDFforAllContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC03_VerifyExprtPDFforAllContractor -->
+      <class name="_2053SubcontractorPayslips.TC07_VerifyDownloadindividualSCPayslip">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC07_VerifyDownloadindividualSCPayslip -->
+      <class name="_2051SummarisedPayTotal.TC06_VerifySPTEmailJustZipforAllContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC06_VerifySPTEmailJustZipforAllContractor -->
+      <class name="_2051SummarisedPayTotal.TC07_VerifySPTEmailJustZipforMultipleContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC07_VerifySPTEmailJustZipforMultipleContractor -->
+      <class name="_2050DetailedPayTotals.TC07_VerifyExprtToPDFFunctionality">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC07_VerifyExprtToPDFFunctionality -->
+      <class name="_2054VerificationCertificate.TC07_VerifyEmailJustZipforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC07_VerifyEmailJustZipforVerificationCertificate -->
+      <class name="_2050DetailedPayTotals.TC10_VerifyDPTEmailforMultipleContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC10_VerifyDPTEmailforMultipleContractor -->
+      <class name="_2051SummarisedPayTotal.TC02_VerifyExprtCSVforOneContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC02_VerifyExprtCSVforOneContractor -->
+      <class name="_2050DetailedPayTotals.TC02_VerifyNameFilter">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC02_VerifyNameFilter -->
+      <class name="_2053SubcontractorPayslips.TC02_ShowSubcontractorPayslipforDateRange">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC02_ShowSubcontractorPayslipforDateRange -->
+      <class name="_2132SubmissionHistory.TC03_VerifyExprtSubmissionhistoryCSV">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC03_VerifyExprtSubmissionhistoryCSV -->
+      <class name="_2055CisReports.TC06_VerifyDetailedPayTotals">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC06_VerifyDetailedPayTotals -->
+      <class name="_2055CisReports.TC03_VerifySubcontractorPayslips">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC03_VerifySubcontractorPayslips -->
+      <class name="_2044CIS_SUBMIT.TC02_VerifyFinYerandFilingPrd">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC02_VerifyFinYerandFilingPrd -->
+      <class name="_2052SubcontractorList.TC06_VerifyWithoutEmailforSubcontractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC06_VerifyWithoutEmailforSubcontractorlist -->
+      <class name="_2054VerificationCertificate.TC05_VerifyExprttoCSVforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC05_VerifyExprttoCSVforVerificationCertificate -->
+      <class name="_2047PaymentandDeductionStmt.TC02_VerifypaymentSubcontractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2047PaymentandDeductionStmt.TC02_VerifypaymentSubcontractor -->
+      <class name="_2054VerificationCertificate.TC06_VerifyEmailtoAllSCforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC06_VerifyEmailtoAllSCforVerificationCertificate -->
+      <class name="_2050DetailedPayTotals.TC05_VerifySubconcPayDetails">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC05_VerifySubconcPayDetails -->
+      <class name="_2052SubcontractorList.TC07_VerifyEmailTemplateforSubcontractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC07_VerifyEmailTemplateforSubcontractorlist -->
+      <class name="_2054VerificationCertificate.TC11_VerifyEmailTemplateforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC11_VerifyEmailTemplateforVerificationCertificate -->
+      <class name="_2047PaymentandDeductionStmt.TC03_Verifypaymentboth">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2047PaymentandDeductionStmt.TC03_Verifypaymentboth -->
+      <class name="_2132SubmissionHistory.TC01_VerifySubmissionhistoryforFinancialYer">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC01_VerifySubmissionhistoryforFinancialYer -->
+      <class name="_2051SummarisedPayTotal.TC09_VerifyEmailTemplateforSPTReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC09_VerifyEmailTemplateforSPTReport -->
+      <class name="_2132SubmissionHistory.TC07_GernateXMLforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC07_GernateXMLforSubmissionhistory -->
+      <class name="_2053SubcontractorPayslips.TC06_VerifyExprtSubcontractorPayslipZip">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC06_VerifyExprtSubcontractorPayslipZip -->
+      <class name="_2044CIS_SUBMIT.TC07_VerifyViewSubmissionPge">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC07_VerifyViewSubmissionPge -->
+      <class name="_2055CisReports.TC02_CheckContractorReportlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC02_CheckContractorReportlist -->
+      <class name="_2054VerificationCertificate.TC10_VerifyEmailtoContractorforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC10_VerifyEmailtoContractorforVerificationCertificate -->
+      <class name="_2052SubcontractorList.TC08_VerifyEmailJustZipforSubcontractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC08_VerifyEmailJustZipforSubcontractorlist -->
+      <class name="_2044CIS_SUBMIT.TC08_VerifyUndoSubmission">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC08_VerifyUndoSubmission -->
+      <class name="_2051SummarisedPayTotal.TC10_VerifyEmaillogsforSPTReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC10_VerifyEmaillogsforSPTReport -->
+      <class name="_2132SubmissionHistory.TC12_VerifyEmailTemplateforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC12_VerifyEmailTemplateforSubmissionhistory -->
+      <class name="_2044CIS_SUBMIT.TC09_VerifySubmissionpageFYandPrd">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC09_VerifySubmissionpageFYandPrd -->
+      <class name="_2047PaymentandDeductionStmt.TC01_Verifypaymentcontractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2047PaymentandDeductionStmt.TC01_Verifypaymentcontractor -->
+      <class name="_2050DetailedPayTotals.TC04_MultipleSubConcSelected">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC04_MultipleSubConcSelected -->
+      <class name="_2132SubmissionHistory.TC08_RegernateXMLforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC08_RegernateXMLforSubmissionhistory -->
+      <class name="_2055CisReports.TC07_VerifyPaymentanddeductionStmt">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2055CisReports.TC07_VerifyPaymentanddeductionStmt -->
+      <class name="_2051SummarisedPayTotal.TC04_VerifyExprtCSVforAllContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC04_VerifyExprtCSVforAllContractor -->
+      <class name="_2132SubmissionHistory.TC15_VerifyCISMonthlyReturnReportPDF">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC15_VerifyCISMonthlyReturnReportPDF -->
+      <class name="_2044CIS_SUBMIT.TC04_VerifyNameChkbx">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC04_VerifyNameChkbx -->
+      <class name="_2053SubcontractorPayslips.TC11_VerifyEmailPayslipJustZipforSunconctractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC11_VerifyEmailPayslipJustZipforSunconctractorlist -->
+      <class name="_2050DetailedPayTotals.TC09_VerifyDPTEmailforAllContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC09_VerifyDPTEmailforAllContractor -->
+      <class name="_2054VerificationCertificate.TC02_ShowVerificationCertificateforDateRange">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC02_ShowVerificationCertificateforDateRange -->
+      <class name="_2132SubmissionHistory.TC11_VerifyEmailJustZipforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC11_VerifyEmailJustZipforSubmissionhistory -->
+      <class name="_2053SubcontractorPayslips.TC09_VerifyEmailPayslipforMultipleSubcontractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC09_VerifyEmailPayslipforMultipleSubcontractor -->
+      <class name="_2051SummarisedPayTotal.TC08_VerifySTPreportwithoutemail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC08_VerifySTPreportwithoutemail -->
+      <class name="_2053SubcontractorPayslips.TC10_VerifyEmailPayslipTemplateforSubcontractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC10_VerifyEmailPayslipTemplateforSubcontractor -->
+      <class name="_2052SubcontractorList.TC03_VerifyExprtSubcontractorlistPDF">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC03_VerifyExprtSubcontractorlistPDF -->
+      <class name="_2052SubcontractorList.TC01_ShowlistofSubContractors">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC01_ShowlistofSubContractors -->
+      <class name="_2050DetailedPayTotals.TC08_VerifyExprtToCSVFunctionality">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC08_VerifyExprtToCSVFunctionality -->
+      <class name="_2044CIS_SUBMIT.TC05_VerifySubmitElectronic">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC05_VerifySubmitElectronic -->
+      <class name="_2053SubcontractorPayslips.TC01_ShowSubcontractorsPayslipforTaxYear">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC01_ShowSubcontractorsPayslipforTaxYear -->
+      <class name="_2052SubcontractorList.TC02_SearchIndividualSubcontractorname">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC02_SearchIndividualSubcontractorname -->
+      <class name="_2054VerificationCertificate.TC12_VerifyEmailtoBothforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC12_VerifyEmailtoBothforVerificationCertificate -->
+      <class name="_2054VerificationCertificate.TC08_VerifyWithoutEmailtoSCforVerificationCertificate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2054VerificationCertificate.TC08_VerifyWithoutEmailtoSCforVerificationCertificate -->
+      <class name="_2051SummarisedPayTotal.TC01_VerifyExprtPDFforOneContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC01_VerifyExprtPDFforOneContractor -->
+      <class name="_2053SubcontractorPayslips.TC08_VerifyEmailPayslipforAllSubcontractorlist">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC08_VerifyEmailPayslipforAllSubcontractorlist -->
+      <class name="_2132SubmissionHistory.TC04_VerifyExprtSubmissionhistoryPDF">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC04_VerifyExprtSubmissionhistoryPDF -->
+      <class name="_2132SubmissionHistory.TC14_VerifyCISMonthlyRetrnReportforTaxYear_Period">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC14_VerifyCISMonthlyRetrnReportforTaxYear_Period -->
+      <class name="_2132SubmissionHistory.TC13_VerifyDownloadCISforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC13_VerifyDownloadCISforSubmissionhistory -->
+      <class name="_2044CIS_SUBMIT.TC03_VerifyDifferentFinYerwihPrd">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC03_VerifyDifferentFinYerwihPrd -->
+      <class name="_2047PaymentandDeductionStmt.TC04_Verifypaymentwithoutemail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2047PaymentandDeductionStmt.TC04_Verifypaymentwithoutemail -->
+      <class name="_2132SubmissionHistory.TC02_VerifySubmissionhistoryforFilingPrd">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC02_VerifySubmissionhistoryforFilingPrd -->
+      <class name="_2051SummarisedPayTotal.TC05_VerifySPTEmailJustPdfforAllContractor">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2051SummarisedPayTotal.TC05_VerifySPTEmailJustPdfforAllContractor -->
+      <class name="_2052SubcontractorList.TC04_VerifyExprtSubcontractorlistCSV">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2052SubcontractorList.TC04_VerifyExprtSubcontractorlistCSV -->
+      <class name="_2132SubmissionHistory.TC09_VerifyEmailforSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC09_VerifyEmailforSubmissionhistory -->
+      <class name="_2044CIS_SUBMIT.TC10_VerifyCISSumissionEmail">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC10_VerifyCISSumissionEmail -->
+      <class name="_2132SubmissionHistory.TC06_VerifyUndoindividualSubmissionhistory">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2132SubmissionHistory.TC06_VerifyUndoindividualSubmissionhistory -->
+      <class name="_2050DetailedPayTotals.TC06_ColumnUpdateList">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC06_ColumnUpdateList -->
+      <class name="_2044CIS_SUBMIT.TC06_VerifyMarkAsFiled">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC06_VerifyMarkAsFiled -->
+      <class name="_2044CIS_SUBMIT.TC01_VerifyFilingPeriodDate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2044CIS_SUBMIT.TC01_VerifyFilingPeriodDate -->
+      <class name="_2050DetailedPayTotals.TC11_VerifyDPTreportwithoutemail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2050DetailedPayTotals.TC11_VerifyDPTreportwithoutemail -->
+      <class name="_2053SubcontractorPayslips.TC12_VerifyWithoutEmailpayslipforSubcontractorlist">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2053SubcontractorPayslips.TC12_VerifyWithoutEmailpayslipforSubcontractorlist -->
+    </classes>
+  </test> <!-- _2044Test(failed) -->
+</suite> <!-- Failed suite [_2044Suite] -->

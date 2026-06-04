@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="VerifySummarySuite">
+  <test thread-count="5" name="VerifySummaryTest">
+    <classes>
+      <class name="verifySummaryReportsData.TC255verifysummaryPayeNIreportwhenQuaterly"/>
+      <class name="verifySummaryReportsData.TC277chkPaymentofsummarywhenMonthly_AllowanceinMid"/>
+      <class name="verifySummaryReportsData.TC281chkCFofsummarywhenSMP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC276chkNIofsummarywhenMonthly_AllowanceinMid"/>
+      <class name="verifySummaryReportsData.TC252SummryWhenCIS_inMay"/>
+      <class name="verifySummaryReportsData.TC258SummryWhenCISinMayforQtr"/>
+      <class name="verifySummaryReportsData.TC270PaymentcheckofsummarywhenQtr_Allowance"/>
+      <class name="verifySummaryReportsData.TC274chkPaymentsummarywhenMonthly_Allowance"/>
+      <class name="verifySummaryReportsData.TC265summarywhenOverpayment_Mnthly"/>
+      <class name="verifySummaryReportsData.TC261summarywhenMonthly_AllowanceinMid"/>
+      <class name="verifySummaryReportsData.TC253SummryWhenCISinAprforQtr"/>
+      <class name="verifySummaryReportsData.TC257verifysummaryPayeNIreportwhenMonthly"/>
+      <class name="verifySummaryReportsData.TC278chkCFofsummarywhenQtr_AllowanceinStart"/>
+      <class name="verifySummaryReportsData.TC268PaymentcheckSummryofWhenCISinMayforQtr"/>
+      <class name="verifySummaryReportsData.TC272chkCFofsummarywhenMonthly_Allowance"/>
+      <class name="verifySummaryReportsData.TC273chkNIofsummarywhenMonthly_Allowance"/>
+      <class name="verifySummaryReportsData.TC256verifysummaryCFreportwhenMonthly"/>
+      <class name="verifySummaryReportsData.TC286chkPaymentssummarywhenOverpayment_Mnthly"/>
+      <class name="verifySummaryReportsData.TC288chkNIofsummarywhenSPP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC275chkCFofsummarywhenMonthly_AllowanceinMid"/>
+      <class name="verifySummaryReportsData.TC266CFcheckSummryWhenCISinMayforQtr"/>
+      <class name="verifySummaryReportsData.TC241verifysummaryreportwhenMonthly"/>
+      <class name="verifySummaryReportsData.TC240verifysummaryreportwhenQuaterly"/>
+      <class name="verifySummaryReportsData.TC271checkCFofsummarywhenQtr_Allowance"/>
+      <class name="verifySummaryReportsData.TC287chkCFsummarywhenSPP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC259summarywhenQtr_Allowance"/>
+      <class name="verifySummaryReportsData.TC262summarywhenQtr_AllowanceinStart"/>
+      <class name="verifySummaryReportsData.TC280chkPaymntspfsummarywhenQtr_AllowanceinStart"/>
+      <class name="verifySummaryReportsData.TC251SummryWhenCIS_mnthly"/>
+      <class name="verifySummaryReportsData.TC264summarywhenSMP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC269NIcheckofsummarywhenQtr_Allowance"/>
+      <class name="verifySummaryReportsData.TC279chkNIofsummarywhenQtr_AllowanceinStart"/>
+      <class name="verifySummaryReportsData.TC267NIcheckSummryWhenCISinMayforQtr"/>
+      <class name="verifySummaryReportsData.TC285chkNIsummarywhenOverpayment_Mnthly"/>
+      <class name="verifySummaryReportsData.TC260summarywhenMonthly_Allowance"/>
+      <class name="verifySummaryReportsData.TC283chkPymntofsummarywhenSMP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC289chkPaymentofsummarywhenSPP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC263summarywhenSPP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC254verifysummaryCFreportwhenQuaterly"/>
+      <class name="verifySummaryReportsData.TC282chkNIofsummarywhenSMP_Mnthly"/>
+      <class name="verifySummaryReportsData.TC284chkCFsummarywhenOverpayment_Mnthly"/>
+    </classes>
+  </test> <!-- VerifySummaryTest -->
+</suite> <!-- VerifySummarySuite -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1747Suite">
+  <test thread-count="5" name="_1747Test">
+    <classes>
+      <class name="_1747EPSverification.TC177EPSgenin1st_and_last"/>
+      <class name="_1747EPSverification.TC179EPSgeninlast"/>
+      <class name="_1747EPSverification.TC178EPSgenwhenNoEmp"/>
+      <class name="_1747EPSverification.TC181EPSwhenSMP"/>
+      <class name="_1747EPSverification.TC182EPSwhenCIS"/>
+      <class name="_1747EPSverification.TC180EPSwhenSPP"/>
+    </classes>
+  </test> <!-- _1747Test -->
+</suite> <!-- _1747Suite -->

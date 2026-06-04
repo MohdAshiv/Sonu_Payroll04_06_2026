@@ -1,0 +1,9 @@
+CompanyName : SPVfAffLR
+PAYE Reference Number : 635 / A635
+Accounts Office Reference : 635PC00000000
+Tax Year : 2024-2025
+
+Month,PayPeriod,EENI,ERNI,ERNIonTerminationAward,StudentLoan,PostGraduateLoan,StatPayFunding,TaxRefundFunding,StatPayRecovery,PreviousYearOverpayment,IncomeTax,EmploymentAllowance,CISDue,CISSuffered,AmountDueToHMRC,AmountPaid,BalanceduetoHMRC
+"Apr 2024","April",0.0000,33.4000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,33.4000,33.4000,"0.0000"
+"Total","",0.0000,33.4000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,33.4000,33.4000,""
+**NIC for off payroll workers is not included in Employment Allowances.

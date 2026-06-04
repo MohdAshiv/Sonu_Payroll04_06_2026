@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [ GDPR]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)">
+    <classes>
+      <class name="EmailGDPR.TC354_GDPR_PayslipEmail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateBothRecieivedPayslipWithSummary"/>
+          <include name="TC05validateBothRecieivedPayslipWithoutSummary"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC354_GDPR_PayslipEmail -->
+      <class name="EmailGDPR.TC360_GDPR_AssessEmployee">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC02validateEmployerRecieivedAutoEnrollement"/>
+        </methods>
+      </class> <!-- EmailGDPR.TC360_GDPR_AssessEmployee -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [ GDPR]] -->

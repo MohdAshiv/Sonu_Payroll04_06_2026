@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1768Suite">
+  <test thread-count="5" name="_1768Test">
+    <classes>
+      <class name="_1768Test._1768SummryWhenCISinMayforQtr"/>
+      <class name="_1768Test._1768IcheckofsummarywhenQtr_Allowance"/>
+      <class name="_1768Test._1768summarywhenSPP_Mnthly"/>
+      <class name="_1768Test._1768verifysummaryCFreportwhenQuaterly"/>
+      <class name="_1768Test.TC293_1768check"/>
+      <class name="_1768Test._1768SummryWhenCIS_mnthly"/>
+      <class name="_1768Test._1768SummryWhenCISinAprforQtr"/>
+      <class name="_1768Test.T_1768verifysummaryCFreportwhenMonthly"/>
+      <class name="_1768Test._1768summarywhenSMP_Mnthly"/>
+      <class name="_1768Test._1768summarywhenMonthly_AllowanceinMid"/>
+      <class name="_1768Test._1768checkCFofsummarywhenQtr_Allowance"/>
+      <class name="_1768Test._1768CFcheckSummryWhenCISinMayforQtr"/>
+      <class name="_1768Test._1768summarywhenOverpayment_Mnthly"/>
+      <class name="_1768Test._1768PaymentcheckSummryofWhenCISinMayforQtr"/>
+      <class name="_1768Test._1768chkNIofsummarywhenMonthly_Allowance"/>
+      <class name="_1768Test._1768SummryWhenCIS_inMay"/>
+      <class name="_1768Test._1768verifysummaryreportwhenMonthly"/>
+      <class name="_1768Test._1768summarywhenQtr_Allowance"/>
+      <class name="_1768Test._1768summarywhenMonthly_Allowance"/>
+      <class name="_1768Test._1768chkCFofsummarywhenMonthly_Allowance"/>
+      <class name="_1768Test._1768verifysummaryreportwhenQuaterly"/>
+      <class name="_1768Test._1768chkPaymentsummarywhenMonthly_Allowance"/>
+      <class name="_1768Test._1768NIcheckSummryWhenCISinMayforQtr"/>
+      <class name="_1768Test._1768chkCFofsummarywhenMonthly_AllowanceinMid"/>
+      <class name="_1768Test._1768summarywhenQtr_AllowanceinStart"/>
+      <class name="_1768Test._1768verifysummaryPayeNIreportwhenQuaterly"/>
+      <class name="_1768Test._1768verifysummaryPayeNIreportwhenMonthly"/>
+      <class name="_1768Test._1768PaymentcheckofsummarywhenQtr_Allowance"/>
+    </classes>
+  </test> <!-- _1768Test -->
+</suite> <!-- _1768Suite -->

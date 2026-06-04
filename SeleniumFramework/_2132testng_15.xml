@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2132SubmissionHistory.TC14_VerifyCISMonthlyRetrnReportforTaxYear_Period"/>
+      <class name="_2132SubmissionHistory.TC13_VerifyDownloadCISforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC12_VerifyEmailTemplateforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC02_VerifySubmissionhistoryforFilingPrd"/>
+      <class name="_2132SubmissionHistory.TC06_VerifyUndoindividualSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC08_RegernateXMLforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC10_VerifyWithoutEmailforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC15_VerifyCISMonthlyReturnReportPDF"/>
+      <class name="_2132SubmissionHistory.TC11_VerifyEmailJustZipforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC07_GernateXMLforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC09_VerifyEmailforSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC04_VerifyExprtSubmissionhistoryPDF"/>
+      <class name="_2132SubmissionHistory.TC03_VerifyExprtSubmissionhistoryCSV"/>
+      <class name="_2132SubmissionHistory.TC05_VerifyUndoAllSubmissionhistory"/>
+      <class name="_2132SubmissionHistory.TC01_VerifySubmissionhistoryforFinancialYer"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

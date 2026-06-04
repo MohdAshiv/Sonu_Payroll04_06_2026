@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2170RTISubmissionSuite">
+  <test thread-count="5" name="_2170RTISubmissionTest">
+    <classes>
+      <class name="_2170RTI_Submission.TC694_695CheckTaxablePayJoinMid"/>
+      <class name="_2170RTI_Submission.TC698_699CheckTaxablePayJoinMidFortNight"/>
+      <class name="_2170RTI_Submission.TC700_701CheckTaxablePayJoinMidFourWeekly"/>
+      <class name="_2170RTI_Submission.TC702CheckTaxablePayJoinMidFourWeekly"/>
+      <class name="_2170RTI_Submission.TC690_691CheckTaxablePayForTwoMonths"/>
+      <class name="_2170RTI_Submission.TC696_697CheckTaxablePayJoinMidWeekly"/>
+      <class name="_2170RTI_Submission.TC689CheckTaxablePay"/>
+      <class name="_2170RTI_Submission.TC692_693CheckTaxablePayForMidYear"/>
+    </classes>
+  </test> <!-- _2170RTISubmissionTest -->
+</suite> <!-- _2170RTISubmissionSuite -->

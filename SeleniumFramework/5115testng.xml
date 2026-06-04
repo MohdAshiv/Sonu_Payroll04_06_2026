@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+     
+      <class name="_5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly"/>
+       <class name="_5115ApprenticeLevyTest.TC122_LevyWeekly"/>
+       <class name="_5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged"/>
+       <class name="_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail"/>
+       <class name="_5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS"/>
+       <class name="_5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly"/>
+       <class name="_5115ApprenticeLevyTest.TC127_ApprenticeLevy_Addition_PayeTax"/>
+       
+       
+      <class name="_5115ApprenticeLevyTest.TC128_ApprenticeLevy_Addition_BasicPay"/>
+      <class name="_5115ApprenticeLevyTest.TC129_ApprenticeLevy_NI_X"/>
+      <class name="_5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary"/>
+      <class name="_5115ApprenticeLevyTest.TC131_ApprenticeLevy_PensionSalarySac"/>
+      <class name="_5115ApprenticeLevyTest.TC132_AprenticeLevy_Director"/>
+      
+      <class name="_5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2"/>
+       <class name="_5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector"/>
+       <class name="_5115ApprenticeLevyTest.TC135_ApprenticeLevy_MultipleAddition"/>
+      
+      <class name="_5115ApprenticeLevyTest.TC136_ApprenticeLevy_AfterTax"/>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

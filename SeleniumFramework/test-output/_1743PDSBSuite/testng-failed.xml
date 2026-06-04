@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_1743PDSBSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_1743PDSBTest(failed)">
+    <classes>
+      <class name="_1743PayrollDSB.TC713_714CheckTaxablePayForTwoMonths10">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- _1743PayrollDSB.TC713_714CheckTaxablePayForTwoMonths10 -->
+      <class name="_1743PayrollDSB.TC709_710CheckTaxablePayForTwoMonths10">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- _1743PayrollDSB.TC709_710CheckTaxablePayForTwoMonths10 -->
+      <class name="_1743PayrollDSB.TC711_712CheckTaxablePayForTwoMonths10">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="allocateData"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- _1743PayrollDSB.TC711_712CheckTaxablePayForTwoMonths10 -->
+    </classes>
+  </test> <!-- _1743PDSBTest(failed) -->
+</suite> <!-- Failed suite [_1743PDSBSuite] -->

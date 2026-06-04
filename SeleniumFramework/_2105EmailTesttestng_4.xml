@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2105EmailTestSuite">
+  <test thread-count="5" name="_2105EmailTestTest">
+    <classes>
+      <class name="_2105EmailTest.TC529EmailSettingfromAgentsetSelf"/>
+      <class name="_2105EmailTest.TC528EmailSettingfromAgentsetDefault"/>
+      <class name="_2105EmailTest.TC527EmailfromAgentsetNomisma"/>
+      <class name="_2105EmailTest.TC530EmailSettingfromBusiness"/>
+    </classes>
+  </test> <!-- _2105EmailTestTest -->
+</suite> <!-- _2105EmailTestSuite -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1772DeregistrationSuite">
+  <test thread-count="5" name="_1772DeregistrationTest">
+    <classes>
+      <class name="_1772Deregistration.TC639FutureDateDeregisteration"/>
+      <class name="_1772Deregistration.TC642PreviousPayrollPendingErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC652CreateScheduleDeregisteration"/>
+      <class name="_1772Deregistration.TC641PriorDateOfDeregisteration"/>
+      <class name="_1772Deregistration.TC645LastPayrollDateErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC650SubmitOutstandingRTIDeregisteration"/>
+      <class name="_1772Deregistration.TC644PayrollDateErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC647UndoLastPayrollErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC649P45whenEmpErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC640ExistingTxYrDeregisteration"/>
+      <class name="_1772Deregistration.TC651BackDatedDeregisteration"/>
+      <class name="_1772Deregistration.TC653UndoLastPayrollEPSSubmittedDeregisteration"/>
+      <class name="_1772Deregistration.TC643PayrollSwitchDateErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC648DeregisterOnLastPayrollErrorDeregisteration"/>
+      <class name="_1772Deregistration.TC646P45NotIssuedErrorDeregisteration"/>
+    </classes>
+  </test> <!-- _1772DeregistrationTest -->
+</suite> <!-- _1772DeregistrationSuite -->

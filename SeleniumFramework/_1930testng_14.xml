@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1930Suite">
+  <test thread-count="5" name="_1930Test">
+    <classes>
+      <class name="_1930.TC335_337_1930MidYrDirector"/>
+      <class name="_1930.TC338_340_1930AlternativeMidYrDirector"/>
+      <class name="_1930.TC329and334_1930CummulativeDirector"/>
+      <class name="_1930.TC341_343_1930DirPaidTwoMonthonly"/>
+      <class name="_1930.TC344_346_1930DirPaidTwoMonthonly"/>
+    </classes>
+  </test> <!-- _1930Test -->
+</suite> <!-- _1930Suite -->

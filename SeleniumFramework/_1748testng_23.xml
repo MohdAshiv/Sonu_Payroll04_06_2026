@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1748Suite">
+  <test thread-count="5" name="_1748Test">
+    <classes>
+      <class name="_1748RunPayrollfromAgent.TC726_731CheckPayroll_OnHoldClient1"/>
+      <class name="_1748RunPayrollfromAgent.TC792_808AgentRunPayrollPDF_EE"/>
+    </classes>
+  </test> <!-- _1748Test -->
+</suite> <!-- _1748Suite -->

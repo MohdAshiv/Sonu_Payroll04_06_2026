@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1912Suite">
+  <test thread-count="5" name="_1912Test">
+    <classes>
+      <class name="_1912.TC353_355_1912DirSalNotFixed"/>
+      <class name="_1912.TC386_388_1912MiddleFPSWithHighSalary"/>
+      <class name="_1912.TC362_364_1912FirstAndLastMonthSalary"/>
+      <class name="_1912.TC371_373_1912DirMidYrJoin"/>
+      <class name="_1912.TC356_358_1912Dir3MonthSalary"/>
+      <class name="_1912.TC389_391_1912MiddleFPSWithLowSalary"/>
+      <class name="_1912.TC359_361_1912DirFirst2MonthSalaryandlast"/>
+      <class name="_1912.TC350_352_1912DirSalFiveMonth"/>
+      <class name="_1912.TC365_367_1912DirPaymentNotFixed"/>
+      <class name="_1912.TC392_394_1912WeeklyHighSalary"/>
+      <class name="_1912.TC374_376_1912DirLeaveDuringTxYr"/>
+      <class name="_1912.TC368_370_1912DirSalinOneMonth"/>
+      <class name="_1912.TC383_385_1912JoiAndLeaveSameYr"/>
+      <class name="_1912.TC347_349_1912TC01"/>
+      <class name="_1912.TC377_382_1912TwoDir"/>
+    </classes>
+  </test> <!-- _1912Test -->
+</suite> <!-- _1912Suite -->

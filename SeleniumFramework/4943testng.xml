@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_4943OpeningBalanceTest.TC154_OpeningBalance_EmployerAllowances"/>
+      <class name="_4943OpeningBalanceTest.TC155_OpeningBalance_EmployerAllowance"/>
+      <class name="_4943OpeningBalanceTest.TC156_OpeningBalance_EmployerAllowance"/>
+      <class name="_4943OpeningBalanceTest.TC157_OpeningBalance_EmployerAllowance"/>
+      <class name="_4943OpeningBalanceTest.TC158_OpeningBalance_EmployerAllowanceDisable"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

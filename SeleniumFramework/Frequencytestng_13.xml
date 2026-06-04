@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FrequencySuite">
+  <test thread-count="5" name="FrequencyTest">
+    <classes>
+      <class name="frequencytest.TC54subScriptWklytoMnth_DefaultProfile"/>
+      <class name="frequencytest.TC57subScriptremoveweeklyschedule_DefaultProfile"/>
+      <class name="frequencytest.TC42subscriptchangemonthlypaydate"/>
+      <class name="frequencytest.TC55subScriptFrwklytoMnthly_DefaultProfile"/>
+      <class name="frequencytest.TC46subscript_multiplefreqtest"/>
+      <class name="frequencytest.TC40subscriptweeklyemployeeTS6"/>
+      <class name="frequencytest.TC50subscriptChngfrqMtoFortnightly"/>
+      <class name="frequencytest.TC49subscriptChngfrqMtoW"/>
+      <class name="frequencytest.TC41subscriptweeklyemployeeleaverTS7"/>
+      <class name="frequencytest.TC51subscriptChngfrqMtoFourWeekly"/>
+      <class name="frequencytest.TC52subscriptT13EPSpermonth"/>
+      <class name="frequencytest.TC62subscriptDiffFPSforDiffFreq"/>
+      <class name="frequencytest.TC56subScriptFortnightlytoMnthly_DefaultProfile"/>
+    </classes>
+  </test> <!-- FrequencyTest -->
+</suite> <!-- FrequencySuite -->

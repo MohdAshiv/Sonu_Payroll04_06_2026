@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_1540Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_1540Test(failed)">
+    <classes>
+      <class name="_1540EEInfoImport.TC809_811RunPayrollTable">
+        <methods>
+          <include name="initDriver"/>
+          <include name="runPayrollPageTable"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="runPayrollPageAccMngrinAlphabetic"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC809_811RunPayrollTable -->
+      <class name="_1540EEInfoImport.TC931DwnldDataFormat">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC931DwnldDataFormat -->
+      <class name="_1540EEInfoImport.TC929EEIInfomport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC929EEIInfomport -->
+      <class name="_1540EEInfoImport.TC939_944CheckPayroll_AwaitingReviewClient">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="AwaitingReview_6plusMonth"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC939_944CheckPayroll_AwaitingReviewClient -->
+    </classes>
+  </test> <!-- _1540Test(failed) -->
+</suite> <!-- Failed suite [_1540Suite] -->

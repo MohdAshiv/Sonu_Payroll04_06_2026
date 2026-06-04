@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TaxCodeSuite">
+  <test thread-count="5" name="TaxCodeTest">
+    <classes>
+      <class name="TaxCode.TC443_444TaxCode_CD1"/>
+      <class name="TaxCode.TC435_436DiffTaxCodeDeduction"/>
+      <class name="TaxCode.TC437_438TaxCode_D0"/>
+      <class name="TaxCode.TC439_440TaxCode_CD0"/>
+      <class name="TaxCode.TC441_442TaxCode_D1"/>
+    </classes>
+  </test> <!-- TaxCodeTest -->
+</suite> <!-- TaxCodeSuite -->

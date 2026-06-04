@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2055CisReports.TC01_CheckSubcontractorReportslist"/>
+      <class name="_2055CisReports.TC02_CheckContractorReportlist"/>
+      <class name="_2055CisReports.TC09_VerifyVerificationCertificates"/>
+      <class name="_2055CisReports.TC05_VerifySummarisedPayTotals"/>
+      <class name="_2055CisReports.TC04_VerifySubcontractorlist"/>
+      <class name="_2055CisReports.TC06_VerifyDetailedPayTotals"/>
+      <class name="_2055CisReports.TC07_VerifyPaymentanddeductionStmt"/>
+      <class name="_2055CisReports.TC08_VerifySubmissionHistory"/>
+      <class name="_2055CisReports.TC03_VerifySubcontractorPayslips"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

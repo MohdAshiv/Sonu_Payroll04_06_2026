@@ -1,0 +1,214 @@
+package _8711Test;
+
+import org.testng.annotations.Test;
+
+import tests.TestBase;
+import utilities.ExcelData;
+
+public class TC608_EmailpermissionSaprateContactLeaveManagement extends TestBase{
+
+	public String sTestCaseID = null;
+	String[] data = null;
+	String Sheet = null;
+
+	
+	@Test(priority=1)
+	public void TCvalidateLeaveManagement() throws Exception 
+	{
+		
+		sTestCaseID = "TC608";
+		Sheet = "Sheet6";
+		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
+
+		pages.loginpage4  loginpage = new pages.loginpage4(driver);
+		loginpage.GoToUrl();	
+		loginpage.AssertUrl();
+		loginpage.Enter_EnterUsername(data[1]);
+		loginpage.Enter_Enterpassword(data[2]);
+		loginpage.Click_LoginButton();
+
+		pages.agentpage agentpage = new pages.agentpage(driver);
+		agentpage.Enter_SearchAgentName(data[3]);
+		agentpage.Click_ClickSearch();
+		agentpage.Click_ClickAgent();
+		
+		pages.OpenClient OpenClient = new pages.OpenClient(driver);
+		OpenClient.Click_ClientsClick();
+		pages.CreateClient buisness= new pages.CreateClient (driver);
+		buisness.clickNewClient();
+		buisness.clickLimitedCompany();
+		buisness.clickMnualyLimitedCompany();
+		buisness.enterBuisnessName();
+		
+		buisness.enterRegistrationNo();
+		buisness.enterRegistrationDate(data[14]);
+		buisness.enterFirstName();
+		buisness.enterLastName();
+		buisness.clickSaveBtn();
+		
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+	
+		pages.AccountingPeriodSettingBK_FAInactive Bk= new 		pages.AccountingPeriodSettingBK_FAInactive(driver);
+		Bk.Click_BKEdit();
+		Bk.Select_services(data[12]);
+		Bk.Enter_CompanyAddressLine1(data[13]);
+		Bk.Click_Save();
+
+		Bk.Click_AccountingPeriod();
+		Bk.Click_AddAccountingPeriod();
+		Bk.Enter_NewStartDate(data[14]);
+		Bk.Enter_NewEndDate(data[15]);
+		Bk.Click_AccPeriodSave();
+		OpenClient.Click_ClientsClick();
+		OpenClient.Enter_EnterClientName2();
+		OpenClient.Click_ClickSearch();
+		OpenClient.Click_ClickClient();
+		
+		pages.EditCompany company= new 	pages.EditCompany(driver);
+		
+		company.Click_gotoEditCompany();
+		company.ClickContactDetails();
+		
+		company.enterFirstName(data[30]);
+		company.enterEmail(data[31]);
+		company.clickAddContact();
+		
+        company.enterFirstName(data[33]);
+		company.enterEmail(data[34]);
+		company.clickAddContact();
+		
+	    company.enterFirstName(data[35]);
+		company.enterEmail(data[36]);
+		company.clickAddContact();
+		
+	    company.enterFirstName(data[37]);
+		company.enterEmail(data[38]);
+		company.clickAddContact();
+		
+	   _8711Page.Page page= new _8711Page.Page(driver);
+		
+		page.editSecondryContact();
+		page.onlyCheckLeaveManagement();
+		company.clickUpdateContact();
+		
+		page.edit3rdContact();
+		page.onlyCheckTimesheetMnagement();
+		company.clickUpdateContact();
+
+		page.edit4thContact();
+		page.onlyCheckPayrollApproval();
+		company.clickUpdateContact();
+
+		page.editMainContact();
+		page.untickPayrollTimesheetLeave();
+		company.clickUpdateContact();
+
+		
+		company.Click_clickPayrollDetails();
+		company.enterPayeNumber(data[16]);
+		company.enterRefrenceNumber(data[17]);
+		company.accountOfficeReffrence(data[18]);
+		
+		company.Click_ClickSave();
+		company.Click_clickPayrollSettings();
+		company.Enter_NomismaStartDate(data[29]);
+		company.Click_ClickSave();
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+
+	    payroll.Click_PayrollDashboard();
+	    	  
+		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
+		employee.clickNewEmployee();
+		employee.enterTitle(data[19]);
+		employee.enterFirstName(data[20]);
+		employee.enterLastName(data[21]);
+		employee.enterDateOfBirth(data[22]);
+		employee.enterAddressLine(data[23]);
+		employee.enterAddressLine2(data[24]);
+		employee.enterPostCode(data[25]);
+		employee.enterEmailAddress(data[39]);
+		employee.clickSaveBtn();
+		employee.clickMandotoryPayroll();
+		employee.enterJoiningDate(data[29]);
+		employee.enterNI(data[32]);
+		employee.enterNICategory(data[26]);
+		employee.enterTaxCode(data[27]);
+		employee.clickSaveBtn();
+		employee.click_Paydetails();
+		employee.enterBasicSalary1(data[28]);
+		employee.clickSaveBtn();
+
+		payroll.Click_PayrollDashboard();
+		company.Click_gotoEditCompany();
+		company.Click_clickPayrollDetails();
+		company.Click_clickPayrollSettings();
+		company.clickRequestPayroll();
+		company.updateRequestPayInfo();
+	    payroll.Click_PayrollDashboard();
+		
+		payroll.Run_Payroll();
+		
+		pages.FilingManagement submitRti=new 	pages.FilingManagement(driver);
+		submitRti.Click_gotoFilingManagement();
+		submitRti.selectStatus(data[8]);
+		submitRti.clickCheckBox();
+		submitRti.enterNotes();
+		submitRti.clickNottoSubmit();
+		pages.EmployerView employerView= new 	pages.EmployerView(driver);
+		
+		employerView.Click_EmployerView();
+		employerView.clickEmployee();
+		
+		pages.LeaveManagement leaves = new pages.LeaveManagement(driver);
+		leaves.clickLeaveManagement();
+		leaves.clickApplyLeaves();
+		leaves.selectLeaveType(data[40]);
+		
+		leaves.Enter_LeaverStartDateHoliday(data[44]);
+		leaves.Enter_LeaverEndDateHoliday(data[45]);
+		leaves.enterLeaveReson(data[51]);
+		leaves.clickSaveBtn();
+		
+	    leaves.selectLeaveType(data[41]);
+		
+		leaves.Enter_LeaverStartDateSick(data[46]);
+		leaves.Enter_LeaverEndDateSick(data[47]);
+		leaves.enterLeaveReson(data[51]);
+		leaves.clickSaveBtn();
+	
+		leaves.selectLeaveType(data[43]);
+
+		leaves.Enter_LeaverStartDateHoliday(data[49]);
+		leaves.Enter_LeaverEndDateHoliday(data[50]);
+		leaves.enterLeaveReson(data[51]);
+
+		leaves.clickSaveBtn();
+
+		leaves.selectLeaveType(data[42]);
+
+		leaves.Enter_LeaverStartDateSSP(data[48]);
+		leaves.enterAwe();
+
+		leaves.clickSaveBtn();
+
+		pages.AgentLevelEmailLog emaillog = new pages.AgentLevelEmailLog(driver);
+
+		emaillog.clickEmailDropDown();
+		emaillog.clickEmailLog();
+		emaillog.clickRecievedEmail1();
+
+		
+		_8711Page.Verify8711Page verify = new _8711Page.Verify8711Page(driver);
+
+		verify.verifyEmailContact(data[10],data[11]);
+		verify.assertAll();
+	
+}	
+	
+	}
+	
+	
+	
+

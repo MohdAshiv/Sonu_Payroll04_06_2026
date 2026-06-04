@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="_1918Test">
+    <classes>
+      <class name="_1918NMW_Alert.TC06over22andEmpApperenticeafterFirstYear"/>
+      <class name="_1918NMW_Alert.TC08over25andEmpApperenticeInFirstYear"/>
+      <class name="_1918NMW_Alert.TC02Under19AndnotApperentice"/>
+      <class name="_1918NMW_Alert.TC01over19AndnotApperentice"/>
+      <class name="_1918NMW_Alert.TC05EmpApperenticeafterFirstYear"/>
+      <class name="_1918NMW_Alert.TC03Under19AndApperentice"/>
+      <class name="_1918NMW_Alert.TC11over21andEmpApperenticeIn2ndYear"/>
+      <class name="_1918NMW_Alert.TC10over18andEmpRateis5"/>
+      <class name="_1918NMW_Alert.TC14over19andEmpApperenticeInFirstYear"/>
+      <class name="_1918NMW_Alert.TC13over21andEmpRateisBelowNMW"/>
+      <class name="_1918NMW_Alert.TC15over26andEmpFirstYrApprenticeComplete"/>
+      <class name="_1918NMW_Alert.TC09under18andEmpApperenticeInFirstYear"/>
+      <class name="_1918NMW_Alert.TC07over25andEmpApperenticeafterFirstYear"/>
+      <class name="_1918NMW_Alert.TC12over21andEmpApperenticeInFirstYear"/>
+      <class name="_1918NMW_Alert.TC04Over19AndApperentice"/>
+    </classes>
+  </test> <!-- _1918Test -->
+</suite> <!-- Suite -->

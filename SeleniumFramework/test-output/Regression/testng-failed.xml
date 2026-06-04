@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression Suit(failed)">
+    <classes>
+      <class name="_5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly -->
+      <class name="_5115ApprenticeLevyTest.TC122_LevyWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="validateAprenticeshipLevy"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC122_LevyWeekly -->
+      <class name="_1566AdditionDeduction.TC084_DirectorABL">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateNetTaxNiGross_YTD"/>
+        </methods>
+      </class> <!-- _1566AdditionDeduction.TC084_DirectorABL -->
+      <class name="_5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="validateAprenticeshipLevy"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS -->
+      <class name="_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="validateAprenticeshipLevy1"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail -->
+      <class name="_5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2 -->
+      <class name="_5115ApprenticeLevyTest.TC132_AprenticeLevy_Director">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC132_AprenticeLevy_Director -->
+      <class name="_5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary -->
+      <class name="_5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly -->
+      <class name="_5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="validateAprenticeshipLevy"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged -->
+      <class name="_5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector">
+        <methods>
+          <include name="initDriver"/>
+          <include name="validateAprenticeshipLevy"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector -->
+    </classes>
+  </test> <!-- Regression Suit(failed) -->
+</suite> <!-- Failed suite [Regression] -->

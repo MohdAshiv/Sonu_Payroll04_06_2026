@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1706SuiteAnd2087">
+  <test thread-count="5" name="_1706Test">
+    <classes>
+      <class name="_1706Test.TC449_452P11DeductionReport"/>
+      <class name="_1706Test.TC692_693CheckTaxablePayForMidYear3"/>
+      <class name="_1706Test.TC696_697CheckTaxablePayJoinMidWeekly5"/>
+      <class name="_1706Test.TC689CheckTaxablePay9"/>
+      <class name="_1706Test.TC692_693CheckTaxablePayForMidYearF"/>
+      <class name="_1706Test.TC696_697CheckTaxablePayJoinMidWeekly13"/>
+      <class name="_1706Test.TC692_693CheckTaxablePayForMidYear11"/>
+      <class name="_1706Test.TC694_695CheckTaxablePayJoinMid4"/>
+      <class name="_1706Test.TC698_699CheckTaxablePayJoinMidFortNight14"/>
+      <class name="_1706Test.TC690_691CheckTaxablePayForTwoMonths2"/>
+      <class name="_1706Test.TC689CheckTaxablePayH"/>
+      <class name="_1706Test.TC696_697CheckTaxablePayJoinMidWeeklyD"/>
+      <class name="_1706Test.TC694_695CheckTaxablePayJoinMidE"/>
+      <class name="_1706Test.TC690_691CheckTaxablePayForTwoMonthsG"/>
+      <class name="_1706Test.TC694_695CheckTaxablePayJoinMid12"/>
+      <class name="_1706Test.TC689CheckTaxablePay1"/>
+      
+      
+      
+       <class name="_2087EmailLog.TC457_458EmailLogFromSummary"/>
+      <class name="_2087EmailLog.TC461_462EmailLogFromP60"/>
+      <class name="_2087EmailLog.TC459_460EmailLogFromAgentPage"/>
+      <class name="_2087EmailLog.TC453_454EmailLogMainContact"/>
+      <class name="_2087EmailLog.TC455_456EmailLogToEmployee"/>
+    </classes>
+  </test> <!-- _1706Test -->
+</suite> <!-- _1706Suite -->

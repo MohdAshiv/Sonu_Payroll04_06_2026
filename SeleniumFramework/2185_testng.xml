@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2185Net_Pay_Arrangement_Test.TC005_2185_NPA_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC006_2185_NPA_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC007_2185_Qualifying_Pensionable"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC008_2185_Custom_Pensionable"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC009_2185_Upper_Basis_C"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC010_EE_ER_Pension"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC011_Weekly_Qualyifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC012_Fortnightly_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC013_Fortnightly_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC014_TaxCalculate_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC015_Tax_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC016_Employee_Ni_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC017_NI_Contribution_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC018_NI_Contribution_Weekly_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC019_NI_Contribution_Weekly_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC020_Director_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC021_Director_CumulativeCustom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC022_DirectorAlternative_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC023_TaxablePayQualifying_2Employee"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC024_TaxblePay_Individual_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC025_NIablePay_Individual"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC026_Payslip_Taxablepay_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC027_Payslip_Taxablepay_Custom"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC028_PayrollSummary_Individual"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC029_PayrollSummary_Individual_Qualifying"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC030_Verify_P11_Report"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC031_Verify_P60_Report"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC032_RTI_Submission_Report"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC033_Employerview"/>
+      <class name="_2185Net_Pay_Arrangement_Test.TC034_SMP_Leave"/>
+    
+      
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

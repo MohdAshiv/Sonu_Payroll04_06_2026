@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_Test_19Suite">
+  <test thread-count="5" name="_Test_19Test">
+    <classes>
+     <class name="tests.TC01CompanyStatusSubscript_DefaultProfile"/>
+      <class name="tests.TC02CompanyInactiveSubscript_DefaultProfile"/>
+      <class name="tests.TC03WrongPayeCloseSubscript_DefaultProfile"/>
+      <class name="tests.TC07subscript_DefaultProfile"/>
+      <class name="tests.TC05LeaverSubscript_DefaultProfileWrongDate"/>
+      <class name="tests.TC19subscriptEmployerOpeningBalance_DefaultProfile"/>
+      <class name="tests.TC13SubscriptPswdProtectionZIP_DefaultProfile"/>
+      <class name="tests.TC09BluepayslipSubscript_DefaultProfile"/>
+      <class name="tests.TC11SubscriptNomismaStartDate_DefaultProfile"/>
+      <class name="tests.TC15subScriptOpeningBalance_DefaultProfile"/>
+      <class name="tests.TC16subScriptAutomaticPayroll_DefaultProfile"/>
+      <class name="tests.TC18subScriptPayFrequency_DefaultProfile"/>
+      <class name="tests.TC14SubscriptPswdProtectionNoProtection_DefaultProfile"/>
+      <class name="tests.TC04ClosePayeWithoutRunPayrollSubscript"/>
+      <class name="tests.TC12SubscriptPswdProtectionPDF_DefaultProfile"/>
+      <class name="tests.TC06LeaverSubscript_DefaultProfile"/> 
+      <class name="tests.TC08GreenpayslipSubscript_DefaultProfile"/>
+      <class name="tests.TC10subscriptDeregisterWithEmploye_DefaultProfile"/>
+      <class name="tests.TC17subScriptMannualPayroll_DefaultProfile"/>
+    </classes>
+  </test> <!-- _Test_19Test -->
+</suite> <!-- _Test_19Suite -->

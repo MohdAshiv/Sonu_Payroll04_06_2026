@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="PasswordProtection">
+		<classes>
+
+
+			<class name="_4942PasswordProtectionTest.TC163_PasswordProtection_Enabled" />
+			<class name="_4942PasswordProtectionTest.TC164_PasswordProtection_CreatePassword" />
+			<class name="_4942PasswordProtectionTest.TC165_PasswordProtection_PreviewIcon" />
+
+			<class name="_4942PasswordProtectionTest.TC166_PasswordProtection_ChangePassword" />
+			<class name="_4942PasswordProtectionTest.TC167_PasswordProtectionPasswordChanged" />
+			<class name="_4942PasswordProtectionTest.TC168_PasswordProtection_RemovedPassword" />
+			<class name="_4942PasswordProtectionTest.TC169_PasswordProtection_CompanyTag" />
+			<class name="_4942PasswordProtectionTest.TC170_PasswordProtection_SpecialCharater" />
+			<class name="_4942PasswordProtectionTest.TC171_PasswordProtection_PayeRefrenceTag" />
+			<class name="_4942PasswordProtectionTest.TC172_PasswordProtection_SpecialCharWithPayeRefrence" />
+			<class name="_4942PasswordProtectionTest.TC173_PasswordProtection_AccountsOffice" />
+			<class name="_4942PasswordProtectionTest.TC174_PasswordProtection_AccountOfficeWithSpecialCharacter" />
+			<class name="_4942PasswordProtectionTest.TC175_PasswordProtection_PayeToAccountOffice" />
+			<class name="_4942PasswordProtectionTest.TC176_PasswordProtection_AccountOfficeToSelect" />
+			<class name="_4942PasswordProtectionTest.TC177_PasswordProtection_EnableToDisable" />
+			
+	        <class name="_4942PasswordProtectionTest.TC179_PasswordProtection_EmployeeNotEnabled" />
+			<class name="_4942PasswordProtectionTest.TC180_PasswordProtection_EmployeeAutoPayrollEnabled" />
+			<class name="_4942PasswordProtectionTest.TC181_PasswordProtection_EmployeeEnabled" />
+			<class name="_4942PasswordProtectionTest.TC182_PasswordProtection_EmployeeCreatePassword" />
+			<class name="_4942PasswordProtectionTest.TC183_PasswordProtection_EmployeePreviewIcn" />
+			<class name="_4942PasswordProtectionTest.TC184_PasswordProtection_EmployeePasswordChangeIcn" />
+			<class name="_4942PasswordProtectionTest.TC185_PasswordProtection_EmployeeChangedPassword" />
+			<class name="_4942PasswordProtectionTest.TC186_PasswordProtection_EmployeeRemovedPassword" />
+			<class name="_4942PasswordProtectionTest.TC187_PasswordProtection_FirstNameTag" />
+	
+			<class name="_4942PasswordProtectionTest.TC188_PasswordProtection_FirstName_SpecialCharcter" />
+			<class name="_4942PasswordProtectionTest.TC189_PasswordProtection_LastName" />
+			<class name="_4942PasswordProtectionTest.TC190_PasswordProtection_LastName_SpecialCharacter" />
+			<class name="_4942PasswordProtectionTest.TC191_PasswordProtection_TaxCode_Tag" />
+			<class name="_4942PasswordProtectionTest.TC192_PasswordProtection_ChangeTaxCode" />
+			<class name="_4942PasswordProtectionTest.TC193_PasswordProtection_PostCode_Tag" />
+			<class name="_4942PasswordProtectionTest.TC194_PasswordProtection_Last4DigitNI_Tag" />
+			<class name="_4942PasswordProtectionTest.TC195_PasswordProtection_NI_Tag" />
+			<class name="_4942PasswordProtectionTest.TC196_PasswordProtection_NI_ToLast4DigitNI" />
+			<class name="_4942PasswordProtectionTest.TC197_PasswordProtection_JustZipFiles" />
+			<class name="_4942PasswordProtectionTest.TC198_PasswordProtection_RegenerateButton" />
+			<class name="_4942PasswordProtectionTest.TC199_PasswordProtection_EnabledToDisable" />
+
+                        
+            <class name="_4942PasswordProtectionTest.TC200_PasswordProtection_EmployeeEmployer" />
+
+			<class name="_4942PasswordProtectionTest.TC201_PasswordProtection_FirstNameEmployeeEmployer" />
+
+			<class name="_4942PasswordProtectionTest.TC202_PasswordProtection_LastnNameCompanyName" />
+
+			<class name="_4942PasswordProtectionTest.TC203_PasswordProtection_TaxCode_PayeRefrence" />
+
+			<class name="_4942PasswordProtectionTest.TC204_PasswordProtection_PostCode_AccountOffice" /> 
+     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+           <!--  <class name="_4942PasswordProtectionTest.TC159_PasswordProtection_NotEnabled" />
+			<class name="_4942PasswordProtectionTest.TC160_PasswordProtection_AutoPayrollEnabled" />
+			<class name="_4942PasswordProtectionTest.TC161_PasswordProtection_JustPDF" />
+			<class name="_4942PasswordProtectionTest.TC162_PasswordProtection_JustZip" />
+
+			<class name="_4942PasswordProtectionTest.TC163_PasswordProtection_Enabled" />
+			<class name="_4942PasswordProtectionTest.TC164_PasswordProtection_CreatePassword" />
+			<class name="_4942PasswordProtectionTest.TC165_PasswordProtection_PreviewIcon" />
+
+			<class name="_4942PasswordProtectionTest.TC166_PasswordProtection_ChangePassword" />
+			<class name="_4942PasswordProtectionTest.TC167_PasswordProtectionPasswordChanged" />
+			<class name="_4942PasswordProtectionTest.TC168_PasswordProtection_RemovedPassword" />
+			<class name="_4942PasswordProtectionTest.TC169_PasswordProtection_CompanyTag" />
+			<class name="_4942PasswordProtectionTest.TC170_PasswordProtection_SpecialCharater" />
+			<class name="_4942PasswordProtectionTest.TC171_PasswordProtection_PayeRefrenceTag" />
+			<class name="_4942PasswordProtectionTest.TC172_PasswordProtection_SpecialCharWithPayeRefrence" />
+			
+			<class name="_4942PasswordProtectionTest.TC173_PasswordProtection_AccountsOffice" />
+			<class name="_4942PasswordProtectionTest.TC174_PasswordProtection_AccountOfficeWithSpecialCharacter" />
+			<class name="_4942PasswordProtectionTest.TC175_PasswordProtection_PayeToAccountOffice" />
+			<class name="_4942PasswordProtectionTest.TC176_PasswordProtection_AccountOfficeToSelect" />
+			<class name="_4942PasswordProtectionTest.TC177_PasswordProtection_EnableToDisable" />
+            <class name="_4942PasswordProtectionTest.TC178_PasswordProtection_Regenerate" />
+            
+            <class name="_4942PasswordProtectionTest.TC179_PasswordProtection_EmployeeNotEnabled" />
+			<class name="_4942PasswordProtectionTest.TC180_PasswordProtection_EmployeeAutoPayrollEnabled" />
+			<class name="_4942PasswordProtectionTest.TC181_PasswordProtection_EmployeeEnabled" />
+			<class name="_4942PasswordProtectionTest.TC182_PasswordProtection_EmployeeCreatePassword" />
+			<class name="_4942PasswordProtectionTest.TC183_PasswordProtection_EmployeePreviewIcn" />
+			<class name="_4942PasswordProtectionTest.TC184_PasswordProtection_EmployeePasswordChangeIcn" />
+			<class name="_4942PasswordProtectionTest.TC185_PasswordProtection_EmployeeChangedPassword" />
+			<class name="_4942PasswordProtectionTest.TC186_PasswordProtection_EmployeeRemovedPassword" />
+			<class name="_4942PasswordProtectionTest.TC187_PasswordProtection_FirstNameTag" />
+			<class name="_4942PasswordProtectionTest.TC188_PasswordProtection_FirstName_SpecialCharcter" />
+			<class name="_4942PasswordProtectionTest.TC189_PasswordProtection_LastName" />
+			<class name="_4942PasswordProtectionTest.TC190_PasswordProtection_LastName_SpecialCharacter" />
+			<class name="_4942PasswordProtectionTest.TC191_PasswordProtection_TaxCode_Tag" />
+
+			<class name="_4942PasswordProtectionTest.TC192_PasswordProtection_ChangeTaxCode" />
+
+			<class name="_4942PasswordProtectionTest.TC193_PasswordProtection_PostCode_Tag" />
+
+			<class name="_4942PasswordProtectionTest.TC194_PasswordProtection_Last4DigitNI_Tag" /> 
+
+			<class name="_4942PasswordProtectionTest.TC195_PasswordProtection_NI_Tag" />
+
+			<class name="_4942PasswordProtectionTest.TC196_PasswordProtection_NI_ToLast4DigitNI" />
+
+			<class name="_4942PasswordProtectionTest.TC197_PasswordProtection_JustZipFiles" />
+
+			<class name="_4942PasswordProtectionTest.TC198_PasswordProtection_RegenerateButton" />
+
+			<class name="_4942PasswordProtectionTest.TC199_PasswordProtection_EnabledToDisable" />
+
+			<class name="_4942PasswordProtectionTest.TC200_PasswordProtection_EmployeeEmployer" />
+
+			<class name="_4942PasswordProtectionTest.TC201_PasswordProtection_FirstNameEmployeeEmployer" />
+
+			<class name="_4942PasswordProtectionTest.TC202_PasswordProtection_LastnNameCompanyName" />
+
+			<class name="_4942PasswordProtectionTest.TC203_PasswordProtection_TaxCode_PayeRefrence" />
+
+			<class name="_4942PasswordProtectionTest.TC204_PasswordProtection_PostCode_AccountOffice" /> 
+     
+     		<class name="_4942PasswordProtectionTest.TC205_PasswordProtection_P45" />
+     
+     		<class name="_4942PasswordProtectionTest.TC206_PasswordProtection_26Employee" />
+     
+     			<class name="_4942PasswordProtectionTest.TC207_PasswordProtection_P60" />
+     
+     			<class name="_4942PasswordProtectionTest.TC208_PasswordProtection_PayrollSummary" />
+     
+     			<class name="_4942PasswordProtectionTest.TC209_PasswordProtection_IEPS" />
+     
+     			<class name="_4942PasswordProtectionTest.TC210_PasswordProtection_AutoPayroll_PP" />
+     
+     			<class name="_4942PasswordProtectionTest.TC211_PasswordProtection_DisableEmployeeEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC212_PasswordProtection_WeeklyEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC213_PasswordProtection_2WeeklyEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC214_PasswordProtection_4WeeklyEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC215_PasswordProtection_ChangePassMultipleTime" />
+     
+         
+          
+            <class name="_4942PasswordProtectionTest.TC179_PasswordProtection_EmployeeNotEnabled" />
+			<class name="_4942PasswordProtectionTest.TC180_PasswordProtection_EmployeeAutoPayrollEnabled" />
+			<class name="_4942PasswordProtectionTest.TC181_PasswordProtection_EmployeeEnabled" />
+			<class name="_4942PasswordProtectionTest.TC182_PasswordProtection_EmployeeCreatePassword" />
+			<class name="_4942PasswordProtectionTest.TC183_PasswordProtection_EmployeePreviewIcn" />
+			<class name="_4942PasswordProtectionTest.TC184_PasswordProtection_EmployeePasswordChangeIcn" />
+			<class name="_4942PasswordProtectionTest.TC185_PasswordProtection_EmployeeChangedPassword" />
+			<class name="_4942PasswordProtectionTest.TC186_PasswordProtection_EmployeeRemovedPassword" />
+			<class name="_4942PasswordProtectionTest.TC187_PasswordProtection_FirstNameTag" />
+			<class name="_4942PasswordProtectionTest.TC188_PasswordProtection_FirstName_SpecialCharcter" />
+			<class name="_4942PasswordProtectionTest.TC189_PasswordProtection_LastName" />
+			<class name="_4942PasswordProtectionTest.TC190_PasswordProtection_LastName_SpecialCharacter" />
+			<class name="_4942PasswordProtectionTest.TC191_PasswordProtection_TaxCode_Tag" />
+
+			<class name="_4942PasswordProtectionTest.TC192_PasswordProtection_ChangeTaxCode" />
+
+			<class name="_4942PasswordProtectionTest.TC193_PasswordProtection_PostCode_Tag" />
+
+			<class name="_4942PasswordProtectionTest.TC194_PasswordProtection_Last4DigitNI_Tag" /> 
+
+			<class name="_4942PasswordProtectionTest.TC195_PasswordProtection_NI_Tag" />
+
+			<class name="_4942PasswordProtectionTest.TC196_PasswordProtection_NI_ToLast4DigitNI" />
+
+			<class name="_4942PasswordProtectionTest.TC197_PasswordProtection_JustZipFiles" />
+
+			<class name="_4942PasswordProtectionTest.TC198_PasswordProtection_RegenerateButton" />
+
+			<class name="_4942PasswordProtectionTest.TC199_PasswordProtection_EnabledToDisable" />
+
+			<class name="_4942PasswordProtectionTest.TC200_PasswordProtection_EmployeeEmployer" />
+
+			<class name="_4942PasswordProtectionTest.TC201_PasswordProtection_FirstNameEmployeeEmployer" />
+
+			<class name="_4942PasswordProtectionTest.TC202_PasswordProtection_LastnNameCompanyName" />
+
+			<class name="_4942PasswordProtectionTest.TC203_PasswordProtection_TaxCode_PayeRefrence" />
+
+			<class name="_4942PasswordProtectionTest.TC204_PasswordProtection_PostCode_AccountOffice" /> 
+     
+     		<class name="_4942PasswordProtectionTest.TC205_PasswordProtection_P45" />
+     
+     		<class name="_4942PasswordProtectionTest.TC206_PasswordProtection_26Employee" />
+     
+     			<class name="_4942PasswordProtectionTest.TC207_PasswordProtection_P60" />
+     
+     			<class name="_4942PasswordProtectionTest.TC208_PasswordProtection_PayrollSummary" />
+     
+     			<class name="_4942PasswordProtectionTest.TC209_PasswordProtection_IEPS" />
+     
+     			<class name="_4942PasswordProtectionTest.TC210_PasswordProtection_AutoPayroll_PP" />
+     
+     			<class name="_4942PasswordProtectionTest.TC211_PasswordProtection_DisableEmployeeEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC212_PasswordProtection_WeeklyEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC213_PasswordProtection_2WeeklyEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC214_PasswordProtection_4WeeklyEmployer" />
+     
+     			<class name="_4942PasswordProtectionTest.TC215_PasswordProtection_ChangePassMultipleTime" />-->
+        
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_2051SummarisedPayTotal.TC01_VerifyExprtPDFforOneContractor"/>
+      <class name="_2051SummarisedPayTotal.TC02_VerifyExprtCSVforOneContractor"/>
+      <class name="_2051SummarisedPayTotal.TC07_VerifySPTEmailJustZipforMultipleContractor"/>
+      <class name="_2051SummarisedPayTotal.TC05_VerifySPTEmailJustPdfforAllContractor"/>
+      <class name="_2051SummarisedPayTotal.TC04_VerifyExprtCSVforAllContractor"/>
+      <class name="_2051SummarisedPayTotal.TC10_VerifyEmaillogsforSPTReport"/>
+      <class name="_2051SummarisedPayTotal.TC08_VerifySTPreportwithoutemail"/>
+      <class name="_2051SummarisedPayTotal.TC09_VerifyEmailTemplateforSPTReport"/>
+      <class name="_2051SummarisedPayTotal.TC03_VerifyExprtPDFforAllContractor"/>
+      <class name="_2051SummarisedPayTotal.TC06_VerifySPTEmailJustZipforAllContractor"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

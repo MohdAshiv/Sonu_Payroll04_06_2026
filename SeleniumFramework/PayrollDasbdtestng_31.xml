@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PayrollDasbdSuite">
+  <test thread-count="5" name="PayrollDasbdTest">
+    <classes>
+      <class name="PayrollDashboardUItest.TC310_320PayrollDshboardChk"/>
+      <class name="PayrollDashboardUItest.TC321_323PayrollDoUndo"/>
+      <class name="PayrollDashboardUItest.TC330_333EditCopannypage"/>
+      <class name="PayrollDashboardUItest.TC297_309PayrollDshboardChk"/>
+    </classes>
+  </test> <!-- PayrollDasbdTest -->
+</suite> <!-- PayrollDasbdSuite -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1956Suite">
+  <test thread-count="5" name="_1956Test">
+    <classes>
+      <class name="_1956Test.TC324_326_1956LeaveManagement"/>
+      <class name="_1956Test.TC327_328_1956LeaveNegativBalance"/>
+    </classes>
+  </test> <!-- _1956Test -->
+</suite> <!-- _1956Suite -->

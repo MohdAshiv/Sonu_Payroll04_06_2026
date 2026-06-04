@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="_8658_Test.TC711_P60ReportCheckBox_Pagination"/>
+      <class name="_8658_Test.TC712_P60ReportCheckBox_Pagination_EmployerView"/>
+      <class name="_8658_Test.TC713_P45ReportCheckBox_Pagination"/>
+      <class name="_8658_Test.TC714_P45ReportCheckBox_Pagination_EmployerView"/>
+      <class name="_8658_Test.TC715_P11DReportCheckBox_Pagination"/>
+      <class name="_8658_Test.TC716_P11DReportCheckBox_Pagination_EmployerView"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

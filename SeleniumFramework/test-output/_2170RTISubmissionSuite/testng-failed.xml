@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_2170RTISubmissionSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_2170RTISubmissionTest(failed)">
+    <classes>
+      <class name="_1540EEInfoImport.TC809_811RunPayrollTable">
+        <methods>
+          <include name="runPayrollPageTable"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="runPayrollPageAccMngrinAlphabetic"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC809_811RunPayrollTable -->
+      <class name="_2170RTI_Submission.TC702CheckTaxablePayJoinMidFourWeekly">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+        </methods>
+      </class> <!-- _2170RTI_Submission.TC702CheckTaxablePayJoinMidFourWeekly -->
+      <class name="_1908WeeklyRate.TC018_1908WeektoDayAlert">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1908WeeklyRate.TC018_1908WeektoDayAlert -->
+      <class name="_1706Test.TC449_452P11DeductionReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4"/>
+        </methods>
+      </class> <!-- _1706Test.TC449_452P11DeductionReport -->
+      <class name="_1540EEInfoImport.TC929EEIInfomport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC929EEIInfomport -->
+      <class name="_1908WeeklyRate.TC011_1908AnnualtoHourAlert">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1908WeeklyRate.TC011_1908AnnualtoHourAlert -->
+      <class name="_2099PreviousEmployment.TC830_837EE_Previous_Yr_Detail">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs6"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2099PreviousEmployment.TC830_837EE_Previous_Yr_Detail -->
+      <class name="_1540EEInfoImport.TC932EEIInfomport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="verifypension_BalancePopup"/>
+          <include name="verifyPayFrequency"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC932EEIInfomport -->
+      <class name="_1908WeeklyRate.TC003_1908AnnuallyRate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1908WeeklyRate.TC003_1908AnnuallyRate -->
+      <class name="_1540EEInfoImport.TC931DwnldDataFormat">
+        <methods>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _1540EEInfoImport.TC931DwnldDataFormat -->
+      <class name="_1768Test._1768IcheckofsummarywhenQtr_Allowance">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- _1768Test._1768IcheckofsummarywhenQtr_Allowance -->
+    </classes>
+  </test> <!-- _2170RTISubmissionTest(failed) -->
+</suite> <!-- Failed suite [_2170RTISubmissionSuite] -->

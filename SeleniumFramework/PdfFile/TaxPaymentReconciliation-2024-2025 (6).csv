@@ -1,0 +1,8 @@
+Tax Payment Reconciliation
+CompanyName : SPVfAffLR
+TaxYear : 2024-2025
+
+Month,PayPeriod,EENI,ERNI,ERNIonTerminationAward,StudentLoan,PostGraduateLoan,StatPayFunding,TaxRefundFunding,StatPayRecovery,PreviousYearOverpayment,IncomeTax,EmploymentAllowance,CISDue,CISSuffered,AmountDueToHMRC,AmountPaid,BalanceduetoHMRC
+"Apr 2024","April",0.0000,33.4000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,33.4000,33.4000,"0.0000"
+"Total","",0.0000,33.4000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,33.4000,33.4000,""
+**NIC for off payroll workers is not included in Employment Allowances.

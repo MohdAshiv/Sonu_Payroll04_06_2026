@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="_1760Test">
+    <classes>
+      <class name="_1760ER_Allow.T158TC06_1760_ERNI_EPSGen_DefaultProfile"/>
+      <class name="_1760ER_Allow.T156TC03_1760_ERNI_MaxEmpAllow_DefaultProfile"/>
+      <class name="_1760ER_Allow.T154TC01_1760_ERNI_DefaultProfile"/>
+      <class name="_1760ER_Allow.T155TC02_1760_ERNI_MaxEmpAllow_DefaultProfile"/>
+      <class name="_1760ER_Allow.T157TC04_1760_ERNI_MaxEmpAllow_DefaultProfile"/>
+    </classes>
+  </test> <!-- _1760Test -->
+</suite> <!-- Suite -->

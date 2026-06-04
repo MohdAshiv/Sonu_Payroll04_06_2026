@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="_2868_Test.TC533_SaveFeatureWithMultipleEmployee" />
+			<class name="_2868_Test.TC534_SaveNextFeatureWithMultipleEmployee" />
+			<class name="_2868_Test.TC535_SavePreviousFeatureWithMultipleEmployee" />
+			<class name="_2868_Test.TC536_SaveEmployeeD" />
+			<class name="_2868_Test.TC537_SaveNextEmployee6" />
+			<class name="_2868_Test.TC538_Save_PreviousEmployee6" />
+			<class name="_2868_Test.TC539_SaveNextEmployee6" />
+			<class name="_2868_Test.TC540_SaveNextEmployee11" />
+			<class name="_2868_Test.TC541_SavePreviousEmployeeFtoA" />
+			<class name="_2868_Test.TC542_SaveNextEmployeeAtoK" />
+			<class name="_2868_Test.TC543_SaveEmployeeH" />
+   			<class name="_2868_Test.TC545_ProcessPayReadOnly" />
+			<class name="_2868_Test.TC546_ProcessPayReadOnly_PreviousNext" />
+			<class name="_2868_Test.TC547_ProcessPayReadOnly_PreviousB" />
+			<class name="_2868_Test.TC548_ProcessPayReadOnly_NextDisable" />
+			<class name="_2868_Test.TC549_ProcessPayReadOnly_SaveDisable" />
+			<class name="_2868_Test.TC550_ProcessPayReadOnly_NextDisableAtoB" />
+			<class name="_2868_Test.TC551_ProcessPayReadOnly_PreviousDisableDtoE" />
+			<class name="_2868_Test.TC552_ProcessPayRunPayroll_SaveNextPrevious" />
+			<class name="_2868_Test.TC553_ProcessPayRunPayroll_SaveNextPrevious_PeriodEnd" />
+			<class name="_2868_Test.TC554_EmployeeDetails_SaveBtn" />
+			<class name="_2868_Test.TC555_EmployeeDetails_SaveAndNextBtn" />
+			<class name="_2868_Test.TC556_EmployeeDetails_SaveAndPreviousBtn" />
+			<class name="_2868_Test.TC557_EmployeeDetails_SaveNextPrebviousEmployee" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

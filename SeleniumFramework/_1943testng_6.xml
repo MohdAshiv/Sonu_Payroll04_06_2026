@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1943Suite">
+  <test thread-count="5" name="_1943Test">
+    <classes>
+      <class name="_1943_GrossPay_Reports_Test.T148TC01_1943_GrossPayCalculation_DefaultProfile"/>
+      <class name="_1943_GrossPay_Reports_Test.T149TC02_1943_Addition_gross_pay_DefaultProfile"/>
+      <class name="_1943_GrossPay_Reports_Test.T125TC03_HourlyRate"/>
+      <class name="_1943_GrossPay_Reports_Test.TC85GrossPayCalculation_DefaultProfile"/>
+      <class name="_1943_GrossPay_Reports_Test.T126TC02_GrossPayTest"/>
+      <class name="_1943_GrossPay_Reports_Test.T150TC03_1943_HrsRate_gross_pay_DefaultProfile"/>
+    </classes>
+  </test> <!-- _1943Test -->
+</suite> <!-- _1943Suite -->

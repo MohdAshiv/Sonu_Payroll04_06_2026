@@ -1,0 +1,1251 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue May 14 22:02:09 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>2130 seconds (2130936 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC07_validateSelectedTaxYearWithPeriodEndDate_Recurring()'><b>TC07_validateSelectedTaxYearWithPeriodEndDate_Recurring</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-1442707449" onClick='toggleBox("Output-1442707449", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1442707449" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1442707449">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click to Employee name<br/>
+Click View Addition Detuction<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	TaxYear selection not as expected did not expect [2021-2022] but found [2021-2022]
+	at _5842TaxYearSelectionPage.VerifyData.assertAll(VerifyData.java:161)
+	at _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC07_validateSelectedTaxYearWithPeriodEndDate_Recurring(TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.java:303)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1442707449", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1442707449'><pre>java.lang.AssertionError: The following asserts failed:
+	TaxYear selection not as expected did not expect [2021-2022] but found [2021-2022]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at _5842TaxYearSelectionPage.VerifyData.assertAll(VerifyData.java:161)
+	at _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC07_validateSelectedTaxYearWithPeriodEndDate_Recurring(TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.java:303)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>58</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_5842TaxYearSelection.TC361_PeriodEndDateWithSelectedTaxYear.TC02_validatePeriodEndWithSelectedTaxYear()'><b>TC02_validatePeriodEndWithSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC361_PeriodEndDateWithSelectedTaxYear<br/>
+<a href="#Output-2144912729" onClick='toggleBox("Output-2144912729", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2144912729" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2144912729">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>_5842TaxYearSelection.TC361_PeriodEndDateWithSelectedTaxYear@602e0143</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report.TC02_validateSelectedTaxYearWithPeriodEndDate()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report<br/>
+<a href="#Output-1195403585" onClick='toggleBox("Output-1195403585", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1195403585" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1195403585">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report@13330ac6</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary<br/>
+<a href="#Output-1193939374" onClick='toggleBox("Output-1193939374", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1193939374" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1193939374">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>57</td>
+<td>_5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary@58be6e8</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule.TC03_validateSelectedTaxYearDateWithEmailDropDown()'><b>TC03_validateSelectedTaxYearDateWithEmailDropDown</b><br>Test class: _5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule<br/>
+<a href="#Output-585803886" onClick='toggleBox("Output-585803886", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-585803886" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-585803886">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmailType<br/>
+verifySelectedTaxYear<br/>
+selectEmailType<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>57</td>
+<td>_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule@2bd08376</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report.TC05_validateSelectedTaxYearWithRegenerateBtn()'><b>TC05_validateSelectedTaxYearWithRegenerateBtn</b><br>Test class: _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report<br/>
+<a href="#Output-1850055104" onClick='toggleBox("Output-1850055104", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1850055104" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1850055104">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+clickRegenerateBtnP60 <br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report@13330ac6</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC365_TaxYearSelection_BACsPayment.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC365_TaxYearSelection_BACsPayment<br/>
+<a href="#Output-2045143855" onClick='toggleBox("Output-2045143855", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2045143855" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2045143855">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click_BACs_Payment_Upload_File<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>_5842TaxYearSelection.TC365_TaxYearSelection_BACsPayment@49964d75</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport.TC04validateSelectedTaxYearWithPeriodEndDate()'><b>TC04validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport<br/>
+<a href="#Output-1917860633" onClick='toggleBox("Output-1917860633", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1917860633" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1917860633">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport@4331d187</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC06_validateSelectedTaxYearWithPeriodEndDate_EmployerNotes()'><b>TC06_validateSelectedTaxYearWithPeriodEndDate_EmployerNotes</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-1442089085" onClick='toggleBox("Output-1442089085", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1442089085" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1442089085">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+clickEmployerNote<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report.TC03_validateSelectedTaxYearDateWithEmailDropDown()'><b>TC03_validateSelectedTaxYearDateWithEmailDropDown</b><br>Test class: _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report<br/>
+<a href="#Output-2094770768" onClick='toggleBox("Output-2094770768", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2094770768" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2094770768">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+selectEmailType<br/>
+verifySelectedTaxYear<br/>
+selectEmailType<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report@13330ac6</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC05_validateSelectedTaxYear_EmployerNotes()'><b>TC05_validateSelectedTaxYear_EmployerNotes</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-1115296438" onClick='toggleBox("Output-1115296438", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1115296438" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1115296438">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+clickEmployerNote<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC03validateSelectedTaxYear_Recurring()'><b>TC03validateSelectedTaxYear_Recurring</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-1410791643" onClick='toggleBox("Output-1410791643", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1410791643" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1410791643">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click 3 dots<br/>
+Click AoE<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC362_TaxYearSelection_Payslip.TC04_validateSelectedTaxYearAndPeriodEndDateWithRegenerateBtn()'><b>TC04_validateSelectedTaxYearAndPeriodEndDateWithRegenerateBtn</b><br>Test class: _5842TaxYearSelection.TC362_TaxYearSelection_Payslip<br/>
+<a href="#Output-906741317" onClick='toggleBox("Output-906741317", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-906741317" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-906741317">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+clickRegenerateBtn <br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>67</td>
+<td>_5842TaxYearSelection.TC362_TaxYearSelection_Payslip@41e68d87</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC362_TaxYearSelection_Payslip.TC02_validateSelectedTaxYearWithPeriodEndDate()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC362_TaxYearSelection_Payslip<br/>
+<a href="#Output-263656423" onClick='toggleBox("Output-263656423", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-263656423" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-263656423">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>_5842TaxYearSelection.TC362_TaxYearSelection_Payslip@41e68d87</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC01validateSelectedTaxYear_ProcessPay()'><b>TC01validateSelectedTaxYear_ProcessPay</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-62610667" onClick='toggleBox("Output-62610667", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-62610667" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-62610667">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule<br/>
+<a href="#Output-1481056406" onClick='toggleBox("Output-1481056406", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1481056406" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1481056406">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule@2bd08376</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC365_TaxYearSelection_BACsPayment.TC02_validateSelectedTaxYearWithPeriodEndDate()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC365_TaxYearSelection_BACsPayment<br/>
+<a href="#Output-294651011" onClick='toggleBox("Output-294651011", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-294651011" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-294651011">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click_BACs_Payment_Upload_File<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>_5842TaxYearSelection.TC365_TaxYearSelection_BACsPayment@49964d75</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity.TC03validateSelectedTaxYearWithChangeLeaveType()'><b>TC03validateSelectedTaxYearWithChangeLeaveType</b><br>Test class: _5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity<br/>
+<a href="#Output-426435961" onClick='toggleBox("Output-426435961", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-426435961" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-426435961">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+selectEmployee -Paternity<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>_5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity@2b76ff4e</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport<br/>
+<a href="#Output-629078509" onClick='toggleBox("Output-629078509", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-629078509" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-629078509">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport@4331d187</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC362_TaxYearSelection_Payslip.TC03_validateSelectedTaxYearAndPeriodEndDateWithEmailDropDown()'><b>TC03_validateSelectedTaxYearAndPeriodEndDateWithEmailDropDown</b><br>Test class: _5842TaxYearSelection.TC362_TaxYearSelection_Payslip<br/>
+<a href="#Output-811792884" onClick='toggleBox("Output-811792884", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-811792884" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-811792884">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+selectEmailType<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+selectEmailType<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+selectEmailType<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>66</td>
+<td>_5842TaxYearSelection.TC362_TaxYearSelection_Payslip@41e68d87</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report.TC06_validateSelectedTaxYearWithPeriodEndDate_WithRegenerateBtn()'><b>TC06_validateSelectedTaxYearWithPeriodEndDate_WithRegenerateBtn</b><br>Test class: _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report<br/>
+<a href="#Output-1339858954" onClick='toggleBox("Output-1339858954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1339858954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1339858954">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+clickRegenerateBtnP60 <br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>58</td>
+<td>_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report@13330ac6</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary.TC02_validateSelectedTaxYearWithPeriodEndDate()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary<br/>
+<a href="#Output-886386381" onClick='toggleBox("Output-886386381", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-886386381" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-886386381">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>60</td>
+<td>_5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary@58be6e8</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport.TC02_validateSelectedTaxYearDateWithEmployeeChange()'><b>TC02_validateSelectedTaxYearDateWithEmployeeChange</b><br>Test class: _5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport<br/>
+<a href="#Output-1340421119" onClick='toggleBox("Output-1340421119", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1340421119" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1340421119">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+selectEmployee -Ms. Priya Sharma<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport@4331d187</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule.TC02_validateSelectedTaxYearWithPeriodEndDate()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule<br/>
+<a href="#Output-1128600792" onClick='toggleBox("Output-1128600792", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1128600792" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1128600792">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule@2bd08376</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC02_validateSelectedTaxYearWithPeriodEndDate_ProcessPay()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate_ProcessPay</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-1985235978" onClick='toggleBox("Output-1985235978", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1985235978" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1985235978">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC369_TaxYearSelection_PayrollReportingPeriodSummary.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC369_TaxYearSelection_PayrollReportingPeriodSummary<br/>
+<a href="#Output-41810270" onClick='toggleBox("Output-41810270", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-41810270" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-41810270">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click_Payroll_Reporting_Period_Summary<br/>
+verifySelectedTaxYear1<br/>
+</div>
+</td>
+<td></td>
+<td>50</td>
+<td>_5842TaxYearSelection.TC369_TaxYearSelection_PayrollReportingPeriodSummary@29ca3d04</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity.TC02_validateSelectedTaxYearWithPeriodEndDate()'><b>TC02_validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity<br/>
+<a href="#Output-708214419" onClick='toggleBox("Output-708214419", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-708214419" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-708214419">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>_5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity@2b76ff4e</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report<br/>
+<a href="#Output-282812721" onClick='toggleBox("Output-282812721", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-282812721" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-282812721">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report@13330ac6</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report.TC04_validateSelectedTaxYearWithFormTypeDropDown()'><b>TC04_validateSelectedTaxYearWithFormTypeDropDown</b><br>Test class: _5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report<br/>
+<a href="#Output-236055802" onClick='toggleBox("Output-236055802", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-236055802" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-236055802">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+select Form<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>50</td>
+<td>_5842TaxYearSelection.TC367_TaxYearSelection_P45_P11D_P60Report@13330ac6</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule.TC04_validateSelectedTaxYearDateWithEmployeeChange()'><b>TC04_validateSelectedTaxYearDateWithEmployeeChange</b><br>Test class: _5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule<br/>
+<a href="#Output-643328884" onClick='toggleBox("Output-643328884", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-643328884" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-643328884">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - TaxYearSelection<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+selectEmployee -Mr. pankaj Sharma<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>54</td>
+<td>_5842TaxYearSelection.TC364_TaxYearSelection_IndividualEmployeePaySchedule@2bd08376</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity<br/>
+<a href="#Output-2074826904" onClick='toggleBox("Output-2074826904", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2074826904" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2074826904">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>_5842TaxYearSelection.TC366_TaxYearSelection_StatutoryMaternityPaternity@2b76ff4e</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC362_TaxYearSelection_Payslip.TC01validateSelectedTaxYear()'><b>TC01validateSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC362_TaxYearSelection_Payslip<br/>
+<a href="#Output-1619773688" onClick='toggleBox("Output-1619773688", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1619773688" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1619773688">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>_5842TaxYearSelection.TC362_TaxYearSelection_Payslip@41e68d87</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary.TC03_validateSelectedTaxYearFromTaxPayment()'><b>TC03_validateSelectedTaxYearFromTaxPayment</b><br>Test class: _5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary<br/>
+<a href="#Output-626961003" onClick='toggleBox("Output-626961003", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-626961003" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-626961003">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Tax Payment <br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>_5842TaxYearSelection.TC363_TaxYearSelection_PayrollSummary@58be6e8</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC369_TaxYearSelection_PayrollReportingPeriodSummary.TC02validateSelectedTaxYearWithPeriodEndDate()'><b>TC02validateSelectedTaxYearWithPeriodEndDate</b><br>Test class: _5842TaxYearSelection.TC369_TaxYearSelection_PayrollReportingPeriodSummary<br/>
+<a href="#Output-132659602" onClick='toggleBox("Output-132659602", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-132659602" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-132659602">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click Report Section<br/>
+Click_Payroll_Reporting_Period_Summary<br/>
+verifySelectedTaxYear1<br/>
+</div>
+</td>
+<td></td>
+<td>59</td>
+<td>_5842TaxYearSelection.TC369_TaxYearSelection_PayrollReportingPeriodSummary@29ca3d04</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC361_PeriodEndDateWithSelectedTaxYear.TC01_validatePeriodEndWithSelectedTaxYear()'><b>TC01_validatePeriodEndWithSelectedTaxYear</b><br>Test class: _5842TaxYearSelection.TC361_PeriodEndDateWithSelectedTaxYear<br/>
+<a href="#Output-2016146960" onClick='toggleBox("Output-2016146960", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2016146960" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2016146960">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelectTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>_5842TaxYearSelection.TC361_PeriodEndDateWithSelectedTaxYear@602e0143</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport.TC03_validateSelectedTaxYearApprenticeshipReport()'><b>TC03_validateSelectedTaxYearApprenticeshipReport</b><br>Test class: _5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport<br/>
+<a href="#Output-1589640004" onClick='toggleBox("Output-1589640004", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1589640004" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1589640004">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verifySelectedTaxYear<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>_5842TaxYearSelection.TC368_TaxYearSelection_P11AndAprenticeshipLeavyReport@4331d187</td></tr>
+<tr>
+<td title='_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring.TC04_validateSelectedTaxYearWithPeriodEndDate_Recurring()'><b>TC04_validateSelectedTaxYearWithPeriodEndDate_Recurring</b><br>Test class: _5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring<br/>
+<a href="#Output-263233676" onClick='toggleBox("Output-263233676", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-263233676" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-263233676">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Click_LoginButton<br/>
+Search Agent Name =Sonu<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click_ClientsClick<br/>
+Enter_EnterClientName - 5842<br/>
+Click_ClickSearch<br/>
+Click_ClickClient<br/>
+SelectTaxYear<br/>
+SelecPeriodEndDate<br/>
+Click 3 dots<br/>
+Click AoE<br/>
+verifySelectedTaxYearAndPeriodEnd<br/>
+</div>
+</td>
+<td></td>
+<td>63</td>
+<td>_5842TaxYearSelection.TC370_TaxYearSelction_PayrollDashboard_ProcessPay_Recurring@55493582</td></tr>
+</table><p>
+</body>
+</html>

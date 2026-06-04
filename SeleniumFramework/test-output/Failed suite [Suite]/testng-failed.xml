@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)">
+    <classes>
+      <class name="ImportCompanies.TC390_ImportCompany">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="TC02validateSingleCompanyImported"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC390_ImportCompany -->
+      <class name="ImportCompanies.TC400_ImportCompany_PensionDetails">
+        <methods>
+          <include name="TC09validateCompanyImportWithOutNumber"/>
+          <include name="closeReporter"/>
+          <include name="TC14validateCompanyImportWithEmailNull"/>
+          <include name="TC11validateCompanyImportWithReEnrollmentDateNull"/>
+          <include name="TC15validateCompanyImportWithPhoneNumberNull"/>
+          <include name="TC12validateCompanyImportWithSignatoryTitleNull"/>
+          <include name="TC13validateCompanyImportWithSignatoryNameNull"/>
+          <include name="TC16validateCompanyImportWithPensionIDNull"/>
+          <include name="initDriver"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC07validateCompanyImportWithPhoneNumber"/>
+          <include name="setupReporter"/>
+          <include name="TC10validateCompanyImportWithStagingDateNull"/>
+          <include name="TC04validateCompanyImportWithSignatoryTitle"/>
+          <include name="TC06validateCompanyImportWithEmail"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC400_ImportCompany_PensionDetails -->
+      <class name="ImportCompanies.TC396_ImportCompany_BankDetatils">
+        <methods>
+          <include name="TC03validateCompanyImportWithAccountNumber"/>
+          <include name="initDriver"/>
+          <include name="TC05validateCompanyImportWithSortCodeNull"/>
+          <include name="closeReporter"/>
+          <include name="TC06validateCompanyImportWithAccountNumberNull"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateCompanyImportWithBankNameNull"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC396_ImportCompany_BankDetatils -->
+      <class name="ImportCompanies.TC397_ImportCompanies_CommanContractualTerms">
+        <methods>
+          <include name="TC15validateCompanyImportLeaveDaysNull"/>
+          <include name="closeReporter"/>
+          <include name="TC19validateCompanyImportWithLeaveYearStartNull"/>
+          <include name="TC16validateCompanyImportHolidayPayRateNull"/>
+          <include name="TC02validateCompanyImportMaximumSickDay"/>
+          <include name="initDriver"/>
+          <include name="TC10validateCompanyImportLeaveDays"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC14validateCompanyImportLeaveYearStart"/>
+          <include name="TC17validateCompanyImportMaxCarryOverNull"/>
+          <include name="setupReporter"/>
+          <include name="TC12validateCompanyImportMaxCarryOver"/>
+          <include name="TC05validateCompanyImportRetirementAgeFemale"/>
+          <include name="TC04validateCompanyImportRetirementAgeMale"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC397_ImportCompanies_CommanContractualTerms -->
+      <class name="ImportCompanies.TC402_ImportCompany_CompanyDetails">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="TC02validateCompanyImportWithUTR"/>
+          <include name="TC06validateCompanyImportWithUTRNull"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC04validateCompanyImportWithAccountOfficeNumber"/>
+          <include name="setupReporter"/>
+          <include name="TC05validateCompanyImportWithRejistrationDateNull"/>
+          <include name="TC01validateCompanyImportWithRejistrationDate"/>
+          <include name="TC03validateCompanyImportWithPayeRefrence"/>
+          <include name="TC07validateCompanyImportWithAccountOfficeNumberNull"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC402_ImportCompany_CompanyDetails -->
+      <class name="ImportCompanies.TC398_ImportCompanies_Information">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="TC07validateCompanyImportWithAddressLine1Null"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC12validateCompanyImportWithCompanyNameNull"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateCompanyImportWithCompanyName"/>
+          <include name="TC02validateCompanyImportWithAddressLine1"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC398_ImportCompanies_Information -->
+      <class name="ImportCompanies.TC392_ImportCompany_RadioButton">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC05validateCompanyImportWithRejisterdCisYes"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC392_ImportCompany_RadioButton -->
+      <class name="ImportCompanies.TC395_ImportCompany_OpeningBalance">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="TC06validateCompanyImportWithOpeningBalanceSMPRecoverd"/>
+          <include name="TC04validateCompanyImportWithOpeningBalanceCisSufferd"/>
+          <include name="TC08validateCompanyImportWithOpeningSPPRecoverd"/>
+          <include name="initDriver"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC07validateCompanyImportWithOpeningNicCompensationSMP"/>
+          <include name="TC05validateCompanyImportWithOpeningBalanceCisTax"/>
+          <include name="setupReporter"/>
+          <include name="TC09validateCompanyImportWithOpeningNicCompensationSSP"/>
+          <include name="TC01validateCompanyImportWithNullOpeningBalance"/>
+          <include name="TC03validateCompanyImportWithOpeningBalanceApprenticeshipLevy"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC395_ImportCompany_OpeningBalance -->
+      <class name="ImportCompanies.TC393_ImportCompany_NormalWorkingDays">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC12validateCompanyImportWithMondayToThursdayYesRestNull"/>
+          <include name="TC07validateCompanyImportWithAllWorkingDaysTuesdayThursdayFridayYesRestNo"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC393_ImportCompany_NormalWorkingDays -->
+      <class name="ImportCompanies.TC394_ImportCompany_Frequency">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC09validateCompanyImportWithFortNightlyFrequency"/>
+          <include name="TC07validateCompanyImportWithMonthlyAnnuallyFrequency"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC394_ImportCompany_Frequency -->
+      <class name="ImportCompanies.TC399_ImportCompany_TaxPayment">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="TC02validateCompanyImportWithCisTaxPayment"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="TC01validateCompanyImportWithCisSufferdTaxPayment"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC399_ImportCompany_TaxPayment -->
+      <class name="ImportCompanies.TC391_ImportCompany_PayDate">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC01validateCompanyImportWithoutAnnuallPaydate"/>
+          <include name="setupReporter"/>
+          <include name="TC04validateCompanyImportWithFourWeeklyPayDate"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC391_ImportCompany_PayDate -->
+      <class name="ImportCompanies.TC401_ImportCompany_ContactDetails">
+        <methods>
+          <include name="closeReporter"/>
+          <include name="TC02validateCompanyImportWithLastName"/>
+          <include name="TC07validateCompanyImportWithLastNameNull"/>
+          <include name="TC04validateCompanyImportWithEmail"/>
+          <include name="TC06validateCompanyImportWithEmailNull"/>
+          <include name="initDriver"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="TC08validateCompanyImportWithPhoneNumberNull"/>
+          <include name="setupReporter"/>
+          <include name="TC03validateCompanyImportWithPhoneNumber"/>
+          <include name="TC01validateCompanyImportWithFirstName"/>
+          <include name="TC05validateCompanyImportWithFirstNameNull"/>
+        </methods>
+      </class> <!-- ImportCompanies.TC401_ImportCompany_ContactDetails -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

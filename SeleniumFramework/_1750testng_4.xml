@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_1750Suite">
+  <test thread-count="5" name="_1750Test">
+    <classes>
+      <class name="_1750Test.TC788_789RTI_List"/>
+      <class name="_1750Test.TC790_791RTI_Submission"/>
+    </classes>
+  </test> <!-- _1750Test -->
+</suite> <!-- _1750Suite -->

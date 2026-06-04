@@ -1,0 +1,2573 @@
+<html>
+<head>
+<title>TestNG:  Regression Suit</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Suit</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/12/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 01 07:38:18 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>7785 seconds (7785301 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_1566AdditionDeduction.TC084_DirectorABL.validateNetTaxNiGross_YTD()'><b>validateNetTaxNiGross_YTD</b><br>Test class: _1566AdditionDeduction.TC084_DirectorABL<br/>
+<a href="#Output-1428527783" onClick='toggleBox("Output-1428527783", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1428527783" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1428527783">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_gridDisplayRecords&apos;]/tbody/tr[2]/td[1]/a
+	at _1566AdditionDeductionPage.ProcessPay.clickEmployeeName(ProcessPay.java:1161)
+	at _1566AdditionDeduction.TC084_DirectorABL.validateNetTaxNiGross_YTD(TC084_DirectorABL.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1428527783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1428527783'><pre>java.lang.AssertionError: Unable to locate object: By.xpath: //*[@id=&apos;ctl00_ctl00_ParentContent_cPH_gridDisplayRecords&apos;]/tbody/tr[2]/td[1]/a
+	at org.testng.Assert.fail(Assert.java:110)
+	at _1566AdditionDeductionPage.ProcessPay.clickEmployeeName(ProcessPay.java:1161)
+	at _1566AdditionDeduction.TC084_DirectorABL.validateNetTaxNiGross_YTD(TC084_DirectorABL.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>335</td>
+<td>_1566AdditionDeduction.TC084_DirectorABL@2631f68c</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC132_AprenticeLevy_Director.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC132_AprenticeLevy_Director<br/>
+<a href="#Output-666056635" onClick='toggleBox("Output-666056635", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-666056635" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-666056635">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Click Edit Btn<br/>
+Click pay details<br/>
+Enter basic salary= 5645<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verify Cumulative Wages<br/>
+verifyCumulative Levy Due<br/>
+verify Cumulative Allownce <br/>
+Verify Levy Payble <br/>
+Click PayrollDashBoard<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Verify there is no Apprenticelevy<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [0]
+	at _5115ApprenticeLevyPage.VerifyData.assertAll(VerifyData.java:518)
+	at _5115ApprenticeLevyTest.TC132_AprenticeLevy_Director.validateAprenticeshipLevy(TC132_AprenticeLevy_Director.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace666056635", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace666056635'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [0]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at _5115ApprenticeLevyPage.VerifyData.assertAll(VerifyData.java:518)
+	at _5115ApprenticeLevyTest.TC132_AprenticeLevy_Director.validateAprenticeshipLevy(TC132_AprenticeLevy_Director.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>273</td>
+<td>_5115ApprenticeLevyTest.TC132_AprenticeLevy_Director@61a88b8c</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS<br/>
+<a href="#Output-428061834" onClick='toggleBox("Output-428061834", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-428061834" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-428061834">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Click Edit Btn<br/>
+Click pay details<br/>
+Enter basic salary= 66700<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Filling Managment <br/>
+Click FPS<br/>
+Go to Xmldata<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.w3c.dom.Node.getTextContent()&quot; because the return value of &quot;org.w3c.dom.NodeList.item(int)&quot; is null
+	at _5115ApprenticeLevyPage.FillingManagement.verifyLevyDue(FillingManagement.java:214)
+	at _5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS.validateAprenticeshipLevy(TC125_ApprenticeLevy_EPS.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace428061834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace428061834'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.w3c.dom.Node.getTextContent()&quot; because the return value of &quot;org.w3c.dom.NodeList.item(int)&quot; is null
+	at _5115ApprenticeLevyPage.FillingManagement.verifyLevyDue(FillingManagement.java:214)
+	at _5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS.validateAprenticeshipLevy(TC125_ApprenticeLevy_EPS.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>152</td>
+<td>_5115ApprenticeLevyTest.TC125_ApprenticeLevy_EPS@53dbe163</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2<br/>
+<a href="#Output-90050962" onClick='toggleBox("Output-90050962", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-90050962" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-90050962">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verify Cumulative Wages<br/>
+Verify levyDue<br/>
+verify Cumulative Allownce <br/>
+Click PayrollDashBoard<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Verify there is no Apprenticelevy<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [0]
+	at _5115ApprenticeLevyPage.VerifyData.assertAll(VerifyData.java:518)
+	at _5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2.validateAprenticeshipLevy(TC133_ApprenticeLevy_Director2.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace90050962", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace90050962'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [0]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at _5115ApprenticeLevyPage.VerifyData.assertAll(VerifyData.java:518)
+	at _5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2.validateAprenticeshipLevy(TC133_ApprenticeLevy_Director2.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>327</td>
+<td>_5115ApprenticeLevyTest.TC133_ApprenticeLevy_Director2@7241a47d</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.validateAprenticeshipLevy1()'><b>validateAprenticeshipLevy1</b><br>Test class: _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail<br/>
+<a href="#Output-545392109" onClick='toggleBox("Output-545392109", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-545392109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-545392109">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Click Edit Btn<br/>
+Click pay details<br/>
+Enter basic salary= 23000<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click to Email <br/>
+Send Email<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: C:\Users\Sonu\Downloads\Employer&apos;s Summary -2022-06-03.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:213)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at _5115ApprenticeLevyPage.VerifyData.VerifyRecivedPayrollSummary1(VerifyData.java:496)
+	at _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.validateAprenticeshipLevy1(TC124_ApprenticeshipLevy_RecievedEmail.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace545392109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace545392109'><pre>java.io.FileNotFoundException: C:\Users\Sonu\Downloads\Employer&apos;s Summary -2022-06-03.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:213)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at _5115ApprenticeLevyPage.VerifyData.VerifyRecivedPayrollSummary1(VerifyData.java:496)
+	at _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.validateAprenticeshipLevy1(TC124_ApprenticeshipLevy_RecievedEmail.java:137)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>197</td>
+<td>_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail@525575</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged<br/>
+<a href="#Output-1063494931" onClick='toggleBox("Output-1063494931", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1063494931" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1063494931">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Click Edit Btn<br/>
+Click pay details<br/>
+Enter basic salary= 66700<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52086}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f489bdad81e73a8e8d82c054687bbc83
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged.validateAprenticeshipLevy(TC123_ApprenticeshipLevy_SalaryChanged.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1063494931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1063494931'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52086}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f489bdad81e73a8e8d82c054687bbc83
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged.validateAprenticeshipLevy(TC123_ApprenticeshipLevy_SalaryChanged.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>158</td>
+<td>_5115ApprenticeLevyTest.TC123_ApprenticeshipLevy_SalaryChanged@4f25b795</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector<br/>
+<a href="#Output-643434827" onClick='toggleBox("Output-643434827", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-643434827" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-643434827">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verifyCumulativeWagesSum<br/>
+Verify levyDue<br/>
+verify Cumulative Allownce <br/>
+Click PayrollDashBoard<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Verify there is no Apprenticelevy<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [0]
+	at _5115ApprenticeLevyPage.VerifyData.assertAll(VerifyData.java:518)
+	at _5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector.validateAprenticeshipLevy(TC134_ApprenticeLevy_WeeklyDirector.java:73)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace643434827", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace643434827'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [0]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at _5115ApprenticeLevyPage.VerifyData.assertAll(VerifyData.java:518)
+	at _5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector.validateAprenticeshipLevy(TC134_ApprenticeLevy_WeeklyDirector.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>779</td>
+<td>_5115ApprenticeLevyTest.TC134_ApprenticeLevy_WeeklyDirector@7e3181aa</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly<br/>
+<a href="#Output-1346560976" onClick='toggleBox("Output-1346560976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1346560976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1346560976">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Click Edit Btn<br/>
+Click pay details<br/>
+Enter basic salary= 66700<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52776}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e0a6128a4c68bda125b56411dc864c1a
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly.validateAprenticeshipLevy(TC126_ApprenticeLevy_Weekly2Weekly.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1346560976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1346560976'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52776}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e0a6128a4c68bda125b56411dc864c1a
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly.validateAprenticeshipLevy(TC126_ApprenticeLevy_Weekly2Weekly.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>156</td>
+<td>_5115ApprenticeLevyTest.TC126_ApprenticeLevy_Weekly2Weekly@6d1ef78d</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary<br/>
+<a href="#Output-1324676647" onClick='toggleBox("Output-1324676647", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1324676647" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1324676647">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verify Cumulative Allownce <br/>
+Verify LevyPay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2237ae6d57abdeee10a3f79d4c40bd97
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary.validateAprenticeshipLevy(TC130_ApprenticeLevy_ChangedSalary.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1324676647", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1324676647'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2237ae6d57abdeee10a3f79d4c40bd97
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary.validateAprenticeshipLevy(TC130_ApprenticeLevy_ChangedSalary.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>230</td>
+<td>_5115ApprenticeLevyTest.TC130_ApprenticeLevy_ChangedSalary@149dd36b</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC122_LevyWeekly.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC122_LevyWeekly<br/>
+<a href="#Output-34150451" onClick='toggleBox("Output-34150451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-34150451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-34150451">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51960}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a1d9298d295591a4868576bd0c736d7
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC122_LevyWeekly.validateAprenticeshipLevy(TC122_LevyWeekly.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace34150451", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace34150451'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51960}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a1d9298d295591a4868576bd0c736d7
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC122_LevyWeekly.validateAprenticeshipLevy(TC122_LevyWeekly.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>137</td>
+<td>_5115ApprenticeLevyTest.TC122_LevyWeekly@5b1ebf56</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail<br/>
+<a href="#Output-977772506" onClick='toggleBox("Output-977772506", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-977772506" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-977772506">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Click Edit Btn<br/>
+Click pay details<br/>
+Enter basic salary= 66700<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Click to Email <br/>
+Send Email<br/>
+clickEmailDropDown<br/>
+clickEmailLog<br/>
+clickRecievedEmail<br/>
+</div>
+</td>
+<td><div><pre>java.io.FileNotFoundException: C:\Users\Sonu\Downloads\Employer&apos;s Summary -2022-04-29.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:213)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at _5115ApprenticeLevyPage.VerifyData.VerifyRecivedPayrollSummary(VerifyData.java:447)
+	at _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.validateAprenticeshipLevy(TC124_ApprenticeshipLevy_RecievedEmail.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace977772506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace977772506'><pre>java.io.FileNotFoundException: C:\Users\Sonu\Downloads\Employer&apos;s Summary -2022-04-29.pdf (The system cannot find the file specified)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(RandomAccessFile.java:344)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:259)
+	at java.base/java.io.RandomAccessFile.&lt;init&gt;(RandomAccessFile.java:213)
+	at org.apache.pdfbox.io.RandomAccessBufferedFileInputStream.&lt;init&gt;(RandomAccessBufferedFileInputStream.java:100)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1084)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1046)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:994)
+	at _5115ApprenticeLevyPage.VerifyData.VerifyRecivedPayrollSummary(VerifyData.java:447)
+	at _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.validateAprenticeshipLevy(TC124_ApprenticeshipLevy_RecievedEmail.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>192</td>
+<td>_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail@525575</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly<br/>
+<a href="#Output-746757564" onClick='toggleBox("Output-746757564", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-746757564" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-746757564">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51839}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 21de7ef9b8252b5db30401893ed27ee3
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly.validateAprenticeshipLevy(TC121_LevyMonthlyWeekly.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace746757564", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace746757564'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-3MPSOML&apos;, ip: &apos;172.16.1.33&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Sonu\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51839}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 21de7ef9b8252b5db30401893ed27ee3
+*** Element info: {Using=xpath, value=//*[@style=&apos;width:23.89mm;min-width: 23.89mm;&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at _5115ApprenticeLevyPage.VerifyData.PayrollSummary(VerifyData.java:87)
+	at _5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly.validateAprenticeshipLevy(TC121_LevyMonthlyWeekly.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>139</td>
+<td>_5115ApprenticeLevyTest.TC121_LevyMonthlyWeekly@5143c662</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC129_ApprenticeLevy_NI_X.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC129_ApprenticeLevy_NI_X<br/>
+<a href="#Output-1701461355" onClick='toggleBox("Output-1701461355", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1701461355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1701461355">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+Verify Levy Payble <br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>236</td>
+<td>_5115ApprenticeLevyTest.TC129_ApprenticeLevy_NI_X@517d4a0d</td></tr>
+<tr>
+<td title='_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll.UndoLastPayroll()'><b>UndoLastPayroll</b><br>Test class: _2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll<br/>
+<a href="#Output-1898629094" onClick='toggleBox("Output-1898629094", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1898629094" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1898629094">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>160</td>
+<td>_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll@3da30852</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC136_ApprenticeLevy_AfterTax.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC136_ApprenticeLevy_AfterTax<br/>
+<a href="#Output-455404074" onClick='toggleBox("Output-455404074", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-455404074" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-455404074">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click AoE<br/>
+Click check Box<br/>
+Click Delect Btn<br/>
+Click AddMore<br/>
+Select Frequency =Recurring<br/>
+Select From Date =06/04/2022<br/>
+Select the Acount Code =6000 - Gross Wages<br/>
+Enter Description =Bonus<br/>
+Enter Amount =4500<br/>
+Click Apply On Btn<br/>
+Untick All Options<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+Verify levyDue<br/>
+verify Cumulative Allownce <br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>148</td>
+<td>_5115ApprenticeLevyTest.TC136_ApprenticeLevy_AfterTax@59b38691</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC135_ApprenticeLevy_MultipleAddition.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC135_ApprenticeLevy_MultipleAddition<br/>
+<a href="#Output-665255666" onClick='toggleBox("Output-665255666", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-665255666" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-665255666">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click AoE<br/>
+Click check Box<br/>
+Click Delect Btn<br/>
+Click AddMore<br/>
+Select Frequency =Recurring<br/>
+Select From Date =06/04/2022<br/>
+Select the Acount Code =6000 - Gross Wages<br/>
+Enter Description =Bonus<br/>
+Enter Amount =8900<br/>
+Click Apply On Btn<br/>
+PAYE tax can be deducted<br/>
+Click AddMore<br/>
+Select Frequency =Recurring<br/>
+Select From Date =06/04/2022<br/>
+Select the Acount Code =6000 - Gross Wages<br/>
+Enter Description =Commision<br/>
+Enter Amount =12890<br/>
+Click Apply On Btn<br/>
+Niable only<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verifyCumulativeWagesSum<br/>
+Verify levyDue<br/>
+verify Cumulative Allownce <br/>
+Click PayrollDashBoard<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Verify there is no Apprenticelevy<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>342</td>
+<td>_5115ApprenticeLevyTest.TC135_ApprenticeLevy_MultipleAddition@8dbfffb</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC128_ApprenticeLevy_Addition_BasicPay.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC128_ApprenticeLevy_Addition_BasicPay<br/>
+<a href="#Output-2127407451" onClick='toggleBox("Output-2127407451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2127407451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2127407451">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click AoE<br/>
+Click check Box<br/>
+Click Delect Btn<br/>
+Click AddMore<br/>
+Select Frequency =Recurring<br/>
+Select From Date =06/04/2022<br/>
+Select the Acount Code =6000 - Gross Wages<br/>
+Enter Description =Bonus<br/>
+Enter Amount =4500<br/>
+Click Apply On Btn<br/>
+PAYE tax can be deducted<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verify Cumulative Wages<br/>
+verify Cumulative Levy Due<br/>
+verify Cumulative Allownce <br/>
+Verify Levy Payble <br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>265</td>
+<td>_5115ApprenticeLevyTest.TC128_ApprenticeLevy_Addition_BasicPay@66ac5762</td></tr>
+<tr>
+<td title='_2155Test.TC091_VerifyAnothoerRate.validateAnotherHourlyRateAfterRunPayroll()'><b>validateAnotherHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC091_VerifyAnothoerRate<br/>
+<a href="#Output-669501311" onClick='toggleBox("Output-669501311", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-669501311" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-669501311">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Add more Rate<br/>
+Enter Rate<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>199</td>
+<td>_2155Test.TC091_VerifyAnothoerRate@21a21c64</td></tr>
+<tr>
+<td title='_2155Test.TC094_VerifyPayslip.validatFuturePayroll()'><b>validatFuturePayroll</b><br>Test class: _2155Test.TC094_VerifyPayslip<br/>
+<a href="#Output-2050715938" onClick='toggleBox("Output-2050715938", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2050715938" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2050715938">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Employee for Edit<br/>
+Verify future payroll<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>117</td>
+<td>_2155Test.TC094_VerifyPayslip@dbd8e44</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC131_ApprenticeLevy_PensionSalarySac.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC131_ApprenticeLevy_PensionSalarySac<br/>
+<a href="#Output-1125499532" onClick='toggleBox("Output-1125499532", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1125499532" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1125499532">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter basicPay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verify Cumulative Wages<br/>
+verify Cumulative Allownce <br/>
+Verify Levy Payble <br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>327</td>
+<td>_5115ApprenticeLevyTest.TC131_ApprenticeLevy_PensionSalarySac@691939c9</td></tr>
+<tr>
+<td title='_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll.validatFuturePayroll()'><b>validatFuturePayroll</b><br>Test class: _2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll<br/>
+<a href="#Output-1552445522" onClick='toggleBox("Output-1552445522", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1552445522" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1552445522">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Employee for Edit<br/>
+Verify future payroll<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Rate<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Employee for Edit<br/>
+Verify future payroll<br/>
+</div>
+</td>
+<td></td>
+<td>148</td>
+<td>_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll@3da30852</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail.UndoLastPayroll()'><b>UndoLastPayroll</b><br>Test class: _5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail<br/>
+<a href="#Output-777940932" onClick='toggleBox("Output-777940932", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-777940932" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-777940932">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>142</td>
+<td>_5115ApprenticeLevyTest.TC124_ApprenticeshipLevy_RecievedEmail@525575</td></tr>
+<tr>
+<td title='_2155Test.TC089_VerifyAnnualToHouraly.validateHourlyRateAfterRunPayroll()'><b>validateHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC089_VerifyAnnualToHouraly<br/>
+<a href="#Output-154449199" onClick='toggleBox("Output-154449199", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-154449199" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-154449199">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter_Annual salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>278</td>
+<td>_2155Test.TC089_VerifyAnnualToHouraly@1fde5d22</td></tr>
+<tr>
+<td title='_2155Test.TC092_Verify_MulipleAddedRates.validatMultipleHourlyRateAfterRunPayroll()'><b>validatMultipleHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC092_Verify_MulipleAddedRates<br/>
+<a href="#Output-411474203" onClick='toggleBox("Output-411474203", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-411474203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-411474203">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Add more Rate<br/>
+Pay description  Bonous<br/>
+Enter Rate<br/>
+Enter Unit<br/>
+Add more Rate<br/>
+Pay description  Holiday<br/>
+Enter Rate<br/>
+Enter Unit<br/>
+Add more Rate<br/>
+Pay description  Leave<br/>
+Enter Rate<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>145</td>
+<td>_2155Test.TC092_Verify_MulipleAddedRates@6436a7db</td></tr>
+<tr>
+<td title='_2155Test.TC095_VerifyPayrollDashboardAndReportSection.validatPayrollDashBoard()'><b>validatPayrollDashBoard</b><br>Test class: _2155Test.TC095_VerifyPayrollDashboardAndReportSection<br/>
+<a href="#Output-120157876" onClick='toggleBox("Output-120157876", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-120157876" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-120157876">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Add more Rate<br/>
+Pay description  Bank Holiday<br/>
+Enter Rate<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Verify Payroll Dashboard<br/>
+</div>
+</td>
+<td></td>
+<td>176</td>
+<td>_2155Test.TC095_VerifyPayrollDashboardAndReportSection@79517588</td></tr>
+<tr>
+<td title='_2155Test.TC086_VerifyHourlyRate.validateHourlyRate()'><b>validateHourlyRate</b><br>Test class: _2155Test.TC086_VerifyHourlyRate<br/>
+<a href="#Output-1731795367" onClick='toggleBox("Output-1731795367", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1731795367" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1731795367">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>184</td>
+<td>_2155Test.TC086_VerifyHourlyRate@386f0da3</td></tr>
+<tr>
+<td title='_2155Test.TC093_Verify_AnnualToDay.validateHourlyRateAfterRunPayroll()'><b>validateHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC093_Verify_AnnualToDay<br/>
+<a href="#Output-28612052" onClick='toggleBox("Output-28612052", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-28612052" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-28612052">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter_Annual salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>198</td>
+<td>_2155Test.TC093_Verify_AnnualToDay@16fdec90</td></tr>
+<tr>
+<td title='_2155Test.TC095_VerifyPayrollDashboardAndReportSection.validatPayyslip()'><b>validatPayyslip</b><br>Test class: _2155Test.TC095_VerifyPayrollDashboardAndReportSection<br/>
+<a href="#Output-1784551034" onClick='toggleBox("Output-1784551034", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1784551034" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1784551034">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+Verify All data on payslip<br/>
+</div>
+</td>
+<td></td>
+<td>259</td>
+<td>_2155Test.TC095_VerifyPayrollDashboardAndReportSection@79517588</td></tr>
+<tr>
+<td title='_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll.validatPayslip()'><b>validatPayslip</b><br>Test class: _2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll<br/>
+<a href="#Output-1916303325" onClick='toggleBox("Output-1916303325", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1916303325" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1916303325">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+Verify All data on payslip<br/>
+</div>
+</td>
+<td></td>
+<td>117</td>
+<td>_2155Test.TC096_VerifyUnitsAndRateChangesForFuturePayroll@3da30852</td></tr>
+<tr>
+<td title='_2155Test.TC090_VerifyUntickFunctionality.validateHourlyRateAfterRunPayroll()'><b>validateHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC090_VerifyUntickFunctionality<br/>
+<a href="#Output-1043535321" onClick='toggleBox("Output-1043535321", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1043535321" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1043535321">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>174</td>
+<td>_2155Test.TC090_VerifyUntickFunctionality@561868a0</td></tr>
+<tr>
+<td title='_2155Test.TC085_Verify_DayRate.validateDayRate()'><b>validateDayRate</b><br>Test class: _2155Test.TC085_Verify_DayRate<br/>
+<a href="#Output-1397516135" onClick='toggleBox("Output-1397516135", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1397516135" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1397516135">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>216</td>
+<td>_2155Test.TC085_Verify_DayRate@63787180</td></tr>
+<tr>
+<td title='_2155Test.TC094_VerifyPayslip.validatPayslip()'><b>validatPayslip</b><br>Test class: _2155Test.TC094_VerifyPayslip<br/>
+<a href="#Output-2084041029" onClick='toggleBox("Output-2084041029", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2084041029" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2084041029">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click Payslip<br/>
+Verify All data on payslip<br/>
+</div>
+</td>
+<td></td>
+<td>170</td>
+<td>_2155Test.TC094_VerifyPayslip@dbd8e44</td></tr>
+<tr>
+<td title='_5115ApprenticeLevyTest.TC127_ApprenticeLevy_Addition_PayeTax.validateAprenticeshipLevy()'><b>validateAprenticeshipLevy</b><br>Test class: _5115ApprenticeLevyTest.TC127_ApprenticeLevy_Addition_PayeTax<br/>
+<a href="#Output-20408451" onClick='toggleBox("Output-20408451", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-20408451" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-20408451">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click AoE<br/>
+Click check Box<br/>
+Click Delect Btn<br/>
+Click AddMore<br/>
+Select Frequency =Recurring<br/>
+Select From Date =06/04/2022<br/>
+Select the Acount Code =6000 - Gross Wages<br/>
+Enter Description =Bonus<br/>
+Enter Amount =1800<br/>
+Click Apply On Btn<br/>
+PAYE tax can be deducted<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click Report Section<br/>
+Click_Apprenticeship_Levy<br/>
+verify Aprenticeship April<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+</div>
+</td>
+<td></td>
+<td>125</td>
+<td>_5115ApprenticeLevyTest.TC127_ApprenticeLevy_Addition_PayeTax@176b3f44</td></tr>
+<tr>
+<td title='_2155Test.TC088_VerifyHourlyRate_After3Months.validateHourlyRateAfterRunPayroll()'><b>validateHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC088_VerifyHourlyRate_After3Months<br/>
+<a href="#Output-92862012" onClick='toggleBox("Output-92862012", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-92862012" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-92862012">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>208</td>
+<td>_2155Test.TC088_VerifyHourlyRate_After3Months@53de625d</td></tr>
+<tr>
+<td title='_2155Test.TC087_VerifyHoulyRate_After2Months.validateHourlyRateAfterRunPayroll()'><b>validateHourlyRateAfterRunPayroll</b><br>Test class: _2155Test.TC087_VerifyHoulyRate_After2Months<br/>
+<a href="#Output-626961003" onClick='toggleBox("Output-626961003", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-626961003" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-626961003">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Enter Hourly salary<br/>
+Click SaveBtn<br/>
+Click PayrollDashBoard<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Enter Unit<br/>
+ApplyFuturePay<br/>
+Click Save Btn<br/>
+Click Run Payroll<br/>
+Click 3 dots<br/>
+Click ProcessPay<br/>
+Verify Unit Rates under process pay<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>193</td>
+<td>_2155Test.TC087_VerifyHoulyRate_After2Months@6e4566f1</td></tr>
+<tr>
+<td title='_2155Test.TC095_VerifyPayrollDashboardAndReportSection.validatReportSection()'><b>validatReportSection</b><br>Test class: _2155Test.TC095_VerifyPayrollDashboardAndReportSection<br/>
+<a href="#Output-886510498" onClick='toggleBox("Output-886510498", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-886510498" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-886510498">
+lunch Url Suss<br/>
+EnterUsername = admin<br/>
+Enter_Enterpassword = admin1@1<br/>
+Login Successful<br/>
+Search Agent Name =SonuNew<br/>
+Enter_SearchAgentName<br/>
+Click Search Btn<br/>
+Click_ClickSearch<br/>
+Click Searched Agen<br/>
+Click_ClickAgent<br/>
+Click Report Section<br/>
+Click_Individual_Employee_Pay_Scheduleclick<br/>
+Verify Individual Employee Pay Schedule<br/>
+Click Report Section<br/>
+Click to Payroll Summary<br/>
+Verify Payroll Summary<br/>
+Click Report Section<br/>
+Click_Payroll_Reporting_Period_Summary<br/>
+Verify Payroll Reporting Period Summary<br/>
+Click PayrollDashBoard<br/>
+Click UndoLast Payroll<br/>
+Click 3 dots<br/>
+Click Edit <br/>
+click PayDetails<br/>
+Select PayworkOut<br/>
+Click SaveBtn<br/>
+</div>
+</td>
+<td></td>
+<td>124</td>
+<td>_2155Test.TC095_VerifyPayrollDashboardAndReportSection@79517588</td></tr>
+</table><p>
+</body>
+</html>

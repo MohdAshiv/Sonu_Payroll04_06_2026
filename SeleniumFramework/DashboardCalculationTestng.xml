@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class
+				name="PayrollDashBoardCalculations.TC01_NICalculationsMonthly" />
+			<class name="PayrollDashBoardCalculations.TC02_NICalculationsWeekly" />
+			<class
+				name="PayrollDashBoardCalculations.TC03_NICalculationsFortnightly" />
+			<class
+				name="PayrollDashBoardCalculations.TC04_NICalculationsFourWeekly" />
+			<class
+				name="PayrollDashBoardCalculations.TC05_NICalculationsAnnually" />
+
+			<class
+				name="PayrollDashBoardCalculations.TC06_TaxCalculationsMonthly" />
+			<class
+				name="PayrollDashBoardCalculations.TC07_TaxCalculationsWeekly" />
+			<class
+				name="PayrollDashBoardCalculations.TC08_TaxCalculationsFortnightly" />
+			<class
+				name="PayrollDashBoardCalculations.TC09_TaxCalculationsFourWeekly" />
+			<class
+				name="PayrollDashBoardCalculations.TC10_TaxCalculationsAnnually" />
+
+			<class name="PayrollDashBoardCalculations.TC11_PensionMonthly" />
+			<class name="PayrollDashBoardCalculations.TC12_PensionWeekly" />
+			<class name="PayrollDashBoardCalculations.TC13_PensionFortnightly" />
+			<class name="PayrollDashBoardCalculations.TC14_PensionFourWeekly" />
+			<class name="PayrollDashBoardCalculations.TC15_PensionAnnually" />
+
+			<class name="PayrollDashBoardCalculations.TC16_NetPayMonthly" />
+			<class name="PayrollDashBoardCalculations.TC17_NetPayWeekly" />
+			<class name="PayrollDashBoardCalculations.TC18_NetPayFortNightly" />
+			<class name="PayrollDashBoardCalculations.TC19_NetPayFourWeekly" />
+			<class name="PayrollDashBoardCalculations.TC20_NetPayAnnually" />
+			<class name="PayrollDashBoardCalculations.TC21_PensionMonthly_SMP" />
+			<class name="PayrollDashBoardCalculations.TC22_PensionWeekly_SMP" />
+			<class name="PayrollDashBoardCalculations.TC23_PensionFortnightly_SMP" />
+			<class name="PayrollDashBoardCalculations.TC24_PensionFourWeekly_SMP" />
+			<class name="PayrollDashBoardCalculations.TC25_PensionAnnualy_SMP" />
+			<class name="PayrollDashBoardCalculations.TC26_PensionMonthly_TPP" />
+			<class name="PayrollDashBoardCalculations.TC27_PensionWeely_TPP" />
+			<class name="PayrollDashBoardCalculations.TC28_PensionFortnightly_TPP" />
+			<class name="PayrollDashBoardCalculations.TC29_PensionFourWeekly_TPP" />
+			<class name="PayrollDashBoardCalculations.TC30_PensionAnnually_TPP" />
+			<class name="PayrollDashBoardCalculations.TC31_PensionMonthly_NOW" />
+			<class name="PayrollDashBoardCalculations.TC32_PensionWeekly_NOW" />
+			<class name="PayrollDashBoardCalculations.TC33_PensionFortnightly_NOW" />
+			<class name="PayrollDashBoardCalculations.TC34_PensionFourWeekly_NOW" />
+			<class name="PayrollDashBoardCalculations.TC35_PensionAnnually_NOW" />
+			<class name="PayrollDashBoardCalculations.TC36_PensionMonthly_AVC" />
+			<class name="PayrollDashBoardCalculations.TC37_PensionWeekly_AVC" />
+			<class name="PayrollDashBoardCalculations.TC38_PensionFortnightly_AVC" />
+			<class name="PayrollDashBoardCalculations.TC39_PensionFourWeekly_AVC" />
+			<class name="PayrollDashBoardCalculations.TC40_PensionAnnually_AVC" />
+			<class name="PayrollDashBoardCalculations.TC41_PensionMonthly_Other" />
+			<class name="PayrollDashBoardCalculations.TC42_PensionWeekly_Other" />
+			<class name="PayrollDashBoardCalculations.TC43_PensionFortnightly_Other" />
+			<class name="PayrollDashBoardCalculations.TC44_PensionFourWeekly_Other" />
+			<class name="PayrollDashBoardCalculations.TC45_PensionAnnually_Other" />
+
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

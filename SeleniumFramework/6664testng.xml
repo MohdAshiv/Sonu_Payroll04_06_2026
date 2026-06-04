@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="_6664_5593_SendApproval.TC371_SendApproval_DisableEnable" />
+			<class name="_6664_5593_SendApproval.TC372_SendApproval_Monthly" />
+			<class name="_6664_5593_SendApproval.TC373_SendApproval_Weekly" />
+			<class name="_6664_5593_SendApproval.TC374_SendApproval_Fornightly" />
+			<class name="_6664_5593_SendApproval.TC375_SendApproval_FourWeekly" />
+			<class name="_6664_5593_SendApproval.TC376_SendApproval_Annualy" />
+			<class name="_6664_5593_SendApproval.TC377_SendApproval_SummaryQuaterly" />
+			<class name="_6664_5593_SendApproval.TC378_SendApproval_SummaryPension" />
+			<class name="_6664_5593_SendApproval.TC379_SendApproval_PensionQuarterly" />
+			<class name="_6664_5593_SendApproval.TC380_SendApproval_SummaryCIS" />
+			<class name="_6664_5593_SendApproval.TC381_SendApproval_SummaryCISPension" />
+			<class name="_6664_5593_SendApproval.TC382_SendApproval_SummaryCISPensionQuarterly" />
+			<class name="_6664_5593_SendApproval.TC383_SendApproval_SummaryCISQuarterly" />
+			<class name="_6664_5593_SendApproval.TC384_SendApproval_EmailTemplate_Monthly" />
+			<class name="_6664_5593_SendApproval.TC385_SendApproval_EmailTemplate_Weekly" />
+			<class name="_6664_5593_SendApproval.TC386_SendApproval_EmailTemplate_Fornightly" />
+			<class name="_6664_5593_SendApproval.TC387_SendApproval_EmailTemplate_Fourweekly" />
+			<class name="_6664_5593_SendApproval.TC388_SendApproval_EmailTemplate_Annualy" />
+			<class name="_6664_5593_SendApproval.TC389_SendApproval_BuisnessUser" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

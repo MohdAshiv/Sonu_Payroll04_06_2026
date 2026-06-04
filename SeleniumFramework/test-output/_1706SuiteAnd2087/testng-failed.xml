@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_1706SuiteAnd2087]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_1706Test(failed)">
+    <classes>
+      <class name="_1706Test.TC449_452P11DeductionReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl1"/>
+        </methods>
+      </class> <!-- _1706Test.TC449_452P11DeductionReport -->
+      <class name="_2087EmailLog.TC461_462EmailLogFromP60">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard1"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- _2087EmailLog.TC461_462EmailLogFromP60 -->
+      <class name="_2087EmailLog.TC457_458EmailLogFromSummary">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2087EmailLog.TC457_458EmailLogFromSummary -->
+      <class name="_2087EmailLog.TC455_456EmailLogToEmployee">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="allocateData"/>
+          <include name="closerDriver"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+        </methods>
+      </class> <!-- _2087EmailLog.TC455_456EmailLogToEmployee -->
+      <class name="_2087EmailLog.TC453_454EmailLogMainContact">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickclickAllowancesSchemesClickmarkYesClickclickSaveClickgotoPayrollDashboard"/>
+          <include name="setupReporter"/>
+        </methods>
+      </class> <!-- _2087EmailLog.TC453_454EmailLogMainContact -->
+    </classes>
+  </test> <!-- _1706Test(failed) -->
+</suite> <!-- Failed suite [_1706SuiteAnd2087] -->

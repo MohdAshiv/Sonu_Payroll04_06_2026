@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="_2106Suite">
+  <test thread-count="5" name="_2106Test">
+    <classes>
+      <class name="_2106AutoPayroll.TC607AutoPayrollAndNotOptForSummary"/>
+      <class name="_2106AutoPayroll.TC611AutoPayrollAndAgainToManual"/>
+      <class name="_2106AutoPayroll.TC608AutoPayrollAndNotOptForPaySlip"/>
+      <class name="_2106AutoPayroll.TC610AutoPayrollAndPayslipToEmpwithSummary"/>
+      <class name="_2106AutoPayroll.TC609AutoPayrollAndPayslipToEmpwithNoSummary"/>
+      <class name="_2106AutoPayroll.TC613AutoPayrollAndOptForSummaryMultFreq"/>
+      <class name="_2106AutoPayroll.TC612AutoPayrollAndNotOptForSummaryMultFreq"/>
+      <class name="_2106AutoPayroll.TC614AutoPayrollAndNoOptForSummaryMultFreq1"/>
+    </classes>
+  </test> <!-- _2106Test -->
+</suite> <!-- _2106Suite -->

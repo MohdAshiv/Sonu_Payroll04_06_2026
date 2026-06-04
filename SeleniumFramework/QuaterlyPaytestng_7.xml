@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QuaterlyPaySuite">
+  <test thread-count="5" name="QuaterlyPayTest">
+    <classes>
+      <class name="Quaterly_Paye_Scheme_test.TC37subscriptAllowenceSchemewithpaymentMngmnt_DefaultProfile"/>
+      <class name="Quaterly_Paye_Scheme_test.TC35subscriptAllowenceScheme_DefaultProfile"/>
+      <class name="Quaterly_Paye_Scheme_test.TC36subscriptNoAllowenceScheme_DefaultProfile"/>
+      <class name="Quaterly_Paye_Scheme_test.TC38CIS_With_Disable_Scheme_test"/>
+      <class name="Quaterly_Paye_Scheme_test.TC53subscriptMulfreqQPSdisable"/>
+      <class name="Quaterly_Paye_Scheme_test.TC76subscriptT12EmployemntAllowence"/>
+      <class name="Quaterly_Paye_Scheme_test.T39CIS_With_Enable_PaySchemetest"/>
+    </classes>
+  </test> <!-- QuaterlyPayTest -->
+</suite> <!-- QuaterlyPaySuite -->

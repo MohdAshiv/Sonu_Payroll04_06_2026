@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [_1706Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="_1706Test(failed)">
+    <classes>
+      <class name="_1706Test.TC449_452P11DeductionReport">
+        <methods>
+          <include name="initDriver"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickcl"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc2"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlClickRunPayroll1ClickRunPayroll2ClickgetSuccessMsgClickUndoLastPayrollClickc4"/>
+        </methods>
+      </class> <!-- _1706Test.TC449_452P11DeductionReport -->
+      <class name="_1706Test.TC690_691CheckTaxablePayForTwoMonthsG">
+        <methods>
+          <include name="initDriver"/>
+          <include name="closeReporter"/>
+          <include name="closerDriver"/>
+          <include name="allocateData"/>
+          <include name="setupReporter"/>
+          <include name="GoToUrlAssertUrlPositiveEnterEnterUsernamePositiveEnterEnterpasswordClickLoginButtonGoToUrlAs1"/>
+        </methods>
+      </class> <!-- _1706Test.TC690_691CheckTaxablePayForTwoMonthsG -->
+    </classes>
+  </test> <!-- _1706Test(failed) -->
+</suite> <!-- Failed suite [_1706Suite] -->
