@@ -1,8 +1,13 @@
 package _4996Page;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -83,8 +88,17 @@ public class Page4996  extends BasePage{
 	public void clickUndoLastPayrollBtn() throws InterruptedException
 	{
         
-		m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")).click();
 
+		  WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	        WebElement quickAction = wait.until(
+	        	    ExpectedConditions.elementToBeClickable(
+	        	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+	        	    )
+	        	);
+
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
 		WebElement elem = getWebElement(undoLastPayrollElem);
 
 		if (elem == null) {

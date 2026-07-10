@@ -5,19 +5,21 @@ import org.testng.annotations.Test;
 import tests.TestBase;
 import utilities.ExcelData;
 
-public class TC38_PensionFortnightly_AVC extends TestBase {
+public class TC54_LinkWithNest_Monthly extends TestBase{
 	
-	String sTestCaseID = null;
+	public String sTestCaseID = null;
 	String[] data = null;
 	String Sheet = null;
-		
+
 	@Test(priority=1)
-	public void TC01validateAllPensionMethod() throws Exception {
-		sTestCaseID = "TC038";
-		Sheet = "PayrollDashboardCalculations";	
+
+	public void TC01validateNormalEmployeeNI() throws Exception {
+
+		sTestCaseID = "TC054";
+		Sheet = "PayrollDashboardCalculations";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
-		pages.loginpage4  loginpage = new  pages.loginpage4(driver);
+		pages.loginpage4  loginpage = new pages.loginpage4(driver);
 		loginpage.GoToUrl();	
 		loginpage.AssertUrl();
 		loginpage.Enter_EnterUsername(data[1]);
@@ -38,7 +40,7 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 		buisness.enterBuisnessName();
 		
 		buisness.enterRegistrationNo();
-		buisness.enterRegistrationDate(data[58]);
+		buisness.enterRegistrationDate(data[88]);
 		buisness.enterFirstName();
 		buisness.enterLastName();
 		buisness.clickSaveBtn();
@@ -49,15 +51,16 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 	
 		pages.AccountingPeriodSettingBK_FAInactive Bk= new 		pages.AccountingPeriodSettingBK_FAInactive(driver);
 		Bk.Click_BKEdit();
-		Bk.Select_services(data[56]);
-		Bk.Enter_CompanyAddressLine1(data[57]);
+		Bk.Select_services(data[86]);
+		Bk.Enter_CompanyAddressLine1(data[87]);
 		Bk.Click_Save();
 
 		Bk.Click_AccountingPeriod();
 		Bk.Click_AddAccountingPeriod();
-		Bk.Enter_NewStartDate(data[58]);
-		Bk.Enter_NewEndDate(data[59]);
+		Bk.Enter_NewStartDate(data[88]);
+		Bk.Enter_NewEndDate(data[89]);
 		Bk.Click_AccPeriodSave();
+		
 		OpenClient.Click_ClientsClick();
 		OpenClient.Enter_EnterClientName2();
 		OpenClient.Click_ClickSearch();
@@ -66,39 +69,27 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 		pages.EditCompany company= new 	pages.EditCompany(driver);
 		
 		company.Click_gotoEditCompany();
-
 		
 	    company.Click_clickDepartments();		
 		company.clickDepartment();
-		company.enterDepartmentName1(data[8]);
+		company.enterDepartmentName1(data[12]);
 		company.clickDepatrmentSaveBtn();
 		Thread.sleep(15000);
-		
+			
 		company.Click_clickPayrollDetails();
 		
-		company.enterPayeNumber(data[60]);
-		company.enterRefrenceNumber(data[61]);
-		company.accountOfficeReffrence(data[62]);
+		company.enterPayeNumber(data[90]);
+		company.enterRefrenceNumber(data[91]);
+		company.accountOfficeReffrence(data[92]);
 		
 		company.Click_ClickSave();
 		company.Click_clickPayrollSettings();
-		company.Enter_NomismaStartDate(data[69]);
-		
-		pages.FrequencySet freq= new pages.FrequencySet(driver);
-		
-		freq.Click_ClickAdditionalFrequecy();
-		freq.Select_F2(data[12]);
-		freq.Enter_FortnightlyPayDate(data[69]);
-		company.Click_ClickSave();
-	
-		freq.clickDeletBtn();
-		
+		company.Enter_NomismaStartDate(data[108]);
 		company.Click_ClickSave();
 		company.clickYesPension();
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
 
-		
-	pages.PensionSetup pension = new pages.PensionSetup(driver);
+		pages.PensionSetup pension = new pages.PensionSetup(driver);
 		
 		pension.enterPensionStagingDate(data[93]);
 		pension.enterSignatoryTitle();
@@ -109,17 +100,10 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 		pension.clickPensonDetailsSave();
 		payroll.scrollClickPayrollDashboard();
 		pension.clickPensionDashBoard();
-		pension.addSchemeManually();
-		pension.enterPensionSchemeName(data[96]);
-		pension.selectPensionProvider(data[96]);
-		pension.selectCalculationBasis(data[97]);
-		pension.selectCalculationMethod(data[98]);
-		pension.eeContribution(data[99]);
-		pension.enterErContribution(data[100]);
-		pension.enterSubgroupName();
-		pension.enterGroupId();
-		pension.enterSubGroupId();
-		pension.clickSaveBtn();
+		pension.addSchemeLinkWithNest();
+		pension.enterUserNamePassAndAuthorize("nestapi","Srb@8955");
+		pension.clickViewScheme();
+		pension.getPensionScheme();
 		payroll.Click_PayrollDashboard();
 		
 		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
@@ -137,8 +121,8 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 
 		employee.enterNICategory(data[6]);
 		employee.enterTaxCode(data[7]);
-		
 		employee.clickSaveBtn();
+
 		employee.click_Paydetails();
 		employee.enterBasicSalary3(data[5]);
 		employee.clickSaveBtn();
@@ -152,11 +136,71 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 		pension.eRVoluntaryContribution(data[101]);
 		pension.clickAutoEnrollmentSaveBtn();
 		payroll.Click_PayrollDashboard();
+
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+
+		verify.verifyPension("Monthly", "QUALIFYING","RAS");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "QUALIFYING","RAS");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
 		
-		verify.verifyPension("FORTNIGHTLY", "QUALIFYING","SALARY_SACRIFICE");// verify
-		payroll.runPayroll();
-		verify.verifyPensionRunPayroll("FORTNIGHTLY", "QUALIFYING","SALARY_SACRIFICE");// verify
+		pension.selectCalculationBasis1("Custom");
+		pension.selectCalculationMethod1("Relief at Source");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+	
+		verify.verifyPension("Monthly", "CUSTOM","RAS");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "CUSTOM","RAS");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Qualifying Earnings");
+		pension.selectCalculationMethod1("Net pay arrangement");
+	
+		pension.clickSaveBtn1();
+		payroll.Click_PayrollDashboard();		
+		
+		verify.verifyPension("Monthly", "QUALIFYING","NET_PAY");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "QUALIFYING","NET_PAY");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Custom");
+		pension.selectCalculationMethod1("Net pay arrangement");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		
+		verify.verifyPension("Monthly", "CUSTOM","NET_PAY");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "CUSTOM","NET_PAY");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Qualifying Earnings");
+		pension.selectCalculationMethod1("Salary sacrifice");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		
+		verify.verifyPension("Monthly", "QUALIFYING","SALARY_SACRIFICE");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "QUALIFYING","SALARY_SACRIFICE");// verify
 
 		pension.clickPensionDashBoard();
 		pension.clickViewScheme();
@@ -168,10 +212,9 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 		pension.clickSaveBtn1();
 
 		payroll.Click_PayrollDashboard();
-		verify.verifyPension("FORTNIGHTLY", "CUSTOM","SALARY_SACRIFICE");// verify
-		payroll.runPayroll();
-		verify.verifyPensionRunPayroll("FORTNIGHTLY", "CUSTOM","SALARY_SACRIFICE");// verify
-
+		verify.verifyPension("Monthly", "CUSTOM","SALARY_SACRIFICE");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "CUSTOM","SALARY_SACRIFICE");// verify
 
 		pension.clickPensionDashBoard();
 		pension.clickViewScheme();
@@ -184,9 +227,9 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 
 		payroll.Click_PayrollDashboard();
 		
-		verify.verifyPension("FORTNIGHTLY", "QUALIFYING","NO_TAX_RELIEF");// verify
-		payroll.runPayroll();
-		verify.verifyPensionRunPayroll("FORTNIGHTLY", "QUALIFYING","NO_TAX_RELIEF");// verify
+		verify.verifyPension("Monthly", "QUALIFYING","NO_TAX_RELIEF");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "QUALIFYING","NO_TAX_RELIEF");// verify
 
 		pension.clickPensionDashBoard();
 		pension.clickViewScheme();
@@ -198,41 +241,10 @@ public class TC38_PensionFortnightly_AVC extends TestBase {
 		pension.clickSaveBtn1();
 
 		payroll.Click_PayrollDashboard();
-		verify.verifyPension("FORTNIGHTLY", "CUSTOM","NO_TAX_RELIEF");// verify
-		payroll.runPayroll();
-		verify.verifyPensionRunPayroll("FORTNIGHTLY", "CUSTOM","NO_TAX_RELIEF");// verify
-
-		pension.clickPensionDashBoard();
-		pension.clickViewScheme();
-		pension.clickEditScheme();
-		
-		pension.selectCalculationBasis1("Qualifying Earnings");
-		pension.selectCalculationMethod1("Relief at Source");
-	
-		pension.clickSaveBtn1();
-
-		payroll.Click_PayrollDashboard();
-	
-		verify.verifyPension("FORTNIGHTLY", "QUALIFYING","RAS");// verify
-		payroll.runPayroll();
-		verify.verifyPensionRunPayroll("FORTNIGHTLY", "QUALIFYING","RAS");// verify
-
-		pension.clickPensionDashBoard();
-		pension.clickViewScheme();
-		pension.clickEditScheme();
-		
-		pension.selectCalculationBasis1("Custom");
-		pension.selectCalculationMethod1("Relief at Source");
-	
-		pension.clickSaveBtn1();
-
-		payroll.Click_PayrollDashboard();
-	
-		verify.verifyPension("FORTNIGHTLY", "CUSTOM","RAS");// verify
-		payroll.runPayroll();
-		verify.verifyPensionRunPayroll("FORTNIGHTLY", "CUSTOM","RAS");// verify
+		verify.verifyPension("Monthly", "CUSTOM","NO_TAX_RELIEF");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("Monthly", "CUSTOM","NO_TAX_RELIEF");// verify
 
 	}
-
 
 }

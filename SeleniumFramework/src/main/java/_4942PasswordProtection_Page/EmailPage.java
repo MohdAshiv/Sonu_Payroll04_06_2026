@@ -1,9 +1,14 @@
 package _4942PasswordProtection_Page;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -41,7 +46,7 @@ public class EmailPage extends BasePage {
 
 		private By emailPayslipElem = By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_lnkbtnPaySlip']");
 
-		private By emailTaxElem = By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnEmail']");
+		private By emailTaxElem = By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_Lnkbtnemail']");
 	
 		private By emailP60Elem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LinkButtonEx1']");
 		
@@ -128,7 +133,165 @@ public class EmailPage extends BasePage {
 		
 	}
 		
+		public void tickAllEmployeP11D() throws Exception
+		{
+	         Thread.sleep(2000);
+
+			WebElement elem = getWebElement(By.xpath("//*[@id='chkAllP11D']"));
+
+			
+			elem.click();
+			
+		Thread.sleep(4000);
+		Reporter.log("tickAllEmployeP11D");
 		
+	}
+		
+		public void tickAllEmployeP60() throws Exception
+		{
+	         Thread.sleep(2000);
+
+			WebElement elem = getWebElement(By.xpath("//*[@id='chkSelectAll']"));
+
+			
+			elem.click();
+			
+		Thread.sleep(4000);
+		Reporter.log("tickAllEmployeP11D");
+		
+	}
+		
+		public void tickAllEmployeP45() throws Exception
+		{
+	         Thread.sleep(2000);
+
+			WebElement elem = getWebElement(By.xpath("//*[@id='chkAll']"));
+
+			
+			elem.click();
+			
+		Thread.sleep(4000);
+		Reporter.log("tickAllEmployeP45");
+		
+	}
+		
+		public void clickDepartmentalEmailBtn() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_Lnkbtnemail']"));
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "clickEmailBtn", "clickEmailBtn failed. Unable to locate object: " + emailElem.toString());
+
+				Assert.fail("Unable to locate object: " + emailElem.toString());
+	        }
+	         Thread.sleep(2000);
+			elem.click();
+			
+			
+		Thread.sleep(4000);
+		Reporter.log("clickDepartmentalEmailBtn");
+		
+	}
+		
+		
+		
+		public void clickAnnualPayScheduleEmailBtn() throws Exception
+		{
+			
+			WebElement elem1 = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphError_btnSearch']"));
+			
+			elem1.click();
+			
+			WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(300));
+
+			wait.until(ExpectedConditions.presenceOfElementLocated(
+			    By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_divPAYEPaymentsToHMRC']/div/table/tbody/tr[2]/td[1]")));
+
+	        
+			
+	  	WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_lnkBtnEmail']"));
+		
+			elem.click();
+			
+		Thread.sleep(4000);
+		Reporter.log("clickAnnualPayScheduleEmailBtn");
+		
+	}
+		public void clickHoursSummaryEmailBtn() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LnkEmail']"));
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "clickEmailBtn", "clickEmailBtn failed. Unable to locate object: " + emailElem.toString());
+
+				Assert.fail("Unable to locate object: " + emailElem.toString());
+	        }
+	         Thread.sleep(2000);
+			elem.click();
+			
+			
+		Thread.sleep(4000);
+		Reporter.log("clickHoursSummaryEmailBtn");
+		
+	}
+		
+		
+		public void clickAttachmentEarningEmailBtn() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LnkBtnEmail']"));
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "clickEmailBtn", "clickEmailBtn failed. Unable to locate object: " + emailElem.toString());
+
+				Assert.fail("Unable to locate object: " + emailElem.toString());
+	        }
+	         Thread.sleep(2000);
+			elem.click();
+			
+			
+		Thread.sleep(4000);
+		Reporter.log("clickAttachmentEarningEmailBtn");
+		
+	}
+		
+		
+		public void clickPayrollReportingPeriodSummaryEmailBtn() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LnkBtnEmail']"));
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "clickEmailBtn", "clickEmailBtn failed. Unable to locate object: " + emailElem.toString());
+
+				Assert.fail("Unable to locate object: " + emailElem.toString());
+	        }
+	         Thread.sleep(2000);
+			elem.click();
+			
+			
+		Thread.sleep(4000);
+		Reporter.log("clickPayrollReportingPeriodSummaryEmailBtn");
+		
+	}
+		
+		
+		public void clickPaymentSummaryEmailBtn() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LnkBtnEmail']"));
+
+		
+	         Thread.sleep(2000);
+			elem.click();
+			
+			
+		Thread.sleep(4000);
+		Reporter.log("clickPaymentSummaryEmailBtn");
+		
+	}
 		
 		public void clickPayslipEmailBtn() throws Exception
 		{
@@ -310,8 +473,105 @@ public class EmailPage extends BasePage {
 			    Reporter.log("click Send Btn");
 			    m_Driver.switchTo().defaultContent();
 		        
-			
 		}
+		
+		public void clickTaxPaymentSendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrameEmail']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_btnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();
+		        
+		}
+		
+		
+		public void clickDepartmentalSendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrame']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_BtnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();			
+		}
+		
+		
+		public void clickHoursSummarySendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrame']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_BtnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();			
+		}
+		
+		
+		public void clickAttachmentEarningSendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrame']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_BtnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();			
+		}
+		
+		
+		
+		public void clickPayrollReportingPeriodSummarySendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='ReportPeriodTotalSummartEmailFrame']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_BtnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();			
+		}
+		
+		
+		public void clickPaymentSummarySendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PaymentSummartEmailFrame']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_BtnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();			
+		}
+		
 		
 		
 		public void clickRequesthrsSendBtn() throws Exception
@@ -407,6 +667,24 @@ public class EmailPage extends BasePage {
 			Reporter.log("selectEmailType");
 
 		}
+		
+		
+		public void selectEmailTypeForms(String emailType) {
+		    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(10));
+
+		    // Open Email Type dropdown
+		    wait.until(ExpectedConditions.elementToBeClickable(
+		            By.xpath("//span[contains(@id,'select2-EmailType-container')]")))
+		            .click();
+
+		    // Search box
+		    WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		            By.xpath("//input[@class='select2-search__field']")));
+
+		    search.sendKeys(emailType);
+		    search.sendKeys(Keys.ENTER);
+		}
+		
 		
 		public void selectPeriodEndDate(String Text) throws Exception
 		{

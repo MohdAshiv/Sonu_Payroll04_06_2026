@@ -1,20 +1,22 @@
 package PayrollDashBoardCalculations;
+
 import org.testng.annotations.Test;
 
 import tests.TestBase;
 import utilities.ExcelData;
 
-public class TC07_TaxCalculationsWeekly extends TestBase {	
+public class TC47_KpiCards extends TestBase {
 	
 	public String sTestCaseID = null;
 	String[] data = null;
 	String Sheet = null;
-	
+		
 	@Test(priority=1)
-	public void TC01validateTaxCalculation() throws Exception {
 
-		sTestCaseID = "TC007";
-		Sheet = "PayrollDashboardCalculations";	
+	public void TC01validatKpiCardsWithoutPension() throws Exception {
+
+		sTestCaseID = "TC047";
+		Sheet = "PayrollDashboardCalculations";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
 		pages.loginpage4  loginpage = new pages.loginpage4(driver);
@@ -38,7 +40,7 @@ public class TC07_TaxCalculationsWeekly extends TestBase {
 		buisness.enterBuisnessName();
 		
 		buisness.enterRegistrationNo();
-		buisness.enterRegistrationDate(data[58]);
+		buisness.enterRegistrationDate(data[88]);
 		buisness.enterFirstName();
 		buisness.enterLastName();
 		buisness.clickSaveBtn();
@@ -49,15 +51,16 @@ public class TC07_TaxCalculationsWeekly extends TestBase {
 	
 		pages.AccountingPeriodSettingBK_FAInactive Bk= new 		pages.AccountingPeriodSettingBK_FAInactive(driver);
 		Bk.Click_BKEdit();
-		Bk.Select_services(data[56]);
-		Bk.Enter_CompanyAddressLine1(data[57]);
+		Bk.Select_services(data[86]);
+		Bk.Enter_CompanyAddressLine1(data[87]);
 		Bk.Click_Save();
 
 		Bk.Click_AccountingPeriod();
 		Bk.Click_AddAccountingPeriod();
-		Bk.Enter_NewStartDate(data[58]);
-		Bk.Enter_NewEndDate(data[59]);
+		Bk.Enter_NewStartDate(data[88]);
+		Bk.Enter_NewEndDate(data[89]);
 		Bk.Click_AccPeriodSave();
+		
 		OpenClient.Click_ClientsClick();
 		OpenClient.Enter_EnterClientName2();
 		OpenClient.Click_ClickSearch();
@@ -66,34 +69,26 @@ public class TC07_TaxCalculationsWeekly extends TestBase {
 		pages.EditCompany company= new 	pages.EditCompany(driver);
 		
 		company.Click_gotoEditCompany();
-
 		
 	    company.Click_clickDepartments();		
 		company.clickDepartment();
-		company.enterDepartmentName1(data[8]);
+		company.enterDepartmentName1(data[12]);
 		company.clickDepatrmentSaveBtn();
 		Thread.sleep(15000);
-		
+			
 		company.Click_clickPayrollDetails();
 		
-		company.enterPayeNumber(data[60]);
-		company.enterRefrenceNumber(data[61]);
-		company.accountOfficeReffrence(data[62]);
+		company.enterPayeNumber(data[90]);
+		company.enterRefrenceNumber(data[91]);
+		company.accountOfficeReffrence(data[92]);
 		
 		company.Click_ClickSave();
 		company.Click_clickPayrollSettings();
-		company.Enter_NomismaStartDate(data[69]);
-		
-		pages.FrequencySet freq= new pages.FrequencySet(driver);
-		
-		freq.Click_ClickAdditionalFrequecy();
-		freq.Select_F2("Weekly");
-		freq.Enter_WeeklyPayDate(data[69]);
+		company.Enter_NomismaStartDate(data[108]);
 		company.Click_ClickSave();
-	
-		freq.clickDeletBtn();
 		
-		company.Click_ClickSave();
+		
+		
 		company.clickYesPension();
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
 
@@ -122,9 +117,13 @@ public class TC07_TaxCalculationsWeekly extends TestBase {
 		pension.clickSaveBtn();
 		payroll.Click_PayrollDashboard();
 		
-		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
 		
 
+		payroll.Click_PayrollDashboard();
+		
+		
+		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
+		
 		for(int i=7;i<=11;i++) {
 			
 		employee.clickNewEmployee();
@@ -146,28 +145,20 @@ public class TC07_TaxCalculationsWeekly extends TestBase {
 		payroll.Click_PayrollDashboard();
 		
 		}
-	   
-
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
-		verify.verifyEmployeeSearch("A");
 
-		payroll.Click_PayrollDashboard();
-
-	    verify.verifyIncomeTax("Weekly");
-		
-	    payroll.runPayroll();
-	    verify.verifyIncomeTaxRunPayroll("Weekly");
-
-	
+		    verify.verifyTotalCostKPI();
+		    verify.verifyTotalNetPayKPI();
+		    verify.verifyTotalTaxesKPI();
+		    verify.verifyTotalNIKPI();	   
 	}
 	
 	
-
 	@Test(priority=2)
 
-	public void TC02validateTaxWithW1M1() throws Exception {
+	public void TC02validatKpiCardsWithPension() throws Exception {
 
-		sTestCaseID = "TC007";
+		sTestCaseID = "TC047";
 		Sheet = "PayrollDashboardCalculations";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -184,50 +175,74 @@ public class TC07_TaxCalculationsWeekly extends TestBase {
 		agentpage.Click_ClickAgent();
 		
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
-
 		OpenClient.Click_ClientsClick();
 		OpenClient.Enter_EnterClientName2();
 		OpenClient.Click_ClickSearch();
-		OpenClient.Click_ClickClient();
-		
-	    pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
-		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+		OpenClient.Click_ClickClient();	
+		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 
-		employee.click3Dots();
-		employee.clickEditBtn();
+		pages.PensionSetup pension = new pages.PensionSetup(driver);
+		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+		employee.clickEmployeeName();
+		employee.editEmployeeDetails();
+
+		employee.clickAutoEnrolment();
+		pension.selectWorkerType(data[109]);
+		pension.selectScheme(data[96]);
+		pension.enterEnrollmentDate(data[108]);
+		pension.eeChoosenContribution(data[99]);
+		pension.erChoosenContribution(data[100]);
+		pension.eeVoluntaryContribution(data[101]);
+		pension.eRVoluntaryContribution(data[101]);
+		employee.clickSaveNextBtn();
 		
-		for(int i=0;i<=4;i++)
-		{
-			employee.clickMandotoryPayroll();
-			employee.clickM1W1Basis();
-			employee.clickSaveNextBtn();
+		employee.clickAutoEnrolment();
+		pension.selectWorkerType(data[109]);
+		pension.selectScheme(data[96]);
+		pension.enterEnrollmentDate(data[108]);
+		pension.eeChoosenContribution(data[99]);
+		pension.erChoosenContribution(data[100]);
+		pension.eeVoluntaryContribution(data[101]);
+		pension.eRVoluntaryContribution(data[101]);
+		employee.clickSaveNextBtn();
+
+		employee.clickAutoEnrolment();
+		pension.selectWorkerType(data[109]);
+		pension.selectScheme(data[96]);
+		pension.enterEnrollmentDate(data[108]);
+		pension.eeChoosenContribution(data[99]);
+		pension.erChoosenContribution(data[100]);
+		pension.eeVoluntaryContribution(data[101]);
+		pension.eRVoluntaryContribution(data[101]);
+		employee.clickSaveNextBtn();
 		
-		}
+		employee.clickAutoEnrolment();
+		pension.selectWorkerType(data[109]);
+		pension.selectScheme(data[96]);
+		pension.enterEnrollmentDate(data[108]);
+		pension.eeChoosenContribution(data[99]);
+		pension.erChoosenContribution(data[100]);
+		pension.eeVoluntaryContribution(data[101]);
+		pension.eRVoluntaryContribution(data[101]);
+		employee.clickSaveNextBtn();
+		
+		employee.clickAutoEnrolment();
+		pension.selectScheme(data[96]);
+		pension.enterEnrollmentDate(data[108]);
+		pension.eeChoosenContribution(data[99]);
+		pension.erChoosenContribution(data[100]);
+		pension.eeVoluntaryContribution(data[101]);
+		pension.eRVoluntaryContribution(data[101]);
+		employee.clickSaveBtn();
 		employee.clickSaveBtn();
 
-		payroll.Click_PayrollDashboard();
-
-		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
-		
-	    verify.verifyIncomeTax("Weekly");
-	    payroll.runPayroll();
-	    verify.verifyIncomeTaxRunPayroll("Weekly");
-	    payroll.Click_PayrollDashboard();
-	    for (int i=0;i<=1;i++)
-	    {
-	    	payroll.Run_Payroll();
-	    	
-		    verify.verifyIncomeTax("Weekly");
-
-	    }
-	    
-	    
-	    payroll.runPayroll();
-	    verify.verifyIncomeTaxRunPayroll("Weekly");
-
+		payroll.Click_PayrollDashboard();		
+	
+		 verify.verifyTotalCostKPI();
+		 verify.verifyTotalNetPayKPI();
+		 verify.verifyTotalTaxesKPI();
+		 verify.verifyTotalNIKPI();	   	
+	
 	}
-	
-	
-
-	
 }

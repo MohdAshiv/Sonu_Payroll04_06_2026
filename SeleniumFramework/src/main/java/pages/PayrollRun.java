@@ -1,11 +1,15 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -68,9 +72,7 @@ public class PayrollRun extends BasePage {
     private By requestHrsElem=  By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnRequestHours']");
 	public void Click_PayrollDashboard() throws Exception
 	{
-
 		Thread.sleep(6000);
-		
 
 		WebElement elem = getWebElement(payrollDahboardElem);
 
@@ -89,6 +91,10 @@ public class PayrollRun extends BasePage {
 		 Reporter.log("Click PayrollDashBoard");
 	
 	}
+	
+	
+	
+	
 	
 	public void ClickJournalsTab() throws Exception
 	{
@@ -227,6 +233,84 @@ public class PayrollRun extends BasePage {
 	
 	}
 	
+	
+	public void clickViewDraftPayslip() throws InterruptedException
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='hrefPreviewPayslips']"));
+
+	
+
+		elem.click();
+		
+		Thread.sleep(3000);
+		
+		ExtentReportManager.passStep(m_Driver, "clickCancel");
+		 Reporter.log("clickViewDraftPayslip");
+	
+	}
+	
+	
+	
+	public void selectNumberOfEmployess(int num ,String xpath) throws InterruptedException
+	{
+        
+		WebElement elem = getWebElement(By.xpath(xpath));
+
+		elem.click();
+		
+		Thread.sleep(1000);
+		
+		ExtentReportManager.passStep(m_Driver, "selectNumberOfEmployess");
+		Reporter.log("selectNumberOfEmployess");
+	
+	}
+	
+	
+
+public void selectRequiredEmployeesAndUntickRest(int employeeCount) {
+
+    List<WebElement> checkboxes = m_Driver.findElements(
+            By.xpath("//span[contains(@class,'rowCheckbox')]//input[@type='checkbox']"));
+
+    Assert.assertTrue(checkboxes.size() > 0,
+            "No checkboxes found.");
+
+    Assert.assertTrue(employeeCount <= checkboxes.size(),
+            "Requested employee count is greater than available checkboxes.");
+
+    Reporter.log("Total Checkboxes Found : " + checkboxes.size(), true);
+    Reporter.log("Employees To Keep Selected : " + employeeCount, true);
+
+    for (int i = 0; i < checkboxes.size(); i++) {
+
+        WebElement checkbox = checkboxes.get(i);
+
+        if (i < employeeCount) {
+
+            // Keep selected
+            if (!checkbox.isSelected()) {
+                ((JavascriptExecutor) m_Driver)
+                        .executeScript("arguments[0].click();", checkbox);
+            }
+
+            Reporter.log("Selected Employee : " + (i + 1), true);
+
+        } else {
+
+            // Untick remaining
+            if (checkbox.isSelected()) {
+                ((JavascriptExecutor) m_Driver)
+                        .executeScript("arguments[0].click();", checkbox);
+            }
+
+            Reporter.log("Unticked Employee : " + (i + 1), true);
+        }}
+    }
+	
+	
+	
+	
 	public void Run_Payroll() throws InterruptedException
 	{
 		ClosePopup.ValidateAndPopUp(m_Driver);
@@ -257,12 +341,50 @@ public class PayrollRun extends BasePage {
 	    Reporter.log("Click Run Payroll");
 	}
 	
+	public void selectPreviousPayrollPeriod() {
+
+	    Select payrollDate = new Select(m_Driver.findElement(
+	            By.xpath("//select[contains(@id,'ddlPayrollDate')]")));
+
+	    List<WebElement> options = payrollDate.getOptions();
+
+	    String selectedValue = payrollDate.getFirstSelectedOption().getText().trim();
+
+	    for (int i = 0; i < options.size(); i++) {
+
+	        if (options.get(i).getText().trim().equals(selectedValue)) {
+
+	            Assert.assertTrue(i < options.size() - 1,
+	                    "No previous payroll period available.");
+
+	            String previousPeriod = options.get(i + 1).getText().trim();
+
+	            payrollDate.selectByIndex(i + 1);
+
+	            Reporter.log("Current Period  : " + selectedValue, true);
+	            Reporter.log("Previous Period Selected : " + previousPeriod, true);
+
+	            return;
+	        }
+	    }
+
+	    Assert.fail("Unable to find currently selected payroll period.");
+	}
 	public void Undo_LastPayroll() throws InterruptedException
 	{
 		ClosePopup.ValidateAndPopUp(m_Driver);
 
-		m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")).click();
-		
+		  WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	        WebElement quickAction = wait.until(
+	        	    ExpectedConditions.elementToBeClickable(
+	        	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+	        	    )
+	        	);
+
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+
 		
 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
 		
@@ -279,6 +401,7 @@ public class PayrollRun extends BasePage {
 
 	    Reporter.log("Click UndoLast Payroll");
 	}
+	
 	
 	public void Undo_LastPayrollWithSubmission() throws InterruptedException
 	{
@@ -307,17 +430,26 @@ public class PayrollRun extends BasePage {
 	{
 		ClosePopup.ValidateAndPopUp(m_Driver);
 		System.out.println("popup closed");
-		m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")).click();
+		  WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	        WebElement quickAction = wait.until(
+	        	    ExpectedConditions.elementToBeClickable(
+	        	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+	        	    )
+	        	);
+
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
 
 		//List<WebElement> list = m_Driver.findElements(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnUndoPayroll']"));
-		List<WebElement> list = m_Driver.findElements(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
+		List<WebElement> list = m_Driver.findElements(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnUndoPayroll']"));
 
 		boolean condition = list.isEmpty();
 		if(false==condition)
 		{
 			//WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnUndoPayroll']"));
 			
-			WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
+			WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnUndoPayroll']"));
 
 			elem.click();
 			Thread.sleep(2000);
@@ -336,10 +468,22 @@ public class PayrollRun extends BasePage {
 
 
 			}
+		
+		else {
 		System.out.println("Undo Btn not present");
 		
-		m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")).click();
 
+	        WebElement quickAction1 = wait.until(
+	        	    ExpectedConditions.elementToBeClickable(
+	        	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+	        	    )
+	        	);
+
+	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction1);
+	        //	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction1);
+
+	      
+		}
 	}
 	
 	public void runPayroll2() throws InterruptedException
@@ -721,7 +865,7 @@ public class PayrollRun extends BasePage {
 
 			elem.sendKeys(Value);
 			
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			
 			ExtentReportManager.passStep(m_Driver, "selectType");
 		
@@ -968,9 +1112,7 @@ public class PayrollRun extends BasePage {
 
 		          ExtentReportManager.passStep(m_Driver, "click_OneOffPmntSaveBtn");
 
-		   
-
-
+		 
 
 
 

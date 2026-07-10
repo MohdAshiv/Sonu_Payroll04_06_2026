@@ -148,6 +148,9 @@ public class TC09_TaxCalculationsFourWeekly extends TestBase {
 		}
 		
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		verify.verifyEmployeeSearch("A");
+		payroll.Click_PayrollDashboard();
+
 	    verify.verifyIncomeTax("FOUR_WEEKLY");
 		
 	    payroll.runPayroll();

@@ -131,6 +131,8 @@ public class TC16_NetPayMonthly extends TestBase {
 		payroll.Click_PayrollDashboard();		
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 		verify.verifyNetPay();
+		payroll.runPayroll();
+		verify.verifyNetPayRunPayroll();
 
 			
 	}		

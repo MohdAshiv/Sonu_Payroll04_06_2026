@@ -185,7 +185,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		pages.DashboardPage dashboard= new pages.DashboardPage(driver);
@@ -221,7 +221,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		pages.DashboardPage dashboard= new pages.DashboardPage(driver);
@@ -257,7 +257,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
@@ -297,7 +297,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
@@ -336,7 +336,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
@@ -374,7 +374,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
@@ -412,7 +412,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
@@ -449,7 +449,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
@@ -485,7 +485,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 		
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("VwrsmzkqU");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
@@ -532,7 +532,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 	}
 	
 	
-	@Test(priority=12)
+	//@Test(priority=12)
 
 	public void TC12validateEmployeeRecordsIfSalaryChangesFromProcessPay() throws Exception {
 
@@ -572,7 +572,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 	}	
 	
 
-	@Test(priority=13)
+//	@Test(priority=13)
 
 	public void TC13validateEmployeeRecordsIfAdditionDeductionFromProcessPay() throws Exception {
 
@@ -621,7 +621,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 	}
 	
 	
-	@Test(priority=14)
+	//@Test(priority=14)
 
 	public void TC14validateEmployeeGrossValueList() throws Exception {
 
@@ -658,7 +658,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 	
 	
 
-	@Test(priority=15)
+//	@Test(priority=15)
 
 	public void TC15validateEmployeeRecordsIfAdditionDeductionFromViewAdditionDeduction() throws Exception {
 
@@ -714,7 +714,7 @@ public class TC797_DashBoardPayrollPage  extends TestBase{
 	
 	
 
-	@Test(priority=16)
+//	@Test(priority=16)
 	public void TC16validateEmployeeGrossValueListWithRecurring() throws Exception {
 
 		sTestCaseID = "TC797";

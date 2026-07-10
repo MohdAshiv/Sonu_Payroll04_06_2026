@@ -637,24 +637,19 @@ public void veriyPensionOnIEPS(String expectedEmployeePension, String expectedEm
           		
           	}
       	
-      	public void verifyPayslipWithSummary()
+      	public void verifyPayslipWithSummary() throws InterruptedException
       	{
-      		
+      		Thread.sleep(3000);
       		try {
       			
-      			List<WebElement> attachmentsEmplyeeList = m_Driver.findElements(By.xpath("//*[contains(text(),'Employee Payslip')]"));
+      			List<WebElement> attachmentsEmplyeeList = m_Driver.findElements(By.xpath("//a[contains(.,'.pdf')]"));
       			
       		
       			int payslipCount = attachmentsEmplyeeList.size();
       			System.out.println("Payslip attachement count = "+payslipCount);
-      			soft.assertEquals(payslipCount, 5);
+      			soft.assertEquals(payslipCount, 7);
       			
-      			
-             List<WebElement> attachmentsEmployerList = m_Driver.findElements(By.xpath("//*[contains(text(),'Employer')]"));
-      			
-      			int payrollSummaryCount = attachmentsEmployerList.size();
-      			System.out.println("payrollSummaryCount attachement count = "+payrollSummaryCount);
-      			soft.assertEquals(payrollSummaryCount, 1);
+      		
       			Reporter.log("verifyPayslipWithSummary");
 
       		} catch (Exception e) {

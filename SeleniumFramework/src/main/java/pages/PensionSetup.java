@@ -1,12 +1,16 @@
 package pages;
 
+import java.time.Duration;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -272,6 +276,18 @@ public class PensionSetup extends BasePage {
  	        action.click(SUBMenu).perform();
  	}
     
+ 	
+ 	public void addSchemeLinkWithNest() throws Exception
+ 	{
+ 		
+ 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='aspnetForm']/main/div/div[3]/header/div/div/div/a"));
+ 		  Actions action =    new Actions(m_Driver);
+ 	        action.moveToElement(elem).perform();
+ 	        Thread.sleep(2000);
+ 	        
+ 	       WebElement  SUBMenu = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LnkWithNest']"));
+ 	        action.click(SUBMenu).perform();
+ 	}
     public void clickPensionDashBoard() throws Exception
 	{
         
@@ -299,6 +315,14 @@ public class PensionSetup extends BasePage {
     public void clickViewScheme() throws Exception
 	{
         
+    	
+
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	    // Open dropdown
+	    WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_hrefViewScheme']")));
+	    
 		WebElement elem = getWebElement(viewScheme);
 
 		if (elem == null) {
@@ -317,6 +341,38 @@ public class PensionSetup extends BasePage {
   		Reporter.log("clickViewScheme");
 
 	}
+    
+    
+
+    public void getPensionScheme() throws Exception
+	{    	
+
+    	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+    	    // Open dropdown
+    	    WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+    	            By.xpath("//button[contains(@class,'dropdown-toggle')]")));
+    	    dropdown.click();
+
+    	    // Click Nest (Recommended)
+    	    WebElement nestOption = wait.until(ExpectedConditions.elementToBeClickable(
+    	            By.xpath("//ul[contains(@class,'dropdown-menu')]//a[@data-value='0']")));
+
+    	    nestOption.click();
+    	
+		WebElement elem1 = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnGetScheme']"));
+
+		elem1.click();
+
+
+//		WebElement element = wait.until(
+//		        ExpectedConditions.visibilityOfElementLocated(
+//		                By.xpath("//*[@id=\"textPension\"]")));
+		
+  		Reporter.log("getPensionScheme");
+
+	}
+    
     
     
     public void clickEditScheme() throws Exception
@@ -365,6 +421,29 @@ public class PensionSetup extends BasePage {
 
   	}
     
+    
+    public void enterUserNamePassAndAuthorize(String user, String pass) throws InterruptedException {
+    	
+		m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='LinkExistingNestPopUpFrame']")));
+		
+		WebElement userName = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_TxtUserName']"));
+		
+		userName.sendKeys(user);
+		
+		
+	  WebElement password = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_TxtPwd']"));
+		
+	  password.sendKeys(pass);
+	  
+	  WebElement  Authorize = m_Driver.findElement(By.xpath("//*[@id='btnAuthorize']"));
+		
+	   Authorize.click();
+
+	   m_Driver.switchTo().defaultContent();
+    	
+		Thread.sleep(5000);
+		
+    }
     
     public void selectPensionProvider(String value) throws Exception
   	{

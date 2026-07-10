@@ -146,6 +146,7 @@ public class TC01_NICalculationsMonthly extends TestBase {
 
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 		payroll.Click_PayrollDashboard();
+	    verify.verifyIncomeTaxPensionNPA("Monthly");
 
 		verify.verifyTop10EmployeesNI("Monthly");
 		payroll.runPayroll();

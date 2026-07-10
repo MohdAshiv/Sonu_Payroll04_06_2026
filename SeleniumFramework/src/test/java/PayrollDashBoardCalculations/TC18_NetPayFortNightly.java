@@ -155,7 +155,8 @@ public class TC18_NetPayFortNightly extends TestBase {
 
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 		verify.verifyNetPay();
-		
+		payroll.runPayroll();
+		verify.verifyNetPayRunPayroll();
 		
 	}
 		

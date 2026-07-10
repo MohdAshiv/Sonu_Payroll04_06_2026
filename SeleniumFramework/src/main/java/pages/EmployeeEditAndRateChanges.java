@@ -26,13 +26,14 @@ public class EmployeeEditAndRateChanges extends BasePage {
 	private By DirectoryesElem = By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpPayrollEmployee_rbIsDirector_0']");
 	private By DirectorNoElem = By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpPayrollEmployee_rbIsDirector_1']");
 	private By directorFromElem = By.xpath("//input[@name='ctl00$ctl00$ParentContent$cPH$tbContainer$tpPayrollEmployee$txtDirectorStartDate']");
-	
+	private By selectDepartmentElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpPayrollEmployee_ddlDepartment']");
+
 
 	private By selectNI_CalculationMethodElem = By.xpath("//select[@name='ctl00$ctl00$ParentContent$cPH$tbContainer$tpPayrollEmployee$ddlDirectorMethod']");
 	
 
 	
-	private By clickEmployeeElem=By.xpath("//*[@id='tblReportData']/tbody/tr[1]/td[1]");
+	private By clickEmployeeElem=By.xpath("//*[@id='tblReportData']/tbody/tr[1]/td[1]/a");
 	private By clickEmployeeElem1=By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_gridDisplayRecords']/tbody/tr[3]/td[1]/a");
 	private By clickEmployeeElem2=By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_gridDisplayRecords']/tbody/tr[4]/td[1]/a");
 	private By clickEmployeeElem3=By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_gridDisplayRecords']/tbody/tr[5]/td[1]/a");
@@ -59,7 +60,7 @@ public class EmployeeEditAndRateChanges extends BasePage {
 	
     private By editElem= By.xpath("/html/body/ul/li[1]/a");
 
-    private By editElem1= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_rptrEditButton_ctl00_PayUnits']");
+    private By editElem1= By.xpath("//*[@id='ctl00_ctl00_ParentContent_divSubContent']/div/div[6]/div/div/table/tbody/tr[2]/td[13]");
 
     private By paydetails = By.xpath("//a[text()='Pay Details']");
     
@@ -1060,7 +1061,9 @@ public class EmployeeEditAndRateChanges extends BasePage {
         Thread.sleep(2000);
 		elem.click();
 		
-		Reporter.log("clickEmployeeName");
+		utilities.ChangeWindow.tabswitch(m_Driver);
+		
+		Reporter.log("clickEmployeeName ");
 		
 		Thread.sleep(1000);
 	}
@@ -1281,7 +1284,7 @@ public class EmployeeEditAndRateChanges extends BasePage {
 	
 	public void exportToCsv() throws Exception
 	{
-		WebElement elem = getWebElement(By.xpath("//*[@id='aspnetForm']/main/div[1]/div[3]/header/div/div/a[5]"));
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divSubContent']/div/div[5]/div/a/i"));
 		elem.click();
 		wt.explicitWait_visibilityOf(m_Driver, 500, elem);
 
@@ -1355,6 +1358,33 @@ public class EmployeeEditAndRateChanges extends BasePage {
 		Reporter.log("Enter basic salary= "+BasicSalary);
 		
 	}
+	
+
+	public void selectDepartment(String data) throws Exception
+	{
+        
+		WebElement elem = getWebElement(selectDepartmentElem);
+
+		if (elem == null) {
+    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AllowancesSchemes", "Click_AllowancesSchemes failed. Unable to locate object: " + selectDepartmentElem.toString());
+
+
+			Assert.fail("Unable to locate object: " + selectDepartmentElem.toString());
+        }
+
+	
+		Select sel= new Select(elem);
+		
+		sel.selectByVisibleText(data);
+		
+		Reporter.log("Click_AllowancesSchemes");
+
+          	
+		Thread.sleep(2000);
+		ExtentReportManager.passStep(m_Driver, "Click_AllowancesSchemes");
+
+	}
+	
 	
 	
 	
@@ -2028,7 +2058,7 @@ public class EmployeeEditAndRateChanges extends BasePage {
     
   public void clickOnLeveBtn() throws InterruptedException {
     	
-    	m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_gridDisplayRecords_ctl02_lnkLeaver']")).click();
+    	m_Driver.findElement(By.xpath("(//*[@id='lileaver']/a)[2]")).click();
     	
     	Thread.sleep(3000);
 

@@ -596,10 +596,7 @@ public class TC292_NewDepartments extends TestBase {
 	
 		verify.assertAll();
 	   
-   
 }
-	
-	
 	
 	
 }

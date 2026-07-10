@@ -148,6 +148,8 @@ public class TC10_TaxCalculationsAnnually extends TestBase {
 		}
 		
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		verify.verifyEmployeeSearch("A");
+
 	    verify.verifyIncomeTax("ANNUALLY");
 		
 	    payroll.runPayroll();

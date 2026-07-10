@@ -1,10 +1,18 @@
 package pages;
 
+import java.time.Duration;
+import java.util.List;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -90,6 +98,24 @@ public class EmployerView extends BasePage {
 	}
 	
 	
+	public void clickHoursSummary() throws InterruptedException
+	{
+        
+		
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefHoursSummary']"));
+
+	
+		elem.click();
+		Thread.sleep(3000);
+          	
+
+		ExtentReportManager.passStep(m_Driver, "Click__DepartmentalAnalyisis_");
+
+		TestModellerLogger.PassStep(m_Driver, "Click__DepartmentalAnalyisis_");
+		
+		Reporter.log("clickHoursSummary");
+	}
+	
 	public void clickPayslip() throws InterruptedException
 	{
         
@@ -100,6 +126,136 @@ public class EmployerView extends BasePage {
 		Reporter.log("clickPayslip");
 	}
 	
+	public void clickP45P60p45Forms() throws InterruptedException
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefReportP60']"));
+		elem.click();
+		Thread.sleep(2000);
+      
+		Reporter.log("clickP45P60p45Forms");
+	}
+	
+	public void selectTaxYear(String taxYear) {
+
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	    // Open dropdown
+	    WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//span[contains(@id,'ddlTaxYears-container')]")));
+	    dropdown.click();
+
+	    // Wait for option
+	    WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(
+	            By.xpath("//ul[contains(@id,'ddlTaxYears-results')]//li[normalize-space()='" + taxYear + "']")));
+
+	    // Scroll into view
+	    ((JavascriptExecutor) m_Driver).executeScript(
+	            "arguments[0].scrollIntoView({block:'center'});", option);
+
+	    // Click using Actions
+	    new Actions(m_Driver)
+	            .moveToElement(option)
+	            .pause(Duration.ofMillis(300))
+	            .click()
+	            .perform();
+
+	    // Verify selection
+	    wait.until(ExpectedConditions.textToBe(
+	            By.xpath("//span[contains(@id,'ddlTaxYears-container')]"),
+	            taxYear));
+	}
+	
+	
+	public void selecteForms(String forms)  throws Exception{
+		
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphError_ddlForm']"));
+		
+		Thread.sleep(2000);
+		Select sel = new Select(elem);
+		sel.selectByVisibleText(forms);
+
+		Thread.sleep(2000);
+		Reporter.log("selectEmailType");
+
+	}
+
+	public void clickEmailBtnP60() throws Exception
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_LinkButtonEx1']"));
+
+         Thread.sleep(2000);
+		elem.click();
+		
+		
+	Thread.sleep(2000);
+	Reporter.log("clickEmailBtnP60");
+	
+}
+	
+	public void clickSendBtnP60() throws Exception
+	{
+		  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrame']")));
+
+			jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_btnSave']")));
+
+			Thread.sleep(5000);
+			
+			ExtentReportManager.passStep(m_Driver, "clickSendBtnP60");
+		
+		 
+		    Reporter.log("click Send Btn");
+		    m_Driver.switchTo().defaultContent();
+	        
+		
+	}
+        
+		public void selectEmailType(String Text) throws Exception
+		{
+			
+			WebElement elem = getWebElement(By.xpath("//*[@id='EmailType']"));
+			
+			Thread.sleep(2000);
+			Select sel = new Select(elem);
+			sel.selectByVisibleText(Text);
+	
+			Thread.sleep(2000);
+			Reporter.log("selectEmailType");
+
+		}
+	
+		
+		public void clickPayslipEmailBtn() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_lnkbtnPaySlip']"));
+
+	         Thread.sleep(2000);
+			elem.click();
+			
+			
+		Thread.sleep(4000);
+		Reporter.log("clickPayslipEmailBtn");
+		
+	}
+		
+		
+		public void clickSendBtn() throws Exception
+		{
+			  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrame']")));
+
+				jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_btnSave']")));
+
+				Thread.sleep(5000);
+				
+				ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+			
+			 
+			    Reporter.log("click Send Btn");
+			    m_Driver.switchTo().defaultContent();
+		        
+		}
 	
 	public void clickDashBoard() throws InterruptedException
 	{
@@ -221,6 +377,57 @@ public class EmployerView extends BasePage {
 		Reporter.log("Click TaxPayment");
 	}
 	
+	
+	
+	public void clickIndividalEmployeePaySchedule() throws InterruptedException
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefReportEmployeePayHistoryDeatils']"));
+
+		elem.click();
+		Thread.sleep(2000);
+          	
+
+		ExtentReportManager.passStep(m_Driver, "clickTaxPayment");
+
+		
+		Reporter.log("clickIndividalEmployeePaySchedule");
+	}
+	
+	
+	public void clickTaxPaymentSendBtn() throws Exception
+	{
+		  m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUpFrame']")));
+
+			jsExec.executeScript("arguments[0].click();", m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_btnSave']")));
+
+			Thread.sleep(5000);
+			
+			ExtentReportManager.passStep(m_Driver, "selectPayrollSummary");
+		
+		 
+		    m_Driver.switchTo().defaultContent();
+		    
+		    Reporter.log("clickTaxPaymentSendBtn");
+
+	        
+	}
+	
+	
+	public void clickEmailTaxBtn() throws Exception
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnEmail']"));
+
+	
+         Thread.sleep(2000);
+		elem.click();
+		
+		
+	Thread.sleep(2000);
+	Reporter.log("clickEmailTaxBtn");
+	
+}
 	
 	
 	public void clickPayDate() throws InterruptedException

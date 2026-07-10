@@ -6,7 +6,6 @@ import tests.TestBase;
 import utilities.ExcelData;
 
 public class TC742_VerifyWith5Employee_PayrollSummaryUntick  extends TestBase{
-
 	
 	public String sTestCaseID = null;
 	String[] data = null;

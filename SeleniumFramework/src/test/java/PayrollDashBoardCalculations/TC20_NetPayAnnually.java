@@ -154,7 +154,8 @@ public class TC20_NetPayAnnually  extends TestBase {
 		
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 		verify.verifyNetPay();
-
+		payroll.runPayroll();
+		verify.verifyNetPayRunPayroll();
 	}
 	
 

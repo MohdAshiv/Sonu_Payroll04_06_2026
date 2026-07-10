@@ -147,6 +147,9 @@ public class TC08_TaxCalculationsFortnightly  extends TestBase{
 		}
 		
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
+		verify.verifyEmployeeSearch("A");
+		payroll.Click_PayrollDashboard();
+
 	    verify.verifyIncomeTax("FORTNIGHTLY");
 
 	    payroll.runPayroll();

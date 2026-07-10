@@ -241,7 +241,7 @@ public class OpenClient extends BasePage
         
 		Thread.sleep(5000);
 WebElement elem = getWebElement(ClickClientElem3);
-  //WebElement elem = getWebElement(ClickClientPayroll);
+//  WebElement elem = getWebElement(ClickClientPayroll);
 
 		if (elem == null) {
     		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_ClickClient", "Click_ClickClient failed. Unable to locate object: " + ClickClientElem.toString());

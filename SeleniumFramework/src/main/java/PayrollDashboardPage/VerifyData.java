@@ -3,17 +3,27 @@ package PayrollDashboardPage;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.net.URL;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.helpers.Loader;
+import org.apache.pdfbox.pdmodel.PDDocument;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
@@ -72,24 +82,24 @@ public class VerifyData extends BasePage{
 	
 	public void  verifyDashboardRecord(String data1,String data2, String data3, String data4, String data5, String data6, String data7,String data8, String data9, String data10,String data11,String Frequency) {
 		
-		WebElement elem1 = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divSubContent']/div/div[3]/div[1]/div[1]/h5/div/div[3]/strong/i"));
+		WebElement elem1 = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/h2/span[2]/span[3]/strong"));
 		
 		String data = elem1.getText();
 		System.out.println(data);
 		
 		soft.assertEquals(data, Frequency);
 		
-		List<WebElement> elem = m_Driver.findElements(By.xpath("//*[@class='table table-head-bg']/tbody/tr[2]/td"));
+		List<WebElement> elem = m_Driver.findElements(By.xpath("//*[@class='table-responsive']/table/tbody/tr[1]/td"));
 		
 		String name = elem.get(0).getText();
 		System.out.println(name);
-		String taxCode = elem.get(1).getText();
+		String taxCode = elem.get(3).getText();
 		System.out.println(taxCode);
-		String director = elem.get(2).getText();
+		String director = elem.get(4).getText();
 		System.out.println(director);
-		String department = elem.get(3).getText();
+		String department = elem.get(5).getText();
 		System.out.println(department);
-		String gross = elem.get(4).getText();
+		String gross = elem.get(6).getText();
 		System.out.println(gross);
 //		String incomeTax = elem.get(5).getText();
 //		System.out.println(incomeTax);
@@ -982,7 +992,14 @@ public void testSortDescending1(int index) throws Exception {
 
 	public void verifyTop10EmployeesNI(String frequency) {
 
-	    // Get top 3 employee rows from table
+	    // Get top employee rows from table
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
+		
+		
 	    List<WebElement> employeeRows = m_Driver.findElements(
 	            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
 
@@ -1170,8 +1187,14 @@ public void testSortDescending1(int index) throws Exception {
 	public void verifyTop10EmployeesNIRunPayroll(String frequency) {
 
 	    // Get top 3 employee rows from table
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr")));
+		
 	    List<WebElement> employeeRows = m_Driver.findElements(
-	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>1]"));
+	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr"));
 	    // ✅ FIX 2: Guard check — if rows are empty, fail immediately instead of silently passing
 	    Reporter.log("Rows found in table: " + employeeRows.size(), true);
 	    assertTrue(employeeRows.size() > 0,
@@ -1540,7 +1563,7 @@ public void testSortDescending1(int index) throws Exception {
 
 	    // Get top 10 employee rows
 	    List<WebElement> employeeRows = m_Driver.findElements(
-	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>1]"));
+	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>0]"));
 
 	    // ✅ FIX 2: Guard check — if rows are empty, fail immediately instead of silently passing
 	    Reporter.log("Rows found in table: " + employeeRows.size(), true);
@@ -1814,7 +1837,7 @@ public void testSortDescending1(int index) throws Exception {
 	    double ST  =  5000.00 / periods;
 
 	    List<WebElement> rows = m_Driver.findElements(
-	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>1]"));
+	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr"));
 
 	    // ✅ FIX 2: Guard check — if rows are empty, fail immediately instead of silently passing
 	    Reporter.log("Rows found in table: " + rows.size(), true);
@@ -2038,6 +2061,179 @@ public void testSortDescending1(int index) throws Exception {
 	}             
 	
 	
+	public void verifyIncomeTaxPensionNPA(String frequency) {
+
+	    int periods = Map.of(
+	            "WEEKLY", 52,
+	            "FORTNIGHTLY", 26,
+	            "FOUR_WEEKLY", 13,
+	            "MONTHLY", 12,
+	            "QUARTERLY", 4,
+	            "HALF_YEARLY", 2,
+	            "ANNUALLY", 1
+	    ).getOrDefault(frequency.toUpperCase(), 12);
+	    
+	    
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
+		
+
+	    List<WebElement> rows = m_Driver.findElements(
+	            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
+
+	    for (WebElement row : rows) {
+
+	        String name = row.findElement(By.xpath(".//td[1]")).getText().trim();
+	        String code = row.findElement(By.xpath(".//td[4]")).getText().trim();
+
+	        double gross = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[7]"))
+	                        .getText().replace("£", "").replace(",", "").trim());
+
+	        double actTax = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[8]"))
+	                        .getText().replace("£", "").replace(",", "").trim());
+
+	        // ✔ EE Pension (Net Pay Arrangement) — taxable gross se minus hogi
+	        double pension = 0.0;
+	        try {
+	            String pensionText = row.findElement(By.xpath(".//td[10]"))
+	                    .getText().replace("£", "").replace(",", "").trim();
+	            if (!pensionText.isEmpty() && !pensionText.equals("-")) {
+	                pension = Double.parseDouble(pensionText);
+	            }
+	        } catch (Exception e) {
+	            Reporter.log("Pension column not found or empty for: " + name, true);
+	        }
+
+	        // ✔ W1/M1 cleaning
+	        String taxCode = code.toUpperCase()
+	                .replaceAll("\\s+", "")
+	                .replaceAll("\\(W1/M1\\)", "")
+	                .replaceAll("\\(M1/W1\\)", "")
+	                .replaceAll("W1M1", "")
+	                .replaceAll("W1", "")
+	                .replaceAll("M1", "")
+	                .trim();
+
+	        // ✔ ALLOWANCE
+	        double allowanceAnnual = 0.0;
+
+	        if (!taxCode.equals("NT") &&
+	            !taxCode.equals("BR") &&
+	            !taxCode.equals("D0") &&
+	            !taxCode.equals("D1")) {
+
+	            String digits = taxCode.replaceAll("[^0-9]", "");
+
+	            if (!digits.isEmpty()) {
+	                allowanceAnnual = Double.parseDouble(digits) * 10;
+	            }
+	        }
+
+	        double periodAllowance = allowanceAnnual / periods;
+
+	        // ✔ K CODE LOGIC
+	        boolean isKCode = taxCode.startsWith("K");
+
+	        // ✔ Net Pay Arrangement — pension gross se pehle katega
+	        double taxableGross = isKCode ? gross + pension : gross - pension;
+
+	        double taxable;
+	        if (isKCode) {
+	            taxable = taxableGross + periodAllowance;
+	        } else {
+	            taxable = Math.max(0, taxableGross - periodAllowance);
+	        }
+
+	        // ✔ TAX CALCULATION
+	        double periodTax = 0.0;
+
+	        double BASIC = 37700.0 / periods;
+	        double HIGH  = 125140.0 / periods;
+
+	        if (taxCode.equals("NT")) {
+
+	            periodTax = 0;
+
+	        } else if (taxCode.equals("BR")) {
+
+	            periodTax = taxableGross * 0.20;
+
+	        } else if (taxCode.equals("D0")) {
+
+	            periodTax = taxableGross * 0.40;
+
+	        } else if (taxCode.equals("D1")) {
+
+	            periodTax = taxableGross * 0.45;
+
+	        } else if (taxCode.startsWith("S") && taxCode.endsWith("L")) {
+
+	            double b1 = 3967.0 / periods;
+	            double b2 = 16956.0 / periods;
+	            double b3 = 31092.0 / periods;
+	            double b4 = 62430.0 / periods;
+	            double b5 = 125140.0 / periods;
+
+	            if (taxable > 0)
+	                periodTax += Math.min(taxable, b1) * 0.19;
+
+	            if (taxable > b1)
+	                periodTax += (Math.min(taxable, b2) - b1) * 0.20;
+
+	            if (taxable > b2)
+	                periodTax += (Math.min(taxable, b3) - b2) * 0.21;
+
+	            if (taxable > b3)
+	                periodTax += (Math.min(taxable, b4) - b3) * 0.42;
+
+	            if (taxable > b4)
+	                periodTax += (Math.min(taxable, b5) - b4) * 0.45;
+
+	            if (taxable > b5)
+	                periodTax += (taxable - b5) * 0.48;
+
+	        } else {
+
+	            if (taxable > 0)
+	                periodTax += Math.min(taxable, BASIC) * 0.20;
+
+	            if (taxable > BASIC)
+	                periodTax += (Math.min(taxable, HIGH) - BASIC) * 0.40;
+
+	            if (taxable > HIGH)
+	                periodTax += (taxable - HIGH) * 0.45;
+	        }
+
+	        double expTax = Math.round(periodTax * 100.0) / 100.0;
+	        double tolerance = 1.00;
+
+	        boolean pass = Math.abs(actTax - expTax) <= tolerance;
+
+	        Reporter.log("================================", true);
+	        Reporter.log("Name   : " + name, true);
+	        Reporter.log("Code   : " + taxCode, true);
+	        Reporter.log("Gross  : £" + gross, true);
+	        Reporter.log("Pension: £" + pension, true);
+	        Reporter.log("Allow  : £" + allowanceAnnual, true);
+	        Reporter.log("Exp    : £" + expTax, true);
+	        Reporter.log("Act    : £" + actTax, true);
+	        Reporter.log("Result : " + (pass ? "PASS" : "FAIL"), true);
+	        Reporter.log("================================", true);
+
+	        assertTrue(pass,
+	                "Income Tax mismatch for " + name +
+	                " [" + taxCode + "] [" + frequency + "]\n" +
+	                "Expected: £" + expTax +
+	                " | Actual: £" + actTax);
+
+	        Reporter.log("");
+	    }
+	}
 	
 	
 	public void verifyIncomeTaxRunPayroll(String frequency) {
@@ -2053,7 +2249,7 @@ public void testSortDescending1(int index) throws Exception {
 	    ).getOrDefault(frequency.toUpperCase(), 12);
 
 	    List<WebElement> rows = m_Driver.findElements(
-	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>1]"));
+	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>0]"));
 
 
 	    // ✅ FIX 2: Guard check — if rows are empty, fail immediately instead of silently passing
@@ -2446,7 +2642,7 @@ public void testSortDescending1(int index) throws Exception {
 	// ✔ FETCH TABLE ROWS
 	// =========================
 	List<WebElement> rows = m_Driver.findElements(
-	    By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>1]"));
+	    By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>0]"));
 
 	for (WebElement row : rows) {
 
@@ -2579,6 +2775,13 @@ public void testSortDescending1(int index) throws Exception {
 	
 	public void verifyNetPay() {
 
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
+		
+		
 	    List<WebElement> rows = m_Driver.findElements(
 	            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
 
@@ -2596,6 +2799,117 @@ public void testSortDescending1(int index) throws Exception {
 
 	        String employeeName = row.findElement(
 	                By.xpath(".//td[1]")).getText().trim();
+
+	        double grossPay = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[7]"))
+	                        .getText()
+	                        .replace("£", "")
+	                        .replace(",", "")
+	                        .trim());
+
+	        double incomeTax = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[8]"))
+	                        .getText()
+	                        .replace("£", "")
+	                        .replace(",", "")
+	                        .trim());
+
+	        double employeeNI = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[9]"))
+	                        .getText()
+	                        .replace("£", "")
+	                        .replace(",", "")
+	                        .trim());
+
+	        double employeePension = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[10]"))
+	                        .getText()
+	                        .replace("£", "")
+	                        .replace(",", "")
+	                        .trim());
+
+	        double actualNetPay = Double.parseDouble(
+	                row.findElement(By.xpath(".//td[11]"))
+	                        .getText()
+	                        .replace("£", "")
+	                        .replace(",", "")
+	                        .trim());
+
+	        // =========================
+	        // ✔ EXPECTED NET PAY
+	        // Net = Gross - Tax - NI - Pension
+	        // =========================
+
+	        double expectedNetPay = Math.round(
+	                (grossPay - incomeTax - employeeNI - employeePension)
+	                * 100.0) / 100.0;
+
+	        // =========================
+	        // ✔ PASS / FAIL CHECK
+	        // =========================
+
+	        double tolerance = 0.01;
+
+	        boolean pass = Math.abs(
+	                expectedNetPay - actualNetPay) <= tolerance;
+
+	        // =========================
+	        // ✔ REPORTING
+	        // =========================
+
+	        Reporter.log("======================================", true);
+	        Reporter.log("Employee      : " + employeeName, true);
+	        Reporter.log("Gross Pay     : £" + grossPay, true);
+	        Reporter.log("Income Tax    : £" + incomeTax, true);
+	        Reporter.log("EE NI         : £" + employeeNI, true);
+	        Reporter.log("EE Pension    : £" + employeePension, true);
+	        Reporter.log("--------------------------------------", true);
+	        Reporter.log("Expected Net  : £" + expectedNetPay, true);
+	        Reporter.log("Actual Net    : £" + actualNetPay, true);
+	        Reporter.log("--------------------------------------", true);
+	        Reporter.log("FINAL RESULT  : " + 
+	                (pass ? "PASS" : "FAIL"), true);
+	        Reporter.log("======================================", true);
+
+	        // =========================
+	        // ✔ ASSERTION
+	        // =========================
+
+	        assertTrue(pass,
+	                "Net Pay mismatch for " + employeeName +
+	                "\nExpected: £" + expectedNetPay +
+	                " | Actual: £" + actualNetPay);
+	    }
+	}
+	        
+	
+
+	public void verifyNetPayRunPayroll() {
+
+		
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>0]")));
+		
+	    List<WebElement> rows = m_Driver.findElements(
+	            By.xpath("//table[contains(@class,'table-head-bg')]//tbody/tr[position()>0]"));
+
+	    for (WebElement row : rows) {
+
+	        // =========================
+	        // ✔ READ FROM UI
+	        // Name      -> td[1]
+	        // Gross     -> td[5]
+	        // Tax       -> td[6]
+	        // EE NI     -> td[7]
+	        // Pension   -> td[8]
+	        // Net Pay   -> td[9]
+	        // =========================
+
+	        String employeeName = row.findElement(
+	                By.xpath(".//td[2]/a")).getText().trim();
 
 	        double grossPay = Double.parseDouble(
 	                row.findElement(By.xpath(".//td[5]"))
@@ -2678,9 +2992,869 @@ public void testSortDescending1(int index) throws Exception {
 	                " | Actual: £" + actualNetPay);
 	    }
 	}
-	        
 	
-       
+	
+public void verifyWorkerTypeAndAEStatusForAllRows(String expectedWorkerType, String expectedAEStatus) {
+
+List<WebElement> rows = m_Driver.findElements(
+By.xpath("//table/tbody/tr[not(contains(@style,'display: none'))]"));
+
+Assert.assertTrue(rows.size() > 0, "No employee records found.");
+
+for (int i = 1; i <= rows.size(); i++) {
+
+String workerType = m_Driver.findElement(
+By.xpath("(//table/tbody/tr)[" + i + "]/td[2]"))
+.getText()
+.replace("\n", " ")
+.trim();
+
+String aeStatus = m_Driver.findElement(
+By.xpath("(//table/tbody/tr)[" + i + "]/td[3]"))
+.getText()
+.trim();
+
+Assert.assertEquals(workerType,
+expectedWorkerType,
+"Worker Type mismatch at row " + i);
+
+Assert.assertEquals(aeStatus,
+expectedAEStatus,
+"AE Status mismatch at row " + i);
+
+System.out.println("Row " + i +
+" | Worker Type: " + workerType +
+" | AE Status: " + aeStatus);
+}
+}
+	
+
+
+public void verifyTotalCostKPI() {
+
+    double grossTotal = 0;
+    double erNiTotal = 0;
+    double erPensionTotal = 0;
+
+    List<WebElement> rows = m_Driver.findElements(By.xpath("//tbody/tr"));
+
+    if (rows.isEmpty()) {
+        Assert.fail("No employee records found in the grid.");
+    }
+    
+    for (int i = 1; i <= rows.size(); i++) {
+
+        double gross = Double.parseDouble(m_Driver.findElement(
+                By.xpath("(//tbody/tr)[" + i + "]/td[7]"))
+                .getText().replace("£", "").replace(",", "").trim());
+
+        double erNi = Double.parseDouble(m_Driver.findElement(
+                By.xpath("(//tbody/tr)[" + i + "]/td[12]"))
+                .getText().replace("£", "").replace(",", "").trim());
+
+        double erPension = Double.parseDouble(m_Driver.findElement(
+                By.xpath("(//tbody/tr)[" + i + "]/td[13]"))
+                .getText().replace("£", "").replace(",", "").trim());
+
+        grossTotal += gross;
+        erNiTotal += erNi;
+        erPensionTotal += erPension;
+    }
+
+    double expectedTotalCost = grossTotal + erNiTotal + erPensionTotal;
+
+    String actualKPI = m_Driver.findElement(
+            By.xpath("//*[@id=\"lblTotalCost\"]"))
+            .getText()
+            .replace("£", "")
+            .replace(",", "")
+            .trim();
+
+    double actualTotalCost = Double.parseDouble(actualKPI);
+    
+    Reporter.log("Gross Total : £" + grossTotal, true);
+    Reporter.log("ER NI Total : £" + erNiTotal, true);
+    Reporter.log("ER Pension Total : £" + erPensionTotal, true);
+    Reporter.log("Expected Total Cost : £" + expectedTotalCost, true);
+    Reporter.log("Actual Total Cost KPI : £" + actualTotalCost, true);
+
+
+    Assert.assertEquals(actualTotalCost, expectedTotalCost, 0.01,
+            "Total Cost KPI mismatch");
+    Reporter.log("Total Cost KPI verified successfully.", true);
+
+
+}
+	
+
+public void verifyTotalNetPayKPI() {
+
+    List<WebElement> netValues = m_Driver.findElements(By.xpath("//tbody/tr/td[11]"));
+
+    if (netValues.isEmpty()) {
+        Reporter.log("No Net Pay values found.", true);
+        Assert.fail("No Net Pay values found.");
+    }
+
+    double expectedNetPay = 0;
+
+    for (WebElement value : netValues) {
+
+        double rowNetPay = Double.parseDouble(
+                value.getText()
+                     .replace("£", "")
+                     .replace(",", "")
+                     .trim());
+
+        Reporter.log("Row Net Pay : £" + rowNetPay, true);
+
+        expectedNetPay += rowNetPay;
+    }
+
+    String actualNetPayText = m_Driver.findElement(
+            By.xpath("//*[@id='lblTotalNetPay']"))
+            .getText()
+            .replace("£", "")
+            .replace(",", "")
+            .trim();
+
+    double actualNetPay = Double.parseDouble(actualNetPayText);
+
+    Reporter.log("Expected Total Net Pay : £" + expectedNetPay, true);
+    Reporter.log("Actual Total Net Pay KPI : £" + actualNetPay, true);
+
+    Assert.assertEquals(actualNetPay, expectedNetPay, 0.01,
+            "Total Net Pay KPI mismatch");
+
+    Reporter.log("Total Net Pay KPI verified successfully.", true);
+}
+
+
+public void verifyTotalTaxesKPI() {
+
+    List<WebElement> taxValues = m_Driver.findElements(By.xpath("//tbody/tr/td[8]"));
+
+    if (taxValues.isEmpty()) {
+        Reporter.log("No Tax values found.", true);
+        Assert.fail("No Tax values found.");
+    }
+
+    double expectedTax = 0;
+
+    for (WebElement value : taxValues) {
+
+        double rowTax = Double.parseDouble(
+                value.getText()
+                     .replace("£", "")
+                     .replace(",", "")
+                     .trim());
+
+        Reporter.log("Row Tax : £" + rowTax, true);
+
+        expectedTax += rowTax;
+    }
+
+    String actualTaxText = m_Driver.findElement(
+            By.xpath("//*[@id='lblTotalTaxes']"))
+            .getText()
+            .replace("£", "")
+            .replace(",", "")
+            .trim();
+
+    double actualTax = Double.parseDouble(actualTaxText);
+
+    Reporter.log("Expected Total Tax : £" + expectedTax, true);
+    Reporter.log("Actual Total Taxes KPI : £" + actualTax, true);
+
+    Assert.assertEquals(actualTax, expectedTax, 0.01,
+            "Total Taxes KPI mismatch");
+
+    Reporter.log("Total Taxes KPI verified successfully.", true);
+}
+
+
+public void verifyTotalNIKPI() {
+
+    List<WebElement> eeNiValues = m_Driver.findElements(By.xpath("//tbody/tr/td[9]"));
+    List<WebElement> erNiValues = m_Driver.findElements(By.xpath("//tbody/tr/td[12]"));
+
+    if (eeNiValues.isEmpty() || erNiValues.isEmpty()) {
+        Reporter.log("NI values not found.", true);
+        Assert.fail("NI values not found.");
+    }
+
+    double eeNiTotal = 0;
+    double erNiTotal = 0;
+
+    for (WebElement value : eeNiValues) {
+
+        double eeNi = Double.parseDouble(
+                value.getText()
+                     .replace("£", "")
+                     .replace(",", "")
+                     .trim());
+
+        Reporter.log("Row EE NI : £" + eeNi, true);
+
+        eeNiTotal += eeNi;
+    }
+
+    for (WebElement value : erNiValues) {
+
+        double erNi = Double.parseDouble(
+                value.getText()
+                     .replace("£", "")
+                     .replace(",", "")
+                     .trim());
+
+        Reporter.log("Row ER NI : £" + erNi, true);
+
+        erNiTotal += erNi;
+    }
+
+    double expectedNI = eeNiTotal + erNiTotal;
+
+    String actualNIText = m_Driver.findElement(
+            By.xpath("//*[@id='lblTotalNI']"))
+            .getText()
+            .replace("£", "")
+            .replace(",", "")
+            .trim();
+
+    double actualNI = Double.parseDouble(actualNIText);
+
+    Reporter.log("EE NI Total : £" + eeNiTotal, true);
+    Reporter.log("ER NI Total : £" + erNiTotal, true);
+    Reporter.log("Expected Total NI : £" + expectedNI, true);
+    Reporter.log("Actual Total NI KPI : £" + actualNI, true);
+
+    Assert.assertEquals(actualNI, expectedNI, 0.01,
+            "Total NI KPI mismatch");
+
+    Reporter.log("Total NI KPI verified successfully.", true);
+}
+
+
+public void verifyEmployeeSearch(String searchText) throws InterruptedException {
+
+	Reporter.log("Searching Employee : " + searchText, true);
+
+	
+	WebElement txtSearch = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_search_input']"));
+    txtSearch.clear();
+    txtSearch.sendKeys(searchText);
+    Thread.sleep(2000);
+
+    List<WebElement> employeeList = m_Driver.findElements(
+            By.xpath("//*[@id='tblReportData']/tbody/tr/td[1]/a"));
+
+    boolean validEmployeeFound = false;
+
+    for (WebElement employee : employeeList) {
+
+        String employeeName = employee.getText().trim();
+
+        if (employeeName.isEmpty()) {
+            continue;
+        }
+
+        Reporter.log("Employee Name : " + employeeName, true);
+        Reporter.log("Employee Name : " + employeeName, true);
+
+        Assert.assertTrue(
+                employeeName.toUpperCase().contains(searchText.toUpperCase()),
+                "Unexpected employee displayed : " + employeeName);
+
+        validEmployeeFound = true;
+    }
+
+    Assert.assertTrue(validEmployeeFound,
+            "No employee found for search text : " + searchText);
+
+    Reporter.log("Search verification passed for : " + searchText, true);
+}
+
+public void verifyEmployeeSearchRunPayroll(String searchText) throws InterruptedException {
+
+	Reporter.log("Searching Employee : " + searchText, true);
+
+	
+	WebElement txtSearch = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_search_input']"));
+    txtSearch.clear();
+    txtSearch.sendKeys(searchText);
+    Thread.sleep(2000);
+
+    List<WebElement> employeeList = m_Driver.findElements(
+            By.xpath(".//td[2]/a"));
+
+    boolean validEmployeeFound = false;
+
+    for (WebElement employee : employeeList) {
+
+        String employeeName = employee.getText().trim();
+
+        if (employeeName.isEmpty()) {
+            continue;
+        }
+
+        Reporter.log("Employee Name : " + employeeName, true);
+        Reporter.log("Employee Name : " + employeeName, true);
+
+        Assert.assertTrue(
+                employeeName.toUpperCase().contains(searchText.toUpperCase()),
+                "Unexpected employee displayed : " + employeeName);
+
+        validEmployeeFound = true;
+    }
+
+    Assert.assertTrue(validEmployeeFound,
+            "No employee found for search text : " + searchText);
+
+    Reporter.log("Search verification passed for : " + searchText, true);
+}
+
+
+
+public void verifyViewDraftPayslipEmployeeSearch(String searchText) throws InterruptedException {
+
+	Reporter.log("Searching Employee : " + searchText, true);
+
+	
+	WebElement txtSearch = m_Driver.findElement(By.xpath("//*[@id='employeeSearchBox']"));
+    txtSearch.clear();
+    txtSearch.sendKeys(searchText);
+    Thread.sleep(2000);
+
+    List<WebElement> employeeList = m_Driver.findElements(
+            By.xpath("//*[@id='employeeTable']/tbody/tr/td[2]"));
+
+    boolean validEmployeeFound = false;
+
+    for (WebElement employee : employeeList) {
+
+        String employeeName = employee.getText().trim();
+
+        if (employeeName.isEmpty()) {
+            continue;
+        }
+
+        Reporter.log("Employee Name : " + employeeName, true);
+        Reporter.log("Employee Name : " + employeeName, true);
+
+        Assert.assertTrue(
+                employeeName.toUpperCase().contains(searchText.toUpperCase()),
+                "Unexpected employee displayed : " + employeeName);
+
+        validEmployeeFound = true;
+    }
+
+    Assert.assertTrue(validEmployeeFound,
+            "No employee found for search text : " + searchText);
+
+    Reporter.log("Search verification passed for : " + searchText, true);
+}
+public void verifyAllRowsLoadedByScrolling() throws InterruptedException {
+    JavascriptExecutor js = (JavascriptExecutor) m_Driver;
+
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(60));
+    WebElement totalRecordLabel = wait.until(driver -> {
+        WebElement el = driver.findElement(
+            By.xpath("(//*[contains(text(),'Total Record')])[2]"));
+        String text = el.getText().replaceAll("[^0-9]", "").trim();
+        return text.isEmpty() ? null : el;
+    });
+
+    int expectedCount = Integer.parseInt(
+        totalRecordLabel.getText().replaceAll("[^0-9]", "").trim());
+    Reporter.log("Expected row count: " + expectedCount, true);
+
+    int previousCount = 0;
+    while (true) {
+        List<WebElement> rows = m_Driver.findElements(By.xpath("//table/tbody/tr"));
+        int currentCount = rows.size();
+        Reporter.log("Rows loaded so far: " + currentCount, true);
+
+        if (currentCount >= expectedCount) break;
+        if (currentCount == previousCount && previousCount != 0) break;
+
+        previousCount = currentCount;
+
+        // Last visible row pe scroll karo — next batch trigger hoga
+        WebElement lastRow = rows.get(rows.size() - 1);
+        js.executeScript("arguments[0].scrollIntoView(true)", lastRow);
+
+        int countBeforeWait = currentCount;
+        new WebDriverWait(m_Driver, Duration.ofSeconds(30)).until(driver ->
+            driver.findElements(By.xpath("//table/tbody/tr")).size() > countBeforeWait
+        );
+    }
+
+    int actualCount = m_Driver.findElements(By.xpath("//table/tbody/tr")).size();
+    Assert.assertEquals(actualCount, expectedCount,
+        "Row count mismatch — Expected: " + expectedCount + ", Actual: " + actualCount);
+
+    Reporter.log("✓ All " + actualCount + " rows loaded and verified.", true);
+}
+
+
+public void verifyAllRowsLoadedByScrollingRunPayrollPage() throws InterruptedException {
+    JavascriptExecutor js = (JavascriptExecutor) m_Driver;
+
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(60));
+    WebElement totalRecordLabel = wait.until(driver -> {
+        WebElement el = driver.findElement(
+            By.xpath("(//*[contains(text(),'Total Record')])[1]"));
+        String text = el.getText().replaceAll("[^0-9]", "").trim();
+        return text.isEmpty() ? null : el;
+    });
+
+    int expectedCount = Integer.parseInt(
+        totalRecordLabel.getText().replaceAll("[^0-9]", "").trim());
+    Reporter.log("Expected row count: " + expectedCount, true);
+
+    int previousCount = 0;
+    while (true) {
+        List<WebElement> rows = m_Driver.findElements(By.xpath("//*[@class=\"table-responsive empGridScroll\"]/table/tbody/tr"));
+        int currentCount = rows.size();
+        Reporter.log("Rows loaded so far: " + currentCount, true);
+
+        if (currentCount >= expectedCount) break;
+        if (currentCount == previousCount && previousCount != 0) break;
+
+        previousCount = currentCount;
+
+        // Last visible row pe scroll karo — next batch trigger hoga
+        WebElement lastRow = rows.get(rows.size() - 1);
+        js.executeScript("arguments[0].scrollIntoView(true)", lastRow);
+
+        int countBeforeWait = currentCount;
+        new WebDriverWait(m_Driver, Duration.ofSeconds(30)).until(driver ->
+            driver.findElements(By.xpath("//*[@class='table-responsive empGridScroll']/table/tbody/tr")).size() > countBeforeWait
+        );
+    }
+
+    int actualCount = m_Driver.findElements(By.xpath("//*[@class='table-responsive empGridScroll']/table/tbody/tr")).size();
+    Assert.assertEquals(actualCount, expectedCount,
+        "Row count mismatch — Expected: " + expectedCount + ", Actual: " + actualCount);
+
+    Reporter.log("✓ All " + actualCount + " rows loaded and verified.", true);
+}
+
+
+
+public void selectAllEmployeeCheckboxes() {
+
+    List<WebElement> employeeCheckboxes = m_Driver.findElements(
+            By.xpath("//input[contains(@class,'chkEmployee')]"));
+
+    Assert.assertTrue(employeeCheckboxes.size() > 0,
+            "No employee checkboxes found");
+
+    Reporter.log("Total Employee Checkboxes : " + employeeCheckboxes.size(), true);
+
+    for (WebElement checkbox : employeeCheckboxes) {
+
+        if (!checkbox.isSelected()) {
+            ((JavascriptExecutor) m_Driver).executeScript(
+                    "arguments[0].click();", checkbox);
+        }
+
+        Assert.assertTrue(checkbox.isSelected(),
+                "Checkbox is not selected");
+
+        Reporter.log("Checkbox Selected Successfully", true);
+    }
+}
+
+
+public void verifyDraftPayslipPdfOpened(int expectedPayslips) throws IOException, Exception {
+
+    m_Driver.findElement(By.xpath("//*[@id='hrefPreviewPayslipsPopup']")).click();
+	Thread.sleep(9000);
+	utilities.ChangeWindow.tabswitch(m_Driver);
+	Thread.sleep(2000);
+
+    String pdfUrl = m_Driver.getCurrentUrl();
+
+    Reporter.log("PDF URL : " + pdfUrl, true);
+
+    Assert.assertTrue(
+            pdfUrl.contains("PreviewPayslip")
+            && pdfUrl.contains(".pdf"),
+            "Draft Payslip PDF is not opened."
+    );
+    Reporter.log("Draft Payslip PDF opened successfully.", true);
+
+    
+    // Load PDF from URL
+    InputStream inputStream = new URL(pdfUrl).openStream();
+
+    PDDocument document = PDDocument.load(inputStream.readAllBytes());
+
+    int actualPages = document.getNumberOfPages();
+
+    Reporter.log("Expected Payslips : " + expectedPayslips, true);
+    Reporter.log("Actual PDF Pages : " + actualPages, true);
+
+    Assert.assertEquals(actualPages, expectedPayslips,
+            "Payslip count mismatch.");
+
+    Reporter.log("Payslip count verified successfully.", true);
+
+    document.close();
+    inputStream.close();
+
+    // Close PDF tab
+    m_Driver.close();
+
+}
+public void verifyAllCheckboxesAreTicked() {
+
+    List<WebElement> checkboxes = m_Driver.findElements(
+            By.xpath("//span[contains(@class,'rowCheckbox')]//input[@type='checkbox']"));
+
+    Assert.assertTrue(checkboxes.size() > 0,
+            "No checkboxes found.");
+
+    Reporter.log("Total Checkboxes Found : " + checkboxes.size(), true);
+
+    int checkedCount = 0;
+
+    for (int i = 0; i < checkboxes.size(); i++) {
+
+        WebElement checkbox = checkboxes.get(i);
+
+        boolean isChecked = checkbox.isSelected()
+                || "checked".equalsIgnoreCase(checkbox.getAttribute("checked"));
+
+        Reporter.log(
+                "Checkbox " + (i + 1)
+                + " | Selected = " + checkbox.isSelected()
+                + " | Checked Attribute = " + checkbox.getAttribute("checked"),
+                true);
+
+        Assert.assertTrue(
+                isChecked,
+                "Checkbox at index " + (i + 1) + " is not ticked.");
+
+        checkedCount++;
+    }
+
+    Reporter.log(
+            "Verified all checkboxes are ticked successfully. Total Checked : "
+                    + checkedCount,
+            true);
+}
+
+
+public void unTickAllCheckboxesAndVerify() {
+
+    List<WebElement> checkboxes = m_Driver
+    		.findElements(
+            By.xpath("//span[contains(@class,'rowCheckbox')]//input[@type='checkbox']"));
+
+    Assert.assertTrue(checkboxes.size() > 0,
+            "No checkboxes found.");
+
+    Reporter.log("Total Checkboxes Found : " + checkboxes.size(), true);
+
+    // Untick all selected checkboxes
+    for (int i = 0; i < checkboxes.size(); i++) {
+
+        WebElement checkbox = checkboxes.get(i);
+
+        if (checkbox.isSelected()) {
+
+            ((JavascriptExecutor) m_Driver)
+                    .executeScript("arguments[0].click();", checkbox);
+
+            Reporter.log("Unticked Checkbox : " + (i + 1), true);
+        }
+    }
+
+    // Verify all are unticked
+    for (int i = 0; i < checkboxes.size(); i++) {
+
+        WebElement checkbox = checkboxes.get(i);
+
+        Reporter.log(
+                "Checkbox " + (i + 1)
+                + " | Selected = " + checkbox.isSelected(),
+                true);
+
+        Assert.assertFalse(
+                checkbox.isSelected(),
+                "Checkbox at index " + (i + 1) + " is still ticked.");
+    }
+
+    Reporter.log("Verified all checkboxes are unticked successfully.", true);
+}
+
+
+public void selectRequiredEmployeesAndUntickRest(int employeeCount) {
+
+    List<WebElement> checkboxes = m_Driver.findElements(
+            By.xpath("//span[contains(@class,'rowCheckbox')]//input[@type='checkbox']"));
+
+    Assert.assertTrue(checkboxes.size() > 0,
+            "No checkboxes found.");
+
+    Assert.assertTrue(employeeCount <= checkboxes.size(),
+            "Requested employee count is greater than available checkboxes.");
+
+    Reporter.log("Total Checkboxes Found : " + checkboxes.size(), true);
+    Reporter.log("Employees To Keep Selected : " + employeeCount, true);
+
+    for (int i = 0; i < checkboxes.size(); i++) {
+
+        WebElement checkbox = checkboxes.get(i);
+
+        if (i < employeeCount) {
+
+            // Keep selected
+            if (!checkbox.isSelected()) {
+                ((JavascriptExecutor) m_Driver)
+                        .executeScript("arguments[0].click();", checkbox);
+            }
+
+            Reporter.log("Selected Employee : " + (i + 1), true);
+
+        } else {
+
+            // Untick remaining
+            if (checkbox.isSelected()) {
+                ((JavascriptExecutor) m_Driver)
+                        .executeScript("arguments[0].click();", checkbox);
+            }
+
+            Reporter.log("Unticked Employee : " + (i + 1), true);
+        }
+    }
+
+    // Verification
+    for (int i = 0; i < checkboxes.size(); i++) {
+
+        boolean actualState = checkboxes.get(i).isSelected();
+
+        if (i < employeeCount) {
+            Assert.assertTrue(actualState,
+                    "Employee " + (i + 1) + " should be selected.");
+        } else {
+            Assert.assertFalse(actualState,
+                    "Employee " + (i + 1) + " should be unselected.");
+        }
+    }
+
+    Reporter.log("Selection verification completed successfully.", true);
+}
+
+
+public void verifyTotalRecordDashboard(String expectedText) throws InterruptedException {
+   
+        WebElement el = m_Driver.findElement(
+            By.xpath("(//*[contains(text(),'Total Record')])[2]"));
+        String text = el.getText().replaceAll("[^0-9]", "").trim();
+        
+        assertEquals(text, expectedText);
+        Reporter.log("Selection verification completed successfully.", true);
+
+        
+    }
+
+
+public void verifyEmailWarning(String expectedText) throws InterruptedException {
+   
+        WebElement el = m_Driver.findElement(
+            By.xpath("//*[contains(@class,'alert') and .//*[contains(text(),'Important')]]"));
+        String text = el.getText().trim();
+        
+        assertEquals(text, expectedText);
+        Reporter.log("verifyEmailWarning", true);
+
+        
+    }
+
+
+
+
+
+
+public void verifyTotalRecordRunPayroll(String expectedText) throws InterruptedException {
+   
+        WebElement el = m_Driver.findElement(
+            By.xpath("(//*[contains(text(),'Total Record')])[1]"));
+        String text = el.getText().replaceAll("[^0-9]", "").trim();
+        
+        assertEquals(text, expectedText);
+        Reporter.log("Selection verification completed successfully.", true);
+
+        
+    }
+public void verifyPayslipWithSummary(int count) throws InterruptedException
+	{
+		Thread.sleep(3000);
+			
+			List<WebElement> attachmentsEmplyeeList = m_Driver.findElements(By.xpath("//a[contains(.,'.pdf')]"));
+			
+		
+			int payslipCount = attachmentsEmplyeeList.size();
+			System.out.println("Payslip attachement count = "+payslipCount);
+			assertEquals(payslipCount, count);
+			
+		
+			Reporter.log("verifyPayslipWithSummary");
+
+	
+
+	}
+	
+
+
+
+
+public void verifyRecievedEmployeePayslip(int recordsToVerify) throws Exception
+{
+    try {
+
+    	
+    	WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(60));
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(
+		    By.xpath("//*[@class='table table-head-bg']/tbody/tr/td[2]/a")));
+
+        List<WebElement> list = m_Driver.findElements(
+                By.xpath("//*[@class='table table-head-bg']/tbody/tr/td[2]/a"));
+
+        System.out.println("Total Emails : " + list.size());
+
+        Assert.assertFalse(list.isEmpty(), "No emails found");
+
+        for (int i = 0; i < recordsToVerify; i++)
+        {
+            List<WebElement> list1 = m_Driver.findElements(
+                    By.xpath("//*[@class='table table-head-bg']/tbody/tr/td[2]/a"));
+
+            WebElement elem = list1.get(i);
+            elem.click();
+
+            Thread.sleep(3000);
+            utilities.ChangeWindow.Switchwindow(3, m_Driver);
+
+            WebElement tagData = m_Driver.findElement(
+                    By.xpath("//*[@id='ctl00_ctl00_ParentContent_divSubContent']/div[4]/div/div/div[2]/div[2]/div/p[1]/span[2]"));
+
+            String name = tagData.getText();
+            System.out.println("Employee Name : " + name);
+
+            WebElement payslipdata = m_Driver.findElement(
+                    By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_rptrDisplayEmailAttachments_ctl00_lbtnFileName']/b"));
+
+            String[] payslipname = payslipdata.getText().split(" ");
+
+            System.out.println("Payslip Name : " + payslipname[4]);
+
+            Assert.assertEquals(name, payslipname[4],
+                    "Employee name mismatch in payslip");
+
+            List<WebElement> attachmentsList = m_Driver.findElements(
+                    By.xpath("//*[contains(text(),'Employee Payslip')]"));
+
+            int count = attachmentsList.size();
+            System.out.println("Payslip attachment count = " + count);
+
+            Assert.assertEquals(count, 1,
+                    "Payslip attachment count mismatch");
+
+            WebElement backBtn = m_Driver.findElement(
+                    By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/a"));
+
+            backBtn.click();
+
+            Thread.sleep(4000);
+            utilities.ChangeWindow.Switchwindow(1, m_Driver);
+        }
+
+        Reporter.log("verifyRecievedEmployeePayslip", true);
+
+    } catch (Exception e) {
+        System.out.println("Issue In verifyRecievedEmployeePayslip : " + e);
+        Assert.fail("Issue In verifyRecievedEmployeePayslip : " + e.getMessage());
+    }
+}
+
+
+
+public void verifyRecievedEmployeePayslip1(int recordsToVerify) throws Exception
+{
+    try {
+
+    	
+    	WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(60));
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(
+		    By.xpath("//*[@class='table table-head-bg']/tbody/tr/td[2]/a")));
+
+        List<WebElement> list = m_Driver.findElements(
+                By.xpath("//*[@class='table table-head-bg']/tbody/tr/td[2]/a"));
+
+        System.out.println("Total Emails : " + list.size());
+
+        Assert.assertFalse(list.isEmpty(), "No emails found");
+
+        for (int i = 1; i < recordsToVerify; i++)
+        {
+            List<WebElement> list1 = m_Driver.findElements(
+                    By.xpath("//*[@class='table table-head-bg']/tbody/tr/td[2]/a"));
+
+            WebElement elem = list1.get(i);
+            elem.click();
+
+            Thread.sleep(3000);
+            utilities.ChangeWindow.Switchwindow(4, m_Driver);
+
+            WebElement tagData = m_Driver.findElement(
+                    By.xpath("//*[@id='ctl00_ctl00_ParentContent_divSubContent']/div[4]/div/div/div[2]/div[2]/div/p[1]/span[2]"));
+
+            String name = tagData.getText();
+            System.out.println("Employee Name : " + name);
+
+            WebElement payslipdata = m_Driver.findElement(
+                    By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_rptrDisplayEmailAttachments_ctl00_lbtnFileName']/b"));
+
+            String[] payslipname = payslipdata.getText().split(" ");
+
+            System.out.println("Payslip Name : " + payslipname[4]);
+
+            Assert.assertEquals(name, payslipname[4],
+                    "Employee name mismatch in payslip");
+
+            List<WebElement> attachmentsList = m_Driver.findElements(
+                    By.xpath("//*[contains(text(),'Employee Payslip')]"));
+
+            int count = attachmentsList.size();
+            System.out.println("Payslip attachment count = " + count);
+
+            Assert.assertEquals(count, 1,
+                    "Payslip attachment count mismatch");
+
+            WebElement backBtn = m_Driver.findElement(
+                    By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/a"));
+
+            backBtn.click();
+
+            Thread.sleep(4000);
+            utilities.ChangeWindow.Switchwindow(1, m_Driver);
+        }
+
+        Reporter.log("verifyRecievedEmployeePayslip", true);
+
+    } catch (Exception e) {
+        System.out.println("Issue In verifyRecievedEmployeePayslip : " + e);
+        Assert.fail("Issue In verifyRecievedEmployeePayslip : " + e.getMessage());
+    }
+}
+
+
 	  public void assertAll()
 	  {
 		soft.assertAll();

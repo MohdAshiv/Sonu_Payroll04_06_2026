@@ -270,7 +270,6 @@ public class TC612_UndoLastPayroll_BasicFuncionality extends TestBase{
 		verify.assertAll();
 
 	}
-	
 
 	
 	@Test(priority=5)
@@ -938,6 +937,5 @@ public class TC612_UndoLastPayroll_BasicFuncionality extends TestBase{
 		verify.assertAll();
 
 	}
-	
 	
 	}

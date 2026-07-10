@@ -1,10 +1,15 @@
 package pages;
 
+import java.time.Duration;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -19,7 +24,7 @@ public class DashboardPage  extends BasePage{
 	
 	public static String text;
 	
-	private By payrollStatusElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_lnkPayrollStatus']");
+	private By payrollStatusElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeading_lnkPayrollStatus']/span");
 	
 	private By payrollAgentStatus= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_rptrDisplayRecords_ctl00_lnkStatus']");
 	private By notesElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_hrefNotesHistory']");
@@ -119,6 +124,20 @@ public void clickAndEnterMayNote() throws Exception {
 
 public void clickJournals() throws Exception {
 	
+	
+	
+
+	  WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+      WebElement quickAction = wait.until(
+      	    ExpectedConditions.elementToBeClickable(
+      	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+      	    )
+      	);
+
+      	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+      	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+
 	WebElement elem = getWebElement(journalsElem);
 	
 	elem.click();

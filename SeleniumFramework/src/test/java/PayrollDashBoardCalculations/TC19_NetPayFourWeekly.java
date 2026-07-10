@@ -153,7 +153,8 @@ public class TC19_NetPayFourWeekly extends TestBase {
 		
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 		verify.verifyNetPay();
-
+		payroll.runPayroll();
+		verify.verifyNetPayRunPayroll();
 }
 
 }

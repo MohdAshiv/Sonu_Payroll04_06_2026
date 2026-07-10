@@ -3,14 +3,18 @@ package pages;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
 import java.util.Random;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.Assertion;
@@ -393,11 +397,18 @@ public class EditCompany extends BasePage {
 	 
 	public void Click_gotoEditCompany() throws InterruptedException
 	{
-		
-		m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")).click();
         Thread.sleep(3000);
+        WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
 
-        
+        WebElement quickAction = wait.until(
+        	    ExpectedConditions.elementToBeClickable(
+        	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+        	    )
+        	);
+
+        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+
 		WebElement elem = getWebElement(gotoEditCompanyElem);
 
 		if (elem == null) {
@@ -2039,6 +2050,8 @@ public class EditCompany extends BasePage {
 		 	}
 		 
 		 
+		
+		 
 		 public void clickIcnEmployee() throws InterruptedException
 		 	{
 		 	    
@@ -2088,7 +2101,7 @@ public class EditCompany extends BasePage {
 		 public void clickChangePasswordEmployee() throws InterruptedException
 		 	{
 		 	    
-		 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_EmployerShow1']/div[2]/a/strong"));
+		 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_EmployerShow1']/div/a/strong"));
 
 
 		 	    elem.click();
@@ -2103,7 +2116,7 @@ public class EditCompany extends BasePage {
 		 public void clickChangePasswordEmployer() throws InterruptedException
 		 	{
 		 	    
-		 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_EmployerShow']/div[2]/a"));
+		 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_EmployerShow']/div/a/strong"));
 
 
 		 	    elem.click();

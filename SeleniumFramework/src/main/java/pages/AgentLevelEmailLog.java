@@ -1,8 +1,12 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -17,7 +21,7 @@ public class AgentLevelEmailLog extends BasePage {
 	
 	
 	
-	private By emailDropDownIcnElem=By.xpath("//*[@id='aspnetForm']/main/header/div[2]/div[3]/ul/li[9]/a");
+	private By emailDropDownIcnElem=By.xpath("//*[@id='aspnetForm']/main/header/div[2]/div[3]/div/ul/li[9]/a");
 	
 	private By emailLogElem =By.xpath("//*[@id='CommunicationInbox']");
 
@@ -86,7 +90,7 @@ public class AgentLevelEmailLog extends BasePage {
 		
       
 		elem.click();
-	 Thread.sleep(9000);
+	 Thread.sleep(5000);
 		
 	
 	Reporter.log("clickEmailLog");
@@ -119,6 +123,11 @@ public class AgentLevelEmailLog extends BasePage {
 	public void clickRecievedEmail() throws Exception
 	{
         
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(300));
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(
+		    By.xpath("//*[@id='FillTable']/tbody/tr[1]/td[2]/a")));
+
 		WebElement elem = getWebElement(recievedEmailElem);
 
 		if (elem == null) {
@@ -128,7 +137,7 @@ public class AgentLevelEmailLog extends BasePage {
         }
 		
 		jsExec.executeScript("arguments[0].click();", elem);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		utilities.ChangeWindow.Switchwindow(3, m_Driver);
 
 		
@@ -143,6 +152,11 @@ public class AgentLevelEmailLog extends BasePage {
 	public void clickRecievedEmail2() throws Exception
 	{
         
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(300));
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(
+		    By.xpath("//*[@id='FillTable']/tbody/tr[2]/td[2]/a")));
+		
 		WebElement elem = getWebElement(By.xpath("//*[@id='FillTable']/tbody/tr[2]/td[2]/a"));
 
 	

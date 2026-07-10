@@ -1,13 +1,11 @@
 package _4996Test;
-
 import org.testng.annotations.Test;
 
 import tests.TestBase;
 import utilities.ExcelData;
 
 public class TC622_UndoPayroll_EmployeeA extends TestBase {
-
-
+	
 	public String sTestCaseID = null;
 	String[] data = null;
 	String Sheet = null;
@@ -137,7 +135,6 @@ public class TC622_UndoPayroll_EmployeeA extends TestBase {
 			verify.verifyTax(data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21]);
 			verify.verifyEmployeeNI(data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29], data[30], data[31], data[32], data[33]);
 			verify.verifyEmployerNI(data[34], data[35], data[36], data[37], data[38], data[39], data[40], data[41], data[42], data[43], data[44], data[45]);
-
 			verify.assertAll();
 	}
 	
@@ -190,8 +187,6 @@ public class TC622_UndoPayroll_EmployeeA extends TestBase {
 		verify.verifyTax(data[72], data[73], data[74], data[75], data[76], data[77], data[78], data[79], data[80], data[81], data[82], data[83]);
 		verify.verifyEmployeeNI(data[84], data[85], data[86], data[87], data[88], data[89], data[90], data[91], data[92], data[93], data[94], data[95]);
 		verify.verifyEmployerNI(data[96], data[97], data[98], data[99], data[100], data[101], data[102], data[103], data[104], data[105], data[106], data[107]);
-
-		
 		
 		verify.assertAll();
 	}

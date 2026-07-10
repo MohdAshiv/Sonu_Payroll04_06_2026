@@ -1,9 +1,13 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -49,7 +53,7 @@ public class Recurring extends BasePage {
 
 	//private By aoeElem=By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_gridDisplayRecords']/tbody/tr[2]/td[15]/div/ul/li[5]/a");
 	 
-	private By aoeElem=By.linkText("Additions / Deductions / AOE");
+	private By aoeElem=By.linkText("Addition / Deductions / AOE");
 
 	 
 	private By saveBtnElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHFooter_btnSave']");
@@ -163,22 +167,25 @@ public class Recurring extends BasePage {
  		 Reporter.log("Select To Date ="+value);
 }
 	
-	public void enterAcountCode(String value)
-	{
-        
-		WebElement elem = getWebElement(accountCode);
+	public void enterAcountCode(String accountCode) throws InterruptedException {
 
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_AcountCode", "Enter_AcountCode failed. Unable to locate object: " + accountCode.toString());
+	    // Click on Account Code dropdown
+	    WebElement dropdown = m_Driver.findElement(
+	            By.xpath("//span[contains(@id,'AdditionAccount-container')]"));
+	    dropdown.click();
 
-			
-        }
+	    // Search textbox inside opened dropdown
+	    WebElement searchBox = m_Driver.findElement(
+	            By.xpath("//span[contains(@class,'select2-container--open')]//input[contains(@class,'select2-search__field')]"));
 
-		elem.sendKeys(value);
-		
-		ExtentReportManager.passStep(m_Driver, "Enter_AcountCode");
-	
-		 Reporter.log("Select the Acount Code ="+value);
+	    searchBox.sendKeys(accountCode);
+
+	    Thread.sleep(1000);
+
+	    // Select matching option
+	    m_Driver.findElement(
+	            By.xpath("//li[contains(@class,'select2-results__option') and contains(text(),'" + accountCode + "')]"))
+	            .click();
 	}
 
 	
@@ -617,22 +624,30 @@ public class Recurring extends BasePage {
 }
 	
 	
-	public void enterAcountCodeDeduction(String value)
-	{
-        
-		WebElement elem = getWebElement(accountCodeDeduction);
-
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterAcountCodeDeduction", "enterAcountCodeDeduction failed. Unable to locate object: " + accountCodeDeduction.toString());
-
-			
-        }
-
-		elem.sendKeys(value);
-		
-		ExtentReportManager.passStep(m_Driver, "enterAcountCodeDeduction");
 	
-		 Reporter.log("Select the Acount Code ="+value);
+	
+	
+	public void enterAcountCodeDeduction(String accountCode) {
+
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(10));
+
+	    // Open dropdown
+	    WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//span[contains(@id,'DeductionAccount-container')]")));
+	    dropdown.click();
+
+	    // Search box
+	    WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
+	            By.xpath("//span[contains(@class,'select2-container--open')]//input")));
+
+	    searchBox.clear();
+	    searchBox.sendKeys(accountCode);
+
+	    // Select option
+	    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//li[contains(@class,'select2-results__option') and contains(normalize-space(),'" + accountCode + "')]")));
+
+	    option.click();
 	}
 	
 	

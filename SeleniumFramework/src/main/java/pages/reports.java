@@ -1,10 +1,16 @@
 package pages;
 
 import pages.BasePage;
+
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -62,7 +68,7 @@ public class reports extends BasePage
 
     private By attachmentEarningElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefReportAttachmentEarning']");
 
-    private By annualPayrollScheduleElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefReportAttachmentEarning']");
+    private By annualPayrollScheduleElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefAnnualPayrollSchedule']");
 
 	public void GoToUrl()
 	{
@@ -128,6 +134,10 @@ public class reports extends BasePage
 	public void Click__DepartmentalAnalyisis_() throws InterruptedException
 	{
         
+		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+		Thread.sleep(2000);
+
+		
 		WebElement elem = getWebElement(DepartmentalElem);
 
 		if (elem == null) {
@@ -138,7 +148,7 @@ public class reports extends BasePage
         }
 
 		elem.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
           	
 
 		ExtentReportManager.passStep(m_Driver, "Click__DepartmentalAnalyisis_");
@@ -149,6 +159,23 @@ public class reports extends BasePage
 	}
 
      
+	public void clickHoursSummary() throws InterruptedException
+	{
+        
+		
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_HrefHoursSummary']"));
+
+	
+		elem.click();
+		Thread.sleep(3000);
+          	
+
+		ExtentReportManager.passStep(m_Driver, "Click__DepartmentalAnalyisis_");
+
+		TestModellerLogger.PassStep(m_Driver, "Click__DepartmentalAnalyisis_");
+		
+		Reporter.log("clickHoursSummary");
+	}
 	/**
  	 * Click P45Forms
      * @name Click P45Forms
@@ -183,32 +210,25 @@ public class reports extends BasePage
     public void Select_SelectP45Form(String SelectP45Form) throws Exception
  	{
  	    
- 		WebElement elem = getWebElement(SelectP45FormElem);
+    	   WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(10));
 
- 		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Select_SelectP45Form", "Select_SelectP45Form failed. Unable to locate object: " + SelectP45FormElem.toString());
+    	    // Open dropdown
+    	    WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+    	            By.xpath("//span[@id='select2-ctl00_ctl00_ParentContent_cPHFilter_ddlForm-container']")));
+    	    dropdown.click();
 
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Select_SelectP45Form", "Select_SelectP45Form failed. Unable to locate object: " + SelectP45FormElem.toString());
-
- 			Assert.fail("Unable to locate object: " + SelectP45FormElem.toString());
-         }
-
- 		Select dropdown = new Select(elem);
-
- 		dropdown.selectByVisibleText(SelectP45Form);
- 		Thread.sleep(2000);
- 		
- 		TakeScreenshot.takeScreenshot(m_Driver, "SelectP45Form");
- 		
- 		m_Driver.switchTo().defaultContent();
- 		
- 		
- 		ExtentReportManager.passStep(m_Driver, "Select_SelectP45Form " + SelectP45Form);
-
- 		TestModellerLogger.PassStep(m_Driver, "Select_SelectP45Form " + SelectP45Form);
+    	    // Enter value
+    	    WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
+    	            By.xpath("//input[@class='select2-search__field']")));
+    	    searchBox.sendKeys(SelectP45Form);
+    	    searchBox.sendKeys(Keys.ENTER);
+    	    
+    	    Thread.sleep(3000);
+    	    
+    	    Reporter.log("Select_SelectP45Form");
  	}
 
-     
+
 	/**
  	 * Click Payslipsclick
 	 * @throws Exception 
@@ -416,7 +436,9 @@ public class reports extends BasePage
      */
 	public void Click_Payroll_Reporting_Period_Summary() throws Exception
 	{
-        
+		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+		Thread.sleep(2000);
+		
 		WebElement elem = getWebElement(Payroll_Reporting_Period_SummaryElem);
 
 		if (elem == null) {
@@ -438,6 +460,25 @@ public class reports extends BasePage
 		Thread.sleep(2000);
 	}
 
+		public void clickPaymentSummaryReport() throws Exception
+		{
+			m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+			Thread.sleep(2000);
+			
+			WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefReportPaymentSummary']"));
+
+			
+
+			elem.click();
+			TakeScreenshot.takeScreenshot(m_Driver, "PayrollReportingPeriod");
+
+			ExtentReportManager.passStep(m_Driver, "Click_Payroll_Reporting_Period_Summary");
+
+			TestModellerLogger.PassStep(m_Driver, "Click_Payroll_Reporting_Period_Summary");
+			
+			Reporter.log("Click_Payroll_Reporting_Period_Summary");
+			Thread.sleep(2000);
+		}
      
 	/**
  	 * Click Payroll Summary
@@ -597,6 +638,9 @@ public class reports extends BasePage
 	
 	public void clickAnnualPayrollSchedule() throws Exception
 	{
+		
+		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+		Thread.sleep(2000);
 		WebElement elem = getWebElement(annualPayrollScheduleElem);
 
 		if (elem == null) {

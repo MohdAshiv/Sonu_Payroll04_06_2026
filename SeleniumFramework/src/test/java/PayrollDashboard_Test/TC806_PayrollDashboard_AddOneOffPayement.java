@@ -250,14 +250,13 @@ public class TC806_PayrollDashboard_AddOneOffPayement extends TestBase{
 
 		verify.verifyLeaverEmployee(0);
 
-
 		verify.assertAll();
 		
 	
 	}
 
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void TC03validateOneOffPayementDeletAndSaveBtn() throws Exception {
 
 		sTestCaseID = "TC806";

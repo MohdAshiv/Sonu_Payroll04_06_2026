@@ -1,8 +1,13 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -23,7 +28,7 @@ public class OneOffPayment extends BasePage{
 	
 	
 
-	private By oneOffPaymentElem = By.xpath("//a[@id='ctl00_ctl00_ParentContent_cPHFilter_btnOneOff']");
+	private By oneOffPaymentElem = By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnOneOff']");
 
 	private By OneOffPaymentCloseBtn = By.xpath("(//button[@id='PopUpClose1'])[2]");
 
@@ -39,7 +44,18 @@ public class OneOffPayment extends BasePage{
      * @name Click click_OneOffPayment
      */
    public void click_OneOffPayment() throws InterruptedException {
-		
+
+	   
+	   WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+       WebElement quickAction = wait.until(
+       	    ExpectedConditions.elementToBeClickable(
+       	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+       	    )
+       	);
+
+       	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+       	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
 		elem = getWebElement(oneOffPaymentElem);
 		
 		if (elem == null) {

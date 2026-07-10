@@ -545,6 +545,22 @@ System.err.println(statusCode);
 
 	}
 	
+	public void Click_ClickAgent1() throws InterruptedException
+	{
+		WebElement elem = getWebElement(By.xpath("//*[@id='tblReportData']/tbody/tr[2]/td[1]/span"));
+		
+		elem.click();
+
+		Thread.sleep(3000);
+		
+	ChangeWindow.tabswitch(m_Driver);
+		
+		Thread.sleep(1000);
+		
+  		Reporter.log("Click_ClickAgent");
+
+	}
+	
 	/**
 	 * Click click on AgentSetting
  * @name AgntSettings

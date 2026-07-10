@@ -2,9 +2,11 @@ package _1566AdditionDeductionPage;
 
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -750,8 +752,8 @@ public class ProcessPay extends BasePage {
     
     public void enterUnit(String data) {
     	
-    	WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_rptrUnit_ctl00_txtUnit10']"));
-    	
+    	WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_RptrUnitDayType_ctl00_txtUnit10']"));
+    	elem.clear();
     	
     	elem.sendKeys(data);
     	
@@ -886,8 +888,9 @@ public class ProcessPay extends BasePage {
     }
     
     
-    public void clickDeductionTab()
+    public void clickDeductionTab() throws Exception
     {
+		Thread.sleep(5000);
 
 		WebElement elem = getWebElement(deductionElem);
 
@@ -897,45 +900,56 @@ public class ProcessPay extends BasePage {
 			Assert.fail("Unable to locate object: " + deductionElem.toString());
         }
 
+		//Thread.sleep(5000);
 		elem.click();
 		ExtentReportManager.passStep(m_Driver, "clickDeductionTab");
 		Reporter.log("Click DeductionTab");
     }
     
     
-    public void enterAccountCode(String value)
-    {
+    public void enterAccountCodeDeduction(String value) {
+        WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+        
+        // Click Select2 container to open dropdown
+        WebElement select2Span = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//*[@id='select2-S-ctl00_ctl00_ParentContent_cPH_tbContainer_tpDeduction_rptrDeduction_ctl00_ltDeductionAccount-container']")));
+        select2Span.click();
 
-		WebElement elem = getWebElement(selectCodeElem);
+        // Type in search input that appears after dropdown opens
+        WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//input[@type='search']")));
+        searchBox.sendKeys(value);
 
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterAccountCode", "enterAccountCode failed. Unable to locate object: " + selectCodeElem.toString());
+        // Click matching option from dropdown list
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[contains(@class,'select2-results__option') and contains(text(),'" + value + "')]")));
+        option.click();
 
-			Assert.fail("Unable to locate object: " + selectCodeElem.toString());
-        }
-
-		elem.sendKeys(value);
-		ExtentReportManager.passStep(m_Driver, "enterAccountCode");
-		Reporter.log("Select AccountCode");
+        ExtentReportManager.passStep(m_Driver, "enterAccountCode");
+        Reporter.log("Select AccountCode: " + value, true);
     }
     
     
-    
-    
-    public void enterAccountCodeDeduction(String value)
-    {
+    public void enterAccountCode(String value) {
+        WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+        
+        // Click Select2 container to open dropdown
+        WebElement select2Span = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//*[@id=\"select2-S-ctl00_ctl00_ParentContent_cPH_tbContainer_tpAdditions_rptrAllowance_ctl00_ltAdditionAccount-container\"]")));
+        select2Span.click();
 
-		WebElement elem = getWebElement(selectCodedeductionElem);
+        // Type in search input that appears after dropdown opens
+        WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//input[@type='search']")));
+        searchBox.sendKeys(value);
 
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterAccountCodeDeduction", "enterAccountCode failed. Unable to locate object: " + selectCodedeductionElem.toString());
+        // Click matching option from dropdown list
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[contains(@class,'select2-results__option') and contains(text(),'" + value + "')]")));
+        option.click();
 
-			Assert.fail("Unable to locate object: " + selectCodedeductionElem.toString());
-        }
-
-		elem.sendKeys(value);
-		ExtentReportManager.passStep(m_Driver, "enterAccountCodeDeduction");
-		Reporter.log("Select AccountCode");
+        ExtentReportManager.passStep(m_Driver, "enterAccountCode");
+        Reporter.log("Select AccountCode: " + value, true);
     }
     
     

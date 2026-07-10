@@ -50,7 +50,7 @@ public class TC353_EmailGDPR_RunPayroll  extends TestBase{
 	
         pages.PayrollRun payroll= new  pages.PayrollRun(driver);
 	    
-        payroll.UndoPayroll();
+       payroll.UndoPayroll();
 	    payroll.runPayroll();
 	    payroll.selectType(data[5]);
 	    payroll.runPayroll2();

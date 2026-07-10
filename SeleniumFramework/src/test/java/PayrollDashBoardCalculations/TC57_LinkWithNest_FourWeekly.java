@@ -1,20 +1,18 @@
 package PayrollDashBoardCalculations;
-
 import org.testng.annotations.Test;
-
 import tests.TestBase;
 import utilities.ExcelData;
 
-public class TC17_NetPayWeekly extends TestBase {
+public class TC57_LinkWithNest_FourWeekly extends TestBase {
 	
 	public String sTestCaseID = null;
 	String[] data = null;
 	String Sheet = null;
 	
 	@Test(priority=1)
-	public void TC01validateNetPay() throws Exception {
+	public void TC01validateQalifyingRAS() throws Exception {
 
-		sTestCaseID = "TC017";
+		sTestCaseID = "TC057";
 		Sheet = "PayrollDashboardCalculations";	
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -89,7 +87,7 @@ public class TC17_NetPayWeekly extends TestBase {
 		
 		freq.Click_ClickAdditionalFrequecy();
 		freq.Select_F2(data[12]);
-		freq.Enter_WeeklyPayDate(data[69]);
+		freq.Enter_FourWeeklyPayDate(data[69]);
 		company.Click_ClickSave();
 	
 		freq.clickDeletBtn();
@@ -110,17 +108,10 @@ public class TC17_NetPayWeekly extends TestBase {
 		pension.clickPensonDetailsSave();
 		payroll.scrollClickPayrollDashboard();
 		pension.clickPensionDashBoard();
-		pension.addSchemeManually();
-		pension.enterPensionSchemeName(data[96]);
-		pension.selectPensionProvider(data[96]);
-		pension.selectCalculationBasis(data[97]);
-		pension.selectCalculationMethod(data[98]);
-		pension.eeContribution(data[99]);
-		pension.enterErContribution(data[100]);
-		pension.enterSubgroupName();
-		pension.enterGroupId();
-		pension.enterSubGroupId();
-		pension.clickSaveBtn();
+		pension.addSchemeLinkWithNest();
+		pension.enterUserNamePassAndAuthorize("nestapi","Srb@8955");
+		pension.clickViewScheme();
+		pension.getPensionScheme();
 		payroll.Click_PayrollDashboard();
 		
 		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
@@ -154,9 +145,113 @@ public class TC17_NetPayWeekly extends TestBase {
 		payroll.Click_PayrollDashboard();
 
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
-		verify.verifyNetPay();
-		payroll.runPayroll();
-		verify.verifyNetPayRunPayroll();
+		verify.verifyPension("FOUR_WEEKLY", "QUALIFYING","RAS");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "QUALIFYING","RAS");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Custom");
+		pension.selectCalculationMethod1("Relief at Source");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+	
+		verify.verifyPension("FOUR_WEEKLY", "CUSTOM","RAS");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "CUSTOM","RAS");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Qualifying Earnings");
+		pension.selectCalculationMethod1("Net pay arrangement");
+	
+		pension.clickSaveBtn1();
+		payroll.Click_PayrollDashboard();		
+		
+		verify.verifyPension("FOUR_WEEKLY", "QUALIFYING","NET_PAY");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "QUALIFYING","NET_PAY");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Custom");
+		pension.selectCalculationMethod1("Net pay arrangement");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		
+		verify.verifyPension("FOUR_WEEKLY", "CUSTOM","NET_PAY");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "CUSTOM","NET_PAY");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Qualifying Earnings");
+		pension.selectCalculationMethod1("Salary sacrifice");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		
+		verify.verifyPension("FOUR_WEEKLY", "QUALIFYING","SALARY_SACRIFICE");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "QUALIFYING","SALARY_SACRIFICE");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Custom");
+		pension.selectCalculationMethod1("Salary sacrifice");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		verify.verifyPension("FOUR_WEEKLY", "CUSTOM","SALARY_SACRIFICE");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "CUSTOM","SALARY_SACRIFICE");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Qualifying Earnings");
+		pension.selectCalculationMethod1("No tax relief");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		
+		verify.verifyPension("FOUR_WEEKLY", "QUALIFYING","NO_TAX_RELIEF");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "QUALIFYING","NO_TAX_RELIEF");// verify
+
+		pension.clickPensionDashBoard();
+		pension.clickViewScheme();
+		pension.clickEditScheme();
+		
+		pension.selectCalculationBasis1("Custom");
+		pension.selectCalculationMethod1("No tax relief");
+	
+		pension.clickSaveBtn1();
+
+		payroll.Click_PayrollDashboard();
+		verify.verifyPension("FOUR_WEEKLY", "CUSTOM","NO_TAX_RELIEF");// verify
+        payroll.runPayroll();
+		verify.verifyPensionRunPayroll("FOUR_WEEKLY", "CUSTOM","NO_TAX_RELIEF");// verify
+
 	}
+	
 
 }
