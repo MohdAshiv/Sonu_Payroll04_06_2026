@@ -488,6 +488,21 @@ public class EditCompany extends BasePage {
 
 	}
 	
+
+	public void enterRegistrationDate(String Data) throws InterruptedException
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_txtPayeRegDate']"));
+
+		elem.sendKeys(Data);
+		
+		Reporter.log("enterRegistrationDate");
+          	
+        Thread.sleep(2000);
+		ExtentReportManager.passStep(m_Driver, "enterRegistrationDate");
+
+	}
+	
 	
 	public void enterHolidayPayRate(String Data) throws InterruptedException
 	{

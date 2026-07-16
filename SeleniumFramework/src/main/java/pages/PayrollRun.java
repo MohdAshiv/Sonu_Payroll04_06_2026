@@ -486,6 +486,48 @@ public void selectRequiredEmployeesAndUntickRest(int employeeCount) {
 		}
 	}
 	
+	
+	public void UndoPayrollTillLast() throws Exception {
+	    ClosePopup.ValidateAndPopUp(m_Driver);
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	    while (true) {
+
+	        ClosePopup.ValidateAndPopUp(m_Driver);
+
+	        WebElement quickAction = wait.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")));
+
+	        ((JavascriptExecutor) m_Driver).executeScript("arguments[0].click();", quickAction);
+
+	        List<WebElement> list = m_Driver.findElements(
+	                By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnUndoPayroll']"));
+
+	        // Exit loop when Undo button is not present
+	        if (list.isEmpty()) {
+	            System.out.println("Undo Button not present. Exiting loop.");
+	            break;
+	        }
+
+	        WebElement elem = list.get(0);
+	        ((JavascriptExecutor) m_Driver).executeScript("arguments[0].click();", elem);
+
+	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
+	                By.id("PopUndoPayrollFrame")));
+
+	        wait.until(ExpectedConditions.elementToBeClickable(
+	                By.id("ctl00_ctl00_ParentContent_cphFooter_btnUndo"))).click();
+
+	        wait.until(ExpectedConditions.alertIsPresent()).accept();
+
+	        m_Driver.switchTo().defaultContent();
+
+	        m_Driver.navigate().refresh();
+
+	        Thread.sleep(5000);
+	    }
+	}
+	
 	public void runPayroll2() throws InterruptedException
 	{
         

@@ -14,7 +14,7 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 	@Test(priority=0)
 	public void TC00createClientForPassword() throws Exception {
 
-	//*** Please add AOE, Hrs summary and p11D Manually****//
+	//*** Please add AOE, Hrs summary and p11D, P45mManually**** //
 		sTestCaseID = "TC001";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
@@ -83,7 +83,7 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 		Thread.sleep(15000);
 			
 		company.Click_clickPayrollDetails();
-		
+		company.enterRegistrationDate(data[108]);
 		company.enterPayeNumber(data[90]);
 		company.enterRefrenceNumber(data[91]);
 		company.accountOfficeReffrence(data[92]);
@@ -134,6 +134,7 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 		employee.enterJoiningDate(data[108]);
 
 		employee.enterNICategory(data[6]);
+		employee.enterNationalInsuranceNumber("JG536834C");
 		employee.enterTaxCode(data[7]);
 		employee.clickSaveBtn();
 
@@ -1363,10 +1364,9 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 		OpenClient.Click_ClickClient();
 
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
-//		payroll.UndoPayroll();
-//		payroll.Run_Payroll();
-//		
-//		for(int i=1;i<=12;i++) {payroll.Run_Payroll();Thread.sleep(3000);}
+		payroll.UndoPayroll();
+		
+		for(int i=1;i<=12;i++) {payroll.Run_Payroll();Thread.sleep(3000);}
 		pages.reports report= new   pages.reports(driver);
 	    report.Click__Reports_();
 		report.Click_P45Forms();
@@ -1384,7 +1384,7 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyPDFPasswordProtection("P60",data[25]);
+	   verify.verifyPDFPasswordProtection("P60",data[26]);
 	}
 	
 	
@@ -1858,6 +1858,15 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 		OpenClient.Enter_EnterClientName(data[4]);
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
+//		
+//	pages.FilingManagement filling = new pages.FilingManagement(driver);
+//		
+//		filling.Click_gotoFilingManagement();
+//		filling.selectStatus(data[23]);
+//		filling.clickCheckBox();
+//		filling.enterNotes();
+//		filling.clickNottoSubmit();
+			
 
 	    pages.EmployerView employer= new pages.EmployerView(driver);
 	    employer.Click_EmployerView();
@@ -1878,7 +1887,7 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-		verify.verifyPDFPasswordProtection("P60",data[25]); // here with employee on buisness  with employer
+		verify.verifyPDFPasswordProtection("P60",data[26]); // here with employee on buisness  with employer
 		 
 	}
 	

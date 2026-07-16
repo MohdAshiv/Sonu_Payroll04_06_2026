@@ -157,7 +157,7 @@ public class EmailPage extends BasePage {
 			elem.click();
 			
 		Thread.sleep(4000);
-		Reporter.log("tickAllEmployeP11D");
+		Reporter.log("tickAllEmployeP60");
 		
 	}
 		

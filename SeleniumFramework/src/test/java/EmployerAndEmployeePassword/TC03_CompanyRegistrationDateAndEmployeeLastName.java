@@ -1,23 +1,18 @@
 package EmployerAndEmployeePassword;
-
 import org.testng.annotations.Test;
-
 import tests.TestBase;
 import utilities.ExcelData;
 
-public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
-	
+public class TC03_CompanyRegistrationDateAndEmployeeLastName extends TestBase{
+
 	public String sTestCaseID = null;
 	String[] data = null;
 	String Sheet = null;
 
-	
-	// Please select Zip manally
-
 	@Test(priority=1)
 	public void TC01_validateToMainFromRunPayroll() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -40,9 +35,35 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
+		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+		payroll.UndoPayrollTillLast();
+		    
 		
-	
-	    pages.PayrollRun payroll= new pages.PayrollRun (driver);
+		pages.EditCompany company= new pages.EditCompany(driver);
+		payroll.Click_PayrollDashboard();
+
+	    company.Click_gotoEditCompany();
+	    company.Click_clickPayrollDetails();
+	    company.Click_clickPayrollSettings();
+	    company.clickChangePasswordEmployer();																																														
+	    company.selectTag("Company Registration Date");
+		
+	    company.clickCreateBtn();//save btn
+	    
+	    company.clickChangePasswordEmployee();	
+	    company.selectTagEmployee("Employee's Last name");
+	    company.clickCreateBtnEmployee();//save btn
+
+	    
+	    company.clickChangePasswordEmployer();																																														
+	    
+	    PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
+	    
+	    verify.verifyLastActivityLogField("Company Registration Date");
+	    company.clickChangePasswordEmployee();	
+	    verify.verifyLastActivityLogField("Employee's Last name");
+
+	    payroll.Click_PayrollDashboard();
 	    payroll.UndoPayroll();
 	    
 	    payroll.runPayroll();
@@ -56,10 +77,10 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	   emaillog.clickEmailDropDown();
 	   emaillog.clickEmailLog();
 	   emaillog.clickRecievedEmail();
-		  PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-
-     verify.verifyZipPasswordProtection("Payslips",data[25]);
-
+   
+     verify.verifyPDFPasswordProtection("Employer's Summary",data[25]);
+     verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
+     verify.verifyPDFPasswordProtection("Payslips_",data[25]);
 
 	}
 
@@ -68,7 +89,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=2)
 	public void TC02_validateToEmployeesRunPayroll() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -107,7 +128,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	   emaillog.clickRecievedEmail();
 	  PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-     verify.verifyZipPasswordProtection("Employee Payslip",data[26]);
+     verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 
 	}
 	
@@ -116,7 +137,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=3)
 	public void TC03_validateToBothRunPayroll() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -160,13 +181,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    
 	 PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	   verify.verifyZipPasswordProtection("Payslips",data[25]);
-	  
+	   verify.verifyPDFPasswordProtection("Employer's Summary",data[25]);
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
+	   verify.verifyPDFPasswordProtection("Payslips_",data[25]);
 	   
 	   emaillog.clickEmailDropDown1();
 	   emaillog.clickEmailLog();
 	   emaillog.clickRecievedEmail2();
-	   verify.verifyZipPasswordProtection("Employee Payslip","testing");
+	   verify.verifyPDFPasswordProtection("Employee Payslip","testing");
 
 	}
 	
@@ -175,7 +197,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=4)
 	public void TC04_payslipReport_Eployer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -221,8 +243,9 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	 PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-     verify.verifyZipPasswordProtection("Payslips",data[25]);
 
+	   verify.verifyPDFPasswordProtection("Employer's Summary",data[25]);
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 	 
 	}
 	
@@ -231,7 +254,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=5)
 	public void TC05_payslipReport_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -278,7 +301,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	 PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-     verify.verifyZipPasswordProtection("Employee",data[26]);
+     verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 	 
 	}
 	
@@ -286,7 +309,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=6)
 	public void TC06_payslipReport_Both() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -336,12 +359,13 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	 PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-       verify.verifyZipPasswordProtection("Payslips",data[25]);
+	   verify.verifyPDFPasswordProtection("Employer's Summary",data[25]);
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 	   
 	   emaillog.clickEmailDropDown1();
 	   emaillog.clickEmailLog();
 	   emaillog.clickRecievedEmail2();
-	   verify.verifyZipPasswordProtection("Employee",data[26]);
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 	 
 	}
 	
@@ -349,7 +373,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=7)
 	public void TC07_pensionSummary_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -395,7 +419,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	 PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	   verify.verifyZipPasswordProtection("PensionSummaryReport",data[25]);
+	   verify.verifyPDFPasswordProtection("PensionSummaryReport",data[25]);
 	 
 	}
 	
@@ -405,7 +429,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=8)
 	public void TC08_pensionSummary_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -449,7 +473,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 	    
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("PensionSummaryReport",data[26]);
+	   verify.verifyPDFPasswordProtection("PensionSummaryReport",data[26]);
 	 
 	}
 		
@@ -457,7 +481,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=9)
 	public void TC09_departmentalAnalysisReport() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -500,7 +524,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 	    
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("DepartmentalAnalysisReport",data[25]);
+	   verify.verifyPDFPasswordProtection("DepartmentalAnalysisReport",data[25]);
 	 
 	}
 
@@ -508,7 +532,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=10)
 	public void TC10_hoursSummaryReport() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -551,13 +575,13 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 	    
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("Hours Summary",data[25]);
+	   verify.verifyPDFPasswordProtection("Hours Summary",data[25]);
 	}
 	
 	@Test(priority=11)
 	public void TC11_attachmentEarningReport() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -582,7 +606,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
 		payroll.UndoPayroll();
-
+		payroll.Run_Payroll();
 		pages.reports report= new   pages.reports(driver);
 	    report.Click__Reports_();
 		
@@ -592,9 +616,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	    email.clickAttachmentEarningEmailBtn();
 	    email.clickAttachmentEarningSendBtn();
-	    payroll.Click_PayrollDashboard();
-		payroll.Run_Payroll();
-
+	
 	   pages.AgentLevelEmailLog emaillog = new pages.AgentLevelEmailLog(driver);
 			
 	    emaillog.clickEmailDropDown();
@@ -602,14 +624,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 	    
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("AttachmentEarningReport",data[25]);
+	   verify.verifyPDFPasswordProtection("AttachmentEarningReport",data[25]);
 	}
 	
 	
 	@Test(priority=12)
 	public void TC12_payrollReportingPeriodSummaryReport() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -652,14 +674,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 	    
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("PayrollReportingPeriodSummary",data[25]);
+	   verify.verifyPDFPasswordProtection("PayrollReportingPeriodSummary",data[25]);
 	}
 	
 	
 	@Test(priority=13)
 	public void TC13_paymentSummaryReport() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -702,7 +724,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 	    
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("PaymentSummaryReport",data[25]);
+	   verify.verifyPDFPasswordProtection("PaymentSummaryReport",data[25]);
 	}
 	
 	
@@ -710,7 +732,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=14)
 	public void TC14_individualEmployeePaySchedule_Eployer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -757,7 +779,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	 PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	   verify.verifyZipPasswordProtection("PaySlips",data[25]);
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[25]);
 	 
 	}
 	
@@ -765,7 +787,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=15)
 	public void TC15_individualEmployeePaySchedule_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -811,14 +833,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	  PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	   verify.verifyZipPasswordProtection("PaySlips",data[26]);
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 	 
 	}
 	
 	@Test(priority=16)
 	public void TC16_annualPayrollSchedule() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -862,8 +884,8 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	   verify.verifyZipPasswordProtection("Payroll-HMRC Payments",data[25]);
-	   verify.verifyZipPasswordProtection("Testing",data[25]);
+	   verify.verifyPDFPasswordProtection("Payroll-HMRC Payments",data[25]);
+	   verify.verifyPDFPasswordProtection("Testing",data[25]);
 
 	}
 	
@@ -871,7 +893,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=17)
 	public void TC17_taxPaymentReeport() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -914,7 +936,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	   verify.verifyZipPasswordProtection("TaxPaymentReconciliationReport",data[25]);
+	   verify.verifyPDFPasswordProtection("TaxPaymentReconciliationReport",data[25]);
 
 	}
 	
@@ -924,7 +946,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=18)
 	public void TC18_p11DReport_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -967,15 +989,15 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection(".zip",data[25]);
-    //   verify.verifyPDFPasswordProtection("P11D(b)",data[25]);
+	   verify.verifyPDFPasswordProtection("P11D",data[25]);
+	   verify.verifyPDFPasswordProtection("P11D(b)",data[25]);
 	}
 	
 	
 	@Test(priority=19)
 	public void TC19_p11DReport_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1018,7 +1040,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection(".zip",data[26]);
+	   verify.verifyPDFPasswordProtection("P11D",data[26]);
 
 	}
 	
@@ -1026,7 +1048,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=20)
 	public void TC20_assessEmployees_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1068,7 +1090,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("Letters",data[26]);
+	   verify.verifyPDFPasswordProtection("AUTOENROLLED",data[26]);
 
 	}
 	
@@ -1076,7 +1098,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=21)
 	public void TC21_assessEmployees_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1119,7 +1141,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("Letters",data[25]);
+	   verify.verifyPDFPasswordProtection("AUTOENROLLED",data[25]);
 
 	}
 	
@@ -1127,7 +1149,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=22)
 	public void TC22_sendForApprovalRunPayroll() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1165,8 +1187,8 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	   emaillog.clickEmailLog();
 	   emaillog.clickRecievedEmail();
    
-     verify.verifyZipPasswordProtection("Payslip",data[25]);
-    // verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
+     verify.verifyPDFPasswordProtection("Employer's Summary",data[25]);
+     verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 
 	}
 	
@@ -1174,7 +1196,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=23)
 	public void TC23_p60Report_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1198,8 +1220,9 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		OpenClient.Click_ClickClient();
 
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
-		payroll.Run_Payroll();
-	
+		payroll.UndoPayroll();
+		
+		for(int i=1;i<=12;i++) {payroll.Run_Payroll();Thread.sleep(3000);}
 		pages.reports report= new   pages.reports(driver);
 	    report.Click__Reports_();
 		report.Click_P45Forms();
@@ -1217,7 +1240,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("P60",data[25]);
+	   verify.verifyPDFPasswordProtection("P60",data[26]);
 	}
 	
 	
@@ -1225,7 +1248,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=24)
 	public void TC24_p60Report_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1266,14 +1289,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("P60",data[26]);
+	   verify.verifyPDFPasswordProtection("P60",data[26]);
 	}
 	
 	
 	@Test(priority=25)
 	public void TC25_p45Report_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1296,7 +1319,32 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 
+
+		pages.EditCompany company= new pages.EditCompany(driver);
+
+	    company.Click_gotoEditCompany();
+	    company.Click_clickPayrollDetails();
+	    company.Click_clickPayrollSettings();
+	    company.clickChangePasswordEmployer();																																														
+	    company.selectTag("Company Registration Date");
+		
+	    company.clickCreateBtn();//save btn
+	    
+	    company.clickChangePasswordEmployee();	
+	    company.selectTagEmployee("Employee's Last name");
+	    company.clickCreateBtnEmployee();//save btn
+
+	    
+	    company.clickChangePasswordEmployer();																																														
+	    
+	    PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
+	    
+	    verify.verifyLastActivityLogField("Company Registration Date");
+	    company.clickChangePasswordEmployee();	
+	    verify.verifyLastActivityLogField("Employee's Last name");
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
+
+	    payroll.Click_PayrollDashboard();
 		payroll.UndoPayroll();
 		payroll.Run_Payroll();
 		
@@ -1316,15 +1364,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickEmailLog();
 	    emaillog.clickRecievedEmail();
 
-	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("P45",data[26]);
+	   verify.verifyPDFPasswordProtection("P45",data[26]);
 	}
 	
 
 	@Test(priority=26)
 	public void TC26_p45Report_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1368,14 +1415,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	    emaillog.clickRecievedEmail();
 
 	   PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("P45",data[26]);
+	   verify.verifyPDFPasswordProtection("P45",data[26]);
 	}
 	
 	
 	@Test(priority=27)
 	public void TC27_payslipEmployerView_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1424,15 +1471,15 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-		verify.verifyZipPasswordProtection("Payslips",data[25]);
-	//	verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
+		verify.verifyPDFPasswordProtection("Employer's Summary",data[25]);
+		verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 		 
 	}
 	
 	@Test(priority=28)
 	public void TC28_payslipEmployerView_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1471,7 +1518,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	     verify.verifyZipPasswordProtection("Employee",data[26]);
+	     verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 		 
 	}
 	
@@ -1479,7 +1526,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=29)
 	public void TC29_hoursSummaryEmployerView() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1518,14 +1565,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
 
-	    verify.verifyZipPasswordProtection("Hours Summary",data[25]);
+	    verify.verifyPDFPasswordProtection("Hours Summary",data[25]);
 		 
 	}
 	
 	@Test(priority=30)
 	public void TC30_taxPaymentmployerView() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1563,7 +1610,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	  verify.verifyZipPasswordProtection("TaxPaymentReconciliationReport",data[25]);
+	  verify.verifyPDFPasswordProtection("TaxPaymentReconciliationReport",data[25]);
 		 
 	}
 	
@@ -1571,7 +1618,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=31)
 	public void TC31_iEPSEmployerView_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1612,7 +1659,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("PaySlips",data[25]); // here with employee on buisness  with employer
+	   verify.verifyPDFPasswordProtection("Employee Payslip",data[25]); // here with employee on buisness  with employer
 		 
 	}
 	
@@ -1621,7 +1668,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=32)
 	public void TC32_iEPSEmployerView_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1662,14 +1709,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-		verify.verifyZipPasswordProtection("PaySlips",data[26]);
+		verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 		 
 	}
 	
 	@Test(priority=33)
 	public void TC33_P60EmployerView_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1691,6 +1738,15 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		OpenClient.Enter_EnterClientName(data[4]);
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
+//		
+//	pages.FilingManagement filling = new pages.FilingManagement(driver);
+//		
+//		filling.Click_gotoFilingManagement();
+//		filling.selectStatus(data[23]);
+//		filling.clickCheckBox();
+//		filling.enterNotes();
+//		filling.clickNottoSubmit();
+			
 
 	    pages.EmployerView employer= new pages.EmployerView(driver);
 	    employer.Click_EmployerView();
@@ -1711,7 +1767,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-		verify.verifyZipPasswordProtection("P60",data[25]); // here with employee on buisness  with employer
+		verify.verifyPDFPasswordProtection("P60",data[26]); // here with employee on buisness  with employer
 		 
 	}
 	
@@ -1720,7 +1776,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=34)
 	public void TC34_P60EmployerView_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1762,7 +1818,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-		verify.verifyZipPasswordProtection("P60",data[26]);
+		verify.verifyPDFPasswordProtection("P60",data[26]);
 		 
 	}
 	
@@ -1771,7 +1827,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 	@Test(priority=35)
 	public void TC35_P11DEmployerView_Employer() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1813,15 +1869,15 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	    verify.verifyZipPasswordProtection(".zip",data[25]);  // here with employee on buisness  with employer
-	//	verify.verifyPDFPasswordProtection("P11D(b)",data[25]);		 
+	    verify.verifyPDFPasswordProtection("P11D",data[25]);  // here with employee on buisness  with employer
+		verify.verifyPDFPasswordProtection("P11D(b)",data[25]);		 
 	}
 
 	
 	@Test(priority=36)
 	public void TC36_P11DEmployerView_Employee() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1863,14 +1919,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	 verify.verifyZipPasswordProtection(".zip",data[26]);
+	 verify.verifyPDFPasswordProtection("P11D",data[26]);
 	}
 	
 	
 	@Test(priority=37)
 	public void TC37_iEPSEmployerView_EmployeeDashboard() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1911,14 +1967,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-		verify.verifyZipPasswordProtection("PaySlips",data[26]);
+		verify.verifyPDFPasswordProtection("Employee Payslip",data[26]);
 		 
 	}	
 
 	@Test(priority=38)
 	public void TC38_P60EmployerView_EmployeeDashboard() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -1959,14 +2015,14 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		  emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-		verify.verifyZipPasswordProtection("P60",data[26]);  
+		verify.verifyPDFPasswordProtection("P60",data[26]);  
 	}
 	
 
 	@Test(priority=39)
 	public void TC39_P11DEmployerView_EmployeeDashboard() throws Exception {
 
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -2009,13 +2065,13 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	    verify.verifyZipPasswordProtection(".zip",data[26]);
+	    verify.verifyPDFPasswordProtection("P11D",data[26]);
 	}
 	
 
 	@Test(priority=40)
 	public void TC40_P45EmployerView_Employer() throws Exception {
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -2064,7 +2120,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	  verify.verifyZipPasswordProtection("P45",data[26]);  // open with employer pass
+	  verify.verifyPDFPasswordProtection("P45",data[26]);
 
 	}
 	
@@ -2073,7 +2129,7 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 
 	@Test(priority=41)
 	public void TC41_P45EmployerView_Employee() throws Exception {
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -2115,13 +2171,13 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("P45",data[26]);
+	   verify.verifyPDFPasswordProtection("P45",data[26]);
 
 	}
 	
 	@Test(priority=42)
 	public void TC42_P45EmployerView_EmployeeDashboard() throws Exception {
-		sTestCaseID = "TC002";
+		sTestCaseID = "TC003";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
 
@@ -2161,7 +2217,8 @@ public class TC02_ZipCompanyUTRAndEmployeeFirstName extends TestBase {
 		emaillog.clickRecievedEmail();
 		utilities.ChangeWindow.tabswitch(driver);
 		PasswordPage.VerifyPage verify= new PasswordPage.VerifyPage (driver);
-	   verify.verifyZipPasswordProtection("P45",data[26]);
+	   verify.verifyPDFPasswordProtection("P45",data[26]);
 
 	}
+
 }
