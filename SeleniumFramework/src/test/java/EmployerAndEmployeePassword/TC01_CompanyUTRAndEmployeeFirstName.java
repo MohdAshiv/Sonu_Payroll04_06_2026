@@ -11,10 +11,10 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 	String[] data = null;
 	String Sheet = null;
 
-	@Test(priority=0)
+//	@Test(priority=0)
 	public void TC00createClientForPassword() throws Exception {
 
-	//*** Please add AOE, Hrs summary and p11D, P45mManually**** //
+	//*** Please addDirector, AOE, Hrs summary and p11D, P45mManually**** //
 		sTestCaseID = "TC001";
 		Sheet = "Password";
 		data = ExcelData.toReadExcelData(sTestCaseID, Sheet);
@@ -187,13 +187,17 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 	    company.Click_gotoEditCompany();
 	    company.Click_clickPayrollDetails();
 	    company.Click_clickPayrollSettings();
-	    company.clickEnabledPassProtectionEmployer();
+	    //company.clickEnabledPassProtectionEmployer();
+	    company.clickChangePasswordEmployer();																																														
+
 	    company.selectTag("Company UTR Number");
 		
 	    company.clickCreateBtn();//save btn
 	    
 	    
-	    company.clickEnabledPassProtectionEmployee();
+	   // company.clickEnabledPassProtectionEmployee();
+	    company.clickChangePasswordEmployee();	
+
 	    company.selectTagEmployee("Employee's First name");
 	    company.clickCreateBtnEmployee();//save btn
 
@@ -1567,7 +1571,7 @@ public class TC01_CompanyUTRAndEmployeeFirstName  extends TestBase{
 
 		pages.FilingManagement filling = new pages.FilingManagement(driver);
 		
-//		filling.Click_gotoFilingManagement();
+		filling.Click_gotoFilingManagement();
 //		
 //		filling.selectStatus(data[23]);
 //		filling.clickCheckBox();

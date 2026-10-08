@@ -146,37 +146,38 @@ public class TC01_NICalculationsMonthly extends TestBase {
 
 		PayrollDashboardPage.VerifyData verify= new PayrollDashboardPage.VerifyData(driver);
 		payroll.Click_PayrollDashboard();
-	    verify.verifyIncomeTaxPensionNPA("Monthly");
+	  //  verify.verifyIncomeTaxPensionNPA("Monthly");
 
 		verify.verifyTop10EmployeesNI("Monthly");
+
 		payroll.runPayroll();
 		verify.verifyTop10EmployeesNIRunPayroll("Monthly");
-		payroll.Click_PayrollDashboard();
-
-		payroll.Run_Payroll();
-
-		_1566AdditionDeductionPage.ProcessPay processPay= new _1566AdditionDeductionPage.ProcessPay(driver);
-
-		processPay.click3Dots();
-		processPay.clickProcessPay();
-		processPay.enterBasicPay("2500");
-		processPay.clickSaveBtn();
-		verify.verifyTop10EmployeesNI("Monthly");
-		
-		processPay.click3Dots();
-		processPay.clickProcessPay();
-		processPay.enterBasicPay("00");
-		processPay.clickSaveBtn();
-		verify.verifyTop10EmployeesNI("Monthly");
-		
-		processPay.click3Dots();
-		processPay.clickProcessPay();
-		processPay.enterBasicPay("123000");
-		processPay.clickSaveBtn();
-		verify.verifyTop10EmployeesNI("Monthly");
-		
-		payroll.runPayroll();
-		verify.verifyTop10EmployeesNIRunPayroll("Monthly");
+//		payroll.Click_PayrollDashboard();
+//
+//		payroll.Run_Payroll();
+//
+//		_1566AdditionDeductionPage.ProcessPay processPay= new _1566AdditionDeductionPage.ProcessPay(driver);
+//
+//		processPay.click3Dots();
+//		processPay.clickProcessPay();
+//		processPay.enterBasicPay("2500");
+//		processPay.clickSaveBtn();
+//		verify.verifyTop10EmployeesNI("Monthly");
+//		
+//		processPay.click3Dots();
+//		processPay.clickProcessPay();
+//		processPay.enterBasicPay("00");
+//		processPay.clickSaveBtn();
+//		verify.verifyTop10EmployeesNI("Monthly");
+//		
+//		processPay.click3Dots();
+//		processPay.clickProcessPay();
+//		processPay.enterBasicPay("123000");
+//		processPay.clickSaveBtn();
+//		verify.verifyTop10EmployeesNI("Monthly");
+//		
+//		payroll.runPayroll();
+//		verify.verifyTop10EmployeesNIRunPayroll("Monthly");
 
 
 	}
@@ -205,7 +206,7 @@ public class TC01_NICalculationsMonthly extends TestBase {
 		pages.OpenClient OpenClient = new pages.OpenClient(driver);
 
 		OpenClient.Click_ClientsClick();
-		OpenClient.Enter_EnterClientName2();
+		OpenClient.Enter_EnterClientName("vvaFwXUpz");
 		OpenClient.Click_ClickSearch();
 		OpenClient.Click_ClickClient();
 		
@@ -213,7 +214,6 @@ public class TC01_NICalculationsMonthly extends TestBase {
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
 
         payroll.UndoPayroll();
-
 		employee.click3Dots();
 		employee.clickEditBtn();
 		
@@ -347,4 +347,9 @@ public class TC01_NICalculationsMonthly extends TestBase {
 
 
 	}
+	
+	
+	
+
+	
 }

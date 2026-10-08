@@ -134,7 +134,7 @@ public class reports extends BasePage
 	public void Click__DepartmentalAnalyisis_() throws InterruptedException
 	{
         
-		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+ 		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
 		Thread.sleep(2000);
 
 		
@@ -410,6 +410,9 @@ public class reports extends BasePage
 	public void Click_P11() throws Exception
 	{
         
+		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+		Thread.sleep(2000);
+		
 		WebElement elem = getWebElement(P11Elem);
 
 		if (elem == null) {
@@ -459,6 +462,25 @@ public class reports extends BasePage
 		Reporter.log("Click_Payroll_Reporting_Period_Summary");
 		Thread.sleep(2000);
 	}
+	
+	
+	public void Click_PayElementReport() throws Exception
+	{
+		m_Driver.findElement(By.xpath("//*[@id=\"ctl00_ctl00_ParentContent_cPH_payrollReports\"]/div[1]/button[2]")).click();
+		Thread.sleep(2000);
+		
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefPayElement']"));
+		
+
+		elem.click();
+
+		ExtentReportManager.passStep(m_Driver, "Click_Payroll_Reporting_Period_Summary");
+
+		
+		Reporter.log("Click_Payroll_Reporting_Period_Summary");
+		Thread.sleep(2000);
+	}
+
 
 		public void clickPaymentSummaryReport() throws Exception
 		{
@@ -656,7 +678,19 @@ public class reports extends BasePage
 		Reporter.log("clickAnnualPayrollSchedule");
 	}
 	
+	public void showAnnualPayScheduleEmailBtn() throws Exception
+	{
+		
+		WebElement elem1 = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphError_btnSearch']"));
+		
+		elem1.click();
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(300));
 
+		wait.until(ExpectedConditions.presenceOfElementLocated(
+		    By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_divPAYEPaymentsToHMRC']/div/table/tbody/tr[2]/td[1]")));
+
+	}
 	
 	
 	public void selectForm(String Text) throws Exception
@@ -674,7 +708,14 @@ public class reports extends BasePage
 		
 	}
 	
-	
+	public void click_Regenerate()
+	{
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_lnkRegenerate']"));
+		elem.click();
+		Reporter.log("click_Regenerate");
+		System.out.println("click_Regenerate");
+		
+	}
 	  public void clickOnRegenerateBtn() throws Exception {
 		
 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_lnkRegenerate']"));

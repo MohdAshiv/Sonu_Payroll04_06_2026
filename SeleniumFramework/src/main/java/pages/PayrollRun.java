@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -131,6 +132,168 @@ public class PayrollRun extends BasePage {
 		ExtentReportManager.passStep(m_Driver, "clickRequestHrs");
 		Reporter.log("clickRequestHrs");
 	
+	}
+	
+	public void FullUndoPayroll() throws Exception
+	{
+		
+	    ClosePopup.ValidateAndPopUp(m_Driver);
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+	    while (true) {
+
+	        ClosePopup.ValidateAndPopUp(m_Driver);
+
+	        WebElement quickAction = wait.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")));
+
+	        ((JavascriptExecutor) m_Driver).executeScript("arguments[0].click();", quickAction);
+
+	        List<WebElement> list = m_Driver.findElements(
+	                By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_btnUndoPayroll']"));
+
+	        // Exit loop when Undo button is not present
+	        if (list.isEmpty()) {
+	            System.out.println("Undo Button not present. Exiting loop.");
+	            break;
+	        }
+
+	        WebElement elem = list.get(0);
+	        ((JavascriptExecutor) m_Driver).executeScript("arguments[0].click();", elem);
+
+	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
+	                By.id("PopUndoPayrollFrame")));
+
+	        wait.until(ExpectedConditions.elementToBeClickable(
+	                By.id("ctl00_ctl00_ParentContent_cphFooter_btnUndo"))).click();
+
+	        wait.until(ExpectedConditions.alertIsPresent()).accept();
+
+	        m_Driver.switchTo().defaultContent();
+
+	        m_Driver.navigate().refresh();
+
+	        Thread.sleep(5000);
+	    }
+		DeletedFeatureLeave();
+		
+		System.out.println("Undo Btn not present");
+		
+	}
+	
+	public void Run_PayrollWithEditAmount(String LeaveName,String LeaveAmount) throws InterruptedException
+	{
+	    WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnRunPayroll']"));
+	    
+	    elem.click();
+	    Thread.sleep(1000);
+	    
+	    WebElement editButton = getWebElement(By.xpath("//*[@id='tbodyEmployees']/tr[1]/td[12]/a[1]"));
+	    editButton.click();
+	
+	  // WebElement SPPColumn = getWebElement(By.xpath("//input[@id='Txt"+LeaveName+"Amount']"));
+	   WebElement SPPColumn = getWebElement(By.xpath("(//*[@class='v2-txtAmt v2-txt"+LeaveName+"'])[1]"));
+
+	   String selectAll = Keys.chord(Keys.CONTROL, "a");
+	   SPPColumn.sendKeys(selectAll);
+	   SPPColumn.sendKeys(LeaveAmount);
+	   SPPColumn.sendKeys(Keys.TAB);
+
+	   WebElement SaveButton = getWebElement(By.xpath("//i[@class='fa fa-save']"));
+	   SaveButton.click();
+	   
+	   Thread.sleep(1000);
+	    WebElement elem1 = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHFooter_btnSubmitOnline']"));
+	     elem1.click();
+	    Thread.sleep(1000);
+	    Reporter.log("Click Run Payroll");
+	}
+
+public void DeletedFeatureLeave() throws Exception
+	{
+	
+	  WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(20));
+
+      WebElement quickAction = wait.until(
+      	    ExpectedConditions.elementToBeClickable(
+      	        By.xpath("//*[@id='ctl00_ctl00_ParentContent_divMainContent']/header/div/div/div[2]/button")
+      	    )
+      	);
+
+	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+//	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+
+		WebElement UpcomingLeave = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHeaderRight_hrefUpcomingLeave']"));
+		UpcomingLeave.click();
+		
+		 Reporter.log("Click Upcoming Leave");
+		    System.out.println("Click Upcoming Leave");
+		    
+		    Thread.sleep(3000);
+		    
+		    
+		   List<WebElement> listOfDeleteBtn = getWebElements(By.xpath("//i[@class='fa fa-trash']"));
+		    
+		    for(int i=0;i<=listOfDeleteBtn.size()-1;i++)
+		    {
+		    	List<WebElement> listOfDeleteBtn2 = getWebElements(By.xpath("//i[@class='fa fa-trash']"));
+		    	listOfDeleteBtn2.get(i).click();
+		    	    Thread.sleep(2000);
+		    		getWebElement(By.xpath("//a[@id='ctl00_ctl00_ParentContent_cPH_btnDelete']")).click();
+		    		 Thread.sleep(2000);
+		    }
+		    
+		    Click_PayrollDashboard();
+	}
+
+	public void FullUndoPayrollByNameAndWithIndex(String Name, int index) throws Exception
+	{
+		
+		List<WebElement> list = m_Driver.findElements(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
+		boolean condition = list.isEmpty();
+		
+		
+			
+			for(int i=1;i<=index;i++)
+			{
+				
+				
+					
+				if(false==condition)
+				{
+					WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
+					elem.click();
+					Thread.sleep(2000);
+					 m_Driver.switchTo().frame(getWebElement(By.xpath("//*[@id='PopUndoPayrollFrame']")));
+
+					
+					 WebElement selectAllOption = getWebElement(By.xpath("//input[@id='ctl00_ctl00_ParentContent_cPH_chkSelectAll']"));
+					 selectAllOption.click();
+					
+					 WebElement chkBox = getWebElement(By.xpath("(//*[contains(text(),'"+Name+"')])//parent::tr/td/span/input"));
+					 chkBox.click();
+					
+					getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cphFooter_btnUndo']")).click();
+					
+					m_Driver.switchTo().alert().accept();
+				    Thread.sleep(1000);
+					m_Driver.switchTo().defaultContent();
+
+					m_Driver.navigate().refresh();
+				    Thread.sleep(5000);
+				    
+				    List<WebElement> list2 = m_Driver.findElements(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
+					condition = list2.isEmpty();
+
+					
+			}
+			
+		}
+		
+		
+		
+		System.out.println("Undo Btn not present");
+		
 	}
 	
 	public void SelectTaxYear(String data) throws Exception
@@ -383,7 +546,7 @@ public void selectRequiredEmployeesAndUntickRest(int employeeCount) {
 	        	);
 
 	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
-	        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+	       	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
 
 		
 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnUndoPayroll']"));
@@ -893,7 +1056,21 @@ public void selectRequiredEmployeesAndUntickRest(int employeeCount) {
 		 Reporter.log("Click PayrollDashBoard");
 }
 
-	
+	public void Run_PayrollByIndex(int Index) throws InterruptedException
+	{
+		for(int i=1;i<=Index;i++)
+		{
+			
+			 WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPHFilter_btnRunPayroll']"));
+			    elem.click();
+			    Thread.sleep(1000);
+			    WebElement elem1 = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHFooter_btnSubmitOnline']"));
+			     elem1.click();
+			    Thread.sleep(5000);
+			    Reporter.log("Click Run Payroll : "+i);
+			    System.out.println("Click Run Payroll : "+i);
+		}
+	}
 	 public void selectType(String Value) throws Exception
 	 {
 	    

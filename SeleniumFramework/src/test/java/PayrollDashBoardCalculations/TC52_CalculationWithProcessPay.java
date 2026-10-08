@@ -6,7 +6,6 @@ import utilities.ExcelData;
 
 public class TC52_CalculationWithProcessPay extends TestBase{
 	
-	
 	public String sTestCaseID = null;
 	String[] data = null;
 	String Sheet = null;
@@ -165,7 +164,6 @@ public class TC52_CalculationWithProcessPay extends TestBase{
 		    verify.verifyIncomeTax("Monthly");
 			verify.verifyNetPay();
 			verify.verifyPension("Monthly", "QUALIFYING","RAS");// verify
-
 			payroll.runPayroll();
 			
 			verify.verifyTop10EmployeesNIRunPayroll("Monthly");

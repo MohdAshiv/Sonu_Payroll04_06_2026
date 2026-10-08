@@ -126,51 +126,51 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
 	{
         
 	
-		WebElement elem = getWebElement(ClickBKEditElem);
-
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_BKEdit", "Click_BKEdit failed. Unable to locate object: " + ClickBKEditElem.toString());
-
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_BKEdit", "Click_BKEdit failed. Unable to locate object: " + ClickBKEditElem.toString());
-
-			Assert.fail("Unable to locate object: " + ClickBKEditElem.toString());
-        }
-
-		elem.click();
-        Thread.sleep(3000); 	
-        utilities.ChangeWindow.tabswitch(m_Driver);
-		
-        
-        try {
-        	
-            WebElement elem1 = m_Driver.findElement(By.xpath("//*[@id='ctl00_cPH_Button1']"));
-			
-			elem1.click();
-			
-			
-			Thread.sleep(2000);
-			
-		} catch (Exception e) {
-			
-			System.err.println("_____element Not found_____");
-		}
-			
-			
-
-        WebElement elem2 = m_Driver.findElement(By.xpath("//*[@id='ctl00_SideMenu1_settingMenu']/a"));
-			
-    	elem2.click();
-        Thread.sleep(2000); 
-        
-        
-        WebElement elem3 = m_Driver.findElement(By.xpath("//*[@id='ctl00_cpHeaderRight_btnEdit']"));
-		
-    	elem3.click();
-        Thread.sleep(2000); 
-		
-		
-
-		ExtentReportManager.passStep(m_Driver, "Click_BKEdit");
+//		WebElement elem = getWebElement(ClickBKEditElem);
+//
+//		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_BKEdit", "Click_BKEdit failed. Unable to locate object: " + ClickBKEditElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_BKEdit", "Click_BKEdit failed. Unable to locate object: " + ClickBKEditElem.toString());
+//
+//			Assert.fail("Unable to locate object: " + ClickBKEditElem.toString());
+//        }
+//
+//		elem.click();
+//        Thread.sleep(3000); 	
+//        utilities.ChangeWindow.tabswitch(m_Driver);
+//		
+//        
+//        try {
+//        	
+//            WebElement elem1 = m_Driver.findElement(By.xpath("//*[@id='ctl00_cPH_Button1']"));
+//			
+//			elem1.click();
+//			
+//			
+//			Thread.sleep(2000);
+//			
+//		} catch (Exception e) {
+//			
+////			System.err.println("_____element Not found_____");
+//		}
+//			
+//			
+//
+//        WebElement elem2 = m_Driver.findElement(By.xpath("//*[@id='ctl00_SideMenu1_settingMenu']/a"));
+//			
+//    	elem2.click();
+//        Thread.sleep(2000); 
+//        
+//        
+//        WebElement elem3 = m_Driver.findElement(By.xpath("//*[@id='ctl00_cpHeaderRight_btnEdit']"));
+//		
+//    	elem3.click();
+//        Thread.sleep(2000); 
+//		
+//		
+//
+//		ExtentReportManager.passStep(m_Driver, "Click_BKEdit");
 
 	}
 
@@ -186,24 +186,22 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
 	public void Click_AccountingPeriod() throws InterruptedException
 	{
         
-		WebElement elem = getWebElement(ClickAccountingPeriodElem);
-
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AccountingPeriod", "Click_AccountingPeriod failed. Unable to locate object: " + ClickAccountingPeriodElem.toString());
-
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_AccountingPeriod", "Click_AccountingPeriod failed. Unable to locate object: " + ClickAccountingPeriodElem.toString());
-
-			Assert.fail("Unable to locate object: " + ClickAccountingPeriodElem.toString());
-        }
-
-		elem.click();
-//		jsExec.executeScript("arguments[0].click();", elem);
-//          	
-		Thread.sleep(2000);
-
-		ExtentReportManager.passStep(m_Driver, "Click_AccountingPeriod");
-
-		TestModellerLogger.PassStep(m_Driver, "Click_AccountingPeriod");
+//		WebElement elem = getWebElement(ClickAccountingPeriodElem);
+//
+//		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AccountingPeriod", "Click_AccountingPeriod failed. Unable to locate object: " + ClickAccountingPeriodElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_AccountingPeriod", "Click_AccountingPeriod failed. Unable to locate object: " + ClickAccountingPeriodElem.toString());
+//
+//			Assert.fail("Unable to locate object: " + ClickAccountingPeriodElem.toString());
+//        }
+//
+//		elem.click();
+//		Thread.sleep(2000);
+//
+//		ExtentReportManager.passStep(m_Driver, "Click_AccountingPeriod");
+//
+//		TestModellerLogger.PassStep(m_Driver, "Click_AccountingPeriod");
 	}
 
       
@@ -218,31 +216,28 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
 	public void Click_AddAccountingPeriod() throws InterruptedException
 	{
         
-		WebElement elem = getWebElement(AddAccountingPeriodElem);
-
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AddAccountingPeriod", "Click_AddAccountingPeriod failed. Unable to locate object: " + AddAccountingPeriodElem.toString());
-
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_AddAccountingPeriod", "Click_AddAccountingPeriod failed. Unable to locate object: " + AddAccountingPeriodElem.toString());
-
-			Assert.fail("Unable to locate object: " + AddAccountingPeriodElem.toString());
-        }
-		Thread.sleep(2000);
-		
-		 
-        WebElement elem3 = m_Driver.findElement(By.xpath("//*[@id='ctl00_cpHeaderRight_btnEdit']"));
-		
-    	elem3.click();
-        Thread.sleep(2000); 
-
-		elem.click();
-//		jsExec.executeScript("arguments[0].click();", elem);
-//          	
-		Thread.sleep(2000);
-	//	ChangeWindow.tabswitch(m_Driver);
-		ExtentReportManager.passStep(m_Driver, "Click_AddAccountingPeriod");
-
-		TestModellerLogger.PassStep(m_Driver, "Click_AddAccountingPeriod");
+//		WebElement elem = getWebElement(AddAccountingPeriodElem);
+//
+//		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AddAccountingPeriod", "Click_AddAccountingPeriod failed. Unable to locate object: " + AddAccountingPeriodElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_AddAccountingPeriod", "Click_AddAccountingPeriod failed. Unable to locate object: " + AddAccountingPeriodElem.toString());
+//
+//			Assert.fail("Unable to locate object: " + AddAccountingPeriodElem.toString());
+//        }
+//		Thread.sleep(2000);
+//		
+//		 
+//        WebElement elem3 = m_Driver.findElement(By.xpath("//*[@id='ctl00_cpHeaderRight_btnEdit']"));
+//		
+//    	elem3.click();
+//        Thread.sleep(2000); 
+//
+//		elem.click();
+//		Thread.sleep(2000);
+//		ExtentReportManager.passStep(m_Driver, "Click_AddAccountingPeriod");
+//
+//		TestModellerLogger.PassStep(m_Driver, "Click_AddAccountingPeriod");
 	}
 
 	
@@ -272,24 +267,24 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
  	public void Enter_NewStartDate(String NewStartDate) throws InterruptedException
  	{
  	    
- 		WebElement elem = getWebElement(NewStartDateElem);
-
- 		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_NewStartDate", "Enter_NewStartDate failed. Unable to locate object: " + NewStartDateElem.toString());
-
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Enter_NewStartDate", "Enter_NewStartDate failed. Unable to locate object: " + NewStartDateElem.toString());
-
- 			Assert.fail("Unable to locate object: " + NewStartDateElem.toString());
-         }
-
- 		elem.clear();
- 		Thread.sleep(2000);
- 		elem.sendKeys(NewStartDate);
- 		
- 		
-  		ExtentReportManager.passStep(m_Driver, "Enter_NewStartDate " + NewStartDate);
-
-  		TestModellerLogger.PassStep(m_Driver, "Enter_NewStartDate " + NewStartDate);
+// 		WebElement elem = getWebElement(NewStartDateElem);
+//
+// 		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_NewStartDate", "Enter_NewStartDate failed. Unable to locate object: " + NewStartDateElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Enter_NewStartDate", "Enter_NewStartDate failed. Unable to locate object: " + NewStartDateElem.toString());
+//
+// 			Assert.fail("Unable to locate object: " + NewStartDateElem.toString());
+//         }
+//
+// 		elem.clear();
+// 		Thread.sleep(2000);
+// 		elem.sendKeys(NewStartDate);
+// 		
+// 		
+//  		ExtentReportManager.passStep(m_Driver, "Enter_NewStartDate " + NewStartDate);
+//
+//  		TestModellerLogger.PassStep(m_Driver, "Enter_NewStartDate " + NewStartDate);
  	}
 
     
@@ -307,25 +302,25 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
      */
  	public void Enter_NewEndDate(String NewEndDate) throws InterruptedException
  	{
- 	    
- 		WebElement elem = getWebElement(NewEndDateElem);
-
- 		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_NewEndDate", "Enter_NewEndDate failed. Unable to locate object: " + NewEndDateElem.toString());
-
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Enter_NewEndDate", "Enter_NewEndDate failed. Unable to locate object: " + NewEndDateElem.toString());
-
- 			Assert.fail("Unable to locate object: " + NewEndDateElem.toString());
-         }
-
- 		elem.clear();
- 		Thread.sleep(2000);
- 		elem.sendKeys(NewEndDate);
- 		
- 		
-  		ExtentReportManager.passStep(m_Driver, "Enter_NewEndDate " + NewEndDate);
-
-  		TestModellerLogger.PassStep(m_Driver, "Enter_NewEndDate " + NewEndDate);
+// 	    
+// 		WebElement elem = getWebElement(NewEndDateElem);
+//
+// 		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_NewEndDate", "Enter_NewEndDate failed. Unable to locate object: " + NewEndDateElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Enter_NewEndDate", "Enter_NewEndDate failed. Unable to locate object: " + NewEndDateElem.toString());
+//
+// 			Assert.fail("Unable to locate object: " + NewEndDateElem.toString());
+//         }
+//
+// 		elem.clear();
+// 		Thread.sleep(2000);
+// 		elem.sendKeys(NewEndDate);
+// 		
+// 		
+//  		ExtentReportManager.passStep(m_Driver, "Enter_NewEndDate " + NewEndDate);
+//
+//  		TestModellerLogger.PassStep(m_Driver, "Enter_NewEndDate " + NewEndDate);
  	}
  	
  	
@@ -348,25 +343,23 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
 	public void Click_AccPeriodSave() throws InterruptedException
 	{
         
-		WebElement elem = getWebElement(AccPeriodSaveElem);
-
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AccPeriodSave", "Click_AccPeriodSave failed. Unable to locate object: " + AccPeriodSaveElem.toString());
-
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_AccPeriodSave", "Click_AccPeriodSave failed. Unable to locate object: " + AccPeriodSaveElem.toString());
-
-			Assert.fail("Unable to locate object: " + AccPeriodSaveElem.toString());
-        }
-
-		elem.click();
-//		jsExec.executeScript("arguments[0].click();", elem);
-//          	
-		Thread.sleep(2000);
-
-		utilities.ChangeWindow.Switchwindow(1, m_Driver);
-		ExtentReportManager.passStep(m_Driver, "Click_AccPeriodSave");
-
-		TestModellerLogger.PassStep(m_Driver, "Click_AccPeriodSave");
+//		WebElement elem = getWebElement(AccPeriodSaveElem);
+//
+//		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_AccPeriodSave", "Click_AccPeriodSave failed. Unable to locate object: " + AccPeriodSaveElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_AccPeriodSave", "Click_AccPeriodSave failed. Unable to locate object: " + AccPeriodSaveElem.toString());
+//
+//			Assert.fail("Unable to locate object: " + AccPeriodSaveElem.toString());
+//        }
+//
+//		elem.click();
+//		Thread.sleep(2000);
+//
+//		utilities.ChangeWindow.Switchwindow(1, m_Driver);
+//		ExtentReportManager.passStep(m_Driver, "Click_AccPeriodSave");
+//
+//		TestModellerLogger.PassStep(m_Driver, "Click_AccPeriodSave");
 	}
 
       
@@ -451,22 +444,22 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
      */
  	public void Enter_CompanyAddressLine1(String CompanyAddLine1) throws InterruptedException
  	{
- 	    
- 		WebElement elem = getWebElement(CompanyAddLine1Elem);
-
- 		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_CompanyAddressLine1", "Enter_CompanyAddressLine1 failed. Unable to locate object: " + CompanyAddLine1Elem.toString());
-
-    		
- 			Assert.fail("Unable to locate object: " + CompanyAddLine1Elem.toString());
-         }
-
- 		elem.clear();
- 		Thread.sleep(2000);
- 		elem.sendKeys(CompanyAddLine1);
- 		
- 		
-  		ExtentReportManager.passStep(m_Driver, "Enter_CompanyAddressLine1 " + CompanyAddLine1);
+// 	    
+// 		WebElement elem = getWebElement(CompanyAddLine1Elem);
+//
+// 		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Enter_CompanyAddressLine1", "Enter_CompanyAddressLine1 failed. Unable to locate object: " + CompanyAddLine1Elem.toString());
+//
+//    		
+// 			Assert.fail("Unable to locate object: " + CompanyAddLine1Elem.toString());
+//         }
+//
+// 		elem.clear();
+// 		Thread.sleep(2000);
+// 		elem.sendKeys(CompanyAddLine1);
+// 		
+// 		
+//  		ExtentReportManager.passStep(m_Driver, "Enter_CompanyAddressLine1 " + CompanyAddLine1);
 
   		
  	}
@@ -480,23 +473,21 @@ public class AccountingPeriodSettingBK_FAInactive extends BasePage{
 	public void Click_Save() throws InterruptedException
 	{
         
-	//	jsExec.executeScript("window.scrollBy(0,250)");
-
-		WebElement elem = getWebElement(SaveElem);
-
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_Save", "Click_Save failed. Unable to locate object: " + SaveElem.toString());
-
-    		
-			Assert.fail("Unable to locate object: " + SaveElem.toString());
-        }
-
-//		elem.click();
-		jsExec.executeScript("arguments[0].click();", elem);
-          	
-		Thread.sleep(2000);
-
-		ExtentReportManager.passStep(m_Driver, "Click_Save");
+//
+//		WebElement elem = getWebElement(SaveElem);
+//
+//		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_Save", "Click_Save failed. Unable to locate object: " + SaveElem.toString());
+//
+//    		
+//			Assert.fail("Unable to locate object: " + SaveElem.toString());
+//        }
+//
+//		jsExec.executeScript("arguments[0].click();", elem);
+//          	
+//		Thread.sleep(2000);
+//
+//		ExtentReportManager.passStep(m_Driver, "Click_Save");
 
 		
 	}

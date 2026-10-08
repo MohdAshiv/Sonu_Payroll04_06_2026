@@ -4,6 +4,7 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Random;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -18,6 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.Assertion;
+import org.testng.asserts.SoftAssert;
 
 import utilities.TakeScreenshot;
 import utilities.reports.ExtentReportManager;
@@ -29,6 +31,7 @@ public class EditCompany extends BasePage {
 		super(driver);
 		
 	}
+	SoftAssert soft=new SoftAssert();
 	
 	private By nomismaStartDateElem = By.xpath("//input[@name='ctl00$ctl00$ParentContent$cPH$tbContainer$tppayrollDetails$txtSwitchDate']");
 	private By ClickPayrollElem = By.xpath("//A[@id='ctl00_SideMenu1_hrefPayroll']");
@@ -303,6 +306,29 @@ public class EditCompany extends BasePage {
 	 		Reporter.log("enterAccruedPay");
 	 	}
 	 
+	 public void Click_OverwriteExistingEmployees() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//input[@id='ctl00_ctl00_ParentContent_cpHFooter_btnOverwrite']"));
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_ClickSave", "Click_ClickSave failed. Unable to locate object: " + ClickSaveElem.toString());
+
+	    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_ClickSave", "Click_ClickSave failed. Unable to locate object: " + ClickSaveElem.toString());
+
+				Assert.fail("Unable to locate object: " + ClickSaveElem.toString());
+	        }
+			elem.click();
+			
+			Thread.sleep(11000);
+			
+			Reporter.log("Click_ClickSave");
+
+
+			ExtentReportManager.passStep(m_Driver, "Click_ClickSave");
+
+		}
+	 
 
 	 
 	 public void clickPayOverTime() throws Exception
@@ -407,7 +433,7 @@ public class EditCompany extends BasePage {
         	);
 
         	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
-        	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
+       	((JavascriptExecutor)m_Driver).executeScript("arguments[0].click();", quickAction);
 
 		WebElement elem = getWebElement(gotoEditCompanyElem);
 
@@ -1219,7 +1245,9 @@ public class EditCompany extends BasePage {
 	     */
 		public void Click_ClickSave() throws Exception
 		{
-	        
+			
+			Thread.sleep(11000);
+
 			WebElement elem = getWebElement(ClickSaveElem);
 
 			if (elem == null) {
@@ -1297,6 +1325,22 @@ public class EditCompany extends BasePage {
 
 		}
 		
+		public void enterPassword(String password) {
+		    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(10));
+
+		    WebElement newPassword = wait.until(ExpectedConditions.elementToBeClickable(
+		            By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_txtNewPassword']")));
+
+		    WebElement confirmPassword = wait.until(ExpectedConditions.elementToBeClickable(
+		            By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_txtConfirmPassword']")));
+
+		    newPassword.clear();
+		    newPassword.sendKeys(password);
+
+		    confirmPassword.clear();
+		    confirmPassword.sendKeys(password);
+		}
+		
 		
 		public void selectCompanyActiveInactiveStatus(String value) throws Exception
 		{
@@ -1366,6 +1410,27 @@ public class EditCompany extends BasePage {
 			Reporter.log("clickCreateBtn");
 
 			ExtentReportManager.passStep(m_Driver, "clickCreateBtn");
+
+		}
+		
+		
+		public void clickSendLink() throws Exception
+		{
+	        
+			WebElement elem = getWebElement(By.xpath("//*[@id=\"dvPasswordProtectionPopup2\"]/div/div/div[2]/div[2]/div[1]/div[6]/div/a[2]"));
+
+
+			elem.click();
+			Thread.sleep(3000);
+
+			WebElement elem1 = getWebElement(By.xpath("//*[@id='CDPControls']/div/div[4]/div/a[2]"));
+
+
+			elem1.click();
+			
+			Thread.sleep(9000);
+			Reporter.log("clickSendLink");
+
 
 		}
 		public void clickCreateBtnEmployee() throws Exception
@@ -2648,7 +2713,308 @@ public class EditCompany extends BasePage {
 		   
 	   }
 	   
+	   public void verifyLeaveStartDateBoxDisible() throws Exception
+	    {
+
+			WebElement elem = getWebElement(leaveStartdateElem);
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterJoiningDate", "enterJoiningDate failed. Unable to locate object: " + leaveStartdateElem.toString());
+
+				Assert.fail("Unable to locate object: " + leaveStartdateElem.toString());
+	        }
+
+			boolean con = elem.isEnabled();
+			soft.assertFalse(con, "start date in edit employee section is not disable");
+			
+			System.out.println("verify Leave Start Date Box Disible in edit employee section");
+			Reporter.log("verify Leave Start Date Box Disible in edit employee section");
+			ExtentReportManager.passStep(m_Driver, "verify Leave Start Date Box Disible in edit employee section");
+
+	    }
 	   
+	   public void verifyLeaveStartDate(String data) throws Exception
+	    {
+
+			WebElement elem = getWebElement(leaveStartdateElem);
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterJoiningDate", "enterJoiningDate failed. Unable to locate object: " + leaveStartdateElem.toString());
+
+				Assert.fail("Unable to locate object: " + leaveStartdateElem.toString());
+	        }
+
+			String Name = elem.getAttribute("value");
+			soft.assertEquals(data, Name);
+			System.out.println("verifyLeaveStartDate : "+Name+"  =  "+data);
+			Reporter.log("verifyLeaveStartDate In Edit Employee Page : "+data);
+
+			ExtentReportManager.passStep(m_Driver, "enterLeaveStartDate");
+
+	    }
+	 
 	   
+	 
 	   
+	   public void verifyHolidayPayRate(String data) throws InterruptedException
+		{
+	        
+			WebElement elem = getWebElement(holidayPayRateElem);
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterHolidayPayRate", "enterHolidayPayRate failed. Unable to locate object: " + holidayPayRateElem.toString());
+
+
+				Assert.fail("Unable to locate object: " + holidayPayRateElem.toString());
+	        }
+			
+			String Name = elem.getAttribute("value");
+			soft.assertEquals(data, Name);
+			System.out.println("verifyHolidayPayRate : "+Name+"  =  "+data);
+			Reporter.log("verifyHolidayPayRate In Edit Employee Page : "+data);
+			
+	          	
+	      
+
+		}
+	   
+	   public void verifyMaxCarryOver(String data) throws InterruptedException
+		{
+	        
+			WebElement elem = getWebElement(maxCarryOverElem);
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterMaxCarryOver", "enterMaxCarryOver failed. Unable to locate object: " + maxCarryOverElem.toString());
+
+
+				Assert.fail("Unable to locate object: " + maxCarryOverElem.toString());
+	        }
+			String Name = elem.getAttribute("value");
+			soft.assertEquals(data, Name);
+			System.out.println("verifyMaxCarryOver : "+Name+"  =  "+data);
+			Reporter.log("verifyMaxCarryOver In Edit Employee Page : "+data);
+		}
+	   
+		 private By weeklyWorkingHrsElem2= By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpPayrollEmployee_txtWorkingHoursWeekly']");
+
+		public void verifyWeeklyWorkingHrs(String Data) throws InterruptedException
+		{
+	        
+			WebElement elem = getWebElement(weeklyWorkingHrsElem2);
+
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterWeeklyWorkingHrs", "enterWeeklyWorkingHrs failed. Unable to locate object: " + weeklyWorkingHrsElem.toString());
+
+
+				Assert.fail("Unable to locate object: " + weeklyWorkingHrsElem.toString());
+	        }
+			String Name = elem.getAttribute("value");
+			soft.assertEquals(Data, Name);
+			Reporter.log("verifyWeeklyWorkingHrs In Edit Employee Page : "+Data);
+
+		}
+		
+		
+		 public void chkNormalWorkingDays(String dayName)
+		 {
+			 WebElement elem = getWebElement(By.xpath("//input[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"']"));
+			 
+			 if ( !m_Driver.findElement(By.id("ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"")).isSelected() )
+			 {
+				 m_Driver.findElement(By.id("ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"")).click();
+				 System.out.println("Click On Chk Option of the "+dayName);
+				 Reporter.log("Click On Chk Option of the "+dayName);
+			 }
+			 else
+			 {
+				 System.out.println("already Chk Option of the "+dayName);
+				 Reporter.log("already Chk Option of the "+dayName);
+			 }
+		 }
+		 public void unChkNormalWorkingDays(String dayName)
+		 {
+			 WebElement elem = getWebElement(By.xpath("//input[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"']"));
+			 
+			 if ( m_Driver.findElement(By.id("ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"")).isSelected() )
+			 {
+				 m_Driver.findElement(By.id("ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"")).click();
+				 System.out.println("Click On UnChk Option of the "+dayName);
+				 Reporter.log("Click On UnChk Option of the "+dayName);
+			 }
+			 else
+			 {
+				 System.out.println("already UnChk Option of the "+dayName);
+				 Reporter.log("already UnChk Option of the "+dayName);
+			 }
+		 }
+		
+		 
+		 public void verifychkedNormalWorkingDays(String dayName)
+		 {
+			 WebElement elem = getWebElement(By.xpath("//input[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"']"));
+			 
+			 if ( m_Driver.findElement(By.id("ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"")).isSelected() )
+			 {
+				 System.out.println("alreday Chked Option of the "+dayName);
+				 Reporter.log("alreday Chked Option of the "+dayName);
+			 }
+			 else
+			 {
+				 soft.assertFalse(true, "NormalWorkingDays is not working as expected :"+dayName);
+				
+			 }
+		 }
+		 
+		 public void verifyUnChkedNormalWorkingDays(String dayName)
+		 {
+			 WebElement elem = getWebElement(By.xpath("//input[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"']"));
+			 
+			 if ( !m_Driver.findElement(By.id("ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_cb"+dayName+"")).isSelected() )
+			 {
+				 System.out.println("alreday UnChked Option of the "+dayName);
+				 Reporter.log("alreday UnChked Option of the "+dayName);
+			 }
+			 else
+			 {
+				 soft.assertFalse(true, "NormalWorkingDays is not working as expected :"+dayName);
+				
+			 }
+		 }
+		
+		
+		 public void AssertALL()
+		    {
+		    	soft.assertAll();
+		    }
+		 
+		 
+		 
+		 public void QuickDropdown()
+		 {
+			 getWebElement(By.xpath("class='btn qa-toggle dropdown-toggle"));
+		 }
+		 
+		 
+		  public void clickOnSaveBtnInEditEmp() throws Exception
+		 	{
+		 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cpHFooter_btnSave']"));
+
+		 		if (elem == null) {
+		    		ExtentReportManager.failStepWithScreenshot(m_Driver, "saveLinkedWithBtn", "saveLinkedWithBtn failed. Unable to locate object: " + SelectEmailModeElem.toString());
+
+
+		 			//Assert.fail("Unable to locate object: " + SelectEmailModeElem.toString());
+		         }
+		 		jsExec.executeScript("arguments[0].click();", elem);
+		 		Thread.sleep(2000);
+				Reporter.log("saveLinkedWithBtn");
+
+
+		 	}
+
+		  public void verifyLeaveDays(String value) throws Exception
+		 	{
+		 		
+		         
+		 		WebElement elem = getWebElement(leaveDaysComapny);
+
+		 		if (elem == null) {
+		     		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterleaveStartDateCompany", "enterleaveStartDateCompany failed. Unable to locate object: " + leaveDaysComapny.toString());
+
+		 			Assert.fail("Unable to locate object: " + leaveDaysComapny.toString());
+		         }
+		 		String AnnualLeave = elem.getAttribute("value").trim();
+		 		soft.assertEquals(value, AnnualLeave,"Annual Leave is not getting matched");
+		 		System.out.println("verifyHolidayPayRate : "+AnnualLeave+"  =  "+value);
+		 		TakeScreenshot.takeScreenshot(m_Driver, "enterleaveDaysComapny");
+		 		ExtentReportManager.passStep(m_Driver, "enterleaveDaysComapny");
+
+		 		Reporter.log("enterleaveDaysComapny");
+		 	}
+
+
+		   public void clickOnResetWithCompanyStdInEditEmp() throws Exception
+		 	{
+		 		WebElement elem = m_Driver.findElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpLeavesManagement_btnResetCompanyStd']"));
+
+		 		if (elem == null) {
+		    		ExtentReportManager.failStepWithScreenshot(m_Driver, "saveLinkedWithBtn", "saveLinkedWithBtn failed. Unable to locate object: " + SelectEmailModeElem.toString());
+
+
+		 			//Assert.fail("Unable to locate object: " + SelectEmailModeElem.toString());
+		         }
+		 		elem.click();
+		 		Thread.sleep(2000);
+				Reporter.log("saveLinkedWithBtn");
+
+
+		 	}
+
+		   public void verifyMaxSickDays(String value) throws Exception
+		 	{
+		         
+		 		WebElement elem = getWebElement(maxSickDays);
+
+		 		if (elem == null) {
+		     		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterMaxSickDays", "enterMaxSickDays failed. Unable to locate object: " + maxSickDays.toString());
+
+		 			Assert.fail("Unable to locate object: " + maxSickDays.toString());
+		         }
+		 		String MaxSickDays = elem.getAttribute("value").trim();
+		 		soft.assertEquals(value, MaxSickDays,"Max Sick Days is not getting matched");
+		 		
+		 		System.out.println("verifyMaxSickDays : "+MaxSickDays+"  =  "+value);
+		 		TakeScreenshot.takeScreenshot(m_Driver, "verifyMaxSickDays");
+		 		ExtentReportManager.passStep(m_Driver, "verifyMaxSickDays");
+		 	}
+		   
+		   public void verifyNoticePeriod(String value) throws Exception
+		 	{
+		         
+		 		WebElement elem = getWebElement(noticePeriod);
+
+		 		if (elem == null) {
+		     		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterNoticePeriod", "enterNoticePeriod failed. Unable to locate object: " + noticePeriod.toString());
+
+		 			Assert.fail("Unable to locate object: " + noticePeriod.toString());
+		         }
+		 		String NoticePeriod = elem.getAttribute("value").trim();
+		 		soft.assertEquals(value, NoticePeriod,"Notice Period is not getting matched");
+		 		
+		 		System.out.println("verfiyNoticePeriod : "+NoticePeriod+"  =  "+value);
+		 		TakeScreenshot.takeScreenshot(m_Driver, "verfiyNoticePeriod");
+		 		ExtentReportManager.passStep(m_Driver, "verfiyNoticePeriod");
+		 	}
+
+		   public void verifyRetirementAgeMale(String value) throws Exception
+		 	{
+		         
+		 		WebElement elem = getWebElement(RetirementAgeMale);
+
+		 		if (elem == null) {
+		     		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterRetirementAgeMale", "enterRetirementAgeMale failed. Unable to locate object: " + RetirementAgeMale.toString());
+
+		 			Assert.fail("Unable to locate object: " + RetirementAgeMale.toString());
+		         }
+		 		String RetirementAgeMale = elem.getAttribute("value").trim();
+		 		soft.assertEquals(value, RetirementAgeMale,"Retirement Age is not getting matched");
+		 		
+		 		System.out.println("verifyRetirementAgeMale : "+RetirementAgeMale+"  =  "+value);
+		 		TakeScreenshot.takeScreenshot(m_Driver, "verifyRetirementAgeMale");
+		 		ExtentReportManager.passStep(m_Driver, "verifyRetirementAgeMale");
+		 	}
+
+			 
+			 public void SelectedPatslipTemplete(String TempName)
+			 {
+				 WebElement elem = getWebElement(By.xpath("//select[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tppayrollDetails_ddlPaySlipTemplate']"));
+				 Select sel= new Select(elem);
+					sel.selectByVisibleText(TempName);
+					System.out.println("Payslip Templete : "+TempName);
+					Reporter.log("Payslip Templete : "+TempName);
+				 
+				 
+			 }
+
+
 }

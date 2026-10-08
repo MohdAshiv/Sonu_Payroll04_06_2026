@@ -7,12 +7,11 @@ import utilities.ExcelData;
 
 public class TC51_RunPayroll_TickUnick extends TestBase {
 	
-		public String sTestCaseID = null;
-		String[] data = null;
-		String Sheet = null;
+	public String sTestCaseID = null;
+	String[] data = null;
+	String Sheet = null;
 		
 	@Test(priority=1)
-
 	public void TC01validateTickUntick() throws Exception {
 
 		sTestCaseID = "TC051";

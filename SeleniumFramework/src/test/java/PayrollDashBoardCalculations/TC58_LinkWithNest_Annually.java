@@ -241,7 +241,7 @@ public class TC58_LinkWithNest_Annually extends TestBase {
 
 		pension.clickPensionDashBoard();
 		pension.clickViewScheme();
-		pension.clickEditScheme();
+		pension.clickEditScheme();     
 		
 		pension.selectCalculationBasis1("Custom");
 		pension.selectCalculationMethod1("No tax relief");

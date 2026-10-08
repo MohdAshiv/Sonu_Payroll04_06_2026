@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
 
 import pages.BasePage;
 import utilities.WaitUtility;
@@ -2110,5 +2111,358 @@ public class EmployeeEditAndRateChanges extends BasePage {
   }
   
   
+  public void clickOnEmployeeList()
+  {
+  	WebElement elem = getWebElement(By.xpath("//span[normalize-space()='Employee List']"));
+  	elem.click();
+  	System.out.println("click On Employee List");
+  	Reporter.log("click On Employee List");
+  	
+  }
+  
+  public void DeleteEmp(String Emp) throws InterruptedException
+  {
+  	WebElement threeDot = getWebElement(By.xpath("//a[contains(text(),'"+Emp+"')]/following::td/div/a//i[@class='fa fa-ellipsis-v']"));
+  	threeDot.click();
+  	WebElement DeleteButton = getWebElement(By.xpath("//a[contains(text(),'"+Emp+"')]/following::td/div/ul/li/a[normalize-space()='Delete']"));
+  	DeleteButton.click();
+  	Thread.sleep(2000);
+  	WebElement DeleteButtonInEmp = getWebElement(By.xpath("//a[@id='ctl00_ctl00_ParentContent_cpHFooter_btnDelete']"));
+  	DeleteButtonInEmp.click();
+  }
+  
+  public void verifyFirstName(String data) throws Exception
+  {
+		WebElement elem = getWebElement(firstNameElem);
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterFirstName", "enterFirstName failed. Unable to locate object: " + firstNameElem.toString());
+
+			Assert.fail("Unable to locate object: " + firstNameElem.toString());
+      }
+		String Name = elem.getAttribute("value");
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyFirstName In Edit Employee Page : "+data);
+		
+		
+		ExtentReportManager.passStep(m_Driver, "enterFirstName");
+  }
+  
+  public void verifyLastName(String data) throws Exception
+  {
+
+		WebElement elem = getWebElement(lastNameElem);
+
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterLastName", "enterLastName failed. Unable to locate object: " + lastNameElem.toString());
+
+			Assert.fail("Unable to locate object: " + lastNameElem.toString());
+      }
+
+		String Name = elem.getAttribute("value");
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyLastName In Edit Employee Page : "+data);
+
+		ExtentReportManager.passStep(m_Driver, "enterLastName");
+
+  }
+  
+  public void verifyDateOfBirth(String data) throws Exception
+  {
+
+		WebElement elem = getWebElement(DobElem);
+
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterDateOfBirth", "enterDateOfBirth failed. Unable to locate object: " + DobElem.toString());
+
+			Assert.fail("Unable to locate object: " + DobElem.toString());
+      }
+
+		String Name = elem.getAttribute("value");
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyDateOfBirth In Edit Employee Page : "+data);
+
+		ExtentReportManager.passStep(m_Driver, "enterDateOfBirth");
+
+  }
+  
+  public void verifyAddressLine(String data) throws Exception
+  {
+
+		WebElement elem = getWebElement(AddressLine1Elem);
+
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterAddressLine", "enterAddressLine failed. Unable to locate object: " + AddressLine1Elem.toString());
+
+			Assert.fail("Unable to locate object: " + AddressLine1Elem.toString());
+      }
+
+		String Name = elem.getAttribute("value").trim();
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyAddressLine In Edit Employee Page : "+data);
+
+		ExtentReportManager.passStep(m_Driver, "enterAddressLine");
+
+  }
+  
+  public void verifyAddressLine2(String data) throws Exception
+  {
+
+		WebElement elem = getWebElement(AddressLine2Elem);
+
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterAddressLine2", "enterAddressLine2 failed. Unable to locate object: " + AddressLine2Elem.toString());
+
+			Assert.fail("Unable to locate object: " + AddressLine2Elem.toString());
+      }
+
+		String Name = elem.getAttribute("value").trim();
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyAddressLine2 In Edit Employee Page : "+data);
+
+		ExtentReportManager.passStep(m_Driver, "enterAddressLine2");
+		Reporter.log("enterAddressLine2");
+  }
+  
+  public void verifyPostCode(String data) throws Exception
+  {
+
+		WebElement elem = getWebElement(postCodeElem);
+
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterPostCode", "enterPostCode failed. Unable to locate object: " + postCodeElem.toString());
+
+			Assert.fail("Unable to locate object: " + postCodeElem.toString());
+      }
+
+		String Name = elem.getAttribute("value");
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyPostCode In Edit Employee Page : "+data);
+
+		ExtentReportManager.passStep(m_Driver, "enterPostCode");
+  }
+  
+  public void verifyJoiningDate(String data) throws Exception
+  {
+
+		WebElement elem = getWebElement(JoiningDateElem);
+
+		if (elem == null) {
+  		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterJoiningDate", "enterJoiningDate failed. Unable to locate object: " + JoiningDateElem.toString());
+
+			Assert.fail("Unable to locate object: " + JoiningDateElem.toString());
+      }
+
+		String Name = elem.getAttribute("value");
+		soft.assertEquals(data, Name);
+		Reporter.log("verifyJoiningDate In Edit Employee Page : "+data);
+
+		ExtentReportManager.passStep(m_Driver, "enterJoiningDate");
+  }
+  
+  public void verifyNICategory(String value) throws Exception
+	 {
+	    
+
+	    	WebElement elem = getWebElement(NiCatogryElem);
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterNICategory", "enterNICategory failed. Unable to locate object: " + NiCatogryElem.toString());
+
+				Assert.fail("Unable to locate object: " + NiCatogryElem.toString());
+	        }
+         
+	     	Select sel= new Select(elem);
+	     	WebElement elem2=sel.getFirstSelectedOption();
+	     	String Name = elem2.getAttribute("value");
+			soft.assertEquals(value, Name);
+			Reporter.log("verifyNICategory In Edit Employee Page : "+value);
+		 
+			ExtentReportManager.passStep(m_Driver, "enterNICategory");
+	    }
+	 
+  public void verifyTaxCode(String Value) throws Exception
+	 {
+	    
+//		 jsExec.executeScript("window.scrollBy(0,250)");
+	    	WebElement elem = getWebElement(taxCodeElem);
+			if (elem == null) {
+	    		ExtentReportManager.failStepWithScreenshot(m_Driver, "enterTaxCode", "enterTaxCode failed. Unable to locate object: " + taxCodeElem.toString());
+
+				Assert.fail("Unable to locate object: " + taxCodeElem.toString());
+	        }
+         
+			String Name = elem.getAttribute("value");
+			soft.assertEquals(Value, Name);
+			Reporter.log("verifyTaxCode In Edit Employee Page : "+taxCodeElem);
+
+			ExtentReportManager.passStep(m_Driver, "enterTaxCode");
+			
+	    }
+  
+  public void verifyBasicSalary3(String BasicSalary) throws Exception
+	{
+		WebElement elem = getWebElement(basicSalaryElem);
+		wt.explicitWait_visibilityOf(m_Driver, 500, elem);
+		String Name = elem.getAttribute("value");
+		soft.assertEquals(BasicSalary, Name);
+		Reporter.log("verifyTaxCode In Edit Employee Page : "+taxCodeElem);
+		
+	}
+  
+  public void SelectHowIsPayWorkedOut(String Option)
+  {
+  	try {
+  		WebElement elem = getWebElement(By.xpath("//select[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpPayrollEmployee_ddlPayMethod']"));
+      	Select WorkedOut =  new Select(elem);
+      	WorkedOut.selectByVisibleText(Option);
+      	System.out.println("Selected How Is Pay Worked Out : "+Option);
+      	Reporter.log("Selected How Is Pay Worked Out : "+Option);
+      	Thread.sleep(2000);
+      	//m_Driver.switchTo().alert().accept();
+      	
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+  	
+  	
+  }
+
+  public void enterPortalLoginUsername(String UserName)
+  {
+	   WebElement elem = getWebElement(By.xpath("//input[@id='txtLoginName']"));
+	   elem.clear();
+	   elem.sendKeys(UserName);
+	   System.out.println("enterPortalLoginUsername : "+UserName);
+	   Reporter.log("enterPortalLoginUsername : "+UserName);
+	   
+  }
+
+  public void clickOnEmailButton() throws InterruptedException
+  {
+	   WebElement elem = getWebElement(By.xpath("//a[@id='ctl00_ctl00_ParentContent_cPH_tbContainer_tpPayrollEmployee_btnSendLoginDetail']"));
+	   elem.click();
+	   System.out.println("clickOnEmailButton");
+	   Reporter.log("clickOnEmailButton");
+	   Thread.sleep(4000);
+  }
+
+  public void LoggedOutAndReloginButton() throws Exception
+  
+  {
+	  Thread.sleep(2000);
+  	//getWebElement(By.xpath("//img[@alt='dropdown_arrow']")).click();
+  	getWebElement(By.xpath("//li[contains(@class,'dropdown')]//a[contains(@class,'dropdown-toggle')][.//div[contains(@class,'profile-icon')]]")).click();
+	  Thread.sleep(2000);
+	  
+		getWebElement(By.xpath("//li[contains(@class,'dropdown')]//a[contains(@class,'dropdown-toggle')][.//div[contains(@class,'profile-icon')]]")).click();
+		  Thread.sleep(2000);
+
+
+  	System.out.println("Click on dropdown-toggle in right top");
+  	
+  	Reporter.log("Click on dropdown-toggle in right top");
+  	getWebElement(By.xpath("//a[@id='ctl00_ctl00_ParentContent_hrefLogout']")).click();
+	  Thread.sleep(2000);
+
+  	System.out.println("Click on Logout in right top");
+  	Reporter.log("Click on Logout in right top");
+  	getWebElement(By.xpath("//a[@id='ctl00_cPH_lnkRelogin']")).click();
+	  Thread.sleep(2000);
+
+  	System.out.println("Click on relogin button");
+  	Reporter.log("Click on relogin button");
+  	
+  }
+  
+public void LoggedOutAndReloginButton1() throws Exception
+  
+  {
+	  Thread.sleep(5000);
+  	//getWebElement(By.xpath("//img[@alt='dropdown_arrow']")).click();
+  	getWebElement(By.xpath("//*[@id='aspnetForm']/main/header/div/div[3]/div/ul/li[3]/a")).click();
+	  Thread.sleep(2000);
+	
+
+  	System.out.println("Click on dropdown-toggle in right top");
+  	
+  	Reporter.log("Click on dropdown-toggle in right top");
+  	getWebElement(By.xpath("//a[@id='ctl00_ctl00_ParentContent_hrefLogout']")).click();
+	  Thread.sleep(2000);
+
+  	System.out.println("Click on Logout in right top");
+  	Reporter.log("Click on Logout in right top");
+  	getWebElement(By.xpath("//a[@id='ctl00_cPH_lnkRelogin']")).click();
+	  Thread.sleep(2000);
+
+  	System.out.println("Click on relogin button");
+  	Reporter.log("Click on relogin button");
+  	
+  }
+  
+  public String getPasswordForNewPortalUser() throws InterruptedException
+  {
+  	String[] UName1 = null;
+  	try {
+  		
+  	 	Thread.sleep(4000);
+      	m_Driver.switchTo().frame(getWebElement(By.xpath("//iframe[@id='PopUpFrame']")));
+  		m_Driver.switchTo().frame(getWebElement(By.xpath("//iframe[@id='ctl00_ctl00_ParentContent_cPH_txtBody_ctl02_ctl00']")));
+      	
+      	String UserName = getWebElement(By.xpath("//body")).getText().trim();
+      	String[] UName = UserName.split("\\n");
+      	UName1= UName[3].split(" ");
+      	
+      	m_Driver.switchTo().defaultContent();
+      	m_Driver.switchTo().defaultContent();
+      	m_Driver.switchTo().frame(getWebElement(By.xpath("//iframe[@id='PopUpFrame']")));
+      	getWebElement(By.xpath("//a[@id='ctl00_ctl00_ParentContent_cphFooter_btnSave']")).click();
+      	m_Driver.switchTo().defaultContent();
+      	Thread.sleep(4000);
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+ 
+  	return UName1[1];
+  	
+  	
+  }
+  
+  public void MultiFactorAuthenticationDropdown(String Option)
+  {
+  	WebElement elem = getWebElement(By.xpath("//select[@id='ddlMFA']"));
+  	Select sl=new Select(elem);
+  	sl.selectByVisibleText(Option);
+  	System.out.println("Seleted Option in the Multi-Factor Authentication :"+Option);
+  	Reporter.log("Seleted Option in the Multi-Factor Authentication :"+Option);
+  	
+  	
+  }
+  public void ClickOnSaveButtonInMultiFactorAuthenticationPage()
+  {
+  	WebElement elem = getWebElement(By.xpath("//a[@id='ctl00_cPH_btnSave']"));
+  	elem.click();
+  	System.out.println("Click On Save Button In Multi-Factor Authentication Page");
+  	Reporter.log("Click On Save Button In Multi-Factor Authentication Page");
+  	
+  }
+  
+  public void RemindMeInMultiFactorAuthenticationDropdown(String Option)
+  {
+  	WebElement elem = getWebElement(By.xpath("//select[@id='ddlRemind']"));
+  	Select sl=new Select(elem);
+  	sl.selectByVisibleText(Option);
+  	System.out.println("Seleted Remind Me Option in the Multi-Factor Authentication :"+Option);
+  	Reporter.log("Seleted Remind Me Option in the Multi-Factor Authentication :"+Option);
+  	
+  	
+  }
+  
+  SoftAssert soft=new SoftAssert();
+  public void AssertALL()
+  {
+  	soft.assertAll();
+  }
+
   
 }

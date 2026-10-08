@@ -4,12 +4,19 @@ import pages.BasePage;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -18,6 +25,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import ie.curiositysoftware.testmodeller.TestModellerModule;
 import utilities.ChangeWindow;
 import utilities.ClosePopup;
+import utilities.TakeScreenshot;
 import utilities.reports.ExtentReportManager;
 import utilities.testmodeller.TestModellerLogger;
 
@@ -501,7 +509,7 @@ System.err.println(statusCode);
         }
 
 		elem.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		ExtentReportManager.passStep(m_Driver, "clickRunPayroll");
 
@@ -510,40 +518,217 @@ System.err.println(statusCode);
 
 	}
 	
+//	public void searchCompanyName(String data) throws Exception
+// 	{
+// 	    
+// 		WebElement elem = getWebElement(By.xpath("//*[@id='search_input']"));
+//
+//	    ImportCompaniesPage.CompanyImportPage abc= new 	ImportCompaniesPage.CompanyImportPage(m_Driver);
+// 		
+// 		String data = abc.client;
+// 		elem.sendKeys(data);
+// 		Reporter.log("searchCompanyName");
+// 	}
 	
 	
+	public void searchCompanyName() throws Exception
+	{
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(10));
 
+	    // Step 1: Get company name from CreateClient (static, no new object)
+	    String data = pages.CreateClient.client;
+
+	    // Step 2: Fail fast if value was never set
+	    if (data == null || data.isEmpty()) {
+	        throw new IllegalStateException("CreateClient.client is null - client creation step did not set it");
+	    }
+
+	    // Step 3: Wait for the input and clear old text
+	    WebElement elem = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='search_input']")));
+	    elem.clear();
+
+	    // Step 4: Type the company name
+	    elem.sendKeys(data);
+	    Reporter.log("Typed company name: " + data, true);
+
+	    // Step 5: Select the autocomplete suggestion
+	    WebElement suggestion = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//*[contains(@class,'dropdown') or contains(@class,'suggest') or contains(@class,'autocomplete')]//*[normalize-space()='" + data + "']")));
+	    suggestion.click();
+
+	    // Step 6: Click Search
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='btnSearch']"))).click();
+	    Reporter.log("searchCompanyName completed", true);
+	}
+	
+	public void searchCompanyName1(String data) throws Exception
+	{
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(10));
+
+	    // Step 1: Fail fast if value was not passed
+	    if (data == null || data.isEmpty()) {
+	        throw new IllegalStateException("searchCompanyName: data parameter is null/empty");
+	    }
+
+	    // Step 2: Wait for the input and clear old text
+	    WebElement elem = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='search_input']")));
+	    elem.clear();
+
+	    // Step 3: Type the company name
+	    elem.sendKeys(data);
+	    Reporter.log("Typed company name: " + data, true);
+
+	    // Step 4: Select the autocomplete suggestion
+	    WebElement suggestion = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//*[contains(@class,'dropdown') or contains(@class,'suggest') or contains(@class,'autocomplete')]//*[normalize-space()='" + data + "']")));
+	    suggestion.click();
+
+	    // Step 5: Click Search
+	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='btnSearch']"))).click();
+	    Reporter.log("searchCompanyName completed", true);
+	}
+	public void clickSearchButton() throws Exception {
+	    // Step 1: Wait until the Search button is clickable
+	    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+	    WebElement btnSearch = wait.until(
+	            ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='btnSearch']")));
+
+	    try {
+	        // Step 2: Normal click
+	        btnSearch.click();
+	    } catch (ElementClickInterceptedException e) {
+	        // Step 3: Fallback to JS click if another element overlays the button
+	        ((JavascriptExecutor) m_Driver).executeScript("arguments[0].click();", btnSearch);
+	    }
+
+	    // Step 4: Wait for the page to reload (old button goes stale). If the page does not reload (AJAX), ignore
+	    try {
+	        new WebDriverWait(m_Driver, Duration.ofSeconds(30))
+	                .until(ExpectedConditions.stalenessOf(btnSearch));
+	    } catch (TimeoutException e) {
+	        Reporter.log("Page did not reload, continuing with readyState wait", true);
+	    }
+
+	    // Step 5: Wait until the page is fully loaded
+	    new WebDriverWait(m_Driver, Duration.ofSeconds(30)).until(d ->
+	            ((JavascriptExecutor) d).executeScript("return document.readyState").equals("complete"));
+
+	    Reporter.log("Clicked on Search button and page loaded", true);
+	}
      
 	/**
  	 * Click ClickAgent
 	 * @throws InterruptedException 
      * @name Click ClickAgent
      */
-	public void Click_ClickAgent() throws InterruptedException
+//	public void Click_ClickAgent() throws InterruptedException
+//	{
+//		WebElement elem = getWebElement(ClickAgentElem);
+//
+//		if (elem == null) {
+//    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_ClickAgent", "Click_ClickAgent failed. Unable to locate object: " + ClickAgentElem.toString());
+//
+//    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_ClickAgent", "Click_ClickAgent failed. Unable to locate object: " + ClickAgentElem.toString());
+//
+//			Assert.fail("Unable to locate object: " + ClickAgentElem.toString());
+//        }
+//
+//		Thread.sleep(3000);
+//
+//		elem.click();
+//	    Reporter.log("Click Searched Agen");
+//		
+//		ChangeWindow.tabswitch(m_Driver);
+//		
+//		Thread.sleep(1000);
+// 
+//		ExtentReportManager.passStep(m_Driver, "Click_ClickAgent");
+//
+//		TestModellerLogger.PassStep(m_Driver, "Click_ClickAgent");
+//  		Reporter.log("Click_ClickAgent");
+//
+//	}
+	
+	
+	public void Click_ClickAgent() throws InterruptedException 
 	{
-		WebElement elem = getWebElement(ClickAgentElem);
+	    int maxAttempts = 3;
 
-		if (elem == null) {
-    		ExtentReportManager.failStepWithScreenshot(m_Driver, "Click_ClickAgent", "Click_ClickAgent failed. Unable to locate object: " + ClickAgentElem.toString());
+	    for (int attempt = 1; attempt <= maxAttempts; attempt++) 
+	    {
+	        try 
+	        {
+	            WebElement elem = getWebElement(ClickAgentElem);
 
-    		TestModellerLogger.FailStepWithScreenshot(m_Driver, "Click_ClickAgent", "Click_ClickAgent failed. Unable to locate object: " + ClickAgentElem.toString());
+	            if (elem == null) 
+	            {
+	                ExtentReportManager.failStepWithScreenshot(
+	                        m_Driver,
+	                        "Click_ClickAgent",
+	                        "Click_ClickAgent failed. Unable to locate object: "
+	                                + ClickAgentElem.toString());
 
-			Assert.fail("Unable to locate object: " + ClickAgentElem.toString());
-        }
+	                TestModellerLogger.FailStepWithScreenshot(
+	                        m_Driver,
+	                        "Click_ClickAgent",
+	                        "Click_ClickAgent failed. Unable to locate object: "
+	                                + ClickAgentElem.toString());
 
-		elem.click();
-	    Reporter.log("Click Searched Agen");
-		
-		ChangeWindow.tabswitch(m_Driver);
-		
-		Thread.sleep(1000);
- 
-		ExtentReportManager.passStep(m_Driver, "Click_ClickAgent");
+	                Assert.fail("Unable to locate object: " + ClickAgentElem.toString());
+	            }
 
-		TestModellerLogger.PassStep(m_Driver, "Click_ClickAgent");
-  		Reporter.log("Click_ClickAgent");
+	            Thread.sleep(3000);
 
+	            // Re-locate element just before click
+	            elem = getWebElement(ClickAgentElem);
+
+	            if (elem == null) {
+	                throw new StaleElementReferenceException("Element not available");
+	            }
+
+	            elem.click();
+
+	            Reporter.log("Click Searched Agent");
+
+	            ChangeWindow.tabswitch(m_Driver);
+
+	            Thread.sleep(1000);
+
+	            ExtentReportManager.passStep(m_Driver, "Click_ClickAgent");
+	            TestModellerLogger.PassStep(m_Driver, "Click_ClickAgent");
+	            Reporter.log("Click_ClickAgent");
+
+	            return; // Click successful
+	        } 
+	        catch (StaleElementReferenceException e) 
+	        {
+	            Reporter.log("Stale element while clicking Agent. Retry: "
+	                    + attempt + "/" + maxAttempts);
+
+	            if (attempt == maxAttempts) 
+	            {
+	                ExtentReportManager.failStepWithScreenshot(
+	                        m_Driver,
+	                        "Click_ClickAgent",
+	                        "Click failed after " + maxAttempts
+	                                + " attempts due to stale element.");
+
+	                TestModellerLogger.FailStepWithScreenshot(
+	                        m_Driver,
+	                        "Click_ClickAgent",
+	                        "Click failed after " + maxAttempts
+	                                + " attempts due to stale element.");
+
+	                Assert.fail("Click_ClickAgent failed due to StaleElementReferenceException.");
+	            }
+
+	            Thread.sleep(1000);
+	        }
+	    }
 	}
+	
 	
 	public void Click_ClickAgent1() throws InterruptedException
 	{

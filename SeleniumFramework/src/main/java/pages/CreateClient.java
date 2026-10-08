@@ -18,7 +18,6 @@ public class CreateClient extends BasePage {
 	}
 	
 	public static String client;
-
 	
 	private By newClientElem= By.xpath("//*[@id='ctl00_ctl00_ParentContent_btnAdd']");
 	
@@ -979,7 +978,30 @@ public class CreateClient extends BasePage {
 
 	}
 	
-	
+	public void enterBuisnessNameInput(String client) throws Exception
+	{
+        
+		WebElement elem = getWebElement(buisnessNameElem);
+ 
+		if (elem == null) {
+    		ExtentReportManager.failStepWithScreenshot(m_Driver, "clickBuisnessName", "clickBuisnessName failed. Unable to locate object: " + buisnessNameElem.toString());
+ 
+ 
+			Assert.fail("Unable to locate object: " + buisnessNameElem.toString());
+        }
+ 
+	   // client = RandomStringUtils.randomAlphabetic(9);
+ 
+		elem.sendKeys(client);
+		System.out.println(client);
+ 
+		Thread.sleep(2000);
+		ExtentReportManager.passStep(m_Driver, "clickBuisnessName");
+ 
+		
+  		Reporter.log("clickBuisnessName");
+ 
+	}
 	
 	public void SaveBtnAddPartnerShip() throws Exception {
 		

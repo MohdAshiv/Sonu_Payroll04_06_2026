@@ -126,6 +126,16 @@ public class EmployerView extends BasePage {
 		Reporter.log("clickPayslip");
 	}
 	
+	public void clickPayrollReportingPeriodSummary() throws InterruptedException
+	{
+        
+		WebElement elem = getWebElement(By.xpath("//*[@id='ctl00_ctl00_ParentContent_cPH_hrefReportPeriodTotal']"));
+		elem.click();
+		Thread.sleep(2000);
+      
+		Reporter.log("clickPayrollReportingPeriodSummary");
+	}
+	
 	public void clickP45P60p45Forms() throws InterruptedException
 	{
         

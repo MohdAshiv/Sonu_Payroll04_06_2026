@@ -172,6 +172,7 @@ public class Page4996  extends BasePage{
 		elem.click();
 		Thread.sleep(1000);
           	
+		m_Driver.switchTo().alert().accept();
 
 		ExtentReportManager.passStep(m_Driver, "clickUndoBtn");
 

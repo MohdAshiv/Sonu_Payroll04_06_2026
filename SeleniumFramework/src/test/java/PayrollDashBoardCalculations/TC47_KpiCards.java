@@ -86,9 +86,7 @@ public class TC47_KpiCards extends TestBase {
 		company.Click_clickPayrollSettings();
 		company.Enter_NomismaStartDate(data[108]);
 		company.Click_ClickSave();
-		
-		
-		
+				
 		company.clickYesPension();
 		pages.PayrollRun payroll= new pages.PayrollRun (driver);
 

@@ -115,10 +115,7 @@ public class TC06_TaxCalculationsMonthly extends TestBase{
 		pension.clickSaveBtn();
 		payroll.Click_PayrollDashboard();
 		
-		
-
 		payroll.Click_PayrollDashboard();
-		
 		
 		pages.EmployeeEditAndRateChanges employee= new pages.EmployeeEditAndRateChanges (driver);
 		

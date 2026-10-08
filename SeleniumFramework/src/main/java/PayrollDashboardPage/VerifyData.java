@@ -11,6 +11,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -1375,6 +1376,10 @@ public void testSortDescending1(int index) throws Exception {
 	
 	public void verifyTop10EmployeesFreeportNI(String frequency) {
 
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
 	    // Get top 10 employee rows
 	    List<WebElement> employeeRows = m_Driver.findElements(
 	            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
@@ -1743,6 +1748,12 @@ public void testSortDescending1(int index) throws Exception {
 	
 	public void verifyDirectorNI(String method, int currentPeriod, String frequency) {
 
+		
+		WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
+		
 	    // ✅ ANNUALLY aur HALF_YEARLY add karo
 	    int periods = frequency.equalsIgnoreCase("WEEKLY")      ? 52
 	                : frequency.equalsIgnoreCase("FORTNIGHTLY") ? 26
@@ -3854,6 +3865,1493 @@ public void verifyRecievedEmployeePayslip1(int recordsToVerify) throws Exception
     }
 }
 
+
+public Map<String, Double> calculateNI(double grossSalary, String frequency) {
+
+    double primaryThreshold = 0.0;
+    double upperEarningsLimit = 0.0;
+    double employerThreshold = 0.0;
+
+    if (frequency.equalsIgnoreCase("Weekly")) {
+        primaryThreshold = 242.00;
+        upperEarningsLimit = 967.00;
+        employerThreshold = 96.00;
+
+    } else if (frequency.equalsIgnoreCase("Fortnightly")
+            || frequency.equalsIgnoreCase("Two Weekly")) {
+
+        primaryThreshold = 484.00;
+        upperEarningsLimit = 1934.00;
+        employerThreshold = 193.00;
+
+    } else if (frequency.equalsIgnoreCase("Four Weekly")) {
+
+        primaryThreshold = 967.00;
+        upperEarningsLimit = 3867.00;
+        employerThreshold = 385.00;
+
+    } else if (frequency.equalsIgnoreCase("Monthly")) {
+
+        primaryThreshold = 1048.00;
+        upperEarningsLimit = 4189.00;
+        employerThreshold = 417.00;
+
+    } else if (frequency.equalsIgnoreCase("Quarterly")) {
+
+        primaryThreshold = 3143.00;
+        upperEarningsLimit = 12568.00;
+        employerThreshold = 1250.00;
+
+    } else if (frequency.equalsIgnoreCase("Half Yearly")) {
+
+        primaryThreshold = 6285.00;
+        upperEarningsLimit = 25135.00;
+        employerThreshold = 2500.00;
+
+    } else if (frequency.equalsIgnoreCase("Annually")
+            || frequency.equalsIgnoreCase("Yearly")) {
+
+        primaryThreshold = 12570.00;
+        upperEarningsLimit = 50270.00;
+        employerThreshold = 5000.00;
+    }
+
+    double expectedEmployeeNI = 0.0;
+    double expectedEmployerNI = 0.0;
+
+    if (grossSalary > primaryThreshold) {
+
+        if (grossSalary <= upperEarningsLimit) {
+
+            expectedEmployeeNI =
+                    (grossSalary - primaryThreshold) * 0.08;
+
+        } else {
+
+            expectedEmployeeNI =
+                    ((upperEarningsLimit - primaryThreshold) * 0.08)
+                    + ((grossSalary - upperEarningsLimit) * 0.02);
+        }
+    }
+
+    if (grossSalary > employerThreshold) {
+        expectedEmployerNI =
+                (grossSalary - employerThreshold) * 0.15;
+    }
+
+    expectedEmployeeNI = Math.round(expectedEmployeeNI * 100.0) / 100.0;
+    expectedEmployerNI = Math.round(expectedEmployerNI * 100.0) / 100.0;
+
+    Map<String, Double> result = new HashMap<>();
+    result.put("EmployeeNI", expectedEmployeeNI);
+    result.put("EmployerNI", expectedEmployerNI);
+
+    return result;
+}
+
+private List<Double> expectedEmployeeNI = new ArrayList<>();
+private List<Double> expectedEmployerNI = new ArrayList<>();
+
+public void captureDashboardNI(String frequency) {
+
+    expectedEmployeeNI.clear();
+    expectedEmployerNI.clear();
+
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
+
+    for (WebElement row : rows) {
+
+        double grossSalary = Double.parseDouble(
+                row.findElement(By.xpath(".//td[7]"))
+                        .getText()
+                        .replace("£", "")
+                        .replace(",", "")
+                        .trim());
+
+        Map<String, Double> ni = calculateNI(grossSalary, frequency);
+
+        expectedEmployeeNI.add(ni.get("EmployeeNI"));
+        expectedEmployerNI.add(ni.get("EmployerNI"));
+    }
+
+    Reporter.log("Dashboard NI data captured successfully.", true);
+}
+
+public void verifyCapturedData(String rowXpath,
+        String employeeNIXpath,
+        String employerNIXpath) {
+
+WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+List<WebElement> rows = wait.until(
+ExpectedConditions.visibilityOfAllElementsLocatedBy(
+By.xpath(rowXpath)));
+
+Reporter.log("========================================", true);
+Reporter.log("Rows Found : " + rows.size(), true);
+Reporter.log("Expected Rows : " + expectedEmployeeNI.size(), true);
+Reporter.log("========================================", true);
+
+assertEquals(rows.size(),
+expectedEmployeeNI.size(),
+"Row count mismatch.");
+
+for (int i = 0; i < rows.size(); i++) {
+
+WebElement row = rows.get(i);
+
+double actualEmployeeNI = Double.parseDouble(
+row.findElement(By.xpath(employeeNIXpath))
+   .getText()
+   .replace("£", "")
+   .replace(",", "")
+   .trim());
+
+double actualEmployerNI = Double.parseDouble(
+row.findElement(By.xpath(employerNIXpath))
+   .getText()
+   .replace("£", "")
+   .replace(",", "")
+   .trim());
+
+Reporter.log("----------------------------------------", true);
+Reporter.log("Row Number : " + (i + 1), true);
+
+Reporter.log("Expected Employee NI : £" + expectedEmployeeNI.get(i), true);
+Reporter.log("Actual Employee NI   : £" + actualEmployeeNI, true);
+
+Reporter.log("Expected Employer NI : £" + expectedEmployerNI.get(i), true);
+Reporter.log("Actual Employer NI   : £" + actualEmployerNI, true);
+
+Reporter.log("----------------------------------------", true);
+
+assertEquals(actualEmployeeNI,
+expectedEmployeeNI.get(i),
+"Employee NI mismatch at row " + (i + 1));
+
+assertEquals(actualEmployerNI,
+expectedEmployerNI.get(i),
+"Employer NI mismatch at row " + (i + 1));
+}
+
+Reporter.log("NI Verification Completed Successfully.", true);
+}
+
+
+public void verifyCapturedData(String rowXpath,
+        String employeeNIXpath) {
+
+WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+List<WebElement> rows = wait.until(
+ExpectedConditions.visibilityOfAllElementsLocatedBy(
+By.xpath(rowXpath)));
+
+Reporter.log("========================================", true);
+Reporter.log("Rows Found : " + rows.size(), true);
+Reporter.log("Expected Rows : " + expectedEmployeeNI.size(), true);
+Reporter.log("========================================", true);
+
+assertEquals(rows.size(),
+expectedEmployeeNI.size(),
+"Row count mismatch.");
+
+for (int i = 0; i < rows.size(); i++) {
+
+WebElement row = rows.get(i);
+
+double actualEmployeeNI = Double.parseDouble(
+row.findElement(By.xpath(employeeNIXpath))
+ .getText()
+ .replace("£", "")
+ .replace(",", "")
+ .trim());
+
+Reporter.log("----------------------------------------", true);
+Reporter.log("Row Number : " + (i + 1), true);
+
+Reporter.log("Expected Employee NI : £" + expectedEmployeeNI.get(i), true);
+Reporter.log("Actual Employee NI   : £" + actualEmployeeNI, true);
+
+Reporter.log("----------------------------------------", true);
+
+assertEquals(actualEmployeeNI,
+expectedEmployeeNI.get(i),
+"Employee NI mismatch at row " + (i + 1));
+}
+
+Reporter.log("Employee NI Verification Completed Successfully.", true);
+}
+
+
+private List<Double> expectedIncomeTax = new ArrayList<>();
+public void captureIncomeTax(String frequency) {
+
+    expectedIncomeTax.clear();
+
+    int periods = Map.of(
+            "WEEKLY", 52,
+            "FORTNIGHTLY", 26,
+            "FOUR_WEEKLY", 13,
+            "MONTHLY", 12,
+            "QUARTERLY", 4,
+            "HALF_YEARLY", 2,
+            "ANNUALLY", 1
+    ).getOrDefault(frequency.toUpperCase(), 12);
+
+    List<WebElement> rows = m_Driver.findElements(
+            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
+
+    for (WebElement row : rows) {
+
+        String name = row.findElement(By.xpath(".//td[1]")).getText().trim();
+        String code = row.findElement(By.xpath(".//td[4]")).getText().trim();
+
+        double gross = Double.parseDouble(
+                row.findElement(By.xpath(".//td[7]"))
+                        .getText().replace("£", "").replace(",", "").trim());
+
+        String taxCode = code.toUpperCase()
+                .replaceAll("\\s+", "")
+                .replaceAll("\\(W1/M1\\)", "")
+                .replaceAll("\\(M1/W1\\)", "")
+                .replaceAll("W1M1", "")
+                .replaceAll("W1", "")
+                .replaceAll("M1", "")
+                .trim();
+
+        double allowanceAnnual = 0.0;
+
+        if (!taxCode.equals("NT") &&
+                !taxCode.equals("BR") &&
+                !taxCode.equals("D0") &&
+                !taxCode.equals("D1")) {
+
+            String digits = taxCode.replaceAll("[^0-9]", "");
+
+            if (!digits.isEmpty()) {
+                allowanceAnnual = Double.parseDouble(digits) * 10;
+            }
+        }
+
+        double periodAllowance = allowanceAnnual / periods;
+
+        boolean isKCode = taxCode.startsWith("K");
+
+        double taxable;
+
+        if (isKCode) {
+            taxable = gross + periodAllowance;
+        } else {
+            taxable = Math.max(0, gross - periodAllowance);
+        }
+
+        double periodTax = 0.0;
+
+        double BASIC = 37700.0 / periods;
+        double HIGH = 125140.0 / periods;
+
+        if (taxCode.equals("NT")) {
+
+            periodTax = 0;
+
+        } else if (taxCode.equals("BR")) {
+
+            periodTax = gross * 0.20;
+
+        } else if (taxCode.equals("D0")) {
+
+            periodTax = gross * 0.40;
+
+        } else if (taxCode.equals("D1")) {
+
+            periodTax = gross * 0.45;
+
+        } else if (taxCode.startsWith("S") && taxCode.endsWith("L")) {
+
+            double b1 = 3967.0 / periods;
+            double b2 = 16956.0 / periods;
+            double b3 = 31092.0 / periods;
+            double b4 = 62430.0 / periods;
+            double b5 = 125140.0 / periods;
+
+            if (taxable > 0)
+                periodTax += Math.min(taxable, b1) * 0.19;
+
+            if (taxable > b1)
+                periodTax += (Math.min(taxable, b2) - b1) * 0.20;
+
+            if (taxable > b2)
+                periodTax += (Math.min(taxable, b3) - b2) * 0.21;
+
+            if (taxable > b3)
+                periodTax += (Math.min(taxable, b4) - b3) * 0.42;
+
+            if (taxable > b4)
+                periodTax += (Math.min(taxable, b5) - b4) * 0.45;
+
+            if (taxable > b5)
+                periodTax += (taxable - b5) * 0.48;
+
+        } else {
+
+            if (taxable > 0)
+                periodTax += Math.min(taxable, BASIC) * 0.20;
+
+            if (taxable > BASIC)
+                periodTax += (Math.min(taxable, HIGH) - BASIC) * 0.40;
+
+            if (taxable > HIGH)
+                periodTax += (taxable - HIGH) * 0.45;
+        }
+
+        double expTax = Math.round(periodTax * 100.0) / 100.0;
+
+        // Capture only
+        expectedIncomeTax.add(expTax);
+
+        Reporter.log(name + " -> Expected Tax : £" + expTax, true);
+    }
+}
+public void verifyCapturedIncomeTax(String rowXpath, String taxXpath) {
+
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(rowXpath)));
+
+    assertEquals(rows.size(), expectedIncomeTax.size(), "Row count mismatch.");
+
+    for (int i = 0; i < rows.size(); i++) {
+
+        double actualTax = Double.parseDouble(
+                rows.get(i).findElement(By.xpath(taxXpath))
+                        .getText()
+                        .replace("£", "")
+                        .replace(",", "")
+                        .trim());
+
+        double expectedTax = expectedIncomeTax.get(i);
+
+        double tolerance = 1.00;
+
+        boolean pass = Math.abs(actualTax - expectedTax) <= tolerance;
+
+        Reporter.log("----------------------------------------", true);
+        Reporter.log("Row Number : " + (i + 1), true);
+        Reporter.log("Expected Tax : £" + expectedTax, true);
+        Reporter.log("Actual Tax   : £" + actualTax, true);
+        Reporter.log("Result : " + (pass ? "PASS" : "FAIL"), true);
+        Reporter.log("----------------------------------------", true);
+
+        assertTrue(pass,
+                "Income Tax mismatch at row " + (i + 1)
+                + "\nExpected : £" + expectedTax
+                + "\nActual   : £" + actualTax);
+    }
+
+    Reporter.log("Income Tax Verification Completed Successfully.", true);
+}
+
+private List<Double> expectedEEPension = new ArrayList<>();
+private List<Double> expectedERPension = new ArrayList<>();
+private List<Double> expectedTotalPension = new ArrayList<>();
+
+public void capturePension(String frequency,
+        String pensionBasis,
+        String calculationMethod) {
+
+expectedEEPension.clear();
+expectedERPension.clear();
+expectedTotalPension.clear();
+
+// =========================
+// SCHEME RATES
+// =========================
+double schemeEmployeeRate = 5.00;
+double employerRate = 3.00;
+
+// =========================
+// EE RATE BASED ON METHOD
+// =========================
+double employeeRate;
+
+switch (calculationMethod.toUpperCase()) {
+
+case "RAS":
+employeeRate = schemeEmployeeRate * 0.80;
+break;
+
+case "NET_PAY":
+case "SALARY_SACRIFICE":
+case "NO_TAX_RELIEF":
+default:
+employeeRate = schemeEmployeeRate;
+break;
+}
+
+// =========================
+// FREQUENCY PERIODS
+// =========================
+int periods = Map.of(
+"WEEKLY", 52,
+"FORTNIGHTLY", 26,
+"FOUR_WEEKLY", 13,
+"MONTHLY", 12,
+"QUARTERLY", 4,
+"HALF_YEARLY", 2,
+"ANNUALLY", 1
+).getOrDefault(frequency.toUpperCase(), 12);
+
+// =========================
+// 2026-27 THRESHOLDS
+// =========================
+double lowerLimit = 6240.0 / periods;
+double upperLimit = 50270.0 / periods;
+
+// =========================
+// FETCH TABLE ROWS
+// =========================
+List<WebElement> rows = m_Driver.findElements(
+By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
+
+for (WebElement row : rows) {
+
+String employeeName = row.findElement(
+By.xpath(".//td[1]")).getText().trim();
+
+double grossPay = Double.parseDouble(
+row.findElement(By.xpath(".//td[7]"))
+     .getText()
+     .replace("£", "")
+     .replace(",", "")
+     .trim());
+
+// =========================
+// PENSIONABLE PAY
+// =========================
+double pensionablePay;
+
+if (pensionBasis.equalsIgnoreCase("QUALIFYING")) {
+
+pensionablePay = Math.max(
+ 0,
+ Math.min(grossPay, upperLimit) - lowerLimit);
+
+} else {
+
+// CUSTOM
+pensionablePay = grossPay;
+}
+
+// =========================
+// EXPECTED CONTRIBUTIONS
+// =========================
+double expectedEE = Math.round(
+((pensionablePay * employeeRate) / 100) * 100.0) / 100.0;
+
+double expectedER = Math.round(
+((pensionablePay * employerRate) / 100) * 100.0) / 100.0;
+
+double expectedTotal = Math.round(
+(expectedEE + expectedER) * 100.0) / 100.0;
+
+// =========================
+// CAPTURE EXPECTED VALUES
+// =========================
+expectedEEPension.add(expectedEE);
+expectedERPension.add(expectedER);
+expectedTotalPension.add(expectedTotal);
+
+Reporter.log("======================================", true);
+Reporter.log("Employee    : " + employeeName, true);
+Reporter.log("Frequency   : " + frequency, true);
+Reporter.log("Basis       : " + pensionBasis.toUpperCase(), true);
+Reporter.log("Method      : " + calculationMethod.toUpperCase(), true);
+Reporter.log("EE Rate     : " + employeeRate + "%", true);
+Reporter.log("ER Rate     : " + employerRate + "%", true);
+Reporter.log("Gross Pay   : £" + grossPay, true);
+Reporter.log("Pensionable : £" + pensionablePay, true);
+Reporter.log("Expected EE : £" + expectedEE, true);
+Reporter.log("Expected ER : £" + expectedER, true);
+Reporter.log("Expected Total : £" + expectedTotal, true);
+Reporter.log("======================================", true);
+}
+
+}
+
+public void verifyCapturedPension(String rowXpath,
+        String employeePensionXpath,
+        String employerPensionXpath) {
+
+WebDriverWait wait = new WebDriverWait(
+m_Driver, Duration.ofSeconds(30));
+
+List<WebElement> rows = wait.until(
+ExpectedConditions.visibilityOfAllElementsLocatedBy(
+By.xpath(rowXpath)));
+
+Reporter.log("========================================", true);
+Reporter.log("Rows Found    : " + rows.size(), true);
+Reporter.log("Expected Rows : " + expectedEEPension.size(), true);
+Reporter.log("========================================", true);
+
+assertEquals(
+rows.size(),
+expectedEEPension.size(),
+"Row count mismatch.");
+
+for (int i = 0; i < rows.size(); i++) {
+
+WebElement row = rows.get(i);
+
+double actualEE = Double.parseDouble(
+row.findElement(By.xpath(employeePensionXpath))
+.getText()
+.replace("£", "")
+.replace(",", "")
+.trim());
+
+double actualER = Double.parseDouble(
+row.findElement(By.xpath(employerPensionXpath))
+.getText()
+.replace("£", "")
+.replace(",", "")
+.trim());
+
+double actualTotal = Math.round(
+(actualEE + actualER) * 100.0) / 100.0;
+
+double expectedEE = expectedEEPension.get(i);
+double expectedER = expectedERPension.get(i);
+double expectedTotal = expectedTotalPension.get(i);
+
+// =========================
+// TOLERANCE
+// =========================
+double tolerance = 1.00;
+
+boolean passEE =
+Math.abs(actualEE - expectedEE) <= tolerance;
+
+boolean passER =
+Math.abs(actualER - expectedER) <= tolerance;
+
+boolean passTotal =
+Math.abs(actualTotal - expectedTotal) <= tolerance;
+
+boolean pass = passEE && passER && passTotal;
+
+Reporter.log("----------------------------------------", true);
+Reporter.log("Row Number : " + (i + 1), true);
+
+Reporter.log(
+"EE Pension    Exp: £" + expectedEE +
+" | Act: £" + actualEE +
+" | " + (passEE ? "PASS" : "FAIL"),
+true);
+
+Reporter.log(
+"ER Pension    Exp: £" + expectedER +
+" | Act: £" + actualER +
+" | " + (passER ? "PASS" : "FAIL"),
+true);
+
+Reporter.log(
+"Total Pension Exp: £" + expectedTotal +
+" | Act: £" + actualTotal +
+" | " + (passTotal ? "PASS" : "FAIL"),
+true);
+
+Reporter.log(
+"FINAL RESULT : " + (pass ? "PASS" : "FAIL"),
+true);
+
+Reporter.log("----------------------------------------", true);
+
+assertTrue(
+pass,
+"Pension mismatch at row " + (i + 1) +
+"\nEE Pension Expected: £" + expectedEE +
+" | Actual: £" + actualEE +
+"\nER Pension Expected: £" + expectedER +
+" | Actual: £" + actualER +
+"\nTotal Pension Expected: £" + expectedTotal +
+" | Actual: £" + actualTotal);
+}
+
+Reporter.log(
+"Pension Verification Completed Successfully.",
+true);
+}
+
+
+public void verifyCapturedEmployeePension(String rowXpath,
+        String employeePensionXpath) {
+
+    WebDriverWait wait = new WebDriverWait(
+            m_Driver, Duration.ofSeconds(30));
+
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    By.xpath(rowXpath)));
+
+    Reporter.log("========================================", true);
+    Reporter.log("Rows Found    : " + rows.size(), true);
+    Reporter.log("Expected Rows : " + expectedEEPension.size(), true);
+    Reporter.log("========================================", true);
+
+    assertEquals(
+            rows.size(),
+            expectedEEPension.size(),
+            "Row count mismatch.");
+
+    for (int i = 0; i < rows.size(); i++) {
+
+        WebElement row = rows.get(i);
+
+        double actualEE = Double.parseDouble(
+                row.findElement(By.xpath(employeePensionXpath))
+                        .getText()
+                        .replace("£", "")
+                        .replace(",", "")
+                        .trim());
+
+        double expectedEE = expectedEEPension.get(i);
+
+        // =========================
+        // TOLERANCE
+        // =========================
+        double tolerance = 1.00;
+
+        boolean passEE =
+                Math.abs(actualEE - expectedEE) <= tolerance;
+
+        Reporter.log("----------------------------------------", true);
+        Reporter.log("Row Number : " + (i + 1), true);
+
+        Reporter.log(
+                "Employee Pension | Exp: £" + expectedEE +
+                " | Act: £" + actualEE +
+                " | " + (passEE ? "PASS" : "FAIL"),
+                true);
+
+        Reporter.log(
+                "FINAL RESULT : " + (passEE ? "PASS" : "FAIL"),
+                true);
+
+        Reporter.log("----------------------------------------", true);
+
+        assertTrue(
+                passEE,
+                "Employee Pension mismatch at row " + (i + 1) +
+                "\nExpected: £" + expectedEE +
+                " | Actual: £" + actualEE);
+    }
+
+    Reporter.log(
+            "Employee Pension Verification Completed Successfully.",
+            true);
+}
+
+List<Double> expectedNetPay = new ArrayList<>();
+
+public void captureNetPay() {
+
+    WebDriverWait wait = new WebDriverWait(
+            m_Driver, Duration.ofSeconds(30));
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//table/tbody/tr[not(th)][position()<=10]")));
+
+    List<WebElement> rows = m_Driver.findElements(
+            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
+
+    expectedNetPay.clear();
+
+    Reporter.log("======================================", true);
+    Reporter.log("Capturing Net Pay from Dashboard", true);
+    Reporter.log("Rows Found : " + rows.size(), true);
+    Reporter.log("======================================", true);
+
+    for (WebElement row : rows) {
+
+        double grossPay = getAmount(row, ".//td[7]");
+
+        double incomeTax = getAmount(row, ".//td[8]");
+
+        double employeeNI = getAmount(row, ".//td[9]");
+
+        double employeePension = getAmount(row, ".//td[10]");
+
+        double netPay = Math.round(
+                (grossPay
+                        - incomeTax
+                        - employeeNI
+                        - employeePension) * 100.0) / 100.0;
+
+        expectedNetPay.add(netPay);
+
+        Reporter.log(
+                "Expected Net Pay : £" + netPay,
+                true);
+    }
+
+    Reporter.log(
+            "Net Pay Capture Completed. Total : "
+                    + expectedNetPay.size(),
+            true);
+}
+public void verifyCapturedNetPay(
+        String rowXpath,
+        String netPayXpath) {
+
+    WebDriverWait wait = new WebDriverWait(
+            m_Driver, Duration.ofSeconds(30));
+
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    By.xpath(rowXpath)));
+
+    Reporter.log("======================================", true);
+    Reporter.log("Verifying Captured Net Pay", true);
+    Reporter.log("Rows Found    : " + rows.size(), true);
+    Reporter.log("Expected Rows : " + expectedNetPay.size(), true);
+    Reporter.log("======================================", true);
+
+    assertEquals(
+            rows.size(),
+            expectedNetPay.size(),
+            "Row count mismatch.");
+
+    for (int i = 0; i < rows.size(); i++) {
+
+        WebElement row = rows.get(i);
+
+        double actualNetPay = getAmount(
+                row,
+                netPayXpath);
+
+        double expected = expectedNetPay.get(i);
+
+        // =========================
+        // TOLERANCE
+        // =========================
+        double tolerance = 1.00;
+
+        boolean pass = Math.abs(
+                actualNetPay - expected) <= tolerance;
+
+        Reporter.log("--------------------------------------", true);
+
+        Reporter.log(
+                "Row Number   : " + (i + 1),
+                true);
+
+        Reporter.log(
+                "Expected Net : £" + expected +
+                " | Actual Net : £" + actualNetPay +
+                " | " + (pass ? "PASS" : "FAIL"),
+                true);
+
+        Reporter.log(
+                "Difference    : £" +
+                Math.round(Math.abs(actualNetPay - expected) * 100.0) / 100.0,
+                true);
+
+        Reporter.log(
+                "FINAL RESULT : " + (pass ? "PASS" : "FAIL"),
+                true);
+
+        Reporter.log("--------------------------------------", true);
+
+        assertTrue(
+                pass,
+                "Net Pay mismatch at row " + (i + 1) +
+                "\nExpected: £" + expected +
+                " | Actual: £" + actualNetPay);
+    }
+
+    Reporter.log(
+            "Captured Net Pay Verification Completed Successfully.",
+            true);
+}
+
+
+private double getAmount(WebElement row, String xpath) {
+
+    return Double.parseDouble(
+            row.findElement(By.xpath(xpath))
+                    .getText()
+                    .replace("£", "")
+                    .replace(",", "")
+                    .trim());
+}
+public void verifyStudentLoan(String frequency, String planType) {
+
+    // =========================
+    // STUDENT LOAN PLAN
+    // =========================
+    double annualThreshold;
+    double rate = 9.00;
+
+    switch (planType.toUpperCase()) {
+
+        case "PLAN1":
+            annualThreshold = 26900.00;
+            break;
+
+        case "PLAN2":
+            annualThreshold = 29385.00;
+            break;
+
+        case "PLAN4":
+            annualThreshold = 33795.00;
+            break;
+
+        case "PLAN5":
+            annualThreshold = 25000.00;
+            break;
+
+        default:
+            throw new IllegalArgumentException(
+                    "Invalid Student Loan Plan: " + planType);
+    }
+
+    // =========================
+    // FREQUENCY
+    // =========================
+    int periods;
+
+    switch (frequency.toUpperCase()) {
+
+        case "WEEKLY":
+            periods = 52;
+            break;
+
+        case "FORTNIGHTLY":
+            periods = 26;
+            break;
+
+        case "FOUR_WEEKLY":
+            periods = 13;
+            break;
+
+        case "MONTHLY":
+            periods = 12;
+            break;
+
+        case "QUARTERLY":
+            periods = 4;
+            break;
+
+        case "HALF_YEARLY":
+            periods = 2;
+            break;
+
+        case "ANNUALLY":
+            periods = 1;
+            break;
+
+        default:
+            throw new IllegalArgumentException(
+                    "Invalid Frequency: " + frequency);
+    }
+
+    // =========================
+    // PERIOD THRESHOLD
+    // =========================
+    double periodThreshold = annualThreshold / periods;
+
+    periodThreshold =
+            Math.floor(periodThreshold * 100.0) / 100.0;
+
+    // =========================
+    // WAIT FOR EMPLOYEE LIST
+    // =========================
+    By rowsLocator = By.xpath(
+            "//table/tbody/tr[not(th)][position()<=10]"
+    );
+
+    WebDriverWait wait = new WebDriverWait(
+            m_Driver,
+            Duration.ofSeconds(30)
+    );
+
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    rowsLocator
+            )
+    );
+
+    Assert.assertFalse(
+            rows.isEmpty(),
+            "Student Loan employee/list not found. " +
+            "Expected employee data but no rows were displayed."
+    );
+
+    // =========================
+    // VERIFY TOP 10 EMPLOYEES
+    // =========================
+    for (int i = 0; i < rows.size(); i++) {
+
+        WebElement row = rows.get(i);
+
+        double grossPay = getAmount(row, ".//td[7]");
+        double tax = getAmount(row, ".//td[8]");
+        double employeeNI = getAmount(row, ".//td[9]");
+        double employeePension = getAmount(row, ".//td[10]");
+        double actualNetPay = getAmount(row, ".//td[11]");
+
+        // =========================
+        // STUDENT LOAN
+        // =========================
+        double expectedStudentLoan = 0.00;
+
+        if (grossPay > periodThreshold) {
+
+            expectedStudentLoan =
+                    (grossPay - periodThreshold) * rate / 100.0;
+        }
+
+        // Rounded down to whole pound
+        expectedStudentLoan = Math.floor(expectedStudentLoan);
+
+        // =========================
+        // NET PAY BEFORE STUDENT LOAN
+        // =========================
+        double netPayBeforeStudentLoan =
+                grossPay
+                - tax
+                - employeeNI
+                - employeePension;
+
+        netPayBeforeStudentLoan =
+                Math.round(netPayBeforeStudentLoan * 100.0) / 100.0;
+
+        // =========================
+        // FINAL EXPECTED NET PAY
+        // =========================
+        double expectedNetPay =
+                netPayBeforeStudentLoan - expectedStudentLoan;
+
+        expectedNetPay =
+                Math.round(expectedNetPay * 100.0) / 100.0;
+
+        // =========================
+        // LOG
+        // =========================
+        System.out.printf(
+                "Row %d | Plan : %s | Gross : £%.2f | Tax : £%.2f | " +
+                "EE NI : £%.2f | EE Pension : £%.2f | " +
+                "Net Before Student Loan : £%.2f | " +
+                "Student Loan : £%.2f | Expected Net : £%.2f | " +
+                "Actual Net : £%.2f%n",
+                i + 1,
+                planType,
+                grossPay,
+                tax,
+                employeeNI,
+                employeePension,
+                netPayBeforeStudentLoan,
+                expectedStudentLoan,
+                expectedNetPay,
+                actualNetPay
+        );
+
+        // =========================
+        // VERIFY NET PAY
+        // =========================
+        Assert.assertEquals(
+                actualNetPay,
+                expectedNetPay,
+                0.25,
+                "Net Pay mismatch at row " + (i + 1)
+                        + " | Plan : " + planType
+                        + " | Gross : £"
+                        + String.format("%.2f", grossPay)
+        );
+    }
+}
+
+
+public void verifyStudentLoanRunPayroll(String frequency, String planType) {
+
+    // =========================
+    // STUDENT LOAN PLAN
+    // =========================
+    double annualThreshold;
+    double rate = 9.00;
+
+    switch (planType.toUpperCase()) {
+
+        case "PLAN1":
+            annualThreshold = 26900.00;
+            break;
+
+        case "PLAN2":
+            annualThreshold = 29385.00;
+            break;
+
+        case "PLAN4":
+            annualThreshold = 33795.00;
+            break;
+
+        case "PLAN5":
+            annualThreshold = 25000.00;
+            break;
+
+        default:
+            throw new IllegalArgumentException(
+                    "Invalid Student Loan Plan: " + planType);
+    }
+
+    // =========================
+    // FREQUENCY
+    // =========================
+    int periods;
+
+    switch (frequency.toUpperCase()) {
+
+        case "WEEKLY":
+            periods = 52;
+            break;
+
+        case "FORTNIGHTLY":
+            periods = 26;
+            break;
+
+        case "FOUR_WEEKLY":
+            periods = 13;
+            break;
+
+        case "MONTHLY":
+            periods = 12;
+            break;
+
+        case "QUARTERLY":
+            periods = 4;
+            break;
+
+        case "HALF_YEARLY":
+            periods = 2;
+            break;
+
+        case "ANNUALLY":
+            periods = 1;
+            break;
+
+        default:
+            throw new IllegalArgumentException(
+                    "Invalid Frequency: " + frequency);
+    }
+
+    // =========================
+    // PERIOD THRESHOLD
+    // =========================
+    double periodThreshold = annualThreshold / periods;
+
+    periodThreshold =
+            Math.floor(periodThreshold * 100.0) / 100.0;
+
+    // =========================
+    // WAIT FOR EMPLOYEE LIST
+    // =========================
+    By rowsLocator = By.xpath(
+            "//table[contains(@class,'table-head-bg')]//tbody/tr"
+    );
+
+    WebDriverWait wait = new WebDriverWait(
+            m_Driver,
+            Duration.ofSeconds(30)
+    );
+
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    rowsLocator
+            )
+    );
+
+    Assert.assertFalse(
+            rows.isEmpty(),
+            "Student Loan employee/list not found. " +
+            "Expected employee data but no rows were displayed."
+    );
+
+    // =========================
+    // VERIFY TOP 10 EMPLOYEES
+    // =========================
+    for (int i = 0; i < rows.size(); i++) {
+
+        WebElement row = rows.get(i);
+
+        double grossPay = getAmount(row, ".//td[5]");
+        double tax = getAmount(row, ".//td[6]");
+        double employeeNI = getAmount(row, ".//td[7]");
+        double employeePension = getAmount(row, ".//td[8]");
+        double actualNetPay = getAmount(row, ".//td[9]");
+
+        // =========================
+        // STUDENT LOAN
+        // =========================
+        double expectedStudentLoan = 0.00;
+
+        if (grossPay > periodThreshold) {
+
+            expectedStudentLoan =
+                    (grossPay - periodThreshold) * rate / 100.0;
+        }
+
+        // Rounded down to whole pound
+        expectedStudentLoan = Math.floor(expectedStudentLoan);
+
+        // =========================
+        // NET PAY BEFORE STUDENT LOAN
+        // =========================
+        double netPayBeforeStudentLoan =
+                grossPay
+                - tax
+                - employeeNI
+                - employeePension;
+
+        netPayBeforeStudentLoan =
+                Math.round(netPayBeforeStudentLoan * 100.0) / 100.0;
+
+        // =========================
+        // FINAL EXPECTED NET PAY
+        // =========================
+        double expectedNetPay =
+                netPayBeforeStudentLoan - expectedStudentLoan;
+
+        expectedNetPay =
+                Math.round(expectedNetPay * 100.0) / 100.0;
+
+        // =========================
+        // LOG
+        // =========================
+        System.out.printf(
+                "Row %d | Plan : %s | Gross : £%.2f | Tax : £%.2f | " +
+                "EE NI : £%.2f | EE Pension : £%.2f | " +
+                "Net Before Student Loan : £%.2f | " +
+                "Student Loan : £%.2f | Expected Net : £%.2f | " +
+                "Actual Net : £%.2f%n",
+                i + 1,
+                planType,
+                grossPay,
+                tax,
+                employeeNI,
+                employeePension,
+                netPayBeforeStudentLoan,
+                expectedStudentLoan,
+                expectedNetPay,
+                actualNetPay
+        );
+
+        // =========================
+        // VERIFY NET PAY
+        // =========================
+        Assert.assertEquals(
+                actualNetPay,
+                expectedNetPay,
+                0.25,
+                "Net Pay mismatch at row " + (i + 1)
+                        + " | Plan : " + planType
+                        + " | Gross : £"
+                        + String.format("%.2f", grossPay)
+        );
+    }
+}
+private List<Double> expectedStudentLoan = new ArrayList<>();
+
+
+//=========================
+//STEP 1: CAPTURE EXPECTED STUDENT LOAN FROM DASHBOARD
+//=========================
+public void captureStudentLoan(String frequency, String planType) {
+
+ expectedStudentLoan.clear();
+
+ // Step 1.1: Annual threshold based on plan type
+ double annualThreshold;
+ double rate = 9.00;
+
+ switch (planType.toUpperCase()) {
+
+     case "PLAN1":
+         annualThreshold = 26900.00;
+         break;
+
+     case "PLAN2":
+         annualThreshold = 29385.00;
+         break;
+
+     case "PLAN4":
+         annualThreshold = 33795.00;
+         break;
+
+     case "PLAN5":
+         annualThreshold = 25000.00;
+         break;
+
+     default:
+         throw new IllegalArgumentException(
+                 "Invalid Student Loan Plan: " + planType);
+ }
+
+ // Step 1.2: Pay periods based on frequency
+ int periods = Map.of(
+         "WEEKLY", 52,
+         "FORTNIGHTLY", 26,
+         "FOUR_WEEKLY", 13,
+         "MONTHLY", 12,
+         "QUARTERLY", 4,
+         "HALF_YEARLY", 2,
+         "ANNUALLY", 1
+ ).getOrDefault(frequency.toUpperCase(), 12);
+
+ // Step 1.3: Period threshold
+ double periodThreshold = annualThreshold / periods;
+ periodThreshold = Math.floor(periodThreshold * 100.0) / 100.0;
+
+ // Step 1.4: Fetch dashboard rows
+ List<WebElement> rows = m_Driver.findElements(
+         By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
+
+ for (WebElement row : rows) {
+
+     String employeeName = row.findElement(
+             By.xpath(".//td[1]")).getText().trim();
+
+     double grossPay = Double.parseDouble(
+             row.findElement(By.xpath(".//td[7]"))
+                     .getText()
+                     .replace("£", "")
+                     .replace(",", "")
+                     .trim());
+
+     // Step 1.5: Calculate expected student loan
+     double expected = 0.00;
+
+     if (grossPay > periodThreshold) {
+         expected = (grossPay - periodThreshold) * rate / 100.0;
+     }
+
+     // Rounded down to whole pound
+     expected = Math.floor(expected);
+
+     // Step 1.6: Capture expected value
+     expectedStudentLoan.add(expected);
+
+     Reporter.log("======================================", true);
+     Reporter.log("Employee         : " + employeeName, true);
+     Reporter.log("Frequency        : " + frequency, true);
+     Reporter.log("Plan             : " + planType.toUpperCase(), true);
+     Reporter.log("Gross Pay        : £" + grossPay, true);
+     Reporter.log("Period Threshold : £" + periodThreshold, true);
+     Reporter.log("Expected Student Loan : £" + expected, true);
+     Reporter.log("======================================", true);
+ }
+}
+
+
+//=========================
+//STEP 2: VERIFY STUDENT LOAN FROM OTHER REPORT
+//=========================
+public void verifyCapturedStudentLoan(String rowXpath, String studentLoanXpath) {
+
+ WebDriverWait wait = new WebDriverWait(
+         m_Driver, Duration.ofSeconds(30));
+
+ List<WebElement> rows = wait.until(
+         ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                 By.xpath(rowXpath)));
+
+ Reporter.log("========================================", true);
+ Reporter.log("Rows Found    : " + rows.size(), true);
+ Reporter.log("Expected Rows : " + expectedStudentLoan.size(), true);
+ Reporter.log("========================================", true);
+
+ assertEquals(
+         rows.size(),
+         expectedStudentLoan.size(),
+         "Row count mismatch.");
+
+ for (int i = 0; i < rows.size(); i++) {
+
+     WebElement row = rows.get(i);
+
+     double actual = Double.parseDouble(
+             row.findElement(By.xpath(studentLoanXpath))
+                     .getText()
+                     .replace("£", "")
+                     .replace(",", "")
+                     .trim());
+
+     double expected = expectedStudentLoan.get(i);
+
+     // Step 2.1: Tolerance
+     double tolerance = 1.00;
+
+     boolean pass = Math.abs(actual - expected) <= tolerance;
+
+     Reporter.log("----------------------------------------", true);
+     Reporter.log("Row Number : " + (i + 1), true);
+
+     Reporter.log(
+             "Student Loan | Exp: £" + expected +
+             " | Act: £" + actual +
+             " | " + (pass ? "PASS" : "FAIL"),
+             true);
+
+     Reporter.log("----------------------------------------", true);
+
+     assertTrue(
+             pass,
+             "Student Loan mismatch at row " + (i + 1) +
+             "\nExpected: £" + expected +
+             " | Actual: £" + actual);
+ }
+
+ Reporter.log(
+         "Student Loan Verification Completed Successfully.",
+         true);
+}
+
+private List<Double> expectedGross = new ArrayList<>();
+
+public void captureGross() {
+
+    // Step 1: Clear old values
+    expectedGross.clear();
+
+    // Step 2: Get first 10 data rows (skip header rows)
+    List<WebElement> rows = m_Driver.findElements(
+            By.xpath("//table/tbody/tr[not(th)][position()<=10]"));
+
+    for (WebElement row : rows) {
+
+        // Step 3: Read employee name (td[1]) and gross (td[7])
+        String name = row.findElement(By.xpath(".//td[1]")).getText().trim();
+
+        double gross = Double.parseDouble(
+                row.findElement(By.xpath(".//td[7]"))
+                        .getText().replace("£", "").replace(",", "").trim());
+
+        // Step 4: Capture only
+        expectedGross.add(gross);
+
+        Reporter.log(name + " -> Gross : £" + gross, true);
+    }
+}
+
+
+public void verifyCapturedGross(String rowXpath, String grossXpath) {
+
+    // Step 1: Wait until all result rows are visible
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(rowXpath)));
+
+    // Step 2: Row count must match captured gross list
+    assertEquals(rows.size(), expectedGross.size(), "Row count mismatch.");
+
+    for (int i = 0; i < rows.size(); i++) {
+
+        // Step 3: Read actual gross from the row
+        double actualGross = Double.parseDouble(
+                rows.get(i).findElement(By.xpath(grossXpath))
+                        .getText()
+                        .replace("£", "")
+                        .replace(",", "")
+                        .trim());
+
+        double expectedGrossValue = expectedGross.get(i);
+
+        // Step 4: Compare (gross is a direct value, so exact match with 0.01 rounding tolerance)
+        double tolerance = 0.01;
+        boolean pass = Math.abs(actualGross - expectedGrossValue) <= tolerance;
+
+        Reporter.log("----------------------------------------", true);
+        Reporter.log("Row Number : " + (i + 1), true);
+        Reporter.log("Expected Gross : £" + expectedGrossValue, true);
+        Reporter.log("Actual Gross   : £" + actualGross, true);
+        Reporter.log("Result : " + (pass ? "PASS" : "FAIL"), true);
+        Reporter.log("----------------------------------------", true);
+
+        assertTrue(pass,
+                "Gross mismatch at row " + (i + 1)
+                + "\nExpected : £" + expectedGrossValue
+                + "\nActual   : £" + actualGross);
+    }
+
+    Reporter.log("Gross Verification Completed Successfully.", true);
+}
+
+private double expectedTotalCost;
+
+public void captureTotalCost() {
+
+    // Step 1: Wait until the Total Cost label is visible
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+    WebElement lblTotalCost = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(By.id("lblTotalCost")));
+
+    // Step 2: Read text and remove currency symbol / commas
+    String text = lblTotalCost.getText()
+            .replace("£", "")
+            .replace(",", "")
+            .trim();
+
+    // Step 3: Capture only
+    expectedTotalCost = Double.parseDouble(text);
+
+    Reporter.log("Captured Total Cost : £" + expectedTotalCost, true);
+}
+public void verifyTotalCost(String rowXpath, String totalCostXpath) {
+
+    // Step 1: Wait until all result rows are visible
+    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+    List<WebElement> rows = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(rowXpath)));
+
+    // Step 2: Sum the Total Cost column of all rows
+    double actualTotalCost = 0.0;
+
+    for (int i = 0; i < rows.size(); i++) {
+
+        double rowCost = Double.parseDouble(
+                rows.get(i).findElement(By.xpath(totalCostXpath))
+                        .getText()
+                        .replace("£", "")
+                        .replace(",", "")
+                        .trim());
+
+        actualTotalCost += rowCost;
+
+        Reporter.log("Row " + (i + 1) + " Total Cost : £" + rowCost, true);
+    }
+
+    // Step 3: Compare with captured value (0.01 tolerance for rounding)
+    double tolerance = 0.01;
+    boolean pass = Math.abs(actualTotalCost - expectedTotalCost) <= tolerance;
+
+    Reporter.log("----------------------------------------", true);
+    Reporter.log("Expected Total Cost : £" + expectedTotalCost, true);
+    Reporter.log("Actual Total Cost (sum of rows) : £" + actualTotalCost, true);
+    Reporter.log("Result : " + (pass ? "PASS" : "FAIL"), true);
+    Reporter.log("----------------------------------------", true);
+
+    assertTrue(pass,
+            "Total Cost mismatch"
+            + "\nExpected : £" + expectedTotalCost
+            + "\nActual   : £" + actualTotalCost);
+
+    Reporter.log("Total Cost Verification Completed Successfully.", true);
+}
 
 	  public void assertAll()
 	  {

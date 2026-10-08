@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+		
+		
+		
+      <class name="New_LeaveManagementTest.TC09_AddSickLeaveThroughUser"/>
+      <class name="New_LeaveManagementTest.TC16_AddHourlyHolidayLeaveAndVerifyAllPayShlipThroughUser"/>
+      <class name="New_LeaveManagementTest.TC19_verifyCarriedForwardLeavesInNextYear"/>
+      <class name="New_LeaveManagementTest.TC05_AddUnpaidLeaveAndVerifyAllPayShlip"/>
+      <class name="New_LeaveManagementTest.TC15_AddHourlyHolidayLeaveAndVerifyAllPayShlip"/>
+      <class name="New_LeaveManagementTest.TC02_AddHolidayLeaveAndVerifyAllPayShlip"/>
+      <class name="New_LeaveManagementTest.TC04_AddSickLeaveAndVerifyAllPayShlipAndAllFrequencyCalculation"/>
+      <class name="New_LeaveManagementTest.TC08_AddStatutoryPaternityPayLeaveThroughUser"/>
+      <class name="New_LeaveManagementTest.TC18_NegativeTC"/>
+      <class name="New_LeaveManagementTest.TC13_MultipleLeaveRequestApproved_DataVerify"/>
+      <class name="New_LeaveManagementTest.TC11_VerifyUserPersonalAndEmploymentDetails"/>
+      <class name="New_LeaveManagementTest.TC02_1_AddMaternityLeaveAndVerifyAllPayShlipAndAllFrequencyCalculation"/>
+      <class name="New_LeaveManagementTest.TC06_AddOtherLeaveAndVerifyAllPayShlip"/>
+      <class name="New_LeaveManagementTest.ExtraTC"/>
+      <class name="New_LeaveManagementTest.EditEmployee"/>
+      <class name="New_LeaveManagementTest.TC07_AddHolidayLeaveThroughUser"/>
+      <class name="New_LeaveManagementTest.TC12_AddAllLeaveTypeAndVerify"/>
+      <class name="New_LeaveManagementTest.TC10_AddOtherLeaveThroughUser"/>
+      <class name="New_LeaveManagementTest.TC01_AddEmployeeAndVerify"/>
+      <class name="New_LeaveManagementTest.TC03_AddStatutoryPaternityPayLeaveAndVerifyAllPayShlipAndAllFrequencyCalculation"/>
+      <class name="New_LeaveManagementTest.TC17_WeeklyLeavesCalculations_OfMaternity"/>
+      <class name="New_LeaveManagementTest.TC14_MulipleLeavesRequestApprovedThroghUser_DataVerify"/>
+      <class name="New_LeaveManagementTest.TC03_1_FemaleEMPAddStatutoryPaternityPayLeaveAndVerifyAllPayShlipAndAllFrequencyCalculation"/>
+ 
+ 
+ 
+ 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -5,7 +5,11 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
@@ -19,7 +23,18 @@ import org.testng.Reporter;
 
 import com.codeborne.selenide.ex.TimeoutException;
 
+import jakarta.mail.Folder;
+import jakarta.mail.Message;
+import jakarta.mail.Session;
+import jakarta.mail.Store;
 import net.lingala.zip4j.ZipFile;
+
+
+import jakarta.mail.*;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import pages.BasePage;
 
 public class VerifyPage extends BasePage{
@@ -441,4 +456,45 @@ public class VerifyPage extends BasePage{
 		    Reporter.log("Last Activity Log Field verified successfully.", true);
 		}
 	 
+	 
+	 public String getResetLinkFromOutlook( String subject) throws Exception {
+
+		    WebDriverWait wait = new WebDriverWait(m_Driver, Duration.ofSeconds(30));
+
+		    m_Driver.get("https://outlook.office.com/mail/");
+
+		    // Wait for inbox
+		    wait.until(ExpectedConditions.visibilityOfElementLocated(
+		            By.xpath("//div[@role='main']")));
+
+		    // Wait up to 60 seconds for email
+		    for (int i = 0; i < 12; i++) {
+
+		        m_Driver.navigate().refresh();
+		        Thread.sleep(5000);
+
+		        List<WebElement> emails = m_Driver.findElements(
+		                By.xpath("//span[contains(text(),'" + subject + "')]"));
+
+		        if (!emails.isEmpty()) {
+
+		            emails.get(0).click();
+
+		            // Wait for email body
+		            wait.until(ExpectedConditions.visibilityOfElementLocated(
+		                    By.xpath("//div[@role='document']")));
+
+		            // First hyperlink in email
+		            WebElement link = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		                    By.xpath("//div[@role='document']//a")));
+
+		            return link.getAttribute("href");
+		        }
+		    }
+
+		    throw new Exception("Password reset email not received.");
+		}
+
+
+
 }
